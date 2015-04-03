@@ -1,3 +1,89 @@
 .pollution-example h1 {
   background-color: purple
 }
+
+body.login, body.register,  body.forgot-password, body.reset-tokenId, body.firstPage {
+    background: url("/pollution/assets/img/gsu_background.jpg") no-repeat fixed center;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    overflow:hidden;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    margin-top: 0;
+    transform: translateY(-50%);
+}
+
+.main-form.forgot_password_form {
+    padding: 34px 27px;
+    /* min-height: 280px; */
+    height: auto;
+    width: 465px;
+    margin-left: -232px;
+}
+
+.main-form.register-form {
+    height: 625px;
+    width: 480px;
+    margin-left: -240px;
+}
+
+.main-form.reset-password {
+    padding: 34px 27px;
+    /* min-height: 280px; */
+    height: 360px;
+    width: 450px;
+    margin-left: -225px;
+}
+
+.main-form {
+    width: 480px;
+    height: 420px;
+    margin-left: -240px;
+}
+
+.innerform {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.pwelcome {
+  padding: 25px 20px;
+  height: 300px;
+  width: 500px;
+  margin-left: -250px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px 1px #003644;
+  /* margin-top: 35px; */
+  left: 50%;
+  position: relative;
+}
+
+.signupbutton {
+  padding: 20px 20px;
+  width: 450px;
+  background-color: forestgreen;
+  text-align: center;
+  font-size: 40px;
+  color:white;
+  position:relative;
+}
+
+.full-link{
+  /* all rules required to make the whole div clickable */
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+  /* this is a fix for IE7-9 */
+  background-color:#ffffff;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity:0;
+}

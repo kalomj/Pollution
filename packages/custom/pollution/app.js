@@ -7,24 +7,29 @@ var Module = require('meanio').Module;
 
 var Pollution = new Module('pollution');
 
+
 /*
  * All MEAN packages require registration
  * Dependency injection is used to define required modules
  */
-Pollution.register(function(app, auth, database) {
+Pollution.register(function(app, auth, system, database) {
+
+  app.set('views',__dirname + '/server/views');
 
   //We enable routing. By default the Package Object is passed to the routes
   Pollution.routes(app, auth, database);
 
   //We are adding a link to the main menu for all authenticated users
   Pollution.menus.add({
-    title: 'pollution example page',
-    link: 'pollution example page',
+    title: 'My Routes',
+    link: 'My Routes',
     roles: ['authenticated'],
     menu: 'main'
   });
   
-  Pollution.aggregateAsset('css', 'pollution.css');
+  Pollution.aggregateAsset('css', 'pollution.css',{
+      weight: 1,
+      group: 'header'});
 
   /**
     //Uncomment to use. Requires meanio@0.3.7 or above
@@ -50,3 +55,4 @@ Pollution.register(function(app, auth, database) {
 
   return Pollution;
 });
+
