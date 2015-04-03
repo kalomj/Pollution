@@ -15,6 +15,13 @@ body.login, body.register,  body.forgot-password, body.reset-tokenId, body.first
     top: 50%;
     margin-top: 0;
     transform: translateY(-50%);
+    width: 100%;
+}
+
+.container {
+    padding-right: 0;
+    padding-left: 0;
+    width:100%;
 }
 
 .main-form.forgot_password_form {
@@ -86,4 +93,13 @@ body.login, body.register,  body.forgot-password, body.reset-tokenId, body.first
   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity:0;
+}
+
+.angular-google-map-container {
+  position:fixed !important;
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
 }

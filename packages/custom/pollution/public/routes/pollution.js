@@ -3,8 +3,8 @@
 angular.module('mean.pollution').config(['$stateProvider',
     function($stateProvider) {
         $stateProvider.state('My Routes', {
-            url: '/pollution/example',
-            templateUrl: 'pollution/views/index.html'
+            url: '/pollution/',
+            templateUrl: 'pollution/views/gmap/index.html'
         });
     }
 ]);

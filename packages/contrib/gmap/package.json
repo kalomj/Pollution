@@ -1,0 +1,18 @@
+{
+  "name": "gmap",
+  "version": "0.0.2",
+  "description": "The gmap package lets you integrate directives and callbacks for location based applications",
+  "author": {
+    "name": "Lior Kesos"
+  },
+  "mean": "0.4.0",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.4.x"
+  },
+  "dependencies": {},
+  "license": "MIT",
+	"scripts":{
+		"postinstall":"bower install"
+	}
+}
