@@ -14,6 +14,7 @@ body.login, body.register,  body.forgot-password, body.reset-tokenId, body.first
 .map-container {
   position: relative;
   height: 100%;
+  margin-top: 50px;
 }
 
 .content {
@@ -29,7 +30,7 @@ body.login, body.register,  body.forgot-password, body.reset-tokenId, body.first
     padding-right: 0;
     padding-left: 0;
     width:100%;
-  height:100%;
+    height:100%;
 }
 
 section.ng-scope{
@@ -114,4 +115,10 @@ section.ng-scope{
   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity:0;
+}
+
+.vcenter {
+  transform: translateY(-50%);
+  top: 50%;
+  position: relative;
 }
