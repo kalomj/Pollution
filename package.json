@@ -38,7 +38,7 @@
     "mongoose": "3.8.23",
     "morgan": "1.5.0",
     "ms": "0.6.2",
-    "nodemailer": "1.2.2",
+    "nodemailer": "~1.2.2",
     "passport-facebook": "1.0.3",
     "passport-github": "0.1.5",
     "passport-google-oauth": "0.1.5",

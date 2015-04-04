@@ -3,12 +3,12 @@
 angular.module('mean.pollution').config(['$stateProvider',
     function($stateProvider) {
         $stateProvider.state('My Routes', {
-            url: '/pollution/',
+            url: '/myroutes',
             templateUrl: 'pollution/views/gmap/myroutes.html'
         });
 
       $stateProvider.state('mapIndex', {
-        url: '/pollution/',
+        url: '/gmap',
         templateUrl: 'pollution/views/gmap/index.html'
       });
     }

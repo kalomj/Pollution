@@ -12,7 +12,7 @@ var Pollution = new Module('pollution');
  * All MEAN packages require registration
  * Dependency injection is used to define required modules
  */
-Pollution.register(function(app, auth, system, database) {
+Pollution.register(function(app, auth, system, database, users) {
 
   app.set('views',__dirname + '/server/views');
 
