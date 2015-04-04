@@ -6,8 +6,14 @@ body.login, body.register,  body.forgot-password, body.reset-tokenId, body.first
     background: url("/pollution/assets/img/gsu_background.jpg") no-repeat fixed center;
     background-size: cover;
     height: 100%;
+    width: 100%;
     position: relative;
     overflow:hidden;
+}
+
+.map-container {
+  position: relative;
+  height: 100%;
 }
 
 .content {
@@ -16,12 +22,27 @@ body.login, body.register,  body.forgot-password, body.reset-tokenId, body.first
     margin-top: 0;
     transform: translateY(-50%);
     width: 100%;
+    height:100%;
 }
 
 .container {
     padding-right: 0;
     padding-left: 0;
     width:100%;
+  height:100%;
+}
+
+section.ng-scope{
+  height: 100%;
+
+}
+.angular-google-map,
+.angular-google-map-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
 }
 
 .main-form.forgot_password_form {
