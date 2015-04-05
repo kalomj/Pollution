@@ -1,0 +1,20 @@
+/* jshint ignore:start */
+var routeData = [
+  new google.maps.LatLng(32.4263451,-81.7817563),
+  new google.maps.LatLng(32.4261540,-81.7817446),
+  new google.maps.LatLng(32.42593645717747,-81.78136427898193),
+  new google.maps.LatLng(32.42576587623414,-81.7812800662532),
+  new google.maps.LatLng(32.4255628662563,-81.7813318934927),
+  new google.maps.LatLng(32.42553421485267,-81.78155647464125),
+  new google.maps.LatLng(32.42536902307204,-81.78164667911493),
+  new google.maps.LatLng(32.4251995482833,-81.78154885431867),
+  new google.maps.LatLng(32.42503600754823,-81.78145901327645),
+  new google.maps.LatLng(32.424886648347005,-81.78131632784324),
+  new google.maps.LatLng(32.42473671280078,-81.78115750660224),
+  new google.maps.LatLng(32.42458767962534,-81.78101874210755),
+  new google.maps.LatLng(32.42441131942588,-81.78091689172763),
+  new google.maps.LatLng(32.42421581048008,-81.78083272900614),
+  new google.maps.LatLng(32.42406784574543,-81.78069887874987),
+  new google.maps.LatLng(32.42423094185359,-81.78049582513934)
+];
+/* jshint ignore:end */

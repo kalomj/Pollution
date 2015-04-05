@@ -34,6 +34,12 @@ Pollution.register(function(app, auth, system, database) {
   Pollution.aggregateAsset('js', 'taxi-data.js',{
     weight: 1,
     group: 'footer'});
+  Pollution.aggregateAsset('js', 'route-data.js',{
+    weight: 1,
+    group: 'footer'});
+  Pollution.aggregateAsset('js', 'weighted-data.js',{
+    weight: 1,
+    group: 'footer'});
 
 
   Pollution.angularDependencies(['ngMap']);

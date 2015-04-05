@@ -1,3 +1,4 @@
+/* jshint ignore:start */
 var taxiData = [
   new google.maps.LatLng(37.782551, -122.445368),
   new google.maps.LatLng(37.782745, -122.444586),
@@ -500,3 +501,4 @@ var taxiData = [
   new google.maps.LatLng(37.752986, -122.403112),
   new google.maps.LatLng(37.751266, -122.403355)
 ];
+/* jshint ignore:end */

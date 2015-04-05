@@ -16,6 +16,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.$on('mapInitialized', function(event, map) {
 
       heatmap = map.heatmapLayers.foo;
+      heatmap.set('radius',75);
 
     });
 
@@ -44,7 +45,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     };
 
     $scope.changeRadius = function() {
-      heatmap.set('radius', heatmap.get('radius') ? null : 20);
+      heatmap.set('radius', heatmap.get('radius')===75 ? 100 : 75);
     };
 
     $scope.changeOpacity = function() {
