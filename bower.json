@@ -11,6 +11,9 @@
     "angular-bootstrap": "0.11.0",
     "angular-ui-router": "#master",
     "web-bootstrap": "./node_modules/meanio/resources/web-bootstrap.js",
-    "ngmap": "~1.6.0"
+    "ngmap": "1.6.0"
+  },
+  "resolutions": {
+    "ngmap": "1.6.0"
   }
 }
