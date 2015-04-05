@@ -60,7 +60,8 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-env": "^0.4.1",
     "grunt-nodemon": "^0.3.0",
-    "load-grunt-tasks": "^0.6.0"
+    "load-grunt-tasks": "^0.6.0",
+    "grunt-forever": "~0.4.5"
   },
   "devDependencies": {
     "expect.js": "0.3.1",

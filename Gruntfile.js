@@ -107,11 +107,20 @@ module.exports = function(grunt) {
       unit: {
         configFile: 'karma.conf.js'
       }
+    },
+    forever: {
+      server: {
+        options: {
+          index: 'server.js',
+          logDir: 'logs'
+        }
+      }
     }
   });
 
   //Load NPM tasks
   require('load-grunt-tasks')(grunt);
+  grunt.loadNpmTasks('grunt-forever');
 
   /**
    * Default Task

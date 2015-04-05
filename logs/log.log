@@ -1,0 +1,184 @@
+
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module '/home/marc/meanapps/Pollution/index.js'
+    at Function.Module._resolveFilename (module.js:338:15)
+    at Function.Module._load (module.js:280:25)
+    at Function.Module.runMain (module.js:497:10)
+    at startup (node.js:119:16)
+    at node.js:902:3
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 1 time
+
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module '/home/marc/meanapps/Pollution/index.js'
+    at Function.Module._resolveFilename (module.js:338:15)
+    at Function.Module._load (module.js:280:25)
+    at Function.Module.runMain (module.js:497:10)
+    at startup (node.js:119:16)
+    at node.js:902:3
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 2 time
+
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module '/home/marc/meanapps/Pollution/index.js'
+    at Function.Module._resolveFilename (module.js:338:15)
+    at Function.Module._load (module.js:280:25)
+    at Function.Module.runMain (module.js:497:10)
+    at startup (node.js:119:16)
+    at node.js:902:3
+error: Forever detected script exited with code: 8
+
+/home/marc/meanapps/Pollution/node_modules/grunt-forever/node_modules/forever/node_modules/forever-monitor/node_modules/broadway/node_modules/eventemitter2/lib/eventemitter2.js:290
+          throw arguments[1]; // Unhandled 'error' event
+                         ^
+Error: Cannot stop process that is not running.
+    at /home/marc/meanapps/Pollution/node_modules/grunt-forever/node_modules/forever/node_modules/forever-monitor/lib/forever-monitor/monitor.js:332:26
+    at process._tickCallback (node.js:415:13)
+
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module '/home/marc/meanapps/Pollution/index.js'
+    at Function.Module._resolveFilename (module.js:338:15)
+    at Function.Module._load (module.js:280:25)
+    at Function.Module.runMain (module.js:497:10)
+    at startup (node.js:119:16)
+    at node.js:902:3
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 1 time
+
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module '/home/marc/meanapps/Pollution/index.js'
+    at Function.Module._resolveFilename (module.js:338:15)
+    at Function.Module._load (module.js:280:25)
+    at Function.Module.runMain (module.js:497:10)
+    at startup (node.js:119:16)
+    at node.js:902:3
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 2 time
+
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module '/home/marc/meanapps/Pollution/index.js'
+    at Function.Module._resolveFilename (module.js:338:15)
+    at Function.Module._load (module.js:280:25)
+    at Function.Module.runMain (module.js:497:10)
+    at startup (node.js:119:16)
+    at node.js:902:3
+error: Forever detected script exited with code: 8
+for real!
+forking  0
+forking  1
+forking  2
+forking  3
+forking  4
+forking  5
+Mean app started on port 3000 (development) cluster.worker.id: 1
+Mean app started on port 3000 (development) cluster.worker.id: 2
+Mean app started on port 3000 (development) cluster.worker.id: 4
+Mean app started on port 3000 (development) cluster.worker.id: 5
+Mean app started on port 3000 (development) cluster.worker.id: 6
+Mean app started on port 3000 (development) cluster.worker.id: 3
+[0mGET / [32m200 [0m28.754 ms - -[0m
+[0mGET /theme/assets/css/theme.css [36m304 [0m5.317 ms - -[0m
+[0mGET /system/assets/css/common.css [36m304 [0m6.194 ms - -[0m
+[0mGET /articles/assets/css/articles.css [36m304 [0m2.516 ms - -[0m
+[0mGET /theme/assets/css/loginForms.css [36m304 [0m3.271 ms - -[0m
+[0mGET /pollution/assets/css/pollution.css [36m304 [0m5.679 ms - -[0m
+[0mGET /pollution/pollution.js [36m304 [0m2.287 ms - -[0m
+[0mGET /articles/routes/articles.js [36m304 [0m2.382 ms - -[0m
+[0mGET /articles/controllers/articles.js [36m304 [0m4.904 ms - -[0m
+[0mGET /articles/services/articles.js [36m304 [0m2.060 ms - -[0m
+[0mGET /system/controllers/header.js [36m304 [0m2.370 ms - -[0m
+[0mGET /system/system.js [36m304 [0m6.677 ms - -[0m
+[0mGET /system/controllers/index.js [36m304 [0m1.617 ms - -[0m
+[0mGET /system/routes/system.js [36m304 [0m2.368 ms - -[0m
+[0mGET /system/services/global.js [36m304 [0m4.449 ms - -[0m
+[0mGET /system/services/interceptor.js [36m304 [0m2.775 ms - -[0m
+[0mGET /system/services/menus.js [36m304 [0m1.553 ms - -[0m
+[0mGET /theme/controllers/theme.js [36m304 [0m2.024 ms - -[0m
+[0mGET /theme/services/theme.js [36m304 [0m1.729 ms - -[0m
+[0mGET /theme/routes/theme.js [36m304 [0m1.642 ms - -[0m
+[0mGET /pollution/controllers/pollution.js [36m304 [0m1.278 ms - -[0m
+[0mGET /users/routes/auth.js [36m304 [0m1.825 ms - -[0m
+[0mGET /users/controllers/meanUser.js [36m304 [0m2.598 ms - -[0m
+[0mGET /pollution/routes/pollution.js [36m304 [0m1.841 ms - -[0m
+[0mGET /users/services/meanUser.js [36m304 [0m7.649 ms - -[0m
+[0mGET /pollution/services/pollution.js [36m304 [0m2.837 ms - -[0m
+[0mGET /pollution/assets/js/taxi-data.js [36m304 [0m1.728 ms - -[0m
+[0mGET /system/assets/css/common.css [36m304 [0m2.196 ms - -[0m
+[0mGET /pollution/assets/js/route-data.js [36m304 [0m2.879 ms - -[0m
+[0mGET /theme/assets/css/theme.css [36m304 [0m4.373 ms - -[0m
+[0mGET /pollution/assets/js/weighted-data.js [36m304 [0m1.848 ms - -[0m
+[0mGET /pollution/assets/css/pollution.css [36m304 [0m2.228 ms - -[0m
+[0mGET /articles/services/articles.js [36m304 [0m1.611 ms - -[0m
+[0mGET /system/system.js [36m304 [0m3.668 ms - -[0m
+[0mGET /system/controllers/index.js [36m304 [0m2.692 ms - -[0m
+[0mGET /system/controllers/header.js [36m304 [0m1.684 ms - -[0m
+[0mGET /system/routes/system.js [36m304 [0m1.712 ms - -[0m
+[0mGET /theme/controllers/theme.js [36m304 [0m1.491 ms - -[0m
+[0mGET /theme/routes/theme.js [36m304 [0m1.248 ms - -[0m
+[0mGET /theme/services/theme.js [36m304 [0m1.544 ms - -[0m
+[0mGET /system/services/interceptor.js [36m304 [0m2.105 ms - -[0m
+[0mGET /system/services/menus.js [36m304 [0m2.497 ms - -[0m
+[0mGET /system/services/global.js [36m304 [0m2.716 ms - -[0m
+[0mGET /_getModules [36m304 [0m6.050 ms - -[0m
+[0mGET /articles/controllers/articles.js [36m304 [0m4.209 ms - -[0m
+[0mGET /system/services/global.js [36m304 [0m5.685 ms - -[0m
+[0mGET /theme/controllers/theme.js [36m304 [0m1.812 ms - -[0m
+[0mGET /theme/services/theme.js [36m304 [0m2.885 ms - -[0m
+[0mGET /pollution/routes/pollution.js [36m304 [0m2.268 ms - -[0m
+[0mGET /pollution/views/header.html [36m304 [0m4.347 ms - -[0m
+[0mGET /pollution/views/gmap/index.html [36m304 [0m4.489 ms - -[0m
+[0mGET /admin/menu/account [32m200 [0m5.835 ms - 107[0m
+[0mGET /admin/menu/main [36m304 [0m10.800 ms - -[0m
+[0mGET / [32m200 [0m24.931 ms - -[0m
+[0mGET /theme/assets/css/loginForms.css [36m304 [0m2.361 ms - -[0m
+[0mGET /system/assets/css/common.css [36m304 [0m3.082 ms - -[0m
+[0mGET /theme/assets/css/theme.css [36m304 [0m1.631 ms - -[0m
+[0mGET /articles/assets/css/articles.css [36m304 [0m2.207 ms - -[0m
+[0mGET /pollution/assets/css/pollution.css [36m304 [0m2.276 ms - -[0m
+[0mGET /system/system.js [36m304 [0m3.161 ms - -[0m
+[0mGET /pollution/pollution.js [36m304 [0m1.444 ms - -[0m
+[0mGET /articles/routes/articles.js [36m304 [0m1.535 ms - -[0m
+[0mGET /articles/services/articles.js [36m304 [0m1.360 ms - -[0m
+[0mGET /system/controllers/header.js [36m304 [0m1.507 ms - -[0m
+[0mGET /system/controllers/index.js [36m304 [0m1.123 ms - -[0m
+[0mGET /articles/controllers/articles.js [36m304 [0m1.528 ms - -[0m
+[0mGET /system/routes/system.js [36m304 [0m1.482 ms - -[0m
+[0mGET /system/services/global.js [36m304 [0m1.609 ms - -[0m
+[0mGET /system/services/menus.js [36m304 [0m1.734 ms - -[0m
+[0mGET /theme/routes/theme.js [36m304 [0m2.509 ms - -[0m
+[0mGET /theme/services/theme.js [36m304 [0m2.193 ms - -[0m
+[0mGET /pollution/controllers/pollution.js [36m304 [0m2.084 ms - -[0m
+[0mGET /theme/controllers/theme.js [36m304 [0m17.243 ms - -[0m
+[0mGET /users/controllers/meanUser.js [36m304 [0m1.796 ms - -[0m
+[0mGET /system/services/interceptor.js [36m304 [0m30.039 ms - -[0m
+[0mGET /users/services/meanUser.js [36m304 [0m1.703 ms - -[0m
+[0mGET /users/routes/auth.js [36m304 [0m3.845 ms - -[0m
+[0mGET /pollution/routes/pollution.js [36m304 [0m6.877 ms - -[0m
+[0mGET /pollution/services/pollution.js [36m304 [0m3.753 ms - -[0m
+[0mGET /pollution/assets/js/taxi-data.js [36m304 [0m2.250 ms - -[0m
+[0mGET /pollution/assets/js/route-data.js [36m304 [0m2.908 ms - -[0m
+[0mGET /pollution/assets/js/weighted-data.js [36m304 [0m1.787 ms - -[0m
+[0mGET /users/routes/auth.js [36m304 [0m1.695 ms - -[0m
+[0mGET /theme/services/theme.js [36m304 [0m3.575 ms - -[0m
+[0mGET /pollution/assets/js/taxi-data.js [36m304 [0m1.869 ms - -[0m
+[0mGET /pollution/routes/pollution.js [36m304 [0m5.439 ms - -[0m
+[0mGET /theme/controllers/theme.js [36m304 [0m3.491 ms - -[0m
+[0mGET /_getModules [36m304 [0m3.659 ms - -[0m
+[0mGET /theme/services/theme.js [36m304 [0m3.272 ms - -[0m
+[0mGET /pollution/routes/pollution.js [36m304 [0m3.660 ms - -[0m
+[0mGET /pollution/views/gmap/index.html [36m304 [0m4.264 ms - -[0m
+[0mGET /pollution/views/header.html [36m304 [0m22.644 ms - -[0m
+[0mGET /admin/menu/account [36m304 [0m4.605 ms - -[0m
+[0mGET /admin/menu/main [36m304 [0m4.133 ms - -[0m
