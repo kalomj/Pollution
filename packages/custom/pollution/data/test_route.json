@@ -1,0 +1,12 @@
+GPS Point Data (User Route Data)
+ID serial NOT NULL,
+userID  text,
+classifiedMode character,   #(what travel mode the point is e.g. walking, running, or driving)
+timestamp with time zone,
+points geometry(MultiPoint,4326),   #(GPS coordinates, MongoDB should have a geometry data type)
+
+
+
+{
+  _id :
+}

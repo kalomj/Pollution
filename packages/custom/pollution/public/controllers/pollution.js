@@ -10,8 +10,8 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
   }
 ]);
 
-angular.module('mean.pollution').controller('myLoginCtrl', ['$scope', '$rootScope', '$http', '$location', 'Global','$log',
-  function($scope, $rootScope, $http, $location, Global, $log) {
+angular.module('mean.pollution').controller('myLoginCtrl', ['$scope', '$rootScope', '$http', '$location', 'Global','$log','$state',
+  function($scope, $rootScope, $http, $location, Global, $log, $state) {
     // This object will be filled by the form
     $scope.user = {};
     $scope.global = Global;
@@ -44,22 +44,8 @@ angular.module('mean.pollution').controller('myLoginCtrl', ['$scope', '$rootScop
 
           $rootScope.$emit('loggedin');
 
-          /*if (response.redirect) {
-            if (window.location.href === response.redirect) {
-              //This is so an admin user will get full admin page
-              window.location.reload();
-            } else {*/
-              //window.location = '/#!/pollution';//response.redirect;
+          $state.go('mapIndex');
 
-              //window.location.href = '#!/mapIndex';
-            $location.path('/gmap');
-            $location.replace();
-            $log.log($location.path());
-
-           /* }
-          } else {
-
-          }*/
         })
         .error(function() {
           $scope.loginerror = 'Authentication failed.';

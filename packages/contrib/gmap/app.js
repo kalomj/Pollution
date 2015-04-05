@@ -58,11 +58,11 @@
   });
 */
 
-  Gmap.aggregateAsset('js', 'googleapis/places.js',{
+  /*Gmap.aggregateAsset('js', 'googleapis/places.js',{
     global: true,
     weight: -4,
     group: 'header'
-  });
+  });*/
 
   Gmap.aggregateAsset('js', '../lib/angular-google-maps/dist/angular-google-maps.min.js',{
     weight: 4,
