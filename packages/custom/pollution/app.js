@@ -12,7 +12,7 @@ var Pollution = new Module('pollution');
  * All MEAN packages require registration
  * Dependency injection is used to define required modules
  */
-Pollution.register(function(app, auth, system, database, users) {
+Pollution.register(function(app, auth, system, database) {
 
   app.set('views',__dirname + '/server/views');
 
@@ -31,6 +31,8 @@ Pollution.register(function(app, auth, system, database, users) {
       weight: 1,
       group: 'header'});
 
+
+  Pollution.angularDependencies(['ngMap']);
   /**
     //Uncomment to use. Requires meanio@0.3.7 or above
     // Save settings with callback

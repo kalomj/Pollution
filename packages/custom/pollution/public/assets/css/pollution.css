@@ -17,6 +17,18 @@ body.login, body.register,  body.forgot-password, body.reset-tokenId, body.first
   margin-top: 50px;
 }
 
+#gmap {
+  position: relative;
+  height: 100%;
+  margin-top: 50px;
+}
+
+map {
+  position: relative;
+  height: 100%;
+  margin-top: 50px;
+}
+
 .content {
     position: absolute;
     top: 50%;

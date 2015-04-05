@@ -2,9 +2,225 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c07db2d7-c1ee-4297-aa63-b09b9fda6e5d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/contrib/gmap/app.js" afterPath="$PROJECT_DIR$/packages/contrib/gmap/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/server/views/includes/head.html" afterPath="$PROJECT_DIR$/packages/custom/pollution/server/views/includes/head.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/.bowerrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/css/gmap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/img/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/js/googleapis/maps.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/js/googleapis/places.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/GruntJasmineSettings.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/GruntOptions.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/Gruntfile.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/README.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/circle.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/images/blue_marker.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/images/cluster1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/images/plane.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/dynamic-map-height.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/example.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/free-draw-polygons.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/geojson.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/hugedata.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-154-marker-fit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-157-ng-click.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-322.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-354-window-windows-rerender-content.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-371-polygon-ng-repeat.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-382-window-windows-ng-show.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-393-cluster-events-mapped.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-432-markers-fit-clustering.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-482-markers-animation-clustering.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-482-markers-animation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-484-markers-self.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-495-polyline-fit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-498-marker-move-loaded.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-504-markers-flash.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-507-windows-show-w-marker-broken.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-522-polyline-no-paths.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-534-markers-child-destroy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-538-window-plus1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-545-marker-flash.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-725-polyline-dupes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/issue-74-markers-events.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/marker-anchor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/overlay-map-type.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/shapes-lines.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/templates/info.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/controllers/two-maps.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/scripts/mocks/heat-layer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/stylesheets/dynamic-height.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/stylesheets/example.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/stylesheets/geojson.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/stylesheets/hugedata.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/assets/templates/info.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/dynamic-map-height.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/example.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/free-draw-polygons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/geojson.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/hugedata.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-154-marker-fit.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-157-ng-click.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-322.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-354-window-windows-rerender-content.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-371-polygon-ng-repeat.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-382-window-windows-ng-show.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-393-cluster-events-mapped.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-432-markers-fit-clustering.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-482-markers-animation-clustering.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-482-markers-animation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-484-markers-self.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-495-polyline-fit.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-498-marker-move-loaded.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-504-markers-flash.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-507-windows-show-w-marker-broken.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-522-polyline-no-paths.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-534-markers-child-destroy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-538-window-plus1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-545-marker-flash-clusterer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-545-marker-flash.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-572-polylines-no-paths.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-725-polyline-dupes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/issue-74-markers-events.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/marker-anchor.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/overlay-map-type.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/shapes-lines.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/two-maps.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/lib/infobox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/lib/markerclusterer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/lib/markerwithlabel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/bootstrap.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/control.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/marker.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/markers.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/models/child/marker-child-model.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/models/child/window-child-model.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/models/parent/i-marker-parent.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/models/parent/layer-parent-model.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/models/parent/map-type-parent-model.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/models/parent/marker-parent-model.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/models/parent/markers-parent-model.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/models/parent/markers-parent.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/models/parent/windows-parent.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/utils/_async.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/utils/base-object.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/utils/events-helper.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/utils/gmap-util.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/utils/model-key.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/utils/prop-map.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/directives/api/window.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/helpers/google-api-mock.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/helpers/google-map-spec-controller.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/usage/underscore.difference.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/usage/underscore.indexOfObject.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/usage/underscore.intersection.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/coffee/usage/underscore.isEqual.spec.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/spec/js/.keep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/control.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/free-draw-polygons.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/i-control.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/i-label.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/i-marker.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/i-polyline.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/i-window.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/managers/clusterer-marker-manager.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/managers/marker-manager.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/map.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/marker.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/markers.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/models/child/free-draw-polygons-child.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/models/child/label-child-model.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/models/child/marker-child-model.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/models/child/polyline-child-model.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/models/child/window-child-model.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/models/parent/i-marker-parent-model.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/models/parent/i-window-parent-model.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/models/parent/layer-parent-model.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/models/parent/map-type-parent-model.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/models/parent/marker-parent-model.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/models/parent/markers-parent-model.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/models/parent/polylines-parent-model.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/models/parent/windows-parent-model.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/polyline.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/polylines.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/utils/_async.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/utils/base-object.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/utils/child-events.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/utils/ctrl_handle.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/utils/events-helper.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/utils/fit-helper.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/utils/gmap-util.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/utils/is-ready.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/utils/linked.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/utils/logger.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/utils/model-key.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/utils/models-watcher.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/utils/prop-map.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/utils/property-action.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/window.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/api/windows.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/circle.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/control.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/controllers/polyline-display.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/free-draw-polygons.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/label.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/layer.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/map-type.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/map.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/marker.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/markers.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/polygon.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/polyline.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/polylines.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/rectangle.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/window.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/directives/windows.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/extensions/google.maps.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/extensions/lodash.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/extensions/string.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/module.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/utils/LatLngArraySync.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/coffee/utils/MapEvents.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/js/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/js/directives/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/js/directives/api/managers/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/js/directives/api/models/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/js/directives/api/utils/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/src/js/extensions/markerclusterer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular/angular-csp.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular/angular.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular/angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular/angular.min.js.gzip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular/angular.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/lodash/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/lodash/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/lodash/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/controllers/gmap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/directives/autocomplete.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/routes/gmap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/services/gmap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/public/views/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/server/routes/gmap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/contrib/gmap/server/views/index.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/app.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/assets.json" afterPath="$PROJECT_DIR$/config/assets.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html" afterPath="$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/public/assets/css/pollution.css" afterPath="$PROJECT_DIR$/packages/custom/pollution/public/assets/css/pollution.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/public/pollution.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/public/pollution.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Pollution.iws" />
@@ -26,11 +242,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="pollution.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/assets/css/pollution.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.43441764">
+              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.3333335">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.6666665">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -38,42 +264,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/views/header.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-28.0">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/views/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="head.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/views/includes/head.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46153846">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gmap.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/server/routes/gmap.js">
+      <file leaf-file-name="map.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bower_components/ngmap/app/scripts/directives/map.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,47 +280,67 @@
         <entry file="file://$PROJECT_DIR$/packages/custom/pollution/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/app.js">
+        <entry file="file://$PROJECT_DIR$/bower_components/ngmap/app/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="places.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/public/assets/js/googleapis/places.js">
+      <file leaf-file-name="ng-map.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bower_components/ngmap/build/scripts/ng-map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.44">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.645162">
+              <caret line="1333" column="9" selection-start-line="1333" selection-start-column="9" selection-end-line="1333" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.markdown" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/README.markdown">
+      <file leaf-file-name="development.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/env/development.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.96">
-              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="maps.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/public/assets/js/googleapis/maps.js">
+      <file leaf-file-name="assets.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/assets.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.08">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            <state vertical-scroll-proportion="-10.0">
+              <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myroutes.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/myroutes.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pollution.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/pollution.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -144,7 +362,6 @@
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/views/layouts/default.html" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/services/pollution.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/views/forgot-password.html" />
-        <option value="$PROJECT_DIR$/packages/custom/pollution/public/pollution.js" />
         <option value="$PROJECT_DIR$/packages/system/public/routes/system.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/directives/autocomplete.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/routes/gmap.js" />
@@ -156,18 +373,21 @@
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/views/login/index.html" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/views/login/forgot-password.html" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/views/login/reset-password.html" />
-        <option value="$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/myroutes.html" />
-        <option value="$PROJECT_DIR$/packages/custom/pollution/public/assets/css/pollution.css" />
-        <option value="$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html" />
-        <option value="$PROJECT_DIR$/packages/custom/pollution/app.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/views/login/login.html" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/routes/pollution.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/config/env/development.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/data/test_route.json" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js" />
-        <option value="$PROJECT_DIR$/packages/contrib/gmap/app.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/views/includes/head.html" />
+        <option value="$PROJECT_DIR$/packages/contrib/gmap/app.js" />
+        <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/config/assets.json" />
+        <option value="$PROJECT_DIR$/packages/custom/pollution/app.js" />
+        <option value="$PROJECT_DIR$/packages/custom/pollution/public/pollution.js" />
+        <option value="$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/myroutes.html" />
+        <option value="$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html" />
+        <option value="$PROJECT_DIR$/packages/custom/pollution/public/assets/css/pollution.css" />
       </list>
     </option>
   </component>
@@ -251,6 +471,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -881,119 +1103,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contrib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contrib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contrib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contrib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1011,131 +1125,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="contrib" />
+              <option name="myItemId" value="custom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="gmap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contrib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contrib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="directives" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contrib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contrib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmap" />
+              <option name="myItemId" value="pollution" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1147,113 +1141,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contrib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-google-maps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contrib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="googleapis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pollution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contrib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1289,10 +1177,196 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ngmap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ngmap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ngmap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ngmap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ngmap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ngmap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ngmap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directives" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1380,7 +1454,6 @@
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34689724" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27008086" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1392,6 +1465,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34689724" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1415,85 +1489,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/views/login/reset-password.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="88" selection-start-line="0" selection-start-column="88" selection-end-line="0" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/assets/css/pollution.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/system/public/routes/system.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73557186">
-          <caret line="65" column="9" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/users/public/views/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/routes/pollution.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/users/public/services/meanUser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/system/server/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.3333335">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/users/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/system/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6486486">
@@ -1514,7 +1509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46332046">
           <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1522,7 +1516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33582088">
           <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1530,23 +1523,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.53731346">
           <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/env/development.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/data/test_route.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.3333335">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1566,46 +1542,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.96">
-          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/GruntOptions.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="100.36">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/dist/angular-google-maps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="112" column="5" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1412535444000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/system/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1621,7 +1561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1629,7 +1568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1637,7 +1575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1645,7 +1582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1653,7 +1589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1661,27 +1596,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/GruntJasmineSettings.coffee">
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/views/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.16">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/example/dynamic-map-height.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/server/views/index.html">
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1689,7 +1615,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/public/routes/gmap.js">
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/views/includes/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/data/test_route.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.3333335">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.bowerrc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1697,7 +1639,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/public/directives/autocomplete.js">
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.666667">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/system/mean.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1705,26 +1655,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/public/controllers/gmap.js">
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/views/includes/foot.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.3333335">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/users/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/public/views/index.html">
+    <entry file="file://$PROJECT_DIR$/packages/system/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.666666">
-          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/public/services/gmap.js">
+    <entry file="file://$PROJECT_DIR$/bower_components/ngmap/app/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/env/development.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/assets.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -1739,90 +1713,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/myroutes.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3333334">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/public/assets/js/googleapis/maps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.08">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/public/assets/lib/angular-google-maps/README.markdown">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.96">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/server/routes/gmap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.3333335">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="-4.6666665">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/ngmap/build/scripts/ng-map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.645162">
+          <caret line="1333" column="9" selection-start-line="1333" selection-start-column="9" selection-end-line="1333" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/packages/custom/pollution/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/views/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.0">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/views/index.html">
+    <entry file="file://$PROJECT_DIR$/bower_components/ngmap/app/scripts/directives/map.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/public/assets/js/googleapis/places.js">
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/assets/css/pollution.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.44">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/contrib/gmap/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/views/includes/head.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46153846">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.43441764">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding />
         </state>
       </provider>
