@@ -1,3 +1,24 @@
-<div class="vcenter" data-ng-controller="MyRoutesCtrl">
-  Not Yet Implemented
+<div class="vcenter" data-ng-controller="MyRoutesCtrl" style="top:700px;position:relative" data-ng-init="findOne()">
+    <li>ID {{myroute._id}}</a></li>
+    <li>{{myroute.user.name}}</li>
+    <li>{{myroute.created}}</li>
+    <li>Points
+      <ol data-ng-repeat="point in myroute.points.coordinates">
+        Lat {{point[0]}}, Long {{point[1]}} time {{myroute.timestamp[$index]}}
+        classifiedMode {{myroute.classifiedmode[$index]}}
+      </ol>
+    </li>
+  <div class="map-container" ng-if="dataHasLoaded" data-ng-init="prepGmap()">
+    <div class="gmap">
+      <div id="panel">
+        <button ng-click="toggleHeatmap()">Toggle Heatmap</button>
+        <button ng-click="changeGradient()">Change gradient</button>
+        <button ng-click="changeRadius()">Change radius</button>
+        <button ng-click="changeOpacity()">Change opacity</button>
+      </div>
+      <map zoom="15" center="32.4263451, -81.7817563" map-type-id="SATELLITE" style="height:600px">
+        <heatmap-layer id="foo" data="gmapPoints"></heatmap-layer>
+      </map>
+    </div>
+  </div>
 </div>

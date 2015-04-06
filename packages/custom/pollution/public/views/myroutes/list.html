@@ -1,3 +1,7 @@
-<div class="vcenter" data-ng-controller="MyRoutesCtrl">
-  Not Yet Implemented
+<div class="vcenter" data-ng-controller="MyRoutesCtrl" data-ng-init="find()">
+  <li data-ng-repeat="myroute in myroutes">
+    <ol>Link <a data-ng-href="#!/myroutes/{{myroute._id}}">{{myroute._id}}</a></ol>
+    <ol>{{myroute.user.name}}</ol>
+    <ol>{{myroute.created}}</ol>
+  </li>
 </div>

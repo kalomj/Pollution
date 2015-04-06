@@ -7,34 +7,6 @@ var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
 /**
- * Points SubSchema
- */
-var Points = new Schema({
-  point: {
-    type: [Number],
-    required: true
-  }
-});
-
-/**
- * Geometry SubSchema
- * Defines a GeoJSON compatible sub schema
- * in our myroute document
- */
-var Geometry  = new Schema({
-  'type': {
-    type: String,
-    required: true,
-    enum: ['Point', 'LineString', 'Polygon', 'MultiPoint'],
-    default: 'MultiPoint'
-  },
-  coordinates: {
-    type: [Points],
-    required: true
-  }
-});
-
-/**
  * MyRoute Schema
  */
 var MyRouteSchema = new Schema({
@@ -53,8 +25,7 @@ var MyRouteSchema = new Schema({
     trim: true
   },
   points: {
-    type: Geometry,
-    required: true
+    type: Schema.Types.Mixed
   },
   user: {
     type: Schema.ObjectId,

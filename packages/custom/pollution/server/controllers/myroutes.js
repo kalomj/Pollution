@@ -24,15 +24,18 @@ exports.myroute = function(req, res, next, id) {
  * Create a myroute
  */
 exports.create = function(req, res) {
+
   var myroute = new MyRoute(req.body);
   myroute.user = req.user;
 
   myroute.save(function(err) {
     if (err) {
+      console.log(err);
       return res.status(500).json({
         error: 'Cannot save the route'
       });
     }
+
     res.json(myroute);
 
   });
@@ -43,6 +46,7 @@ exports.create = function(req, res) {
  */
 exports.update = function(req, res) {
   var myroute = req.myroute;
+
 
   myroute = _.extend(myroute, req.body);
 
