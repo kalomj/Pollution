@@ -1,7 +1,37 @@
-<div class="vcenter" data-ng-controller="MyRoutesCtrl" data-ng-init="find()">
-  <li data-ng-repeat="myroute in myroutes">
-    <ol>Link <a data-ng-href="#!/myroutes/{{myroute._id}}">{{myroute._id}}</a></ol>
-    <ol>{{myroute.user.name}}</ol>
-    <ol>{{myroute.created}}</ol>
-  </li>
+<div style="top:60px;position:relative" data-ng-controller="MyRoutesCtrl" data-ng-init="find()">
+  <table>
+    <tr>
+      <td>Link</td>
+      <td>User</td>
+      <td>Created</td>
+      <td>Delete</td>
+    </tr>
+    <tr data-ng-repeat="myroute in myroutes">
+      <td><a data-ng-href="#!/myroutes/{{myroute._id}}">{{myroute._id}}</a></td>
+      <td>{{myroute.user.name}}</td>
+      <td>{{myroute.created}}</td>
+      <td><button ng-click="remove(myroute._id)">DELETE</button></td>
+    </tr>
+  </table>
+  <a ui-sref="createRoute">Click Here to Create a new Route</a>
+  <pre>    To create a new route, authenticate with the server by POSTING a message to
+    http://airquality.cloudapp.net/login
+
+    {"email":"myemail@gmail.com","password":"XXXxxXXX"}
+
+    Note that the password is plain text - we should get a certificate to use HTTPS or move
+    to using Google/Faceboox authentication in the future
+
+    If login is successfull, then
+    GET http://airquality.cloudapp.net/loggedin
+    should return your user information.
+
+    Next, POST the following JSON to
+    http://airquality.cloudapp.net/myroutes/create
+
+    The server will respond with the JSON of a complete object stored in the MongoDB
+    complete with "created" timestamp and "user" fields (user automatically populated
+    based on the user that was authenticated)
+
+    {{pretty}}</pre>
 </div>

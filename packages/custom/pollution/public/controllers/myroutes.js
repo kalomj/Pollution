@@ -8,6 +8,8 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
       return $scope.global.isAdmin || myroute.user._id === $scope.global.user._id;
     };
 
+    $scope.pretty = JSON.stringify(testRoute,null,"    ");
+
     $scope.create = function(isValid) {
       //if (isValid) {
       var myroute
@@ -24,21 +26,29 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
       //}
     };
 
-    $scope.remove = function(myroute) {
-      if (myroute) {
-        myroute.$remove(function(response) {
-          for (var i in $scope.myroutes) {
-            if ($scope.myroutes[i] === myroute) {
-              $scope.myroutes.splice(i,1);
-            }
+    $scope.remove = function(myrouteId) {
+
+      MyRoutes.get({
+          myrouteId: myrouteId
+        }, function(myroute) {
+          $scope.myroute = myroute;
+
+          if (myroute) {
+            myroute.$remove(function(response) {
+              for (var i in $scope.myroutes) {
+                if ($scope.myroutes[i] === myroute) {
+                  $scope.myroutes.splice(i,1);
+                }
+              }
+              $state.reload();
+            });
+          } else {
+            $scope.myroute.$remove(function(response) {
+              $state.reload();
+            });
           }
-          $location.path('myroutes');
         });
-      } else {
-        $scope.myroute.$remove(function(response) {
-          $location.path('myroutes');
-        });
-      }
+
     };
 
     $scope.update = function(isValid) {
