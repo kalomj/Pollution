@@ -48,7 +48,7 @@ Pollution.register(function(app, auth, system, database) {
     group: 'footer'});
 
 
-  Pollution.angularDependencies(['ngMap']);
+  Pollution.angularDependencies(['ngMap', 'xml']);
   /**
     //Uncomment to use. Requires meanio@0.3.7 or above
     // Save settings with callback
