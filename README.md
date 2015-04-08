@@ -6,5 +6,5 @@ The Pollution Tracker is a server application built on the MEAN framework. This 
 
 ## Contributers
 
-This application is developed by researchers at Georgia Southern University. Special thanks to Dr.Xiaolu and Dr. Lixin Li.
+This application is developed by researchers at Georgia Southern University. Special thanks to Dr.Xiaolu Zhou and Dr. Lixin Li.
 
