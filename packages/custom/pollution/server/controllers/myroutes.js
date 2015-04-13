@@ -5,7 +5,8 @@
  */
 var mongoose = require('mongoose'),
   MyRoute = mongoose.model('MyRoute'),
-  _ = require('lodash');
+  _ = require('lodash'),
+  interpolate = require('../services/interpolate');
 
 
 /**
@@ -28,6 +29,8 @@ exports.create = function(req, res) {
   var myroute = new MyRoute(req.body);
   myroute.user = req.user;
 
+  interpolate.interpolate(myroute);
+
   myroute.save(function(err) {
     if (err) {
       console.log(err);
@@ -42,7 +45,7 @@ exports.create = function(req, res) {
 };
 
 /**
- * Update a myroute
+ * Update a myroute - there is currently no way to call this from the website
  */
 exports.update = function(req, res) {
   var myroute = req.myroute;
