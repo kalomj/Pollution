@@ -29,19 +29,21 @@ exports.create = function(req, res) {
   var myroute = new MyRoute(req.body);
   myroute.user = req.user;
 
-  interpolate.interpolate(myroute);
+  interpolate.interpolate(myroute,function() {
+    myroute.save(function(err) {
+      if (err) {
+        console.log(err);
+        return res.status(500).json({
+          error: 'Cannot save the route'
+        });
+      }
 
-  myroute.save(function(err) {
-    if (err) {
-      console.log(err);
-      return res.status(500).json({
-        error: 'Cannot save the route'
-      });
-    }
+      res.json(myroute);
 
-    res.json(myroute);
-
+    });
   });
+
+
 };
 
 /**
