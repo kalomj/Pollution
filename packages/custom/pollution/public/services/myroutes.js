@@ -39,7 +39,7 @@ angular.module('mean.pollution')
           for(var j=0; j<pt.trkpt.length; j+=1) {
             routejson.classifiedmode.push('W');
             routejson.timestamp.push(pt.trkpt[j].time);
-            routejson.points.coordinates.push([pt.trkpt[j]._lat,pt.trkpt[j]._lon]);
+            routejson.points.coordinates.push([Number(pt.trkpt[j]._lat),Number(pt.trkpt[j]._lon)]);
           }
         }
 

@@ -145,7 +145,7 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
         $scope.myroute = myroute;
 
         /* jshint ignore:start */
-        gmapPoints = [];
+        $scope.gmapPoints = [];
 
         //set map center to the first point in the list
         $scope.centerlat = myroute.points.coordinates[0][0];
@@ -155,7 +155,7 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
 
           var point = myroute.points.coordinates[i];
 
-          gmapPoints.push(new google.maps.LatLng(Number(point[0]),Number(point[1])));
+          $scope.gmapPoints.push(new google.maps.LatLng(Number(point[0]),Number(point[1])));
 
         }
         /* jshint ignore:end */

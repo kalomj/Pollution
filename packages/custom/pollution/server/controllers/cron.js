@@ -78,10 +78,11 @@ exports.delaunay_cron = function(req, res) {
             if (err) {
               console.log(err);
             }
+            console.log('Finished adding triangles to collection at %s %s %s', valid_date, valid_time, parameter_name);
           });
         });
 
-        console.log('Finished adding triangles to collection at %s %s %s', valid_date, valid_time, parameter_name);
+
       });
     });
 

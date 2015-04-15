@@ -22,14 +22,16 @@ exports.interpolate = function(myroute,cb) {
   //setup callback to handle the mongodb query
   var querycb =  function(callback,i) {
     return function(err,triangle) {
+      if(err) {
+        console.log(err);
+      }
       var triangleArray = triangle[0].triangle.coordinates[0].slice(0,3);
       var triangleValues = triangle[0].values;
       //pull in barcentric library here - calculate coordinates then interpolate
       var bcc = barycentric(triangleArray,[points[i][1],points[i][0]]);
       var interpolated_value = bcc[0]*triangleValues[0] + bcc[1]*triangleValues[1] + bcc[2]*triangleValues[2];
       myroute.pm25[i] = interpolated_value;
-      console.log(triangleValues);
-      console.log(interpolated_value);
+
       //async callback
       callback();
     };
@@ -59,7 +61,7 @@ exports.interpolate = function(myroute,cb) {
 
   }
 
-  //run all queries, then call the callback based into exports.interpolate function
+  //run all queries, then call the callback passed into exports.interpolate function
   async.parallel(asyncTasks,function() {
     //callback passed into function when tasks are complete
     cb();
