@@ -1,6 +1,6 @@
-<div style="height:100%;width:100%;position:absolute;overflow:hidden">
-  <div class="map-container">
-    <div class="gmap" data-ng-controller="LayerHeatmapCtrl">
+<div data-ng-controller="LayerHeatmapCtrl" style="height:100%;width:100%;position:absolute;overflow:hidden">
+  <div class="map-container"  >
+    <div class="gmap">
       <div class="panel">
         <button ng-click="toggleHeatmap()">Toggle Heatmap</button>
         <button ng-click="changeGradient()">Change gradient</button>
@@ -8,7 +8,7 @@
         <button ng-click="changeOpacity()">Change opacity</button>
       </div>
       <map zoom="15" center="37.782, -122.441" map-type-id="SATELLITE">
-        <heatmap-layer id="foo" data="weightedData"></heatmap-layer>
+        <heatmap-layer id="foo" data="viewportData"></heatmap-layer>
       </map>
     </div>
   </div>

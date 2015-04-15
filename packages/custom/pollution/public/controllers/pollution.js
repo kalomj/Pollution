@@ -8,16 +8,81 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
       name: 'pollution'
     };
   }
-]).controller('LayerHeatmapCtrl', ['$scope', 'Global', 'Pollution', '$log',
-  function($scope, Global, Pollution, $log) {
-    var heatmap;
+]).controller('LayerHeatmapCtrl', ['$scope', 'Global', 'Pollution', '$log', '$http',
+  function($scope, Global, Pollution, $log, $http) {
 
+    $scope.viewportData = [];
+
+    var heatmap;
 
     $scope.$on('mapInitialized', function(event, map) {
 
       heatmap = map.heatmapLayers.foo;
       heatmap.set('radius',75);
+      heatmap.set('maxIntensity',25);
 
+      $scope.map = map;
+
+      //set up event listeners - when the user stops browsing the map for a moment, rerender the pollution data
+      google.maps.event.addListener //jshint ignore:line
+        (map, 'idle', function() {
+
+        var gridspacing = 50;
+
+        var bounds = map.getBounds();
+
+        //set lat to min lat
+        var lat = bounds.Da.k;
+
+        //while lat is less than max lat
+        var latArray = [lat];
+
+        //build array of latitude steps
+        var latstep = (bounds.Da.j - bounds.Da.k)/(map.getDiv().clientHeight/gridspacing);
+        while(lat < bounds.Da.j) {
+          lat += latstep;
+          latArray.push(lat);
+        }
+
+        //set lng to min lng
+        var lng = bounds.va.j;
+
+        //while lng is less than max lng
+        var lngArray = [lng];
+
+        //build array of longitude steps
+        var lngstep = (bounds.va.k - bounds.va.j)/(map.getDiv().clientWidth/gridspacing);
+        while(lng < bounds.va.k) {
+          lng += lngstep;
+          lngArray.push(lng);
+        }
+
+        //build grid of points to overlay on map
+
+        var viewportQuery = { points: { coordinates: []}};
+        for(var i = 0; i < latArray.length; i+=1){
+          for(var j = 0; j < lngArray.length; j+=1) {
+            viewportQuery.points.coordinates.push([latArray[i],lngArray[j]]);
+          }
+        }
+
+        $http.post('/viewport', viewportQuery)
+          .success(function(response) {
+            $scope.viewportData = [];
+
+            for(var i=0;i<response.points.coordinates.length;i+=1){
+
+              var point = response.points.coordinates[i];
+
+              $scope.viewportData.push({location: new google.maps.LatLng(Number(point[0]),Number(point[1])), weight: response.pm25[i]}); //jshint ignore:line
+
+            }
+
+            heatmap.set('data', $scope.viewportData);
+          });
+
+
+      });
     });
 
     $scope.toggleHeatmap= function(event) {
@@ -50,104 +115,6 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
     $scope.changeOpacity = function() {
       heatmap.set('opacity', heatmap.get('opacity') ? null : 0.2);
-    };
-  }
-]).controller('myLoginCtrl', ['$scope', '$rootScope', '$http', '$location', 'Global','$log','$state',
-  function($scope, $rootScope, $http, $location, Global, $log, $state) {
-    // This object will be filled by the form
-    $scope.user = {};
-    $scope.global = Global;
-    $scope.global.registerForm = false;
-    $scope.input = {
-      type: 'password',
-      placeholder: 'Password',
-      confirmPlaceholder: 'Repeat Password',
-      iconClass: '',
-      tooltipText: 'Show password'
-    };
-
-    $scope.togglePasswordVisible = function() {
-      $scope.input.type = $scope.input.type === 'text' ? 'password' : 'text';
-      $scope.input.placeholder = $scope.input.placeholder === 'Password' ? 'Visible Password' : 'Password';
-      $scope.input.iconClass = $scope.input.iconClass === 'icon_hide_password' ? '' : 'icon_hide_password';
-      $scope.input.tooltipText = $scope.input.tooltipText === 'Show password' ? 'Hide password' : 'Show password';
-    };
-
-    // Register the login() function
-    $scope.login = function() {
-      $http.post('/login', {
-        email: $scope.user.email,
-        password: $scope.user.password
-      })
-        .success(function(response) {
-          // authentication OK
-          $scope.loginError = 0;
-          $rootScope.user = response.user;
-
-          $rootScope.$emit('loggedin');
-
-          $state.go('mapIndex');
-
-        })
-        .error(function() {
-          $scope.loginerror = 'Authentication failed.';
-        });
-    };
-  }
-]).controller('myRegisterCtrl', ['$scope', '$rootScope', '$http', '$location', 'Global','$state',
-  function($scope, $rootScope, $http, $location, Global, $state) {
-    $scope.user = {};
-    $scope.global = Global;
-    $scope.global.registerForm = true;
-    $scope.input = {
-      type: 'password',
-      placeholder: 'Password',
-      placeholderConfirmPass: 'Repeat Password',
-      iconClassConfirmPass: '',
-      tooltipText: 'Show password',
-      tooltipTextConfirmPass: 'Show password'
-    };
-
-    $scope.togglePasswordVisible = function() {
-      $scope.input.type = $scope.input.type === 'text' ? 'password' : 'text';
-      $scope.input.placeholder = $scope.input.placeholder === 'Password' ? 'Visible Password' : 'Password';
-      $scope.input.iconClass = $scope.input.iconClass === 'icon_hide_password' ? '' : 'icon_hide_password';
-      $scope.input.tooltipText = $scope.input.tooltipText === 'Show password' ? 'Hide password' : 'Show password';
-    };
-    $scope.togglePasswordConfirmVisible = function() {
-      $scope.input.type = $scope.input.type === 'text' ? 'password' : 'text';
-      $scope.input.placeholderConfirmPass = $scope.input.placeholderConfirmPass === 'Repeat Password' ? 'Visible Password' : 'Repeat Password';
-      $scope.input.iconClassConfirmPass = $scope.input.iconClassConfirmPass === 'icon_hide_password' ? '' : 'icon_hide_password';
-      $scope.input.tooltipTextConfirmPass = $scope.input.tooltipTextConfirmPass === 'Show password' ? 'Hide password' : 'Show password';
-    };
-
-    $scope.register = function() {
-      $scope.usernameError = null;
-      $scope.registerError = null;
-      $http.post('/register', {
-        email: $scope.user.email,
-        password: $scope.user.password,
-        confirmPassword: $scope.user.confirmPassword,
-        username: $scope.user.username,
-        name: $scope.user.name
-      })
-        .success(function() {
-          // authentication OK
-          $scope.registerError = 0;
-          $rootScope.user = $scope.user;
-          Global.user = $rootScope.user;
-          Global.authenticated = !! $rootScope.user;
-          $rootScope.$emit('loggedin');
-          $state.go('mapIndex');
-        })
-        .error(function(error) {
-          // Error: authentication failed
-          if (error === 'Username already taken') {
-            $scope.usernameError = error;
-          } else if (error === 'Email already taken') {
-            $scope.emailError = error;
-          } else $scope.registerError = error;
-        });
     };
   }
 ]);

@@ -16,12 +16,10 @@ var MyRouteSchema = new Schema({
   },
   classifiedmode: {
     type: [String],
-    required: true,
     trim: true
   },
   timestamp: {
     type: [String],
-    required: true,
     trim: true
   },
   points: {

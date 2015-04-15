@@ -22,15 +22,22 @@ exports.interpolate = function(myroute,cb) {
   //setup callback to handle the mongodb query
   var querycb =  function(callback,i) {
     return function(err,triangle) {
-      if(err) {
+      if (err) {
         console.log(err);
       }
-      var triangleArray = triangle[0].triangle.coordinates[0].slice(0,3);
-      var triangleValues = triangle[0].values;
-      //pull in barcentric library here - calculate coordinates then interpolate
-      var bcc = barycentric(triangleArray,[points[i][1],points[i][0]]);
-      var interpolated_value = bcc[0]*triangleValues[0] + bcc[1]*triangleValues[1] + bcc[2]*triangleValues[2];
-      myroute.pm25[i] = interpolated_value;
+
+      if (triangle[0]) {
+        var triangleArray = triangle[0].triangle.coordinates[0].slice(0, 3);
+        var triangleValues = triangle[0].values;
+        //pull in barcentric library here - calculate coordinates then interpolate
+        var bcc = barycentric(triangleArray, [points[i][1], points[i][0]]);
+        var interpolated_value = bcc[0] * triangleValues[0] + bcc[1] * triangleValues[1] + bcc[2] * triangleValues[2];
+        myroute.pm25[i] = interpolated_value;
+      }
+      else {
+        myroute.pm25[i] = 0;
+      }
+
 
       //async callback
       callback();
