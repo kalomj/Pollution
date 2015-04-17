@@ -1,16 +1,34 @@
 <div data-ng-controller="LayerHeatmapCtrl" style="height:100%;width:100%;position:absolute;overflow:hidden">
+
   <div class="leftmenu">
-    <button  ng-click="toggleHeatmap()">Toggle Heatmap</button>
+
+    <button ng-click="toggleMarkers()">Toggle Info Markers</button>
+    <button ng-click="toggleHeatmap()">Toggle Heatmap</button>
     <button ng-click="changeGradient()">Change gradient</button>
     <button ng-click="changeOpacity()">Change opacity</button>
-    <p>Max Intensity Slider</p>
+
+
+    <h4>Date PickerPopup</h4>
+        <p class="input-group">
+          <input readonly type="text" class="form-control" datepicker-popup="{{format}}" show-button-bar="false" ng-model="dt" is-open="opened" min-date="'2015-01-02'" max-date="today" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+        </p>
+
+    <h4>Max Intensity Slider</h4>
     <div ui-slider min="0" max="200" ng-model="slider.maxIntensity" ng-change="updateMaxValue()" ></div>
     <input type="text" ng-model="slider.maxIntensity" ng-change="updateMaxValue()" />
 
-    <p>Radius of Influence Slider</p>
-    <div ui-slider min="50" max="100" ng-model="slider.radius" ng-change="changeRadius()" ></div>
+
+
+    <h4>Radius of Influence Slider</h4>
+    <div ui-slider min="0" max="100" ng-model="slider.radius" ng-change="changeRadius()" ></div>
     <input type="text" ng-model="slider.radius" ng-change="changeRadius()" />
   </div>
+
+
+
   <div class="map-container"  >
     <div class="gmap">
       <map zoom="5" center="39.8282, -98.5795">
@@ -18,4 +36,6 @@
       </map>
     </div>
   </div>
+
+
 </div>

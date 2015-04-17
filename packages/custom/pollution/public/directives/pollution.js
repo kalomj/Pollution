@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('mean.pollution').directive('onReadFile', function ($parse) {
+angular.module('mean.pollution')
+  .directive('onReadFile', function ($parse) {
   return {
     restrict: 'A',
     scope: false,
@@ -17,6 +18,20 @@ angular.module('mean.pollution').directive('onReadFile', function ($parse) {
         };
 
         reader.readAsText((onChangeEvent.srcElement || onChangeEvent.target).files[0]);
+      });
+    }
+  };
+})
+  //overloading datepicker directive to due bug in intial formatting string
+  .directive('datepickerPopup', function (dateFilter, datepickerPopupConfig) {
+  return {
+    restrict: 'A',
+    priority: 1,
+    require: 'ngModel',
+    link: function(scope, element, attr, ngModel) {
+      var dateFormat = attr.datepickerPopup || datepickerPopupConfig.datepickerPopup;
+      ngModel.$formatters.push(function (value) {
+        return dateFilter(value, dateFormat);
       });
     }
   };

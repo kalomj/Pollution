@@ -14,6 +14,26 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.viewportData = [];
     $scope.slider = {};
 
+
+    //datapicker functions - TODO move to another controller
+
+    $scope.open = function($event) {
+      $event.preventDefault();
+      $event.stopPropagation();
+
+      $scope.opened = true;
+    };
+
+    $scope.dateOptions = {
+      formatYear: 'yy'
+    };
+
+    $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+    $scope.format = $scope.formats[0];
+
+    $scope.dt = $scope.today =  new Date();
+    //end datepicker functions
+
     var heatmap;
 
     $scope.$on('mapInitialized', function(event, map) {
@@ -71,8 +91,10 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
           }
         }
 
+        //post each time there is a map idle event to interpolate the gridded points
         $http.post('/viewport', viewportQuery)
           .success(function(response) {
+
             $scope.viewportData = [];
 
             for(var i=0;i<response.points.coordinates.length;i+=1){
@@ -92,10 +114,53 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
           });
       });
+
+      $scope.markers = [];
+      //function to build a marker at a location that pops open a window with information
+      $scope.createMarker = function(lat, lng, info) {
+        //jshint ignore:start
+        var pos = new google.maps.LatLng(lat, lng);
+
+        //build marker
+        var marker = new google.maps.Marker({
+          position: pos,
+          map: map
+        });
+
+        //build information window for marker
+        var infowindow = new google.maps.InfoWindow({
+          content: info
+        });
+
+        //add click listener to marker to pop up information window
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map,marker);
+        });
+
+        $scope.markers.push(marker);
+        //jshint ignore:end
+      };
+
+      //post to set up map markers to display measurement data info
+      $http.get('/hourlydata')
+        .success(function(response) {
+          $scope.markers = [];
+          for(var i=0;i<response.length; i+=1) {
+            $scope.createMarker(response[i].latitude, response[i].longitude, '<pre>' + JSON.stringify(response[i],null,2) + '</pre>');
+          }
+
+        });
+
     });
 
     $scope.updateMaxValue = function() {
       heatmap.set('maxIntensity',$scope.slider.maxIntensity);
+    };
+
+    $scope.toggleMarkers = function() {
+      for (var i = 0; i < $scope.markers.length; i+=1) {
+        $scope.markers[i].setMap($scope.markers[i].map ? null : $scope.map);
+      }
     };
 
     $scope.toggleHeatmap= function(event) {

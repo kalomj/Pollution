@@ -25,7 +25,8 @@ body.login, body.register,  body.forgot-password, body.reset-tokenId, body.first
   line-height: 1.42857143;
   color: #222;
   background-color: #999;
-  overflow:auto;
+
+  overflow-x:visible;
 
   height: -o-calc(100% - 50px); /* opera */
   height: -webkit-calc(100% - 50px); /* google, safari */
@@ -202,3 +203,4 @@ table tr:nth-child(odd)	{
 table tr:nth-child(even) {
   background-color: #ffffff;
 }
+

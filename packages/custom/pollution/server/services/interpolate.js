@@ -32,7 +32,9 @@ exports.interpolate = function(myroute,cb) {
         //pull in barcentric library here - calculate coordinates then interpolate
         var bcc = barycentric(triangleArray, [points[i][1], points[i][0]]);
         var interpolated_value = bcc[0] * triangleValues[0] + bcc[1] * triangleValues[1] + bcc[2] * triangleValues[2];
-        myroute.pm25[i] = interpolated_value;
+
+        //add interpolated value to the array. If it is less then zero, set it to zero
+        myroute.pm25[i] = interpolated_value < 0 ? 0 : interpolated_value;
       }
       else {
         myroute.pm25[i] = 0;
