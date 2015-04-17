@@ -11,10 +11,35 @@ body.login, body.register,  body.forgot-password, body.reset-tokenId, body.first
     overflow:hidden;
 }
 
+.leftmenu {
+  position:absolute;
+  left:0px;
+  height: calc(100% - 50px);
+  width:210px;
+  z-index:5;
+
+  margin-top: 50px;
+
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #222;
+  background-color: #999;
+  overflow:auto;
+
+  height: -o-calc(100% - 50px); /* opera */
+  height: -webkit-calc(100% - 50px); /* google, safari */
+  height: -moz-calc(100% - 50px); /* firefox */
+}
+
 .map-container {
   position: relative;
-  height: 100%;
+  height: calc(100% - 50px);
   margin-top: 50px;
+  margin-left:210px;
+  height: -o-calc(100% - 50px); /* opera */
+  height: -webkit-calc(100% - 50px); /* google, safari */
+  height: -moz-calc(100% - 50px); /* firefox */
 }
 
 .gmap {

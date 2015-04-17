@@ -13,7 +13,8 @@
     "web-bootstrap": "./node_modules/meanio/resources/web-bootstrap.js",
     "ngmap": "1.6.0",
     "angular-xml": "~2.1.0",
-    "angular-file-upload": "~1.1.5"
+    "angular-file-upload": "~1.1.5",
+    "angular-ui-slider": "~0.1.1"
   },
   "resolutions": {
     "ngmap": "1.6.0"

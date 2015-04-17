@@ -31,6 +31,10 @@ Pollution.register(function(app, auth, system, database) {
       weight: 1,
       group: 'header'});
 
+  Pollution.aggregateAsset('css', 'jquery-ui.css',{
+    weight: 1,
+    group: 'header'});
+
   Pollution.aggregateAsset('js', 'taxi-data.js',{
     weight: 1,
     group: 'footer'});

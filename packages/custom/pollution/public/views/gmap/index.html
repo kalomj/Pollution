@@ -1,13 +1,19 @@
 <div data-ng-controller="LayerHeatmapCtrl" style="height:100%;width:100%;position:absolute;overflow:hidden">
+  <div class="leftmenu">
+    <button  ng-click="toggleHeatmap()">Toggle Heatmap</button>
+    <button ng-click="changeGradient()">Change gradient</button>
+    <button ng-click="changeOpacity()">Change opacity</button>
+    <p>Max Intensity Slider</p>
+    <div ui-slider min="0" max="200" ng-model="slider.maxIntensity" ng-change="updateMaxValue()" ></div>
+    <input type="text" ng-model="slider.maxIntensity" ng-change="updateMaxValue()" />
+
+    <p>Radius of Influence Slider</p>
+    <div ui-slider min="50" max="100" ng-model="slider.radius" ng-change="changeRadius()" ></div>
+    <input type="text" ng-model="slider.radius" ng-change="changeRadius()" />
+  </div>
   <div class="map-container"  >
     <div class="gmap">
-      <div class="panel">
-        <button ng-click="toggleHeatmap()">Toggle Heatmap</button>
-        <button ng-click="changeGradient()">Change gradient</button>
-        <button ng-click="changeRadius()">Change radius</button>
-        <button ng-click="changeOpacity()">Change opacity</button>
-      </div>
-      <map zoom="15" center="37.782, -122.441" map-type-id="SATELLITE">
+      <map zoom="5" center="39.8282, -98.5795">
         <heatmap-layer id="foo" data="viewportData"></heatmap-layer>
       </map>
     </div>

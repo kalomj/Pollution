@@ -12,6 +12,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
   function($scope, Global, Pollution, $log, $http) {
 
     $scope.viewportData = [];
+    $scope.slider = {};
 
     var heatmap;
 
@@ -19,9 +20,16 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
       heatmap = map.heatmapLayers.foo;
       heatmap.set('radius',75);
+      $scope.slider.radius = 75;
       heatmap.set('maxIntensity',25);
+      $scope.slider.maxIntensity = 25;
 
       $scope.map = map;
+
+      google.maps.event.addListener //jshint ignore:line
+      (map, 'zoom_changed', function() {
+        heatmap.setMap(null);
+      });
 
       //set up event listeners - when the user stops browsing the map for a moment, rerender the pollution data
       google.maps.event.addListener //jshint ignore:line
@@ -35,9 +43,8 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
         var lat = bounds.Da.k;
 
         //while lat is less than max lat
-        var latArray = [lat];
-
         //build array of latitude steps
+        var latArray = [lat];
         var latstep = (bounds.Da.j - bounds.Da.k)/(map.getDiv().clientHeight/gridspacing);
         while(lat < bounds.Da.j) {
           lat += latstep;
@@ -48,9 +55,8 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
         var lng = bounds.va.j;
 
         //while lng is less than max lng
-        var lngArray = [lng];
-
         //build array of longitude steps
+        var lngArray = [lng];
         var lngstep = (bounds.va.k - bounds.va.j)/(map.getDiv().clientWidth/gridspacing);
         while(lng < bounds.va.k) {
           lng += lngstep;
@@ -58,7 +64,6 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
         }
 
         //build grid of points to overlay on map
-
         var viewportQuery = { points: { coordinates: []}};
         for(var i = 0; i < latArray.length; i+=1){
           for(var j = 0; j < lngArray.length; j+=1) {
@@ -71,19 +76,27 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
             $scope.viewportData = [];
 
             for(var i=0;i<response.points.coordinates.length;i+=1){
-
               var point = response.points.coordinates[i];
+              $scope.viewportData.push(
+                {
+                  location: new google.maps.LatLng(Number(point[0]),Number(point[1])), //jshint ignore:line
+                  weight: response.pm25[i]
+                });
+            }
 
-              $scope.viewportData.push({location: new google.maps.LatLng(Number(point[0]),Number(point[1])), weight: response.pm25[i]}); //jshint ignore:line
-
+            if(!heatmap.getMap()) {
+              heatmap.setMap(map);
             }
 
             heatmap.set('data', $scope.viewportData);
+
           });
-
-
       });
     });
+
+    $scope.updateMaxValue = function() {
+      heatmap.set('maxIntensity',$scope.slider.maxIntensity);
+    };
 
     $scope.toggleHeatmap= function(event) {
       heatmap.setMap(heatmap.getMap() ? null : $scope.map);
@@ -110,7 +123,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     };
 
     $scope.changeRadius = function() {
-      heatmap.set('radius', heatmap.get('radius')===75 ? 100 : 75);
+      heatmap.set('radius', $scope.slider.radius);
     };
 
     $scope.changeOpacity = function() {

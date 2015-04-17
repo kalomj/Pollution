@@ -14,7 +14,10 @@
         "bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
         "bower_components/web-bootstrap/index.js",
         "bower_components/ngmap/build/scripts/ng-map.min.js",
-        "bower_components/x2js/xml2json.min.js"
+        "bower_components/x2js/xml2json.min.js",
+        "bower_components/jquery/dist/jquery.min.js",
+        "bower_components/jquery-ui/ui/minified/jquery-ui.min.js",
+        "bower_components/angular-ui-slider/src/slider.js"
       ]
     }
   }
