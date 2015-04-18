@@ -11,13 +11,13 @@ var mongoose = require('mongoose'),
  * Calculate the interpolated value of a point
  * assuming a delaunay mesh exists with known measurements
  */
-exports.interpolate = function(myroute,cb) {
+exports.interpolate = function(myroute,year,month,day,hour,parameter_name,cb) {
 
   var points = myroute.points.coordinates;
   var asyncTasks = [];
 
   //setup location to store intepolated values - TODO : only handles PM2.5 at the moment, add support for more types
-  myroute.pm25 = [];
+  myroute[parameter_name] = [];
 
   //setup callback to handle the mongodb query
   var querycb =  function(callback,i) {
@@ -34,10 +34,10 @@ exports.interpolate = function(myroute,cb) {
         var interpolated_value = bcc[0] * triangleValues[0] + bcc[1] * triangleValues[1] + bcc[2] * triangleValues[2];
 
         //add interpolated value to the array. If it is less then zero, set it to zero
-        myroute.pm25[i] = interpolated_value < 0 ? 0 : interpolated_value;
+        myroute[parameter_name][i] = interpolated_value < 0 ? 0 : interpolated_value;
       }
       else {
-        myroute.pm25[i] = 0;
+        myroute[parameter_name][i] = 0;
       }
 
 

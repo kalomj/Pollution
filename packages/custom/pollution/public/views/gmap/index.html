@@ -16,8 +16,12 @@
               </span>
         </p>
 
+    <h4>Time Picker</h4>
+      <timepicker readonly-input="true" ng-model="time" hour-step="1" minute-step="60" show-meridian="false"></timepicker>
+    </p>
+
     <h4>Max Intensity Slider</h4>
-    <div ui-slider min="0" max="200" ng-model="slider.maxIntensity" ng-change="updateMaxValue()" ></div>
+    <div ui-slider min="0" max="300" ng-model="slider.maxIntensity" ng-change="updateMaxValue()" ></div>
     <input type="text" ng-model="slider.maxIntensity" ng-change="updateMaxValue()" />
 
 
@@ -25,7 +29,39 @@
     <h4>Radius of Influence Slider</h4>
     <div ui-slider min="0" max="100" ng-model="slider.radius" ng-change="changeRadius()" ></div>
     <input type="text" ng-model="slider.radius" ng-change="changeRadius()" />
+
+    <h4>Pollution Parameter Type</h4>
+    <form name="myForm">
+      <label>
+        <input type="radio" ng-model="parameter_name" value="O3">
+        O3
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="parameter_name" value="PM25">
+        PM2.5
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="parameter_name" value="PM10">
+        PM10
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="parameter_name" value="CO">
+        CO
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="parameter_name" value="SO2">
+        SO2
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="parameter_name" value="NO2">
+        NO2
+      </label><br/>
+    </form>
+
+
   </div>
+
+
 
 
 

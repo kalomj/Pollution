@@ -32,7 +32,19 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.format = $scope.formats[0];
 
     $scope.dt = $scope.today =  new Date();
+
     //end datepicker functions
+
+    //timepicker functions
+    $scope.time = new Date();
+    $scope.time.setMinutes(0,0,0);
+    //end timepicker functions
+
+    $scope.year = '15';
+    $scope.month = '04';
+    $scope.day = '08';
+    $scope.hour = '21';
+    $scope.parameter_name = 'PM25';
 
     var heatmap;
 
@@ -156,7 +168,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
         }
 
         //post each time there is a map idle event to interpolate the gridded points
-        $http.post('/viewport', viewportQuery)
+        $http.post('/viewport/' + $scope.year + '/' + $scope.month + '/' + $scope.day + '/' + $scope.hour + '/' + $scope.parameter_name, viewportQuery)
           .success(function(response) {
 
             $scope.viewportData = [];
@@ -174,7 +186,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
                 $scope.viewportData.push(
                   {
                     location: latlng, //jshint ignore:line
-                    weight: response.pm25[i]
+                    weight: response[$scope.parameter_name][i]
                   });
               }
             }

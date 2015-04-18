@@ -14,7 +14,13 @@ var mongoose = require('mongoose'),
 exports.render = function(req, res) {
   var myroute = new MyRoute(req.body);
 
-  interpolate.interpolate(myroute,function() {
+  var year = req.params.year;
+  var month = req.params.month;
+  var day = req.params.day;
+  var hour = req.params.hour;
+  var parameter_name = req.params.parameter_name;
+
+  interpolate.interpolate(myroute,year,month,day,hour,parameter_name,function() {
       res.json(myroute);
   });
 };

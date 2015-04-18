@@ -29,7 +29,7 @@ var MyRouteSchema = new Schema({
     type: Schema.ObjectId,
     ref: 'User'
   },
-  pm25: {
+  PM25: {
     type: [Number]
   }
 });
