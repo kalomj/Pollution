@@ -8,7 +8,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
       name: 'pollution'
     };
   }
-]).controller('LayerHeatmapCtrl', ['$scope', 'Global', 'Pollution', '$log', '$http',
+]).controller('GMapCtrl', ['$scope', 'Global', 'Pollution', '$log', '$http',
   function($scope, Global, Pollution, $log, $http) {
 
     $scope.viewportData = [];
@@ -46,10 +46,74 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
       $scope.map = map;
 
+      //clear heatmap when there is a zoom event to prevent bad visualization (red rectangle issue)
       google.maps.event.addListener //jshint ignore:line
       (map, 'zoom_changed', function() {
         heatmap.setMap(null);
       });
+
+      //set up polygon containing the contiguous united states - only render points in this polygon
+      var uspolygoncoordinates = [
+        /* jshint ignore:start */
+        new google.maps.LatLng(46.195042,-125.112305),
+        new google.maps.LatLng(41.771312,-125.419922),
+        new google.maps.LatLng(39.130060,-124.936523),
+        new google.maps.LatLng(34.307144,-121.245117),
+        new google.maps.LatLng(32.324276,-117.465820),
+        new google.maps.LatLng(32.138409,-115.268555),
+        new google.maps.LatLng(30.789037,-111.357422),
+        new google.maps.LatLng(30.751278,-108.237305),
+        new google.maps.LatLng(30.334954,-106.303711),
+        new google.maps.LatLng(28.574874,-104.194336),
+        new google.maps.LatLng(28.497661,-102.700195),
+        new google.maps.LatLng(29.152161,-101.953125),
+        new google.maps.LatLng(27.994401,-100.898438),
+        new google.maps.LatLng(26.076521,-99.404297 ),
+        new google.maps.LatLng(25.522615,-97.031250 ),
+        new google.maps.LatLng(25.958045,-96.152344 ),
+        new google.maps.LatLng(27.215556,-96.635742 ),
+        new google.maps.LatLng(28.497661,-94.658203 ),
+        new google.maps.LatLng(28.767659,-90.659180 ),
+        new google.maps.LatLng(28.574874,-88.417969 ),
+        new google.maps.LatLng(29.688053,-88.461914 ),
+        new google.maps.LatLng(29.573457,-86.000977 ),
+        new google.maps.LatLng(29.113775,-84.770508 ),
+        new google.maps.LatLng(29.228890,-84.111328 ),
+        new google.maps.LatLng(25.878994,-82.441406 ),
+        new google.maps.LatLng(24.726875,-81.298828 ),
+        new google.maps.LatLng(25.045792,-79.584961 ),
+        new google.maps.LatLng(26.627818,-79.233398 ),
+        new google.maps.LatLng(31.090574,-80.419922 ),
+        new google.maps.LatLng(34.741612,-75.673828 ),
+        new google.maps.LatLng(36.985003,-75.058594 ),
+        new google.maps.LatLng(40.111689,-73.344727 ),
+        new google.maps.LatLng(40.813809,-69.082031 ),
+        new google.maps.LatLng(42.940339,-69.653320 ),
+        new google.maps.LatLng(44.653024,-66.269531 ),
+        new google.maps.LatLng(47.842658,-67.456055 ),
+        new google.maps.LatLng(47.517201,-69.653320 ),
+        new google.maps.LatLng(45.798170,-71.147461 ),
+        new google.maps.LatLng(45.706179,-74.750977 ),
+        new google.maps.LatLng(44.339565,-77.255859 ),
+        new google.maps.LatLng(43.421009,-79.892578 ),
+        new google.maps.LatLng(42.650122,-81.518555 ),
+        new google.maps.LatLng(45.460131,-82.089844 ),
+        new google.maps.LatLng(48.429201,-87.670898 ),
+        new google.maps.LatLng(49.353756,-94.218750 ),
+        new google.maps.LatLng(49.696062,-124.936523),
+        new google.maps.LatLng(46.195042,-125.112305)
+        /* jshint ignore:end */
+      ];
+
+      //jshint ignore:start
+      $scope.uspolygon = new google.maps.Polygon({
+        paths: uspolygoncoordinates,
+        strokeOpacity : 0,
+        fillOpacity: 0
+      });
+      //jshint ignore:end
+
+      $scope.uspolygon.setMap(map);
 
       //set up event listeners - when the user stops browsing the map for a moment, rerender the pollution data
       google.maps.event.addListener //jshint ignore:line
@@ -99,11 +163,20 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
             for(var i=0;i<response.points.coordinates.length;i+=1){
               var point = response.points.coordinates[i];
-              $scope.viewportData.push(
-                {
-                  location: new google.maps.LatLng(Number(point[0]),Number(point[1])), //jshint ignore:line
-                  weight: response.pm25[i]
-                });
+
+              var latlng = new google.maps.LatLng(Number(point[0]),Number(point[1])); // jshint ignore:line
+
+              var isWithinPolygon =
+                google.maps.geometry.poly.containsLocation //jshint ignore:line
+                  (latlng, $scope.uspolygon);
+
+              if(isWithinPolygon) {
+                $scope.viewportData.push(
+                  {
+                    location: latlng, //jshint ignore:line
+                    weight: response.pm25[i]
+                  });
+              }
             }
 
             if(!heatmap.getMap()) {
@@ -150,7 +223,6 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
           }
 
         });
-
     });
 
     $scope.updateMaxValue = function() {
