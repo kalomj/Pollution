@@ -22,8 +22,8 @@
     </p>
 
     <h4>Max Intensity Slider</h4>
-    <div ui-slider min="1" max="400" ng-model="slider.maxIntensity" ng-change="updateMaxValue()" ></div>
-    <input type="text" ng-model="slider.maxIntensity" ng-change="updateMaxValue()" />
+    <div ui-slider min="1" max="400" ng-model="slider.maxIntensity" ng-change="changeMaxValue()" ></div>
+    <input type="text" ng-model="slider.maxIntensity" ng-change="changeMaxValue()" />
 
 
 
@@ -31,31 +31,35 @@
     <div ui-slider min="0" max="100" ng-model="slider.radius" ng-change="changeRadius()" ></div>
     <input type="text" ng-model="slider.radius" ng-change="changeRadius()" />
 
+
+    <h4>Calculated Max Intensity<br />in Parameter Units</h4>
+    <input type="text" readonly  ng-model="slider.calculated"  />
+
     <h4>Pollution Parameter Type</h4>
     <form name="myForm">
       <label>
         <input type="radio" ng-model="parameter_name" ng-change="changeParameter()" value="OZONE">
-        O3
+        <b>O<sub>3</sub> (ppb)</b>
       </label><br/>
       <label>
         <input type="radio" ng-model="parameter_name" ng-change="changeParameter()" value="PM25">
-        PM2.5
+        <b>PM<sub>2.5</sub> (µg/m<sup>3</sup>)</b>
       </label><br/>
       <label>
         <input type="radio" ng-model="parameter_name" ng-change="changeParameter()" value="PM10">
-        PM10
+        <b>PM<sub>10</sub> (µg/m<sup>3</sup>)</b>
       </label><br/>
       <label>
         <input type="radio" ng-model="parameter_name" ng-change="changeParameter()" value="CO">
-        CO
+        <b>CO (ppm)</b>
       </label><br/>
       <label>
         <input type="radio" ng-model="parameter_name" ng-change="changeParameter()" value="SO2">
-        SO2
+        <b>SO<sub>2</sub> (ppb)</b>
       </label><br/>
       <label>
         <input type="radio" ng-model="parameter_name" ng-change="changeParameter()" value="NO2">
-        NO2
+        <b>NO<sub>2</sub> (ppb)</b>
       </label><br/>
     </form>
 

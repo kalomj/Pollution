@@ -64,6 +64,21 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.slider.parameterMaxIntensity.NO2 = 37;
     $scope.slider.parameterMaxIntensity.OZONE = 1;
 
+    $scope.gridSpacing = 50;
+
+    $scope.slider.radius = 82;
+    $scope.slider.maxIntensity = $scope.slider.parameterMaxIntensity[$scope.parameter_name];
+
+    //Attempt to show the "true" max intensity in parameter units by considering ratio of overlap of heatmap markers
+    $scope.slider.calculate = function() {
+      var multiplier = $scope.gridSpacing < $scope.slider.radius ? $scope.gridSpacing / $scope.slider.radius : 1;
+
+      $scope.slider.calculated = $scope.slider.maxIntensity * multiplier;
+      $scope.slider.calculated = +(Math.round($scope.slider.calculated + "e+2")  + "e-2");
+    }
+
+    $scope.slider.calculate();
+
 
     var heatmap;
 
@@ -163,7 +178,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
         return;
       }
 
-      var gridspacing = 50;
+      var gridspacing = $scope.gridSpacing;
 
       var bounds = $scope.map.getBounds();
 
@@ -241,10 +256,8 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
       heatmap = map.heatmapLayers.foo;
 
-      $scope.slider.radius = 82;
-      heatmap.set('radius',82);
 
-      $scope.slider.maxIntensity = $scope.slider.parameterMaxIntensity[$scope.parameter_name];
+      heatmap.set('radius',$scope.slider.radius );
       heatmap.set('maxIntensity',$scope.slider.maxIntensity);
 
 
@@ -284,8 +297,8 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
         new google.maps.LatLng(29.113775,-84.770508 ),
         new google.maps.LatLng(29.228890,-84.111328 ),
         new google.maps.LatLng(25.878994,-82.441406 ),
-        new google.maps.LatLng(24.726875,-81.298828 ),
-        new google.maps.LatLng(25.045792,-79.584961 ),
+        new google.maps.LatLng(24.5,-82 ),
+        new google.maps.LatLng(24.5,-79 ),
         new google.maps.LatLng(26.627818,-79.233398 ),
         new google.maps.LatLng(31.090574,-80.419922 ),
         new google.maps.LatLng(34.741612,-75.673828 ),
@@ -336,8 +349,9 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
     });
 
-    $scope.updateMaxValue = function() {
+    $scope.changeMaxValue = function() {
       heatmap.set('maxIntensity',$scope.slider.maxIntensity);
+      $scope.slider.calculate();
     };
 
     $scope.toggleMarkers = function() {
@@ -385,6 +399,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
     $scope.changeRadius = function() {
       heatmap.set('radius', $scope.slider.radius);
+      $scope.slider.calculate();
     };
 
     $scope.changeOpacity = function() {
@@ -397,6 +412,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
       heatmap.setMap(null);
       $scope.slider.maxIntensity = $scope.slider.parameterMaxIntensity[$scope.parameter_name];
       heatmap.set('maxIntensity',$scope.slider.maxIntensity);
+      $scope.slider.calculate();
 
       $scope.renderHeatmap();
 
