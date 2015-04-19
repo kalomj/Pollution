@@ -42,12 +42,24 @@ exports.delaunay_cron = function(req, res) {
         });
       }
 
-      hourlydatas.forEach(function(hourlydata){
-        points.push([hourlydata.latitude, hourlydata.longitude]);
-      });
 
+      var hourlydatas_copy = [];
+      for(var i = 0; i < hourlydatas.length; i+=1) {
+
+        var hourlydata = hourlydatas[i];
+        //exclude where latitude and longitude values are invalid
+        if(hourlydata.latitude !== 0 && hourlydata.longitude !== 0) {
+          points.push([hourlydata.latitude, hourlydata.longitude]);
+          hourlydatas_copy.push(hourlydata);
+        }
+      }
+
+      hourlydatas = hourlydatas_copy;
+
+      console.log('Calculating triangulation');
       // Perform delaunay triangulation
       var triangles = triangulate(points);
+      console.log('Finished calculating triangulation');
 
       // Remove old delaunay triangulation wth the same metadata if it exists
       Triangle.remove({ valid_date: valid_date,
@@ -56,6 +68,7 @@ exports.delaunay_cron = function(req, res) {
         console.log('triangle removed at %s %s %s', valid_date, valid_time, parameter_name);
 
         // populate the collection with the new triangulation
+        var triangle_bodys = [];
         triangles.forEach(function(triangle) {
           var body = {
             triangle: {
@@ -78,18 +91,23 @@ exports.delaunay_cron = function(req, res) {
             ]
           };
 
-          var myTriangle = new Triangle(body);
-          myTriangle.save(function(err) {
-            if (err) {
-              console.log(err);
-            }
-            console.log('Finished adding triangles to collection at %s %s %s', valid_date, valid_time, parameter_name);
-          });
-        });
+          triangle_bodys.push(body);
 
+        });
+        Triangle.collection.insert(triangle_bodys,{},function(err) {
+          if (err) {
+            console.log(err);
+            res.send('Cron job failed: ' + err);
+          }
+          else {
+            console.log('finished bulk triangle insert');
+            res.send('cron job successfully completed for ' + valid_date + ' ' + valid_time + ' ' + parameter_name);
+          }
+
+        });
 
       });
     });
 
-  res.send('cron job successfully requested for ' + valid_date + ' ' + valid_time + ' ' + parameter_name);
+  console.log('cron job requested for ' + valid_date + ' ' + valid_time + ' ' + parameter_name);
 };

@@ -29,12 +29,25 @@ exports.interpolate = function(myroute,year,month,day,hour,parameter_name,cb) {
         console.log(err);
       }
 
+      if(triangle.length > 1) {
+        console.log('Point unexpectedly belongs to more than one triangle');
+      }
+
       if (triangle[0]) {
         var triangleArray = triangle[0].triangle.coordinates[0].slice(0, 3);
         var triangleValues = triangle[0].values;
         //pull in barcentric library here - calculate coordinates then interpolate
         var bcc = barycentric(triangleArray, [points[i][1], points[i][0]]);
         var interpolated_value = bcc[0] * triangleValues[0] + bcc[1] * triangleValues[1] + bcc[2] * triangleValues[2];
+
+        /*
+        console.log('Point ' + i);
+        console.log(triangle[0]);
+        console.log(triangle[0].triangle.coordinates[0]);
+        console.log(bcc);
+        console.log(points[i]);
+        console.log(interpolated_value);
+        */
 
         //add interpolated value to the array. If it is less then zero, set it to a very small value
         myroute[parameter_name][i] = interpolated_value < 0 ? 0.000001 : interpolated_value;

@@ -53,7 +53,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.parameterMultiplier.PM10 = 0.1;
     $scope.parameterMultiplier.SO2 = 5;
     $scope.parameterMultiplier.NO2 = 2;
-    $scope.parameterMultiplier.OZONE = 1;
+    $scope.parameterMultiplier.OZONE = 0.5;
 
     $scope.slider.parameterMaxIntensity = {};
 
@@ -62,7 +62,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.slider.parameterMaxIntensity.PM10 = 400;
     $scope.slider.parameterMaxIntensity.SO2 = 23;
     $scope.slider.parameterMaxIntensity.NO2 = 37;
-    $scope.slider.parameterMaxIntensity.OZONE = 1;
+    $scope.slider.parameterMaxIntensity.OZONE = 125;
 
     $scope.gridSpacing = 50;
 
@@ -74,8 +74,8 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
       var multiplier = $scope.gridSpacing < $scope.slider.radius ? $scope.gridSpacing / $scope.slider.radius : 1;
 
       $scope.slider.calculated = $scope.slider.maxIntensity * multiplier;
-      $scope.slider.calculated = +(Math.round($scope.slider.calculated + "e+2")  + "e-2");
-    }
+      $scope.slider.calculated = +(Math.round($scope.slider.calculated + 'e+2')  + 'e-2');
+    };
 
     $scope.slider.calculate();
 
