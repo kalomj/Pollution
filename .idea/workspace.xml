@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c07db2d7-c1ee-4297-aa63-b09b9fda6e5d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/server/controllers/cron.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/server/controllers/cron.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/server/controllers/hourlydata.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/server/controllers/hourlydata.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/server/routes/hourlydata.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/server/routes/hourlydata.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/server/services/interpolate.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/server/services/interpolate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/public/assets/css/jquery-ui.css" afterPath="$PROJECT_DIR$/packages/custom/pollution/public/assets/css/jquery-ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html" afterPath="$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js" />
     </list>
     <ignored path="Pollution.iws" />
@@ -37,16 +36,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pollution.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pollution.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.62329483">
+              <caret line="201" column="0" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
               <folding>
-                <element signature="e#545#644#0" expanded="false" />
-                <element signature="e#672#702#0" expanded="false" />
-                <element signature="e#1813#4472#0" expanded="false" />
+                <element signature="e#575#674#0" expanded="false" />
+                <element signature="e#702#732#0" expanded="false" />
+                <element signature="e#1845#4504#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="triangles.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/models/triangles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -61,21 +70,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hourlydata.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/hourlydata.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.547744">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state vertical-scroll-proportion="-10.666667">
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interpolate.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/services/interpolate.js">
+      <file leaf-file-name="hourlydata.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/hourlydata.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myroutes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/myroutes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.903226">
+              <caret line="34" column="10" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="triangles.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/routes/triangles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cron.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/cron.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-37.741936">
+              <caret line="65" column="53" selection-start-line="65" selection-start-column="53" selection-end-line="65" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="triangles.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/triangles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.32258">
+              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -89,8 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bower_components/ngmap/app/scripts/directives/heatmap-layer.js" />
-        <option value="$PROJECT_DIR$/bower_components/ngmap/app/scripts/directives/map_controller.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/assets/js/taxi-data.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/assets/js/route-data.js" />
         <option value="$PROJECT_DIR$/bower_components/ngmap/build/scripts/ng-map.js" />
@@ -117,7 +164,6 @@
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/routes/myroutes.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/controllers/myroutes.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/views/myroutes/view.html" />
-        <option value="$PROJECT_DIR$/packages/custom/pollution/server/controllers/cron.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/services/myroutes.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/assets/data/myroute.json" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/controllers/myroutes.js" />
@@ -133,13 +179,16 @@
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/models/triangles.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/routes/viewport.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/controllers/viewport.js" />
-        <option value="$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/models/myroutes.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/routes/hourlydata.js" />
-        <option value="$PROJECT_DIR$/packages/custom/pollution/server/controllers/hourlydata.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/services/interpolate.js" />
-        <option value="$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/assets/css/jquery-ui.css" />
+        <option value="$PROJECT_DIR$/packages/custom/pollution/server/routes/triangles.js" />
+        <option value="$PROJECT_DIR$/packages/custom/pollution/server/controllers/hourlydata.js" />
+        <option value="$PROJECT_DIR$/packages/custom/pollution/server/controllers/cron.js" />
+        <option value="$PROJECT_DIR$/packages/custom/pollution/server/controllers/triangles.js" />
+        <option value="$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html" />
+        <option value="$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js" />
       </list>
     </option>
   </component>
@@ -1066,7 +1115,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1074,7 +1123,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20752798" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22857143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22857143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1130,20 +1179,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/packages/articles/public/views/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/articles/public/controllers/articles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7122302">
-          <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/angular-file-upload/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1388,42 +1423,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/routes/cron.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/cron.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/models/triangles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/services/myroutes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/routes/myroutes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1444,24 +1447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48488122">
-          <caret line="55" column="66" selection-start-line="55" selection-start-column="66" selection-end-line="55" selection-end-column="66" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/myroutes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3210913">
-          <caret line="17" column="73" selection-start-line="17" selection-start-column="73" selection-end-line="17" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/routes/viewport.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11332634">
@@ -1474,14 +1459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47219306">
           <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/viewport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -1502,15 +1479,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js">
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/routes/myroutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47219306">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/routes/cron.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
-          <folding>
-            <element signature="e#545#644#0" expanded="false" />
-            <element signature="e#672#702#0" expanded="false" />
-            <element signature="e#1813#4472#0" expanded="false" />
-          </folding>
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1522,11 +1503,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/myroutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.903226">
+          <caret line="34" column="10" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/cron.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-37.741936">
+          <caret line="65" column="53" selection-start-line="65" selection-start-column="53" selection-end-line="65" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/hourlydata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.547744">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="2" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/models/triangles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/viewport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/routes/triangles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/triangles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.32258">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.666667">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62329483">
+          <caret line="201" column="0" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+          <folding>
+            <element signature="e#575#674#0" expanded="false" />
+            <element signature="e#702#732#0" expanded="false" />
+            <element signature="e#1845#4504#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

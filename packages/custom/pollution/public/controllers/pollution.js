@@ -13,7 +13,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
     $scope.viewportData = [];
     $scope.slider = {};
-
+    $scope.userHeatmap = true;
 
     //datapicker functions - TODO move to another controller
 
@@ -51,10 +51,10 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.$on('mapInitialized', function(event, map) {
 
       heatmap = map.heatmapLayers.foo;
-      heatmap.set('radius',75);
-      $scope.slider.radius = 75;
-      heatmap.set('maxIntensity',25);
-      $scope.slider.maxIntensity = 25;
+      heatmap.set('radius',82);
+      $scope.slider.radius = 82;
+      heatmap.set('maxIntensity',141);
+      $scope.slider.maxIntensity = 141;
 
       $scope.map = map;
 
@@ -191,7 +191,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
               }
             }
 
-            if(!heatmap.getMap()) {
+            if($scope.userHeatmap && !heatmap.getMap()) {
               heatmap.setMap(map);
             }
 
@@ -209,12 +209,19 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
         //build marker
         var marker = new google.maps.Marker({
           position: pos,
-          map: map
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: 'blue',
+            fillOpacity: .2,
+            scale: info.value,
+            strokeColor: 'white',
+            strokeWeight: .5
+          }
         });
 
         //build information window for marker
         var infowindow = new google.maps.InfoWindow({
-          content: info
+          content: '<pre>' + JSON.stringify(info,null,2) + '</pre>'
         });
 
         //add click listener to marker to pop up information window
@@ -231,10 +238,40 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
         .success(function(response) {
           $scope.markers = [];
           for(var i=0;i<response.length; i+=1) {
-            $scope.createMarker(response[i].latitude, response[i].longitude, '<pre>' + JSON.stringify(response[i],null,2) + '</pre>');
+            $scope.createMarker(response[i].latitude, response[i].longitude, response[i] );
           }
 
         });
+
+      $scope.triangles = [];
+      //  return triangles of the delaunay triangluation for the given parameter
+      $http.get('/triangles/' + $scope.year + '/' + $scope.month + '/' + $scope.day + '/' + $scope.hour + '/' + $scope.parameter_name)
+        .success(function(response) {
+          $scope.triangles = [];
+          for(var i=0;i<response.length; i+=1) {
+
+
+            var triangleCoordinates = [
+              //jshint ignore:start
+              new google.maps.LatLng(response[i].triangle.coordinates[0][0][1],response[i].triangle.coordinates[0][0][0]),
+              new google.maps.LatLng(response[i].triangle.coordinates[0][1][1],response[i].triangle.coordinates[0][1][0]),
+              new google.maps.LatLng(response[i].triangle.coordinates[0][2][1],response[i].triangle.coordinates[0][2][0]),
+              new google.maps.LatLng(response[i].triangle.coordinates[0][3][1],response[i].triangle.coordinates[0][3][0])
+              //jshint ignore:end
+            ];
+
+            //jshint ignore:start
+            $scope.triangles[i] = new google.maps.Polygon({
+              paths: triangleCoordinates,
+              strokeOpacity : 0.5,
+              fillOpacity: 0,
+              strokeWeight: 1
+            });
+            //jshint ignore:end
+          }
+
+        });
+
     });
 
     $scope.updateMaxValue = function() {
@@ -247,8 +284,15 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
       }
     };
 
+    $scope.toggleTriangles = function() {
+      for (var i = 0; i < $scope.triangles.length; i+=1) {
+        $scope.triangles[i].setMap($scope.triangles[i].map ? null : $scope.map);
+      }
+    };
+
     $scope.toggleHeatmap= function(event) {
-      heatmap.setMap(heatmap.getMap() ? null : $scope.map);
+      $scope.userHeatmap = $scope.userHeatmap ? false : true;
+      heatmap.setMap($scope.userHeatmap ? $scope.map : null);
     };
 
     $scope.changeGradient = function() {

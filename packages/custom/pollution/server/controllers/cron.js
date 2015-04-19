@@ -15,12 +15,10 @@ var mongoose = require('mongoose'),
 exports.delaunay_cron = function(req, res) {
   var valid_date = '04/08/15';
   var valid_time = '21:00';
-  var country_code = 'US';
   var parameter_name = 'PM2.5';
 
   HourlyData.find({ valid_date: valid_date,
                     valid_time: valid_time,
-                    country_code: country_code,
                     parameter_name: parameter_name})
     .select('latitude longitude value')
     .exec(function (err,hourlydatas) {
@@ -45,7 +43,6 @@ exports.delaunay_cron = function(req, res) {
       // Remove old delaunay triangulation wth the same metadata if it exists
       Triangle.remove({ valid_date: valid_date,
         valid_time: valid_time,
-        country_code: country_code,
         parameter_name: parameter_name}, function(err) {
         console.log('triangle removed at %s %s %s', valid_date, valid_time, parameter_name);
 
@@ -65,7 +62,6 @@ exports.delaunay_cron = function(req, res) {
             },
             valid_date: valid_date,
             valid_time: valid_time,
-            country_code: country_code,
             parameter_name: parameter_name,
             values: [ hourlydatas[triangle[0]].value,
               hourlydatas[triangle[1]].value,
@@ -86,5 +82,5 @@ exports.delaunay_cron = function(req, res) {
       });
     });
 
-  res.send('cron job successfully requested for ' + valid_date + ' ' + valid_time + ' ' + country_code + ' ' + parameter_name);
+  res.send('cron job successfully requested for ' + valid_date + ' ' + valid_time + ' ' + parameter_name);
 };

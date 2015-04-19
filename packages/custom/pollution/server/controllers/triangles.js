@@ -4,11 +4,11 @@
  * Module dependencies.
  */
 var mongoose = require('mongoose'),
-  HourlyData = mongoose.model('HourlyData');
+  Triangle = mongoose.model('Triangle');
 
 
 /**
- * Return collection of hourly data measurements
+ * Return collection triangles
  */
 exports.show = function(req, res) {
 
@@ -26,12 +26,12 @@ exports.show = function(req, res) {
     valid_time: valid_time,
     parameter_name: query_parameter_name};
 
-  HourlyData.find(query).exec(function(err, hourlydata) {
+  Triangle.find(query).exec(function(err, triangles) {
     if (err) {
       return res.status(500).json({
-        error: 'Cannot list the hourlydata'
+        error: 'Cannot list the triangles'
       });
     }
-    res.json(hourlydata);
+    res.json(triangles);
   });
 };
