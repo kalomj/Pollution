@@ -227,7 +227,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
       };
 
       //post to set up map markers to display measurement data info
-      $http.get('/hourlydata')
+      $http.get('/hourlydata/' + $scope.year + '/' + $scope.month + '/' + $scope.day + '/' + $scope.hour + '/' + $scope.parameter_name)
         .success(function(response) {
           $scope.markers = [];
           for(var i=0;i<response.length; i+=1) {
