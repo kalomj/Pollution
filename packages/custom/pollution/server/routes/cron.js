@@ -14,7 +14,7 @@ var hasAuthorization = function(req, res, next) {
 
 module.exports = function(Pollution, app, auth) {
 
-  app.route('/cron')
+  app.route('/cron/:year/:month/:day/:hour/:parameter_name')
     .get(cron.delaunay_cron);
 
   /*

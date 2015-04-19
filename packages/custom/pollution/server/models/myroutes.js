@@ -31,6 +31,21 @@ var MyRouteSchema = new Schema({
   },
   PM25: {
     type: [Number]
+  },
+  OZONE: {
+    type: [Number]
+  },
+  CO: {
+    type: [Number]
+  },
+  NO2: {
+    type: [Number]
+  },
+  SO2: {
+    type: [Number]
+  },
+  PM10: {
+    type: [Number]
   }
 });
 

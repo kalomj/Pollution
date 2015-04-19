@@ -14,6 +14,8 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.viewportData = [];
     $scope.slider = {};
     $scope.userHeatmap = true;
+    $scope.userTriangles = false;
+    $scope.userMarkers = false;
 
     //datapicker functions - TODO move to another controller
 
@@ -44,17 +46,207 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.month = '04';
     $scope.day = '08';
     $scope.hour = '21';
-    $scope.parameter_name = 'PM25';
+    $scope.parameter_name = 'CO';
+    $scope.parameterMultiplier = {};
+    $scope.parameterMultiplier.CO = 100;
+    $scope.parameterMultiplier.PM25 = 1;
+    $scope.parameterMultiplier.PM10 = 0.1;
+    $scope.parameterMultiplier.SO2 = 5;
+    $scope.parameterMultiplier.NO2 = 2;
+    $scope.parameterMultiplier.OZONE = 1;
+
+    $scope.slider.parameterMaxIntensity = {};
+
+    $scope.slider.parameterMaxIntensity.PM25 = 141;
+    $scope.slider.parameterMaxIntensity.CO = 2;
+    $scope.slider.parameterMaxIntensity.PM10 = 400;
+    $scope.slider.parameterMaxIntensity.SO2 = 23;
+    $scope.slider.parameterMaxIntensity.NO2 = 37;
+    $scope.slider.parameterMaxIntensity.OZONE = 1;
+
 
     var heatmap;
+
+
+    //  return triangles of the delaunay triangluation for the given parameter
+    $scope.renderTriangles = function(cb) {
+      $scope.triangles = [];
+      $http.get('/triangles/' + $scope.year + '/' + $scope.month + '/' + $scope.day + '/' + $scope.hour + '/' + $scope.parameter_name)
+        .success(function (response) {
+
+          for (var i = 0; i < response.length; i += 1) {
+
+
+            var triangleCoordinates = [
+              //jshint ignore:start
+              new google.maps.LatLng(response[i].triangle.coordinates[0][0][1], response[i].triangle.coordinates[0][0][0]),
+              new google.maps.LatLng(response[i].triangle.coordinates[0][1][1], response[i].triangle.coordinates[0][1][0]),
+              new google.maps.LatLng(response[i].triangle.coordinates[0][2][1], response[i].triangle.coordinates[0][2][0]),
+              new google.maps.LatLng(response[i].triangle.coordinates[0][3][1], response[i].triangle.coordinates[0][3][0])
+              //jshint ignore:end
+            ];
+
+            //jshint ignore:start
+            $scope.triangles[i] = new google.maps.Polygon({
+              paths: triangleCoordinates,
+              strokeOpacity: 0.5,
+              fillOpacity: 0,
+              strokeWeight: 1
+            });
+            //jshint ignore:end
+          }
+          if(cb) {
+            cb();
+          }
+        });
+    };
+
+    //function to build a marker at a location that pops open a window with information
+    $scope.createMarker = function(lat, lng, info) {
+      //jshint ignore:start
+      var pos = new google.maps.LatLng(lat, lng);
+
+      //set minumum and maximum values for marker size
+      var scale = $scope.parameterMultiplier[$scope.parameter_name] * info.value;
+      scale = scale > 75 ? 75 : scale;
+      scale = scale < 7 ? 7 : scale;
+
+      //build marker
+      var marker = new google.maps.Marker({
+        position: pos,
+        icon: {
+          path: google.maps.SymbolPath.CIRCLE,
+          fillColor: 'blue',
+          fillOpacity: .2,
+          scale: scale,
+          strokeColor: 'white',
+          strokeWeight: .5
+        }
+      });
+
+      //build information window for marker
+      var infowindow = new google.maps.InfoWindow({
+        content: '<pre>' + JSON.stringify(info,null,2) + '</pre>'
+      });
+
+      //add click listener to marker to pop up information window
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open($scope.map,marker);
+      });
+
+      $scope.markers.push(marker);
+      //jshint ignore:end
+    };
+
+    $scope.renderMarkers = function(cb) {
+      $scope.markers = [];
+
+      //post to set up map markers to display measurement data info
+      $http.get('/hourlydata/' + $scope.year + '/' + $scope.month + '/' + $scope.day + '/' + $scope.hour + '/' + $scope.parameter_name)
+        .success(function(response) {
+
+          for(var i=0;i<response.length; i+=1) {
+            $scope.createMarker(response[i].latitude, response[i].longitude, response[i] );
+          }
+          if(cb) {
+            cb();
+          }
+        });
+    };
+
+    $scope.renderHeatmap = function(cb) {
+
+      if(!$scope.userHeatmap) {
+        if(cb) {
+          cb();
+        }
+        return;
+      }
+
+      var gridspacing = 50;
+
+      var bounds = $scope.map.getBounds();
+
+      //set lat to min lat
+      var lat = bounds.Da.k;
+
+      //while lat is less than max lat
+      //build array of latitude steps
+      var latArray = [lat];
+      var latstep = (bounds.Da.j - bounds.Da.k)/($scope.map.getDiv().clientHeight/gridspacing);
+      while(lat < bounds.Da.j) {
+        lat += latstep;
+        latArray.push(lat);
+      }
+
+      //set lng to min lng
+      var lng = bounds.va.j;
+
+      //while lng is less than max lng
+      //build array of longitude steps
+      var lngArray = [lng];
+      var lngstep = (bounds.va.k - bounds.va.j)/($scope.map.getDiv().clientWidth/gridspacing);
+      while(lng < bounds.va.k) {
+        lng += lngstep;
+        lngArray.push(lng);
+      }
+
+      //build grid of points to overlay on map
+      var viewportQuery = { points: { coordinates: []}};
+      for(var i = 0; i < latArray.length; i+=1){
+        for(var j = 0; j < lngArray.length; j+=1) {
+          viewportQuery.points.coordinates.push([latArray[i],lngArray[j]]);
+        }
+      }
+
+
+      $http.post('/viewport/' + $scope.year + '/' + $scope.month + '/' + $scope.day + '/' + $scope.hour + '/' + $scope.parameter_name, viewportQuery)
+        .success(function(response) {
+
+          $scope.viewportData = [];
+
+          for(var i=0;i<response.points.coordinates.length;i+=1){
+            var point = response.points.coordinates[i];
+
+            var latlng = new google.maps.LatLng(Number(point[0]),Number(point[1])); // jshint ignore:line
+
+            // use google maps geometry library (client side) to only render points in the contiguous united states
+            var isWithinPolygon =
+              google.maps.geometry.poly.containsLocation //jshint ignore:line
+              (latlng, $scope.uspolygon);
+
+            if(isWithinPolygon) {
+              $scope.viewportData.push(
+                {
+                  location: latlng, //jshint ignore:line
+                  weight: response[$scope.parameter_name][i]
+                });
+            }
+          }
+
+          if($scope.userHeatmap && !heatmap.getMap()) {
+            heatmap.setMap($scope.map);
+          }
+
+          heatmap.set('data', $scope.viewportData);
+
+          if(cb) {
+            cb();
+          }
+
+        });
+    };
 
     $scope.$on('mapInitialized', function(event, map) {
 
       heatmap = map.heatmapLayers.foo;
-      heatmap.set('radius',82);
+
       $scope.slider.radius = 82;
-      heatmap.set('maxIntensity',141);
-      $scope.slider.maxIntensity = 141;
+      heatmap.set('radius',82);
+
+      $scope.slider.maxIntensity = $scope.slider.parameterMaxIntensity[$scope.parameter_name];
+      heatmap.set('maxIntensity',$scope.slider.maxIntensity);
+
 
       $scope.map = map;
 
@@ -130,147 +322,17 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
       //set up event listeners - when the user stops browsing the map for a moment, rerender the pollution data
       google.maps.event.addListener //jshint ignore:line
         (map, 'idle', function() {
+          //post each time there is a map idle event to interpolate the gridded points
+          $scope.renderHeatmap();
 
-        var gridspacing = 50;
-
-        var bounds = map.getBounds();
-
-        //set lat to min lat
-        var lat = bounds.Da.k;
-
-        //while lat is less than max lat
-        //build array of latitude steps
-        var latArray = [lat];
-        var latstep = (bounds.Da.j - bounds.Da.k)/(map.getDiv().clientHeight/gridspacing);
-        while(lat < bounds.Da.j) {
-          lat += latstep;
-          latArray.push(lat);
-        }
-
-        //set lng to min lng
-        var lng = bounds.va.j;
-
-        //while lng is less than max lng
-        //build array of longitude steps
-        var lngArray = [lng];
-        var lngstep = (bounds.va.k - bounds.va.j)/(map.getDiv().clientWidth/gridspacing);
-        while(lng < bounds.va.k) {
-          lng += lngstep;
-          lngArray.push(lng);
-        }
-
-        //build grid of points to overlay on map
-        var viewportQuery = { points: { coordinates: []}};
-        for(var i = 0; i < latArray.length; i+=1){
-          for(var j = 0; j < lngArray.length; j+=1) {
-            viewportQuery.points.coordinates.push([latArray[i],lngArray[j]]);
-          }
-        }
-
-        //post each time there is a map idle event to interpolate the gridded points
-        $http.post('/viewport/' + $scope.year + '/' + $scope.month + '/' + $scope.day + '/' + $scope.hour + '/' + $scope.parameter_name, viewportQuery)
-          .success(function(response) {
-
-            $scope.viewportData = [];
-
-            for(var i=0;i<response.points.coordinates.length;i+=1){
-              var point = response.points.coordinates[i];
-
-              var latlng = new google.maps.LatLng(Number(point[0]),Number(point[1])); // jshint ignore:line
-
-              var isWithinPolygon =
-                google.maps.geometry.poly.containsLocation //jshint ignore:line
-                  (latlng, $scope.uspolygon);
-
-              if(isWithinPolygon) {
-                $scope.viewportData.push(
-                  {
-                    location: latlng, //jshint ignore:line
-                    weight: response[$scope.parameter_name][i]
-                  });
-              }
-            }
-
-            if($scope.userHeatmap && !heatmap.getMap()) {
-              heatmap.setMap(map);
-            }
-
-            heatmap.set('data', $scope.viewportData);
-
-          });
       });
 
-      $scope.markers = [];
-      //function to build a marker at a location that pops open a window with information
-      $scope.createMarker = function(lat, lng, info) {
-        //jshint ignore:start
-        var pos = new google.maps.LatLng(lat, lng);
-
-        //build marker
-        var marker = new google.maps.Marker({
-          position: pos,
-          icon: {
-            path: google.maps.SymbolPath.CIRCLE,
-            fillColor: 'blue',
-            fillOpacity: .2,
-            scale: info.value,
-            strokeColor: 'white',
-            strokeWeight: .5
-          }
-        });
-
-        //build information window for marker
-        var infowindow = new google.maps.InfoWindow({
-          content: '<pre>' + JSON.stringify(info,null,2) + '</pre>'
-        });
-
-        //add click listener to marker to pop up information window
-        google.maps.event.addListener(marker, 'click', function() {
-          infowindow.open(map,marker);
-        });
-
-        $scope.markers.push(marker);
-        //jshint ignore:end
-      };
-
-      //post to set up map markers to display measurement data info
-      $http.get('/hourlydata/' + $scope.year + '/' + $scope.month + '/' + $scope.day + '/' + $scope.hour + '/' + $scope.parameter_name)
-        .success(function(response) {
-          $scope.markers = [];
-          for(var i=0;i<response.length; i+=1) {
-            $scope.createMarker(response[i].latitude, response[i].longitude, response[i] );
-          }
-
-        });
-
-      $scope.triangles = [];
-      //  return triangles of the delaunay triangluation for the given parameter
-      $http.get('/triangles/' + $scope.year + '/' + $scope.month + '/' + $scope.day + '/' + $scope.hour + '/' + $scope.parameter_name)
-        .success(function(response) {
-          $scope.triangles = [];
-          for(var i=0;i<response.length; i+=1) {
 
 
-            var triangleCoordinates = [
-              //jshint ignore:start
-              new google.maps.LatLng(response[i].triangle.coordinates[0][0][1],response[i].triangle.coordinates[0][0][0]),
-              new google.maps.LatLng(response[i].triangle.coordinates[0][1][1],response[i].triangle.coordinates[0][1][0]),
-              new google.maps.LatLng(response[i].triangle.coordinates[0][2][1],response[i].triangle.coordinates[0][2][0]),
-              new google.maps.LatLng(response[i].triangle.coordinates[0][3][1],response[i].triangle.coordinates[0][3][0])
-              //jshint ignore:end
-            ];
 
-            //jshint ignore:start
-            $scope.triangles[i] = new google.maps.Polygon({
-              paths: triangleCoordinates,
-              strokeOpacity : 0.5,
-              fillOpacity: 0,
-              strokeWeight: 1
-            });
-            //jshint ignore:end
-          }
+      $scope.renderTriangles();
+      $scope.renderMarkers();
 
-        });
 
     });
 
@@ -279,20 +341,26 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     };
 
     $scope.toggleMarkers = function() {
+      $scope.userMarkers = $scope.userMarkers ? false : true;
+
       for (var i = 0; i < $scope.markers.length; i+=1) {
-        $scope.markers[i].setMap($scope.markers[i].map ? null : $scope.map);
+        $scope.markers[i].setMap($scope.userMarkers ? $scope.map : null);
       }
     };
 
     $scope.toggleTriangles = function() {
+      $scope.userTriangles = $scope.userTriangles ? false : true;
+
       for (var i = 0; i < $scope.triangles.length; i+=1) {
-        $scope.triangles[i].setMap($scope.triangles[i].map ? null : $scope.map);
+        $scope.triangles[i].setMap($scope.userTriangles ? $scope.map : null);
       }
     };
 
     $scope.toggleHeatmap= function(event) {
       $scope.userHeatmap = $scope.userHeatmap ? false : true;
-      heatmap.setMap($scope.userHeatmap ? $scope.map : null);
+      $scope.renderHeatmap(function() {
+        heatmap.setMap($scope.userHeatmap ? $scope.map : null);
+      });
     };
 
     $scope.changeGradient = function() {
@@ -321,6 +389,40 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
     $scope.changeOpacity = function() {
       heatmap.set('opacity', heatmap.get('opacity') ? null : 0.2);
+    };
+
+    $scope.changeParameter = function () {
+
+      //disable heatmap first, and then adjust intensity parameter to prevent visualization artifacts
+      heatmap.setMap(null);
+      $scope.slider.maxIntensity = $scope.slider.parameterMaxIntensity[$scope.parameter_name];
+      heatmap.set('maxIntensity',$scope.slider.maxIntensity);
+
+      $scope.renderHeatmap();
+
+      for (var i = 0; i < $scope.triangles.length; i+=1) {
+        $scope.triangles[i].setMap(null);
+      }
+
+      $scope.renderTriangles(function() {
+        if($scope.userTriangles) {
+          for (var i = 0; i < $scope.triangles.length; i+=1) {
+            $scope.triangles[i].setMap($scope.map);
+          }
+        }
+      });
+
+      for (i = 0; i < $scope.markers.length; i+=1) {
+        $scope.markers[i].setMap(null);
+      }
+
+      $scope.renderMarkers(function() {
+        if($scope.userMarkers) {
+          for (var i = 0; i < $scope.markers.length; i+=1) {
+            $scope.markers[i].setMap($scope.map);
+          }
+        }
+      });
     };
   }
 ]);
