@@ -69,6 +69,18 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.slider.radius = 82;
     $scope.slider.maxIntensity = $scope.slider.parameterMaxIntensity[$scope.parameter_name];
 
+    $scope.updateDate = function () {
+      $scope.year = String($scope.dt.getYear()).slice(-2);
+      $scope.month = String('00' + ($scope.dt.getMonth()+1)).slice(-2);
+      $scope.day = String('00' + ($scope.dt.getDate())).slice(-2);
+      $scope.renderMap();
+    };
+
+    $scope.updateTime = function () {
+      $scope.hour = String('00' + $scope.time.getHours()).slice(-2);
+      $scope.renderMap();
+    };
+
     //Attempt to show the "true" max intensity in parameter units by considering ratio of overlap of heatmap markers
     $scope.slider.calculate = function() {
       var multiplier = $scope.gridSpacing < $scope.slider.radius ? $scope.gridSpacing / $scope.slider.radius : 1;
@@ -407,7 +419,10 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     };
 
     $scope.changeParameter = function () {
+      $scope.renderMap();
+    };
 
+    $scope.renderMap = function() {
       //disable heatmap first, and then adjust intensity parameter to prevent visualization artifacts
       heatmap.setMap(null);
       $scope.slider.maxIntensity = $scope.slider.parameterMaxIntensity[$scope.parameter_name];

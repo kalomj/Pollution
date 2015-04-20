@@ -9,16 +9,16 @@
     <button ng-click="changeOpacity()">Change opacity</button>
 
 
-    <h4>Date PickerPopup</h4>
+    <h4>Date Picker</h4>
         <p class="input-group">
-          <input readonly type="text" class="form-control" datepicker-popup="{{format}}" show-button-bar="false" ng-model="dt" is-open="opened" min-date="'2015-01-02'" max-date="today" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+          <input readonly type="text" class="form-control" datepicker-popup="{{format}}" show-button-bar="false" ng-model="dt" ng-change="updateDate()" is-open="opened" min-date="'2015-01-02'" max-date="today" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
               <span class="input-group-btn">
                 <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
               </span>
         </p>
 
     <h4>Time Picker</h4>
-      <timepicker readonly-input="true" ng-model="time" hour-step="1" minute-step="60" show-meridian="false"></timepicker>
+      <timepicker readonly-input="true" ng-model="time" ng-change="updateTime()" hour-step="1" minute-step="60" show-meridian="false"></timepicker>
     </p>
 
     <h4>Max Intensity Slider</h4>
