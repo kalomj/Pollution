@@ -60,32 +60,31 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
 
 
-    $scope.updateDate = function () {
-      $scope.year = String($scope.dt.getYear()).slice(-2);
-      $scope.month = String('00' + ($scope.dt.getMonth()+1)).slice(-2);
-      $scope.day = String('00' + ($scope.dt.getDate())).slice(-2);
-      if($scope.checkDateTime()) {
+    $scope.updateDateTime = function () {
+      var year = String($scope.dt.getYear()).slice(-2);
+      var month = String('00' + ($scope.dt.getMonth()+1)).slice(-2);
+      var day = String('00' + ($scope.dt.getDate())).slice(-2);
+      var hour = String('00' + $scope.time.getHours()).slice(-2);
+
+      if($scope.checkDateTime(year,month,day,hour)) {
+        $scope.year = year;
+        $scope.month = month;
+        $scope.day = day;
+        $scope.hour = hour;
         $scope.renderMap();
       }
     };
 
-    $scope.updateTime = function () {
-      $scope.hour = String('00' + $scope.time.getHours()).slice(-2);
-      if($scope.checkDateTime()) {
-        $scope.renderMap();
-      }
-    };
-
-    $scope.checkDateTime = function() {
-      var valid_date = $scope.month + '/' + $scope.day + '/' + $scope.year;
-      var valid_time =  $scope.hour + ':00';
+    $scope.checkDateTime = function(year,month,day,hour) {
+      var valid_date = month + '/' + day + '/' + year;
+      var valid_time =  hour + ':00';
       for(var i = 0; i < $scope.datastats.files_collection.length; i+=1) {
         if($scope.datastats.files_collection[i].valid_date === valid_date && $scope.datastats.files_collection[i].valid_time === valid_time) {
           $scope.dtalert = null;
           return true;
         }
       }
-      $scope.dtalert = valid_date + ' ' + valid_time + ' not available';
+      $scope.dtalert = valid_date + ' ' + valid_time + ' not available\nUsing ' + $scope.month + '/' + $scope.day + '/' + $scope.year + ' ' + $scope.hour + ':00';;
       return false;
     };
 
