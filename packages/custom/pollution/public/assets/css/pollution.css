@@ -27,6 +27,7 @@ body.login, body.register,  body.forgot-password, body.reset-tokenId, body.first
   background-color: #999;
 
   overflow-x:visible;
+  overflow-y: auto;
 
   height: -o-calc(100% - 50px); /* opera */
   height: -webkit-calc(100% - 50px); /* google, safari */
