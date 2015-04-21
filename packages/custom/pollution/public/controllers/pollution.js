@@ -35,15 +35,6 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
     //end datepicker functions
 
-    //timepicker functions
-    $scope.time = new Date();
-    $scope.time.setMinutes(0,0,0);
-    //end timepicker functions
-
-    $scope.year = '15';
-    $scope.month = '04';
-    $scope.day = '08';
-    $scope.hour = '21';
     $scope.parameter_name = 'CO';
     $scope.parameterMultiplier = {};
     $scope.parameterMultiplier.CO = 100;
@@ -73,20 +64,29 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
       $scope.year = String($scope.dt.getYear()).slice(-2);
       $scope.month = String('00' + ($scope.dt.getMonth()+1)).slice(-2);
       $scope.day = String('00' + ($scope.dt.getDate())).slice(-2);
-      $scope.renderMap();
+      if($scope.checkDateTime()) {
+        $scope.renderMap();
+      }
     };
 
     $scope.updateTime = function () {
       $scope.hour = String('00' + $scope.time.getHours()).slice(-2);
-      $scope.renderMap();
+      if($scope.checkDateTime()) {
+        $scope.renderMap();
+      }
     };
 
-    $scope.updateDateTime = function() {
-      $scope.year = String($scope.dt.getYear()).slice(-2);
-      $scope.month = String('00' + ($scope.dt.getMonth()+1)).slice(-2);
-      $scope.day = String('00' + ($scope.dt.getDate())).slice(-2);
-      $scope.hour = String('00' + $scope.time.getHours()).slice(-2);
-      $scope.renderMap();
+    $scope.checkDateTime = function() {
+      var valid_date = $scope.month + '/' + $scope.day + '/' + $scope.year;
+      var valid_time =  $scope.hour + ':00';
+      for(var i = 0; i < $scope.datastats.files_collection.length; i+=1) {
+        if($scope.datastats.files_collection[i].valid_date === valid_date && $scope.datastats.files_collection[i].valid_time === valid_time) {
+          $scope.dtalert = null;
+          return true;
+        }
+      }
+      $scope.dtalert = valid_date + ' ' + valid_time + ' not available';
+      return false;
     };
 
     $scope.getDataStats = function () {
@@ -95,13 +95,19 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
         $scope.dt = $scope.maxdate = new Date(response.max_valid_date);
         $scope.mindate = response.min_valid_date;
 
-        $scope.time.setHours($scope.datastats.max_valid_time.slice(0,2));
 
-        $scope.updateDateTime();
-        $scope.initleftmenu = true;
+        var t = new Date();
+        t.setHours($scope.datastats.max_valid_time.slice(0,2));
+        t.setMinutes(0,0,0);
 
+        $scope.time = t;
+        $scope.year = String($scope.dt.getYear()).slice(-2);
+        $scope.month = String('00' + ($scope.dt.getMonth()+1)).slice(-2);
+        $scope.day = String('00' + ($scope.dt.getDate())).slice(-2);
+        $scope.hour = String('00' + $scope.time.getHours()).slice(-2);
       });
     };
+
     $scope.getDataStats();
 
     //Attempt to show the "true" max intensity in parameter units by considering ratio of overlap of heatmap markers
@@ -385,9 +391,9 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
       //set up event listeners - when the user stops browsing the map for a moment, rerender the pollution data
       google.maps.event.addListener //jshint ignore:line
-        (map, 'idle', function() {
-          //post each time there is a map idle event to interpolate the gridded points
-          $scope.renderHeatmap();
+      ($scope.map, 'idle', function() {
+        //post each time there is a map idle event to interpolate the gridded points
+        $scope.renderHeatmap();
 
       });
 

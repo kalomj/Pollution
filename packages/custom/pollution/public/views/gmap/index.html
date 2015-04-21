@@ -1,6 +1,7 @@
-<div data-ng-controller="GMapCtrl" style="height:100%;width:100%;position:absolute;overflow:hidden" ng-init="getDataStats()">
+<div data-ng-controller="GMapCtrl" style="height:100%;width:100%;position:absolute;overflow:hidden">
 
-  <div class="leftmenu" ng-if="initleftmenu">
+  <div class="leftmenu">
+
 
 
 
@@ -13,14 +14,16 @@
 
     <h4>Date Picker</h4>
         <p class="input-group">
-          <input datepicker-append-to-body="true" readonly type="text" class="form-control" show-button-bar="false" datepicker-popup="{{format}}" ng-model="dt" ng-change="updateDate()" is-open="opened" min-date="mindate" max-date="maxdate" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+          <input datepicker-append-to-body="true" readonly type="text" class="form-control" show-button-bar="false" datepicker-popup="{{format}}" ng-model="dt" ng-change="updateDate()" is-open="opened" min-date="mindate" max-date="maxdate" datepicker-options="dateOptions" ng-required="true" />
               <span class="input-group-btn">
                 <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
               </span>
         </p>
 
     <h4>Time Picker</h4>
-      <timepicker readonly-input="true" ng-model="time" ng-change="updateTime()" hour-step="1" minute-step="60" show-meridian="false"></timepicker>
+    <timepicker readonly-input="true" ng-model="time" ng-change="updateTime()" hour-step="1" minute-step="60" show-meridian="false"></timepicker>
+
+    <div class="alert alert-danger animated fadeIn" ng-show="dtalert">{{dtalert}}</div>
 
     <h4>Max Intensity Slider</h4>
     <div ui-slider min="1" max="500" ng-model="slider.maxIntensity" ng-change="changeMaxValue()" ></div>
