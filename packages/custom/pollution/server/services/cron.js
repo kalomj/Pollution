@@ -16,11 +16,10 @@ exports.delaunay_cron = function(year,month,day,hour,parameter_name,cb) {
 
   var valid_date = month + '/' + day + '/' + year;
   var valid_time = hour + ':00';
-  var query_parameter_name = parameter_name === 'PM25' ? 'PM2.5' : parameter_name;
 
   var query = { valid_date: valid_date,
     valid_time: valid_time,
-    parameter_name: query_parameter_name};
+    parameter_name: parameter_name};
 
   HourlyData.find(query)
     .select('latitude longitude value')

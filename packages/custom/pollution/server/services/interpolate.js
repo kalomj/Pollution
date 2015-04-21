@@ -16,8 +16,6 @@ exports.interpolate = function(myroute,year,month,day,hour,parameter_name,cb) {
   var points = myroute.points.coordinates;
   var asyncTasks = [];
 
-  //fix for having a dot (.) in the PM2.5 parameter name ....
-  var query_parameter_name = parameter_name==='PM25' ? 'PM2.5' : parameter_name;
 
   //setup location to store intepolated values
   myroute[parameter_name] = [];
@@ -55,7 +53,7 @@ exports.interpolate = function(myroute,year,month,day,hour,parameter_name,cb) {
       Triangle
         .where('valid_date').equals(month + '/' + day + '/' + year)
         .where('valid_time').equals(hour + ':' + '00')
-        .where('parameter_name').equals(query_parameter_name)
+        .where('parameter_name').equals(parameter_name)
         .where('triangle').intersects().geometry(querypoint)
         .exec(querycb(callback,i));
     };

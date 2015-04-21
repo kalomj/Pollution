@@ -34,6 +34,9 @@ exports.reload = function(req, res) {
 
     var filestoload = _.difference(availablefiles, loadedfiles);
 
+    //sort descending to get the most recent first
+    filestoload.sort().reverse();
+
 
     var totaljobs = filestoload.length * 6;
 
@@ -78,20 +81,33 @@ exports.reload = function(req, res) {
       };
     };
 
-    for (i = 0; i < filestoload.length; i += 1) {
+    //don't process more than N at a time, to avoid crashing server instances with low memory. Assuming this
+    //routine is scheduled every hour, it will eventually catch up to the available data, processing 10 days worth of data
+    //per day until all historical data is captured in the database
+    var N = 5;
+    for (i = 0; i < filestoload.length && i < N; i += 1) {
       var filename = filestoload[i];
 
       var script =
+        //replace commas with another character because mongoimport expects a 'dumb' csv file with commas that can't be escaped
           'sed \'s/,/./g\' ' + hourlydatapath + '/' + filename + ' > ' + joinedpath + '/' + filename + '\n' +
           'sed \'s/,/./g\' ' + locationpath + '/monitoring_site_locations.dat > ' + joinedpath + '/msl_' + filename + '\n' +
+            //replace O3 with OZONE in the locations file so it can be joined with the hourly data
           'sed -i \'s/[|]O3[|]/|OZONE|/g\' ' + joinedpath + '/msl_' + filename + '\n' +
+            //replace PM2.5 with PM25 because the dot causes all kinds of problems with javascript notations
+          'sed -i \'s/[|]PM2.5[|]/|PM25|/g\' ' + joinedpath + '/msl_' + filename + '\n' +
+          'sed -i \'s/[|]PM2.5[|]/|PM25|/g\' ' + joinedpath + '/' + filename + '\n' +
+            //using awk to replace pipes with commas and reorder/concatenate columns
           'awk \'BEGIN { FS="|";OFS=","} {print $3$6,$1,$2,"id" $3,$4,$5,$6,$7,$8,$9}\' ' + joinedpath + '/' + filename + ' | sort -t , -k1,1 > ' + joinedpath + '/temp_' + filename + ' && mv ' + joinedpath + '/temp_' + filename + ' ' + joinedpath + '/' + filename + '\n' +
           'awk \'BEGIN { FS="|";OFS=","} {print $1$2,$9,$10,$13}\' ' + joinedpath + '/msl_' + filename + ' | sort  -t , -k1,1 > ' + joinedpath + '/temp_' + filename + ' && mv ' + joinedpath + '/temp_' + filename + ' ' + joinedpath + '/msl_' + filename + '\n' +
+          //sort and join the hourly data and the monitoring site files
           'join -t, -1 1 -2 1 -o 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.2 2.3 2.4 1.10 ' + joinedpath + '/' + filename + ' ' + joinedpath + '/msl_' + filename + ' > ' + joinedpath + '/joined_' + filename + '\n' +
+          //use mongoimport to pull into the hourlydata collection
           'mongoimport --db mean-dev --collection hourlydata --type csv --file ' + joinedpath + '/joined_' + filename + ' --fields measurement_key,valid_date,valid_time,aqsid,sitename,gmt_offset,parameter_name,reporting_units,value,latitude,longitude,country_code,data_source --upsert --upsertFields measurement_key,valid_date,valid_time' + '\n' +
-          //'rm ' + joinedpath + '/' + filename + '\n' +
-          //'rm ' + joinedpath + '/msl_' + filename + '\n' +
-          //'rm ' + joinedpath + '/joined_' + filename + '\n'
+          //remove all temporary files to save space
+          'rm ' + joinedpath + '/' + filename + '\n' +
+          'rm ' + joinedpath + '/msl_' + filename + '\n' +
+          'rm ' + joinedpath + '/joined_' + filename + '\n' +
         '\n'
         ;
 
