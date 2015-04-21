@@ -98,6 +98,14 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     //  return triangles of the delaunay triangluation for the given parameter
     $scope.renderTriangles = function(cb) {
       $scope.triangles = [];
+
+      if(!$scope.userTriangles) {
+        if(cb) {
+          cb();
+        }
+        return;
+      }
+
       $http.get('/triangles/' + $scope.year + '/' + $scope.month + '/' + $scope.day + '/' + $scope.hour + '/' + $scope.parameter_name)
         .success(function (response) {
 
@@ -168,6 +176,13 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
     $scope.renderMarkers = function(cb) {
       $scope.markers = [];
+
+      if(!$scope.userMarkers) {
+        if(cb) {
+          cb();
+        }
+        return;
+      }
 
       //post to set up map markers to display measurement data info
       $http.get('/hourlydata/' + $scope.year + '/' + $scope.month + '/' + $scope.day + '/' + $scope.hour + '/' + $scope.parameter_name)
@@ -370,6 +385,16 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.toggleMarkers = function() {
       $scope.userMarkers = $scope.userMarkers ? false : true;
 
+      if($scope.markers.length === 0) {
+        $scope.renderMarkers(function() {
+          if($scope.userMarkers) {
+            for (var i = 0; i < $scope.markers.length; i+=1) {
+              $scope.markers[i].setMap($scope.map);
+            }
+          }
+        });
+      }
+
       for (var i = 0; i < $scope.markers.length; i+=1) {
         $scope.markers[i].setMap($scope.userMarkers ? $scope.map : null);
       }
@@ -377,6 +402,16 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
     $scope.toggleTriangles = function() {
       $scope.userTriangles = $scope.userTriangles ? false : true;
+
+      if($scope.triangles.length === 0) {
+        $scope.renderTriangles(function() {
+          if($scope.userTriangles) {
+            for (var i = 0; i < $scope.triangles.length; i+=1) {
+              $scope.triangles[i].setMap($scope.map);
+            }
+          }
+        });
+      }
 
       for (var i = 0; i < $scope.triangles.length; i+=1) {
         $scope.triangles[i].setMap($scope.userTriangles ? $scope.map : null);
