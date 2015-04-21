@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c07db2d7-c1ee-4297-aa63-b09b9fda6e5d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/server/routes/cron.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/server/routes/cron.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html" afterPath="$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/public/assets/css/pollution.css" afterPath="$PROJECT_DIR$/packages/custom/pollution/public/assets/css/pollution.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js" />
     </list>
     <ignored path="Pollution.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,13 +27,23 @@
       <file leaf-file-name="pollution.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+            <state vertical-scroll-proportion="-15.096774">
+              <caret line="93" column="36" selection-start-line="93" selection-start-column="36" selection-end-line="93" selection-end-column="36" />
               <folding>
                 <element signature="e#641#740#0" expanded="false" />
                 <element signature="e#768#798#0" expanded="false" />
-                <element signature="e#9407#12042#0" expanded="false" />
+                <element signature="e#10172#12807#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pollution.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/directives/pollution.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="37" column="3" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -42,9 +51,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23326133">
-              <caret line="12" column="114" selection-start-line="12" selection-start-column="114" selection-end-line="12" selection-end-column="114" />
-              <folding />
+            <state vertical-scroll-proportion="0.2138229">
+              <caret line="11" column="76" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,11 +163,11 @@
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/controllers/triangles.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/services/interpolate.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/controllers/reload.js" />
-        <option value="$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/routes/cron.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/routes/loadedfiles.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/controllers/loadedfiles.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/assets/css/pollution.css" />
+        <option value="$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html" />
       </list>
     </option>
@@ -587,6 +598,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="directives" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="custom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -968,13 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/directives/pollution.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="3" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/services/myroutes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1142,18 +1176,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-          <folding>
-            <element signature="e#641#740#0" expanded="false" />
-            <element signature="e#768#798#0" expanded="false" />
-            <element signature="e#9407#12042#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/models/loadedfiles.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1178,11 +1200,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/directives/pollution.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="3" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.096774">
+          <caret line="93" column="36" selection-start-line="93" selection-start-column="36" selection-end-line="93" selection-end-column="36" />
+          <folding>
+            <element signature="e#641#740#0" expanded="false" />
+            <element signature="e#768#798#0" expanded="false" />
+            <element signature="e#10172#12807#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23326133">
-          <caret line="12" column="114" selection-start-line="12" selection-start-column="114" selection-end-line="12" selection-end-column="114" />
-          <folding />
+        <state vertical-scroll-proportion="0.2138229">
+          <caret line="11" column="76" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

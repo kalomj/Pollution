@@ -30,10 +30,8 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
       formatYear: 'yy'
     };
 
-    $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+    $scope.formats = ['MM/dd/yyyy', 'dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
     $scope.format = $scope.formats[0];
-
-    $scope.dt = $scope.today =  new Date();
 
     //end datepicker functions
 
@@ -69,6 +67,8 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.slider.radius = 82;
     $scope.slider.maxIntensity = $scope.slider.parameterMaxIntensity[$scope.parameter_name];
 
+
+
     $scope.updateDate = function () {
       $scope.year = String($scope.dt.getYear()).slice(-2);
       $scope.month = String('00' + ($scope.dt.getMonth()+1)).slice(-2);
@@ -80,6 +80,29 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
       $scope.hour = String('00' + $scope.time.getHours()).slice(-2);
       $scope.renderMap();
     };
+
+    $scope.updateDateTime = function() {
+      $scope.year = String($scope.dt.getYear()).slice(-2);
+      $scope.month = String('00' + ($scope.dt.getMonth()+1)).slice(-2);
+      $scope.day = String('00' + ($scope.dt.getDate())).slice(-2);
+      $scope.hour = String('00' + $scope.time.getHours()).slice(-2);
+      $scope.renderMap();
+    };
+
+    $scope.getDataStats = function () {
+      $http.get('/loadedfiles').success(function (response) {
+        $scope.datastats = response;
+        $scope.dt = $scope.maxdate = new Date(response.max_valid_date);
+        $scope.mindate = response.min_valid_date;
+
+        $scope.time.setHours($scope.datastats.max_valid_time.slice(0,2));
+
+        $scope.updateDateTime();
+        $scope.initleftmenu = true;
+
+      });
+    };
+    $scope.getDataStats();
 
     //Attempt to show the "true" max intensity in parameter units by considering ratio of overlap of heatmap markers
     $scope.slider.calculate = function() {

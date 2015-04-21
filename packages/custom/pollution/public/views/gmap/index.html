@@ -1,16 +1,19 @@
-<div data-ng-controller="GMapCtrl" style="height:100%;width:100%;position:absolute;overflow:hidden">
+<div data-ng-controller="GMapCtrl" style="height:100%;width:100%;position:absolute;overflow:hidden" ng-init="getDataStats()">
 
-  <div class="leftmenu">
+  <div class="leftmenu" ng-if="initleftmenu">
+
+
 
     <button ng-click="toggleMarkers()">Toggle Info Markers</button>
     <button ng-click="toggleTriangles()">Toggle Triangulation</button>
     <button ng-click="toggleHeatmap()">Toggle Heatmap</button>
     <button ng-click="changeGradient()">Change gradient</button>
 
+    <p>Latest: {{datastats.max_valid_date}} {{datastats.max_valid_time}}</p>
 
     <h4>Date Picker</h4>
         <p class="input-group">
-          <input datepicker-append-to-body="true" readonly type="text" class="form-control" show-button-bar="false" datepicker-popup="{{format}}" ng-model="dt" ng-change="updateDate()" is-open="opened" min-date="'2015-01-02'" max-date="today" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+          <input datepicker-append-to-body="true" readonly type="text" class="form-control" show-button-bar="false" datepicker-popup="{{format}}" ng-model="dt" ng-change="updateDate()" is-open="opened" min-date="mindate" max-date="maxdate" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
               <span class="input-group-btn">
                 <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
               </span>
