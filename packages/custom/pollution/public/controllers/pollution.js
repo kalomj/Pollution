@@ -153,7 +153,8 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
       //build information window for marker
       var infowindow = new google.maps.InfoWindow({
-        content: '<pre>' + JSON.stringify(info,null,2) + '</pre>'
+        //content: '<pre>' + JSON.stringify(info,null,2) + '</pre>'
+        content: '<h4>' + info.value + ' ' + info.reporting_units + '</h4><p>Source: ' + info.data_source
       });
 
       //add click listener to marker to pop up information window

@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c07db2d7-c1ee-4297-aa63-b09b9fda6e5d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/server/services/cron.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/server/services/cron.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/server/controllers/hourlydata.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/server/controllers/hourlydata.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/server/services/interpolate.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/server/services/interpolate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/server/controllers/reload.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/server/controllers/reload.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/server/controllers/triangles.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/server/controllers/triangles.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Pollution.iws" />
@@ -28,17 +24,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pollution.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pollution.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.4446929">
-              <caret line="131" column="52" selection-start-line="131" selection-start-column="52" selection-end-line="131" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="156" column="105" selection-start-line="156" selection-start-column="105" selection-end-line="156" selection-end-column="105" />
               <folding>
                 <element signature="e#641#740#0" expanded="false" />
                 <element signature="e#768#798#0" expanded="false" />
                 <element signature="e#3079#4321#0" expanded="false" />
-                <element signature="e#9096#11731#0" expanded="false" />
+                <element signature="e#9204#11839#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hourlydata.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/hourlydata.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.54301673">
+              <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,12 +112,12 @@
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/models/loadedfiles.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/controllers/cron.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html" />
-        <option value="$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/services/cron.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/controllers/hourlydata.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/controllers/triangles.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/services/interpolate.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/controllers/reload.js" />
+        <option value="$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js" />
       </list>
     </option>
   </component>
@@ -956,14 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/hourlydata.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66368717">
-          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/myroutes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.20670392">
@@ -998,14 +996,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4446929">
-          <caret line="131" column="52" selection-start-line="131" selection-start-column="52" selection-end-line="131" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="156" column="105" selection-start-line="156" selection-start-column="105" selection-end-line="156" selection-end-column="105" />
           <folding>
             <element signature="e#641#740#0" expanded="false" />
             <element signature="e#768#798#0" expanded="false" />
             <element signature="e#3079#4321#0" expanded="false" />
-            <element signature="e#9096#11731#0" expanded="false" />
+            <element signature="e#9204#11839#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/hourlydata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54301673">
+          <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
