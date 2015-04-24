@@ -74,9 +74,7 @@ exports.reload = function(req, res) {
           valid_time: hour + ':00'
         });
 
-        if (totaljobs === 0) {
-          newLoadedFile.save(savecb(filename));
-        }
+        newLoadedFile.save(savecb(filename));
 
         //attempt to create triangulations for each parameter
         var parameter_names = ['PM25', 'PM10', 'OZONE', 'NO2', 'SO2', 'CO'];

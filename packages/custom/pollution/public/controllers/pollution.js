@@ -11,13 +11,19 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 ]).controller('GMapCtrl', ['$scope', 'Global', 'Pollution', '$log', '$http',
   function($scope, Global, Pollution, $log, $http) {
 
+    $scope.routeData = [];
+    //default center on the united states
+    $scope.centerlat = 39.8282;
+    $scope.centerlon = -98.5795;
+    $scope.zoom = 5;
+
     $scope.viewportData = [];
     $scope.slider = {};
     $scope.userHeatmap = true;
     $scope.userTriangles = false;
     $scope.userMarkers = false;
 
-    //datapicker functions - TODO move to another controller
+    //datapicker functions
 
     $scope.open = function($event) {
       $event.preventDefault();
