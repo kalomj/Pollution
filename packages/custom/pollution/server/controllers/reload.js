@@ -37,13 +37,9 @@ exports.reload = function(req, res) {
     //sort descending to get the most recent first
     filestoload.sort().reverse();
 
+    var max_files = 5;
+    var totaljobs = filestoload.length > max_files ? max_files * 6 : filestoload.length * 6;
 
-    var totaljobs = filestoload.length * 6;
-
-    var logcb = function(message) {
-      totaljobs-=1;
-      console.log(message + ' ' + totaljobs + ' remaining');
-    };
 
     var savecb = function (filename) {
       return function (err) {
@@ -51,6 +47,13 @@ exports.reload = function(req, res) {
           console.log(err);
         }
         console.log(filename + ' saved to database');
+      };
+    };
+
+    var logcb = function() {
+      return function(message) {
+        totaljobs -= 1;
+        console.log(message + ' ' + totaljobs + ' remaining');
       };
     };
 
@@ -71,12 +74,14 @@ exports.reload = function(req, res) {
           valid_time: hour + ':00'
         });
 
-        newLoadedFile.save(savecb(filename));
+        if (totaljobs === 0) {
+          newLoadedFile.save(savecb(filename));
+        }
 
         //attempt to create triangulations for each parameter
         var parameter_names = ['PM25', 'PM10', 'OZONE', 'NO2', 'SO2', 'CO'];
         for(var j = 0; j < parameter_names.length; j+=1) {
-          cron.delaunay_cron(year,month,day,hour,parameter_names[j],logcb);
+          cron.delaunay_cron(year,month,day,hour,parameter_names[j],logcb());
         }
       };
     };
@@ -84,8 +89,7 @@ exports.reload = function(req, res) {
     //don't process more than N at a time, to avoid crashing server instances with low memory. Assuming this
     //routine is scheduled every hour, it will eventually catch up to the available data, processing 10 days worth of data
     //per day until all historical data is captured in the database
-    var N = 5;
-    for (i = 0; i < filestoload.length && i < N; i += 1) {
+    for (i = 0; i < filestoload.length && i < max_files; i += 1) {
       var filename = filestoload[i];
 
       var script =

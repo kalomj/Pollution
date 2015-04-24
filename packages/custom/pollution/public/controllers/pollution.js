@@ -84,7 +84,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
           return true;
         }
       }
-      $scope.dtalert = valid_date + ' ' + valid_time + ' not available\nUsing ' + $scope.month + '/' + $scope.day + '/' + $scope.year + ' ' + $scope.hour + ':00';;
+      $scope.dtalert = valid_date + ' ' + valid_time + ' not available\nUsing ' + $scope.month + '/' + $scope.day + '/' + $scope.year + ' ' + $scope.hour + ':00';
       return false;
     };
 

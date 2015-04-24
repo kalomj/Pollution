@@ -15,12 +15,15 @@ var cluster = require('cluster');
 
 // Code to run if we're in the master process or if we are not in debug mode/ running tests
 
-if ((cluster.isMaster) && (process.execArgv.indexOf('--debug') < 0) && (process.env.NODE_ENV!=='test') && (process.execArgv.indexOf('--singleProcess')<0)) {
+//&& (process.execArgv.indexOf('--debug') < 0)
+if ((cluster.isMaster)  && (process.env.NODE_ENV!=='test') && (process.execArgv.indexOf('--singleProcess')<0)) {
 //if (cluster.isMaster) {
 
     console.log('for real!');
     // Count the machine's CPUs
     var cpuCount = require('os').cpus().length;
+
+    var cpuCount = 4;
 
     // Create a worker for each CPU
     for (var i = 0; i < cpuCount; i += 1) {
