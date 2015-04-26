@@ -150,12 +150,12 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
           var point = myroute.points.coordinates[i];
 
           var info = {
-            PM25:PM25[i],
-            PM10:PM10[i],
-            CO:CO[i],
-            SO2:SO2[i],
-            NO2:NO2[i],
-            OZONE:OZONE[i]
+            PM25:myroute.PM25[i],
+            PM10:myroute.PM10[i],
+            CO:myroute.CO[i],
+            SO2:myroute.SO2[i],
+            NO2:myroute.NO2[i],
+            OZONE:myroute.OZONE[i]
           };
 
           $scope.createRouteMarker(Number(point[0]),Number(point[1]),info);
