@@ -115,8 +115,8 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
 
       //build information window for marker
       var infowindow = new google.maps.InfoWindow({
-        //content: '<pre>' + JSON.stringify(info,null,2) + '</pre>'
-        content: info
+        content: '<pre>' + JSON.stringify(info,null,2) + '</pre>'
+        //content: info
       });
 
       //add click listener to marker to pop up information window
@@ -149,7 +149,16 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
 
           var point = myroute.points.coordinates[i];
 
-          $scope.createRouteMarker(Number(point[0]),Number(point[1]),myroute.pm25[i].toString());
+          var info = {
+            PM25:PM25[i],
+            PM10:PM10[i],
+            CO:CO[i],
+            SO2:SO2[i],
+            NO2:NO2[i],
+            OZONE:OZONE[i]
+          };
+
+          $scope.createRouteMarker(Number(point[0]),Number(point[1]),info);
 
         }
         /* jshint ignore:end */
