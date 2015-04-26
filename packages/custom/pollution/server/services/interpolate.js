@@ -20,6 +20,7 @@ exports.interpolate = function(myroute,year,month,day,hour,parameter_name,cb) {
   //setup location to store intepolated values
   myroute[parameter_name] = [];
 
+
   //setup callback to handle the mongodb query
   var querycb =  function(callback,i)  {
     return function(err,triangle) {
@@ -36,6 +37,7 @@ exports.interpolate = function(myroute,year,month,day,hour,parameter_name,cb) {
 
         //add interpolated value to the array. If it is less then zero, set it to a very small value
         myroute[parameter_name][i] = interpolated_value < 0 ? 0.000001 : interpolated_value;
+
       }
       else {
         //set to very small value - setting to zero produces strange results in some heatmaps

@@ -1,37 +1,32 @@
 <div class="leftmenu">
 
-  <button ng-click="toggleMarkers()">Toggle Info Markers</button>
-  <button ng-click="toggleTriangles()">Toggle Triangulation</button>
-  <button ng-click="toggleHeatmap()">Toggle Heatmap</button>
-  <button ng-click="changeGradient()">Change gradient</button>
+  <p><button class="toggleButton" ng-disabled="infoMarkerStatus !== 'Not Displayed' && infoMarkerStatus !== 'Rendered'" ng-click="toggleMarkers()">Toggle Info Markers</button><span ng-model="infoMarkerStatus">{{infoMarkerStatus}}</span></p>
+  <p><button class="toggleButton" ng-disabled="triangleStatus !== 'Not Displayed' && triangleStatus !== 'Rendered'" ng-click="toggleTriangles()">Toggle Triangulation</button><span ng-model="triangleStatus">{{triangleStatus}}</span></p>
+  <p><button class="toggleButton" ng-disabled="heatmapStatus !== 'Not Displayed' && heatmapStatus !== 'Rendered'" ng-click="toggleHeatmap()">Toggle Heatmap</button><span ng-model="heatmapStatus">{{heatmapStatus}}</span></p>
 
   <p>Latest: {{datastats.max_valid_date}} {{datastats.max_valid_time}}</p>
+  <p ng-model="renderedTimeString">Displayed: {{renderedTimeString}}</p>
 
   <div ng-hide="routeView">
     <h4>Date Picker</h4>
     <p class="input-group">
-      <input datepicker-append-to-body="true" readonly type="text" class="form-control" show-button-bar="false" datepicker-popup="{{format}}" ng-model="dt" ng-change="updateDateTime()" is-open="opened" min-date="mindate" max-date="maxdate" datepicker-options="dateOptions" ng-required="true" />
-                <span class="input-group-btn">
-                  <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-                </span>
+      <datepicker show-weeks="false" ng-model="dt" ng-change="updateDateTime(dt,time)" min-date="mindate" max-date="maxdate"  class="well well-sm"></datepicker>
     </p>
 
+    <h4>Time Slider</h4>
+    <div ui-slider min="0" max="23" ng-model="time" ng-change="updateDateTime(dt,time)" ><input type="text" ng-model="time" ng-change="updateDateTime(dt,time)"/></div>
 
-    <h4>Time Picker</h4>
-    <timepicker readonly-input="true" ng-model="time" ng-change="updateDateTime()" hour-step="1" minute-step="60" show-meridian="false"></timepicker>
 
-    <div class="alert alert-danger animated fadeIn" ng-show="dtalert">{{dtalert}}</div>
-
-    <h4>Max Intensity Slider</h4>
-    <div ui-slider min="1" max="500" ng-model="slider.maxIntensity" ng-change="changeMaxValue()" ></div>
-    <input type="text" ng-model="slider.maxIntensity" ng-change="changeMaxValue()" />
+    <p><div class="alert alert-danger animated fadeIn" ng-show="dtalert" >{{dtalert}}</div></p>
   </div>
 
+  <h4>Max Intensity Slider</h4>
+  <div ui-slider min="1" max="500" ng-model="slider.maxIntensity" ng-change="changeMaxValue()" ><input type="text" ng-model="slider.maxIntensity" ng-change="changeMaxValue()" /></div>
 
 
   <h4>Radius of Influence Slider</h4>
-  <div ui-slider min="0" max="100" ng-model="slider.radius" ng-change="changeRadius()" ></div>
-  <input type="text" ng-model="slider.radius" ng-change="changeRadius()" />
+  <div ui-slider min="0" max="100" ng-model="slider.radius" ng-change="changeRadius()" ><input type="text" ng-model="slider.radius" ng-change="changeRadius()" /></div>
+
 
 
   <h4>Calculated Max Intensity<br />in Parameter Units</h4>
@@ -40,30 +35,31 @@
   <h4>Pollution Parameter Type</h4>
   <form name="myForm">
     <label>
-      <input type="radio" ng-model="parameter_name" ng-change="changeParameter()" value="OZONE">
+      <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="OZONE">
       <b>O<sub>3</sub> (ppb)</b>
     </label><br/>
     <label>
-      <input type="radio" ng-model="parameter_name" ng-change="changeParameter()" value="PM25">
+      <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="PM25">
       <b>PM<sub>2.5</sub> (µg/m<sup>3</sup>)</b>
     </label><br/>
     <label>
-      <input type="radio" ng-model="parameter_name" ng-change="changeParameter()" value="PM10">
+      <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="PM10">
       <b>PM<sub>10</sub> (µg/m<sup>3</sup>)</b>
     </label><br/>
     <label>
-      <input type="radio" ng-model="parameter_name" ng-change="changeParameter()" value="CO">
+      <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="CO">
       <b>CO (ppm)</b>
     </label><br/>
     <label>
-      <input type="radio" ng-model="parameter_name" ng-change="changeParameter()" value="SO2">
+      <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="SO2">
       <b>SO<sub>2</sub> (ppb)</b>
     </label><br/>
     <label>
-      <input type="radio" ng-model="parameter_name" ng-change="changeParameter()" value="NO2">
+      <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="NO2">
       <b>NO<sub>2</sub> (ppb)</b>
     </label><br/>
   </form>
 
-
+  <br/>
+  <br/>
 </div>

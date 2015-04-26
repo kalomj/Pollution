@@ -13,6 +13,8 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
     $scope.pretty = JSON.stringify(testRoute,null,'    ');
     /* jshint ignore:end */
 
+    $scope.inRouteView = true;
+
     $scope.create = function(isValid) {
 
       //if (isValid) {
@@ -128,7 +130,7 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
       //jshint ignore:end
     };
 
-    $scope.findOne = function(map) {
+    $scope.findOne = function(map,setDT) {
 
       $scope.map = map;
 
@@ -136,6 +138,11 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
         myrouteId: $stateParams.myrouteId
       }, function(myroute) {
         $scope.myroute = myroute;
+
+        $scope.year = myroute.valid_date.substring(6,8);
+        $scope.month = myroute.valid_date.substring(0,2);
+        $scope.day = myroute.valid_date.substring(3,5);
+        $scope.hour = myroute.valid_time.substring(0,2);
 
         /* jshint ignore:start */
         $scope.routeData = [];
@@ -162,6 +169,7 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
 
         }
         /* jshint ignore:end */
+
       });
 
     };

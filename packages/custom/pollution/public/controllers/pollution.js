@@ -8,10 +8,8 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
       name: 'pollution'
     };
   }
-]).controller('GMapCtrl', ['$scope', 'Global', 'Pollution', '$log', '$http',
-  function($scope, Global, Pollution, $log, $http) {
-
-
+]).controller('GMapCtrl', ['$scope', '$timeout', 'Global', 'Pollution', '$log', '$http',
+  function($scope, $timeout, Global, Pollution, $log, $http) {
 
     $scope.routeViewLoad = function() {
       $scope.routeView = true;
@@ -31,6 +29,11 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.userHeatmap = true;
     $scope.userTriangles = false;
     $scope.userMarkers = false;
+
+    $scope.infoMarkerStatus = 'Not Displayed';
+    $scope.triangleStatus = 'Not Displayed';
+    $scope.heatmapStatus = 'Not Displayed';
+    $scope.renderedTimeString = 'None';
 
     //datapicker functions
 
@@ -73,13 +76,14 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.slider.radius = 82;
     $scope.slider.maxIntensity = $scope.slider.parameterMaxIntensity[$scope.parameter_name];
 
+    $scope.updateDateTime = function (dt,time) {
+      $scope.dt = dt;
+      $scope.time = String('00' + time).slice(-2);
 
-
-    $scope.updateDateTime = function () {
       var year = String($scope.dt.getYear()).slice(-2);
       var month = String('00' + ($scope.dt.getMonth()+1)).slice(-2);
       var day = String('00' + ($scope.dt.getDate())).slice(-2);
-      var hour = String('00' + $scope.time.getHours()).slice(-2);
+      var hour = $scope.time;//String('00' + $scope.time.getHours()).slice(-2);
 
       if($scope.checkDateTime(year,month,day,hour)) {
         $scope.year = year;
@@ -93,13 +97,14 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.checkDateTime = function(year,month,day,hour) {
       var valid_date = month + '/' + day + '/' + year;
       var valid_time =  hour + ':00';
+
       for(var i = 0; i < $scope.datastats.files_collection.length; i+=1) {
         if($scope.datastats.files_collection[i].valid_date === valid_date && $scope.datastats.files_collection[i].valid_time === valid_time) {
           $scope.dtalert = null;
           return true;
         }
       }
-      $scope.dtalert = valid_date + ' ' + valid_time + ' not available\nUsing ' + $scope.month + '/' + $scope.day + '/' + $scope.year + ' ' + $scope.hour + ':00';
+      $scope.dtalert = valid_date + ' ' + valid_time + ' not available. Using ' + $scope.month + '/' + $scope.day + '/' + $scope.year + ' ' + $scope.hour + ':00';
       return false;
     };
 
@@ -109,16 +114,17 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
         $scope.dt = $scope.maxdate = new Date(response.max_valid_date);
         $scope.mindate = response.min_valid_date;
 
+        $scope.time = $scope.datastats.max_valid_time.slice(0,2);
 
-        var t = new Date();
-        t.setHours($scope.datastats.max_valid_time.slice(0,2));
-        t.setMinutes(0,0,0);
+        //only set if not in route view
+        if(!$scope.inRouteView) {
+          $scope.year = String($scope.dt.getYear()).slice(-2);
+          $scope.month = String('00' + ($scope.dt.getMonth() + 1)).slice(-2);
+          $scope.day = String('00' + ($scope.dt.getDate())).slice(-2);
+          $scope.hour = $scope.time;//String('00' + $scope.time.getHours()).slice(-2);
+        }
 
-        $scope.time = t;
-        $scope.year = String($scope.dt.getYear()).slice(-2);
-        $scope.month = String('00' + ($scope.dt.getMonth()+1)).slice(-2);
-        $scope.day = String('00' + ($scope.dt.getDate())).slice(-2);
-        $scope.hour = String('00' + $scope.time.getHours()).slice(-2);
+        $scope.renderedTimeString = $scope.month + '/' + $scope.day + '/' + $scope.year + ' ' + $scope.hour + ':00';
       });
     };
 
@@ -134,9 +140,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
     $scope.slider.calculate();
 
-
     var heatmap;
-
 
     //  return triangles of the delaunay triangluation for the given parameter
     $scope.renderTriangles = function(cb) {
@@ -149,8 +153,17 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
         return;
       }
 
+      $scope.triangleStatus = 'Requesting...';
+
       $http.get('/triangles/' + $scope.year + '/' + $scope.month + '/' + $scope.day + '/' + $scope.hour + '/' + $scope.parameter_name)
         .success(function (response) {
+          $scope.triangleStatus = 'Success...';
+
+          //clear old triangles before rendering new ones
+          for (var i = 0; i < $scope.triangles.length; i+=1) {
+            $scope.triangles[i].setMap(null);
+          }
+          $scope.triangles = [];
 
           for (var i = 0; i < response.length; i += 1) {
 
@@ -173,6 +186,12 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
             });
             //jshint ignore:end
           }
+          if(cb) {
+            cb();
+          }
+        })
+        .error(function(data,status) {
+          $scope.triangleStatus = 'Error: ' + status;
           if(cb) {
             cb();
           }
@@ -227,13 +246,28 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
         return;
       }
 
+      $scope.infoMarkerStatus = 'Requesting...';
+
       //post to set up map markers to display measurement data info
       $http.get('/hourlydata/' + $scope.year + '/' + $scope.month + '/' + $scope.day + '/' + $scope.hour + '/' + $scope.parameter_name)
         .success(function(response) {
+          $scope.infoMarkerStatus = 'Success...';
+
+          //clear old markers before setting new ones
+          for (var i = 0; i < $scope.markers.length; i += 1) {
+            $scope.markers[i].setMap(null);
+          }
+          $scope.markers = [];
 
           for(var i=0;i<response.length; i+=1) {
             $scope.createMarker(response[i].latitude, response[i].longitude, response[i] );
           }
+          if(cb) {
+            cb();
+          }
+        })
+        .error(function(data,status) {
+          $scope.infoMarkerStatus = 'Error: ' + status;
           if(cb) {
             cb();
           }
@@ -243,6 +277,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.renderHeatmap = function(cb) {
 
       if(!$scope.userHeatmap) {
+        $scope.heatmapStatus = 'Not Displayed';
         if(cb) {
           cb();
         }
@@ -250,9 +285,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
       }
 
       var gridspacing = $scope.gridSpacing;
-
       var bounds = $scope.map.getBounds();
-
       //set lat to min lat
       var lat = bounds.Da.k;
 
@@ -285,10 +318,10 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
         }
       }
 
+      $scope.heatmapStatus = 'Requsting';
 
       $http.post('/viewport/' + $scope.year + '/' + $scope.month + '/' + $scope.day + '/' + $scope.hour + '/' + $scope.parameter_name, viewportQuery)
         .success(function(response) {
-
           $scope.viewportData = [];
 
           for(var i=0;i<response.points.coordinates.length;i+=1){
@@ -316,27 +349,23 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
           heatmap.set('data', $scope.viewportData);
 
+          $scope.heatmapStatus = 'Rendered';
+
           if(cb) {
             cb();
           }
-
         });
     };
 
     $scope.$on('mapInitialized', function(event, map) {
 
-
-
       heatmap = map.heatmapLayers.foo;
-
 
       heatmap.set('radius',$scope.slider.radius );
       heatmap.set('maxIntensity',$scope.slider.maxIntensity);
 
-
       $scope.map = map;
 
-      //if this is a child scope of myroutesctrl, render the route on the map
       if($scope.findOne)
       {
         $scope.findOne(map);
@@ -419,12 +448,8 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
       });
 
-
-
-
       $scope.renderTriangles();
       $scope.renderMarkers();
-
 
     });
 
@@ -436,23 +461,30 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.toggleMarkers = function() {
       $scope.userMarkers = $scope.userMarkers ? false : true;
 
-      if($scope.markers.length === 0) {
-        $scope.renderMarkers(function() {
-          if($scope.userMarkers) {
-            for (var i = 0; i < $scope.markers.length; i+=1) {
+      $scope.infoMarkerStatus = 'Toggling';
+
+      if ($scope.markers.length === 0) {
+        $scope.renderMarkers(function () {
+          if ($scope.userMarkers) {
+            for (var i = 0; i < $scope.markers.length; i += 1) {
               $scope.markers[i].setMap($scope.map);
             }
           }
+          $scope.infoMarkerStatus = $scope.userMarkers ? 'Rendered' : 'Not Displayed';
         });
       }
-
-      for (var i = 0; i < $scope.markers.length; i+=1) {
-        $scope.markers[i].setMap($scope.userMarkers ? $scope.map : null);
+      else {
+        for (var i = 0; i < $scope.markers.length; i += 1) {
+          $scope.markers[i].setMap($scope.userMarkers ? $scope.map : null);
+        }
+        $scope.infoMarkerStatus = $scope.userMarkers ? 'Rendered' : 'Not Displayed';
       }
     };
 
     $scope.toggleTriangles = function() {
       $scope.userTriangles = $scope.userTriangles ? false : true;
+
+      $scope.triangleStatus = 'Toggling';
 
       if($scope.triangles.length === 0) {
         $scope.renderTriangles(function() {
@@ -461,11 +493,14 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
               $scope.triangles[i].setMap($scope.map);
             }
           }
+          $scope.triangleStatus = $scope.userTriangles ? 'Rendered' : 'Not Displayed';
         });
       }
-
-      for (var i = 0; i < $scope.triangles.length; i+=1) {
-        $scope.triangles[i].setMap($scope.userTriangles ? $scope.map : null);
+      else {
+        for (var i = 0; i < $scope.triangles.length; i+=1) {
+          $scope.triangles[i].setMap($scope.userTriangles ? $scope.map : null);
+        }
+        $scope.triangleStatus = $scope.userTriangles ? 'Rendered' : 'Not Displayed';
       }
     };
 
@@ -505,11 +540,42 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
       heatmap.set('opacity', heatmap.get('opacity') ? null : 0.2);
     };
 
-    $scope.changeParameter = function () {
+    $scope.changeParameter = function (parameter_name) {
+      $scope.parameter_name = parameter_name;
       $scope.renderMap();
     };
 
+    $scope.preventRender = false;
+
     $scope.renderMap = function() {
+      //prevent rendering more than once a second
+      if($scope.preventRender) {
+        return;
+      }
+      else {
+        $scope.preventRender = true;
+        $timeout(function() {
+          $scope.preventRender = false;
+          //render one last time if the current date, time, or parameter are not the currently rendered
+          if(
+            $scope.renderedYear !== $scope.year ||
+            $scope.renderedDay !== $scope.day ||
+            $scope.renderedHour !== $scope.hour ||
+            $scope.renderedMonth !== $scope.month ||
+            $scope.renderedParameter !== $scope.parameter_name
+          ) {
+            $scope.renderMap();
+          }
+        }, 1000);
+      }
+
+      $scope.renderedYear = $scope.year;
+      $scope.renderedDay = $scope.day;
+      $scope.renderedHour = $scope.hour;
+      $scope.renderedMonth = $scope.month;
+      $scope.renderedParameter = $scope.parameter_name;
+      $scope.renderedTimeString = $scope.month + '/' + $scope.day + '/' + $scope.year + ' ' + $scope.hour + ':00';
+
       //disable heatmap first, and then adjust intensity parameter to prevent visualization artifacts
       heatmap.setMap(null);
       $scope.slider.maxIntensity = $scope.slider.parameterMaxIntensity[$scope.parameter_name];
@@ -528,6 +594,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
             $scope.triangles[i].setMap($scope.map);
           }
         }
+        $scope.triangleStatus = $scope.userTriangles ? 'Rendered' : 'Not Displayed';
       });
 
       for (i = 0; i < $scope.markers.length; i+=1) {
@@ -540,6 +607,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
             $scope.markers[i].setMap($scope.map);
           }
         }
+        $scope.infoMarkerStatus = $scope.userMarkers ? 'Rendered' : 'Not Displayed';
       });
     };
   }

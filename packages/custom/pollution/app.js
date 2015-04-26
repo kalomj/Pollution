@@ -28,7 +28,7 @@ Pollution.register(function(app, auth, system, database) {
   });
   
   Pollution.aggregateAsset('css', 'pollution.css',{
-      weight: 1,
+      weight: 2,
       group: 'header'});
 
   Pollution.aggregateAsset('css', 'jquery-ui.css',{

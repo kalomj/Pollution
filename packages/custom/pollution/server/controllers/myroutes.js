@@ -35,7 +35,6 @@ exports.create = function(req, res) {
     return function() {
       count -= 1;
 
-      console.log('here' + count);
       if (count === 0) {
         myroute.save(function (err) {
           if (err) {
@@ -44,7 +43,6 @@ exports.create = function(req, res) {
               error: 'Cannot save the route'
             });
           }
-
           res.json(myroute);
 
         });
