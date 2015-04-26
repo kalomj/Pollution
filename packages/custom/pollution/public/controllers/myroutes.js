@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$stateParams', '$location', 'Global', 'MyRoutes','$state','XmlParser',
-  function($parent, $scope, $stateParams, $location, Global, MyRoutes, $state, XmlParser) {
+  function($scope, $stateParams, $location, Global, MyRoutes, $state, XmlParser) {
     $scope.global = Global;
 
     $scope.hasAuthorization = function(myroute) {
@@ -91,8 +91,46 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
       });
     };
 
+    $scope.routeMarkers = [];
+    $scope.routeData = [];
 
-    $scope.findOne = function() {
+    //function to build a marker at a location that pops open a window with information
+    $scope.createRouteMarker = function(lat, lng, info) {
+      //jshint ignore:start
+      var pos = new google.maps.LatLng(lat, lng);
+
+      //build marker
+      var marker = new google.maps.Marker({
+        position: pos,
+        map: $scope.map,
+        icon: {
+          path: google.maps.SymbolPath.CIRCLE,
+          fillColor: 'pink',
+          fillOpacity: .7,
+          scale: 5,
+          strokeColor: 'black',
+          strokeWeight: .5
+        }
+      });
+
+      //build information window for marker
+      var infowindow = new google.maps.InfoWindow({
+        //content: '<pre>' + JSON.stringify(info,null,2) + '</pre>'
+        content: info
+      });
+
+      //add click listener to marker to pop up information window
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open($scope.map,marker);
+      });
+
+      $scope.routeMarkers.push(marker);
+      //jshint ignore:end
+    };
+
+    $scope.findOne = function(map) {
+
+      $scope.map = map;
 
       MyRoutes.get({
         myrouteId: $stateParams.myrouteId
@@ -100,22 +138,25 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
         $scope.myroute = myroute;
 
         /* jshint ignore:start */
-        $parent.routeData = [];
+        $scope.routeData = [];
 
         //set map center to the first point in the list
-        $parent.centerlat = myroute.points.coordinates[0][0];
-        $parent.centerlon = myroute.points.coordinates[0][1];
+        map.setZoom(16);
+        map.panTo(new google.maps.LatLng(myroute.points.coordinates[0][0],myroute.points.coordinates[0][1]));
+
 
         for(var i=0;i<myroute.points.coordinates.length;i+=1){
 
           var point = myroute.points.coordinates[i];
 
-          $parent.routeData.push(new google.maps.LatLng(Number(point[0]),Number(point[1])));
+          $scope.createRouteMarker(Number(point[0]),Number(point[1]),myroute.pm25[i].toString());
 
         }
         /* jshint ignore:end */
       });
 
     };
+
+
   }
 ]);

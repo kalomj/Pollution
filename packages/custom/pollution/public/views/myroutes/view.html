@@ -1,76 +1,7 @@
-<div style="height:100%;overflow:hidden" data-ng-controller="MyRoutesCtrl" data-ng-init="findOne()">
+<div style="height:100%;overflow:hidden" data-ng-controller="MyRoutesCtrl"> <!--  data-ng-init="findOne()" -->
   <div data-ng-controller="GMapCtrl" style="height:100%;width:100%;position:absolute;overflow:hidden">
 
-    <div class="leftmenu">
-
-
-
-
-      <button ng-click="toggleMarkers()">Toggle Info Markers</button>
-      <button ng-click="toggleTriangles()">Toggle Triangulation</button>
-      <button ng-click="toggleHeatmap()">Toggle Heatmap</button>
-      <button ng-click="changeGradient()">Change gradient</button>
-
-      <p>Latest: {{datastats.max_valid_date}} {{datastats.max_valid_time}}</p>
-
-      <h4>Date Picker</h4>
-      <p class="input-group">
-        <input datepicker-append-to-body="true" readonly type="text" class="form-control" show-button-bar="false" datepicker-popup="{{format}}" ng-model="dt" ng-change="updateDateTime()" is-open="opened" min-date="mindate" max-date="maxdate" datepicker-options="dateOptions" ng-required="true" />
-              <span class="input-group-btn">
-                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-              </span>
-      </p>
-
-      <h4>Time Picker</h4>
-      <timepicker readonly-input="true" ng-model="time" ng-change="updateDateTime()" hour-step="1" minute-step="60" show-meridian="false"></timepicker>
-
-      <div class="alert alert-danger animated fadeIn" ng-show="dtalert">{{dtalert}}</div>
-
-      <h4>Max Intensity Slider</h4>
-      <div ui-slider min="1" max="500" ng-model="slider.maxIntensity" ng-change="changeMaxValue()" ></div>
-      <input type="text" ng-model="slider.maxIntensity" ng-change="changeMaxValue()" />
-
-
-
-      <h4>Radius of Influence Slider</h4>
-      <div ui-slider min="0" max="100" ng-model="slider.radius" ng-change="changeRadius()" ></div>
-      <input type="text" ng-model="slider.radius" ng-change="changeRadius()" />
-
-
-      <h4>Calculated Max Intensity<br />in Parameter Units</h4>
-      <input type="text" readonly  ng-model="slider.calculated"  />
-
-      <h4>Pollution Parameter Type</h4>
-      <form name="myForm">
-        <label>
-          <input type="radio" ng-model="parameter_name" ng-change="changeParameter()" value="OZONE">
-          <b>O<sub>3</sub> (ppb)</b>
-        </label><br/>
-        <label>
-          <input type="radio" ng-model="parameter_name" ng-change="changeParameter()" value="PM25">
-          <b>PM<sub>2.5</sub> (µg/m<sup>3</sup>)</b>
-        </label><br/>
-        <label>
-          <input type="radio" ng-model="parameter_name" ng-change="changeParameter()" value="PM10">
-          <b>PM<sub>10</sub> (µg/m<sup>3</sup>)</b>
-        </label><br/>
-        <label>
-          <input type="radio" ng-model="parameter_name" ng-change="changeParameter()" value="CO">
-          <b>CO (ppm)</b>
-        </label><br/>
-        <label>
-          <input type="radio" ng-model="parameter_name" ng-change="changeParameter()" value="SO2">
-          <b>SO<sub>2</sub> (ppb)</b>
-        </label><br/>
-        <label>
-          <input type="radio" ng-model="parameter_name" ng-change="changeParameter()" value="NO2">
-          <b>NO<sub>2</sub> (ppb)</b>
-        </label><br/>
-      </form>
-
-
-    </div>
-
+    <ng-include src="'pollution/views/leftmenu/leftmenu.html'" onload="routeViewLoad()" ></ng-include>
 
     <div class="map-container">
       <div class="gmap">

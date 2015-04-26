@@ -46,6 +46,12 @@ var MyRouteSchema = new Schema({
   },
   PM10: {
     type: [Number]
+  },
+  valid_date: {
+    type: String
+  },
+  valid_time: {
+    type: String
   }
 });
 

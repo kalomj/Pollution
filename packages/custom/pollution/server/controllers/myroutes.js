@@ -29,6 +29,13 @@ exports.create = function(req, res) {
   var myroute = new MyRoute(req.body);
   myroute.user = req.user;
 
+  //create valid date and valid_time from first point timestamp
+  //"2014-06-05T23:39:51Z"
+
+
+
+
+
   interpolate.interpolate(myroute,function() {
     myroute.save(function(err) {
       if (err) {

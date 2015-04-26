@@ -11,7 +11,16 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 ]).controller('GMapCtrl', ['$scope', 'Global', 'Pollution', '$log', '$http',
   function($scope, Global, Pollution, $log, $http) {
 
-    $scope.routeData = [];
+
+
+    $scope.routeViewLoad = function() {
+      $scope.routeView = true;
+    };
+
+    $scope.mainViewLoad = function() {
+      $scope.routeView = false;
+    };
+
     //default center on the united states
     $scope.centerlat = 39.8282;
     $scope.centerlon = -98.5795;
@@ -316,6 +325,8 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
     $scope.$on('mapInitialized', function(event, map) {
 
+
+
       heatmap = map.heatmapLayers.foo;
 
 
@@ -324,6 +335,12 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
 
       $scope.map = map;
+
+      //if this is a child scope of myroutesctrl, render the route on the map
+      if($scope.findOne)
+      {
+        $scope.findOne(map);
+      }
 
       //clear heatmap when there is a zoom event to prevent bad visualization (red rectangle issue)
       google.maps.event.addListener //jshint ignore:line
