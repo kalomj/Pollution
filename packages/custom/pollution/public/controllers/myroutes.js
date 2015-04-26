@@ -117,7 +117,14 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
 
       //build information window for marker
       var infowindow = new google.maps.InfoWindow({
-        content: '<pre>' + JSON.stringify(info,null,2) + '</pre>'
+        content:  '<p> <b>O<sub>3</sub> (ppb):</b> ' + +(Math.round(info.OZONE + 'e+4')  + 'e-4') + '</p>' +
+                  '<p><b>PM<sub>2.5</sub> (µg/m<sup>3</sup>):</b> ' + +(Math.round(info.PM25 + 'e+4')  + 'e-4') + '</p>' +
+                  '<p><b>PM<sub>10</sub> (µg/m<sup>3</sup>):</b> ' + +(Math.round(info.PM10 + 'e+4')  + 'e-4') + '</p>' +
+                  '<p><b>CO (ppm):</b> ' + +(Math.round(info.CO + 'e+4')  + 'e-4') + '</p>' +
+                  '<p><b>SO<sub>2</sub> (ppb):</b> ' + +(Math.round(info.SO2 + 'e+4')  + 'e-4') + '</p>' +
+                  '<p><b>NO<sub>2</sub> (ppb):</b> ' + +(Math.round(info.NO2 + 'e+4')  + 'e-4') + '</p>' +
+                  '<p>Timestamp: ' + info.timestamp + '</p>'
+
         //content: info
       });
 
@@ -130,7 +137,7 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
       //jshint ignore:end
     };
 
-    $scope.findOne = function(map,setDT) {
+    $scope.findOne = function(map) {
 
       $scope.map = map;
 
@@ -162,7 +169,8 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
             CO:myroute.CO[i],
             SO2:myroute.SO2[i],
             NO2:myroute.NO2[i],
-            OZONE:myroute.OZONE[i]
+            OZONE:myroute.OZONE[i],
+            timestamp: myroute.timestamp[i]
           };
 
           $scope.createRouteMarker(Number(point[0]),Number(point[1]),info);
