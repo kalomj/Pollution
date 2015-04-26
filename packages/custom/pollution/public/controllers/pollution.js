@@ -318,7 +318,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
         }
       }
 
-      $scope.heatmapStatus = 'Requsting';
+      $scope.heatmapStatus = 'Requesting';
 
       $http.post('/viewport/' + $scope.year + '/' + $scope.month + '/' + $scope.day + '/' + $scope.hour + '/' + $scope.parameter_name, viewportQuery)
         .success(function(response) {
