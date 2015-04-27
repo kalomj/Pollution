@@ -447,10 +447,6 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
         $scope.renderHeatmap();
 
       });
-
-      $scope.renderTriangles();
-      $scope.renderMarkers();
-
     });
 
     $scope.changeMaxValue = function() {

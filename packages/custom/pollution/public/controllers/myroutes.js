@@ -146,6 +146,8 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
         $scope.day = myroute.valid_date.substring(3,5);
         $scope.hour = myroute.valid_time.substring(0,2);
 
+        $scope.renderedTimeString = $scope.month + '/' + $scope.day + '/' + $scope.year + ' ' + $scope.hour + ':00';
+
         /* jshint ignore:start */
         $scope.routeData = [];
 
@@ -172,7 +174,6 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
 
         }
         /* jshint ignore:end */
-
       });
 
     };
