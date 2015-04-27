@@ -17,7 +17,6 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
 
     $scope.create = function(isValid) {
 
-      //if (isValid) {
       var myroute
       /* jshint ignore:start */
          = new MyRoutes(testRoute)
@@ -26,10 +25,6 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
         myroute.$save(function(response) {
           $location.path('myroutes/' + response._id);
         });
-
-      //} else {
-      //  $scope.submitted = true;
-      //}
     };
 
     $scope.uploadXml = function($fileContent){
