@@ -71,6 +71,9 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.slider.parameterMaxIntensity.NO2 = 37;
     $scope.slider.parameterMaxIntensity.OZONE = 125;
 
+    $scope.triangles = [];
+    $scope.markers = [];
+
     $scope.gridSpacing = 50;
 
     $scope.slider.radius = 82;
