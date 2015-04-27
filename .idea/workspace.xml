@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c07db2d7-c1ee-4297-aa63-b09b9fda6e5d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/public/views/leftmenu/leftmenu.html" afterPath="$PROJECT_DIR$/packages/custom/pollution/public/views/leftmenu/leftmenu.html" />
     </list>
     <ignored path="Pollution.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,11 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pollution.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pollution.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.72342736">
-              <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+            <state vertical-scroll-proportion="-40.677418">
+              <caret line="76" column="28" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="leftmenu.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/views/leftmenu/leftmenu.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6803456">
+              <caret line="41" column="109" selection-start-line="41" selection-start-column="109" selection-end-line="41" selection-end-column="109" />
               <folding />
             </state>
           </provider>
@@ -86,12 +96,12 @@
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/controllers/myroutes.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/app.js" />
-        <option value="$PROJECT_DIR$/packages/custom/pollution/public/assets/css/pollution.css" />
-        <option value="$PROJECT_DIR$/packages/custom/pollution/public/views/leftmenu/leftmenu.html" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/views/myroutes/view.html" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/services/interpolate.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/controllers/myroutes.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js" />
+        <option value="$PROJECT_DIR$/packages/custom/pollution/public/views/leftmenu/leftmenu.html" />
+        <option value="$PROJECT_DIR$/packages/custom/pollution/public/assets/css/pollution.css" />
       </list>
     </option>
   </component>
@@ -1277,14 +1287,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/assets/css/pollution.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/views/gmap/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.666667">
@@ -1297,14 +1299,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/views/leftmenu/leftmenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.333334">
-          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1359,8 +1353,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72342736">
-          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+        <state vertical-scroll-proportion="-40.677418">
+          <caret line="76" column="28" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/assets/css/pollution.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7366212">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/views/leftmenu/leftmenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6803456">
+          <caret line="41" column="109" selection-start-line="41" selection-start-column="109" selection-end-line="41" selection-end-column="109" />
           <folding />
         </state>
       </provider>

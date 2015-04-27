@@ -33,7 +33,7 @@
   <input type="text" readonly  ng-model="slider.calculated"  />
 
   <h4>Pollution Parameter Type</h4>
-  <form name="myForm">
+  <form class="paramForm" name="myForm" ng-disabled="infoMarkerStatus !== 'Not Displayed' && infoMarkerStatus !== 'Rendered' && triangleStatus !== 'Not Displayed' && triangleStatus !== 'Rendered' && heatmapStatus !== 'Not Displayed' && heatmapStatus !== 'Rendered'">
     <label>
       <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="OZONE">
       <b>O<sub>3</sub> (ppb)</b>
