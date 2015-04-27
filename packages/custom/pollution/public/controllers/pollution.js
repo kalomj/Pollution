@@ -338,7 +338,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
               $scope.viewportData.push(
                 {
                   location: latlng, //jshint ignore:line
-                  weight: response[$scope.parameter_name][i]
+                  weight: response[$scope.parameter_name][i] <= 0 ? .00001 : response[$scope.parameter_name][i]
                 });
             }
           }

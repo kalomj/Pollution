@@ -35,13 +35,11 @@ exports.interpolate = function(myroute,year,month,day,hour,parameter_name,cb) {
         var bcc = barycentric(triangleArray, [points[i][1], points[i][0]]);
         var interpolated_value = bcc[0] * triangleValues[0] + bcc[1] * triangleValues[1] + bcc[2] * triangleValues[2];
 
-        //add interpolated value to the array. If it is less then zero, set it to a very small value
-        myroute[parameter_name][i] = interpolated_value < 0 ? 0.000001 : interpolated_value;
+        myroute[parameter_name][i] = interpolated_value;
 
       }
       else {
-        //set to very small value - setting to zero produces strange results in some heatmaps
-        myroute[parameter_name][i] = 0.000001;
+        myroute[parameter_name][i] = 0;
       }
 
 
