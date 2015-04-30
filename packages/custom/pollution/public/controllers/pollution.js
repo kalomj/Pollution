@@ -168,7 +168,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
           }
           $scope.triangles = [];
 
-          for (var i = 0; i < response.length; i += 1) {
+          for (i = 0; i < response.length; i += 1) {
 
 
             var triangleCoordinates = [
@@ -262,7 +262,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
           }
           $scope.markers = [];
 
-          for(var i=0;i<response.length; i+=1) {
+          for(i=0;i<response.length; i+=1) {
             $scope.createMarker(response[i].latitude, response[i].longitude, response[i] );
           }
           if(cb) {
@@ -289,26 +289,31 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
       var gridspacing = $scope.gridSpacing;
       var bounds = $scope.map.getBounds();
+
+      var ne = bounds.getNorthEast();
+      var sw = bounds.getSouthWest();
       //set lat to min lat
-      var lat = bounds.Da.k;
+      var lat = sw.lat();
+
+      console.log(ne.lat() + ' ' + sw.lat() + ' ' + ne.lng() + ' ' + sw.lng());
 
       //while lat is less than max lat
       //build array of latitude steps
       var latArray = [lat];
-      var latstep = (bounds.Da.j - bounds.Da.k)/($scope.map.getDiv().clientHeight/gridspacing);
-      while(lat < bounds.Da.j) {
+      var latstep = (ne.lat() - sw.lat())/($scope.map.getDiv().clientHeight/gridspacing);
+      while(lat < ne.lat()) {
         lat += latstep;
         latArray.push(lat);
       }
 
       //set lng to min lng
-      var lng = bounds.va.j;
+      var lng = sw.lng();
 
       //while lng is less than max lng
       //build array of longitude steps
       var lngArray = [lng];
-      var lngstep = (bounds.va.k - bounds.va.j)/($scope.map.getDiv().clientWidth/gridspacing);
-      while(lng < bounds.va.k) {
+      var lngstep = (ne.lng() - sw.lng())/($scope.map.getDiv().clientWidth/gridspacing);
+      while(lng < ne.lng()) {
         lng += lngstep;
         lngArray.push(lng);
       }
@@ -341,7 +346,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
               $scope.viewportData.push(
                 {
                   location: latlng, //jshint ignore:line
-                  weight: response[$scope.parameter_name][i] <= 0 ? .00001 : response[$scope.parameter_name][i]
+                  weight: response[$scope.parameter_name][i] <= 0 ? 0.00001 : response[$scope.parameter_name][i]
                 });
             }
           }
