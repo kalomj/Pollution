@@ -85,7 +85,7 @@ exports.reload = function(req, res) {
     };
 
     //don't process more than N at a time, to avoid crashing server instances with low memory. Assuming this
-    //routine is scheduled every hour, it will eventually catch up to the available data, processing 10 days worth of data
+    //routine is scheduled every hour, it will eventually catch up to the available data, processing N days worth of data
     //per day until all historical data is captured in the database
     for (i = 0; i < filestoload.length && i < max_files; i += 1) {
       var filename = filestoload[i];

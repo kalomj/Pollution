@@ -295,8 +295,6 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
       //set lat to min lat
       var lat = sw.lat();
 
-      console.log(ne.lat() + ' ' + sw.lat() + ' ' + ne.lng() + ' ' + sw.lng());
-
       //while lat is less than max lat
       //build array of latitude steps
       var latArray = [lat];

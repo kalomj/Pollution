@@ -45,4 +45,20 @@ var testRoute = {
     ]
   }
 };
+
+
+var testRoute2 = {
+  "classifiedmode":["W","W"],
+  "points": {
+    "coordinates": [
+        [33.78541728,-84.38039474],
+        [33.78577773,-84.38044068]
+    ],
+    "type":"MultiPoint"
+  },
+  "timestamp":[
+    "2015-05-21T15:26:35.998",
+    "2015-05-21T15:26:54.006"
+  ]
+};
 /* jshint ignore:end */

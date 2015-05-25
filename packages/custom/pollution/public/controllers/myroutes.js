@@ -19,7 +19,7 @@ angular.module('mean.pollution').controller('MyRoutesCtrl', ['$scope', '$statePa
 
       var myroute
       /* jshint ignore:start */
-         = new MyRoutes(testRoute)
+         = new MyRoutes(testRoute2)
       /* jshint ignore:end */
           ;
         myroute.$save(function(response) {
