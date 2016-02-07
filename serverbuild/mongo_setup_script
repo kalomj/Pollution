@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [[ $# -ne 1 ]] ; then
     echo 'Usage: mongo_setup_script device_name'
