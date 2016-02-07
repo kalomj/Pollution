@@ -1,0 +1,16 @@
+copy install_script to a fresh Ubuntu installation and run it to set up the environment
+
+to setup mongodb on a new disk,  run:
+
+mongo_setup_script device_name       (where device name is like sdb)
+
+
+to setup lftp to download from teh airnow api, run
+airnow_setup
+
+
+
+
+you will need to 
+chmod 777 airnow_setup
+to set execute permissions
