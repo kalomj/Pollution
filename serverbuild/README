@@ -12,5 +12,7 @@ airnow_setup username password
 
 
 you will need to 
-chmod 777 airnow_setup
+chmod 755 airnow_setup
+chmod 755 install_scripts
+chmod 755 mongo_setup_script
 to set execute permissions
