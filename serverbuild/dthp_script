@@ -5,3 +5,5 @@ sudo cp /home/pollution/airquality/serverbuild/disable-transparent-hugepages /et
 sudo chmod 755 /etc/init.d/disable-transparent-hugepages
 
 sudo update-rc.d disable-transparent-hugepages defaults
+
+echo 'Transparent Huge Pages Disabled.'
