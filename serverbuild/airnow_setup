@@ -38,3 +38,5 @@ echo '5 * * * * wget -O /dev/null http://localhost:3000/filesync' | sudo tee -a 
 echo '30 * * * * wget -O /dev/null http://localhost:3000/reload' | sudo tee -a cron_file
 
 crontab cron_file
+
+echo 'Airnow Data Syncronization Scheduled.'
