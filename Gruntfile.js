@@ -112,7 +112,10 @@ module.exports = function(grunt) {
       server: {
         options: {
           index: 'server.js',
-          logDir: 'logs'
+          logDir: 'logs',
+          errFile: 'err.log',
+          outFile: 'out.log',
+          logFile: 'log.log'
         }
       }
     }
