@@ -1,50 +1,67 @@
-#mount additional volumes
-#to find volume name (volume name will be like /dev/sd*)
+#!/bin/sh
 
-#lsblk 
+if [[ $# -eq 0 ]] ; then
+    echo 'Usage: mongo_setup_script device_name'
+    echo 'Use device_name=sdb, not device_name=/dev/sdb'
+    echo 'to find volume name (volume name will be like /dev/sd*)'
+    echo 'lsblk'
+    exit 0
+fi
+
+#mount additional volumes
 
 #check for file system on the volume. If filesystem is ‘data’ the no file system exists on the disk
-
 #sudo file -s /dev/sd*
 
 #create file system on the volume
-
-#sudo mkfs.ext4 -F /dev/sd*
+sudo mkfs.ext4 -F /dev/$1
 
 
 #create directory for mount point
-#mkdir /home/pollution/mongo
+mkdir /home/pollution/mongo
 #mount disk to mount point
-#echo '/dev/sdb /home/pollution/mongo ext4 defaults,auto,noatime,noexec 0 0' | sudo tee -a /etc/fstab
+echo "/dev/$1 /home/pollution/mongo ext4 defaults,auto,noatime,noexec 0 0" | sudo tee -a /etc/fstab
 
-#sudo mount /home/pollution/mongo
-#mkdir /home/pollution/mongo/log
-#mkdir /home/pollution/mongo/data
-#sudo chown mongodb:nogroup /home/pollution/mongo/data
-#sudo chown mongodb:nogroup /home/pollution/mongo/log
+sudo mount /home/pollution/mongo
+
+mkdir /home/pollution/mongo/log
+mkdir /home/pollution/mongo/data
+
+sudo chown mongodb:nogroup /home/pollution/mongo/data
+sudo chown mongodb:nogroup /home/pollution/mongo/log
+
 #edit default mongodb configuration
 #edit mongod.conf
-#sudo sed -i -e 's/\/var\/log\/mongodb/\/home\/pollution\/mongo\/log/' /etc/mongod.conf
-#sudo sed -i -e 's/\/var\/lib\/mongodb/\/home\/pollution\/mongo\/data/' /etc/mongod.conf
+
+sudo sed -i -e 's/\/var\/log\/mongodb/\/home\/pollution\/mongo\/log/' /etc/mongod.conf
+sudo sed -i -e 's/\/var\/lib\/mongodb/\/home\/pollution\/mongo\/data/' /etc/mongod.conf
+
 #By default Amazon Linux uses ulimit settings that are not appropriate for MongoDB. To setup ulimit to match the documented ulimit settings use the following steps:
+
 #delete last line using SED
-# sudo sed -i '$d' /etc/security/limits.conf
+sudo sed -i '$d' /etc/security/limits.conf
+
 #increase default number of processes and open files
-#echo '* soft nofile 64000' | sudo tee -a /etc/security/limits.conf
-#echo '* hard nofile 64000' | sudo tee -a /etc/security/limits.conf
-#echo '* soft nproc 32000' | sudo tee -a /etc/security/limits.conf
-#echo '* hard nproc 32000' | sudo tee -a /etc/security/limits.conf
-#echo  '# End of file' | sudo tee -a /etc/security/limits.conf
+echo '* soft nofile 64000' | sudo tee -a /etc/security/limits.conf
+echo '* hard nofile 64000' | sudo tee -a /etc/security/limits.conf
+echo '* soft nproc 32000' | sudo tee -a /etc/security/limits.conf
+echo '* hard nproc 32000' | sudo tee -a /etc/security/limits.conf
+echo  '# End of file' | sudo tee -a /etc/security/limits.conf
+
 #do the same thing if the pam package uses this file which can overwrite settings in limits.conf
 # sudo sed -i '$d' /etc/security/limits.d/90-nproc.conf
 #echo '* soft nproc 32000' | sudo tee -a /etc/security/limits.d/90-nproc.conf
 #echo '* hard nproc 32000' | sudo tee -a /etc/security/limits.d/90-nproc.conf
 #echo  '# End of file' | sudo tee -a /etc/security/limits.d/90-nproc.conf
+
 #set EC2 optimized block read settings for EC2
-# sudo blockdev --setra 32 /dev/sdb
+sudo blockdev --setra 32 /dev/sdb
+
 #makes block read settings persistent across reboots
-# echo 'ACTION=="add", KERNEL=="xvdf", ATTR{bdi/read_ahead_kb}="16"' | sudo tee -a /etc/udev/rules.d/85-ebs.rules
+echo "ACTION==\"add\", KERNEL==\"$1\", ATTR{bdi/read_ahead_kb}=\"16\"" | sudo tee -a /etc/udev/rules.d/85-ebs.rules
+
 #restart mongodb
-# sudo service mongod restart
-# now use grunt to confirm installation and set up mean-dev database in mongo
-# /home/pollution/airquality/grunt
+sudo service mongod restart
+
+echo 'now use grunt to confirm installation and set up mean-dev database in mongo'
+echo '/home/pollution/airquality/grunt'
