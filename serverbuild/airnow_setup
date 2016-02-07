@@ -14,7 +14,7 @@ mkdir /home/$(whoami)/airnow/joined
 
 #lftp -c "open -u user,password ftp://ftp.airnowapi.org/; mirror  --only-newer --no-recursion /Locations /home/$(whoami)/airnow/locations"
 #lftp -c "open -u user,password ftp://ftp.airnowapi.org/; mirror --only-newer --no-recursion /HourlyData /home/$(whoami)/airnow/hourlydata"
-
+rm /home/$(whoami)/airnow/filesync
 touch /home/$(whoami)/airnow/filesync
 line1='lftp -c "open -u $1,$2 ftp://ftp.airnowapi.org/; mirror  --only-newer --no-recursion /Locations /home/$(whoami)/airnow/locations"'
 line2='lftp -c "open -u $1,$2 ftp://ftp.airnowapi.org/; mirror --only-newer --no-recursion /HourlyData /home/$(whoami)/airnow/hourlydata"'
