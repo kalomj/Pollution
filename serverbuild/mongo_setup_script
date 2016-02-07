@@ -10,6 +10,11 @@ if [[ $# -ne 1 ]] ; then
     exit 0
 fi
 
+if [[ -d "/home/pollution/mongo" ]] ; then
+  echo "/home/pollution/mongo already exists"
+  exit 0
+fi
+
 #mount additional volumes
 
 #check for file system on the volume. If filesystem is ‘data’ the no file system exists on the disk
