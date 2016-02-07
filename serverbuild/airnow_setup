@@ -7,7 +7,7 @@ mkdir /home/$(whoami)/airnow/locations
 mkdir /home/$(whoami)/airnow/joined
 
 #LFTP for ftp mirroring
-#sudo apt-get install lftp
+sudo apt-get install lftp
 
 #Save the following two commands to a file named /home/$(whoami)/airnow/filesync
 # Be sure to replace user,password with your user name and password obtained from signing up at http://www.airnowapi.org
@@ -16,21 +16,19 @@ mkdir /home/$(whoami)/airnow/joined
 #lftp -c "open -u user,password ftp://ftp.airnowapi.org/; mirror --only-newer --no-recursion /HourlyData /home/$(whoami)/airnow/hourlydata"
 rm /home/$(whoami)/airnow/filesync
 touch /home/$(whoami)/airnow/filesync
-line1="lftp -c \"open -u $1,$2 ftp://ftp.airnowapi.org/; mirror  --only-newer --no-recursion /Locations /home/$(whoami)/airnow/locations\""
-line2="lftp -c \"open -u $1,$2 ftp://ftp.airnowapi.org/; mirror --only-newer --no-recursion /HourlyData /home/$(whoami)/airnow/hourlydata\""
-echo "$1"
-echo "$2"
+line1='lftp -c "open -u $1,$2 ftp://ftp.airnowapi.org/; mirror  --only-newer --no-recursion /Locations /home/$(whoami)/airnow/locations"'
+line2='lftp -c "open -u $1,$2 ftp://ftp.airnowapi.org/; mirror --only-newer --no-recursion /HourlyData /home/$(whoami)/airnow/hourlydata"'
+
 echo "$line1" | sudo tee -a /home/$(whoami)/airnow/filesync
 echo "$line2" | sudo tee -a /home/$(whoami)/airnow/filesync
-
 
 # Set up execute permissions on the file
 chmod 777 /home/$(whoami)/airnow/filesync
 
 # Set up a cronjob at the 5 minute mark of every hour to download the latest files, and again at the 30 minute mark of every hour to load the triangulation
-#crontab -l > cron_file
+crontab -l > cron_file
 
-#echo '5 * * * * wget -O /dev/null http://localhost:3000/filesync' | sudo tee -a cron_file
-#echo '30 * * * * wget -O /dev /null http://localhost:3000/reload' | sudo tee -a cron_file
+echo '5 * * * * wget -O /dev/null http://localhost:3000/filesync' | sudo tee -a cron_file
+echo '30 * * * * wget -O /dev /null http://localhost:3000/reload' | sudo tee -a cron_file
 
-#crontab cron_file
+crontab cron_file
