@@ -3,8 +3,9 @@
 if [[ $# -eq 0 ]] ; then
     echo 'Usage: mongo_setup_script device_name'
     echo 'Use device_name=sdb, not device_name=/dev/sdb'
-    echo 'to find volume name (volume name will be like /dev/sd*)'
+    echo 'to find volume name:'
     echo 'lsblk'
+    echo '(lsblk will list volume name like /dev/sd*)'
     exit 0
 fi
 
