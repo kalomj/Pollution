@@ -8,6 +8,9 @@ mongo_setup_script device_name       (where device name is like sdb)
 to setup lftp to download from teh airnow api, run the following (where username and password correspond to an Airnow API account)
 airnow_setup username password
 
+to disable transparent huge pages for mongodb performance, run
+dthp_script
+
 
 
 
@@ -15,4 +18,5 @@ you will need to
 chmod 755 airnow_setup
 chmod 755 install_scripts
 chmod 755 mongo_setup_script
+chmod 755 dthp_script
 to set execute permissions
