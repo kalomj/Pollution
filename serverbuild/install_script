@@ -1,0 +1,44 @@
+#!/bin/sh
+
+#This script builds the initial environment to host the pollution tracking web app
+
+#Certain commands require sudo so this cannot be automated (must type password when prompted
+
+#This should be run in an empty directory which will contain the project source code after the script completes
+
+
+sudo apt-get update
+sudo apt-get -y install git
+git config --global user.name "Marc Kalo"
+git config --global user.email "marc.kalo@gmail.com"
+git init
+
+git remote add origin https://github.com/kalomj/Pollution
+git pull origin master
+
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+
+echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+
+sudo apt-get update
+
+sudo apt-get install -y mongodb-org=3.0.0 mongodb-org-server=3.0.0 mongodb-org-shell=3.0.0 mongodb-org-mongos=3.0.0 mongodb-org-tools=3.0.0
+
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
+. ~/.nvm/nvm.sh 
+. ~/.profile 
+. ~/.bashrc
+
+
+nvm install v0.10.25
+nvm alias default 0.10.25
+(cd node_modules/meanio && npm install request)
+(cd node_modules/meanio && npm install uglify-js)
+(cd node_modules/meanio && npm install)
+
+npm install -g bower
+bower install
+npm install -g grunt-cli
+npm install -g grunt
+
+npm install
