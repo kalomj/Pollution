@@ -95,7 +95,7 @@ echo '10 seconds to go'
 sleep 10
 
 
-echo 'then use the following command to setup the database indexes'
+echo 'now using the following command to setup the database indexes'
 echo 'mongo localhost:27017/mean-dev < /home/pollution/airquality/serverbuild/mongo_setup.js'
 mongo localhost:27017/mean-dev < /home/pollution/airquality/serverbuild/mongo_setup.js
 
