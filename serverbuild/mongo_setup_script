@@ -73,7 +73,7 @@ sudo service mongod restart
 echo 'now use grunt to confirm installation and set up mean-dev database in mongo'
 echo '/home/pollution/airquality/grunt'
 
-/home/pollution/airquality/grunt forever:server:start
+grunt --gruntfile /home/pollution/airquality/Gruntfile.js forever:server:start
 
 echo 'call wget to download latest file data from the airnow ftp'
 wget -O /dev/null http://localhost:3000/filesync
