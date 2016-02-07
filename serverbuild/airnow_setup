@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-if [[ $# -eq 0 ]] ; then
+if [[ $# -ne 2 ]] ; then
     echo 'Usage: airnow_setup username password'
     exit 0
 fi
