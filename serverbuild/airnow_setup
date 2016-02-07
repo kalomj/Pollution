@@ -35,6 +35,6 @@ chmod 777 /home/$(whoami)/airnow/filesync
 crontab -l > cron_file
 
 echo '5 * * * * wget -O /dev/null http://localhost:3000/filesync' | sudo tee -a cron_file
-echo '30 * * * * wget -O /dev /null http://localhost:3000/reload' | sudo tee -a cron_file
+echo '30 * * * * wget -O /dev/null http://localhost:3000/reload' | sudo tee -a cron_file
 
 crontab cron_file
