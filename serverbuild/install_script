@@ -42,3 +42,5 @@ npm install -g grunt-cli
 npm install -g grunt
 
 npm install
+
+echo 'Install Complete.'
