@@ -11,12 +11,24 @@ airnow_setup username password
 to disable transparent huge pages for mongodb performance, run
 dthp_script
 
+to migrate the mongo database to a new volume, first mount the volume to a new directory. the following script will shut down the webserver,
+shut down the mongo database service, move the database files, restart the mongo server, then restart the web server
+move_mongo_script src dst
+
+use the following to stop the server daemon
+grunt forever:server:stop
+
+use the following to start the server daemon
+grunt forever:server:start
+
+use the following to tail the log file when running as a daemon
+tail -f /logs/log.log
 
 
-
-you will need to 
+you will need to to set execute permissions
 chmod 755 airnow_setup
 chmod 755 install_scripts
 chmod 755 mongo_setup_script
 chmod 755 dthp_script
-to set execute permissions
+chmod 755 move_mongo_script
+
