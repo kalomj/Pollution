@@ -1,4 +1,10 @@
 #!/bin/sh
+
+if [[ $# -eq 0 ]] ; then
+    echo 'Usage: airnow_setup username password'
+    exit 0
+fi
+
 # Make directories to store hourly data from AirNow API
 
 mkdir /home/$(whoami)/airnow
