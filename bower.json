@@ -17,6 +17,7 @@
     "angular-ui-slider": "~0.1.1"
   },
   "resolutions": {
-    "ngmap": "1.6.0"
+    "ngmap": "1.6.0",
+    "angular": "1.3.2"
   }
 }

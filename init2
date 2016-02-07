@@ -1,0 +1,19 @@
+#!/bin/sh
+
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
+. ~/.nvm/nvm.sh 
+. ~/.profile 
+. ~/.bashrc
+
+
+nvm install v0.10.25
+(cd node_modules/meanio && npm install request)
+(cd node_modules/meanio && npm install uglify-js)
+(cd node_modules/meanio && npm install)
+
+npm install -g bower
+bower install
+npm install -g grunt-cli
+npm install -g grunt
+
+npm install
