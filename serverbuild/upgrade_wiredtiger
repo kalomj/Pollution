@@ -36,7 +36,7 @@ sudo chown mongodb:nogroup $1/log
 #edit default mongodb configuration
 echo 'storageEngine=wiredTiger' | sudo tee -a /etc/mongod.conf
 
-echo 'startintg mongod'
+echo 'starting mongod'
 sudo service mongod start
 
 echo 'now use grunt to confirm installation and set up mean-dev database in mongo'
