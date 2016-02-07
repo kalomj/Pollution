@@ -17,6 +17,12 @@ exports.delaunay_cron = function(year,month,day,hour,parameter_name,cb) {
   var valid_date = month + '/' + day + '/' + year;
   var valid_time = hour + ':00';
 
+  //calculate monotonically increasing integer per hour since Midnight, January 1st, 2000
+  var now = Date.UTC(year,month-1,day,hour);
+  var epoch = Date.UTC(2000,0,1,0);
+
+  var hour_code = Math.abs((now.valueOf() - epoch.valueOf())/(60*60*1000));
+
   var query = { valid_date: valid_date,
     valid_time: valid_time,
     parameter_name: parameter_name};
@@ -41,6 +47,10 @@ exports.delaunay_cron = function(year,month,day,hour,parameter_name,cb) {
       for(var i = 0; i < hourlydatas.length; i+=1) {
 
         var hourlydata = hourlydatas[i];
+
+        hourlydata.hour_code = hour_code;
+        hourlydata.save();
+
         //exclude where latitude and longitude values are invalid
         if(hourlydata.latitude !== 0 && hourlydata.longitude !== 0) {
           points.push([hourlydata.latitude, hourlydata.longitude]);

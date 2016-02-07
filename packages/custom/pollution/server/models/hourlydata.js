@@ -48,6 +48,9 @@ var HourlyDataSchema = new Schema({
   },
   data_source: {
     type: String
+  },
+  hour_code: {
+    type: Number
   }
 });
 
