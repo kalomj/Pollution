@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [[ $# -eq 0 ]] ; then
+if [[ $# -ne 1 ]] ; then
     echo 'Usage: mongo_setup_script device_name'
     echo 'Use device_name=sdb, not device_name=/dev/sdb'
     echo 'to find volume name:'
