@@ -6,6 +6,7 @@ if [[ $# -eq 0 ]] ; then
     echo 'to find volume name:'
     echo 'lsblk'
     echo '(lsblk will list volume name like /dev/sd*)'
+    echo 'see script comments for details on checking filesytem'
     exit 0
 fi
 
