@@ -67,3 +67,8 @@ sudo service mongod restart
 
 echo 'now use grunt to confirm installation and set up mean-dev database in mongo'
 echo '/home/pollution/airquality/grunt'
+
+echo 'then use the following command to setup the database indexes'
+echo 'mongo localhost:27017/mean-dev /home/pollution/airquality/serverbuild/mongo_setup.js'
+
+
