@@ -6,15 +6,23 @@ if [[ $# -ne 2 ]] ; then
     exit 0
 fi
 
-#stop the mongo service
+echo 'stop the web server'
+/home/pollution/airquality/grunt forever:server:stop
+
+echo 'stop the mongo service'
 sudo service mongod stop
 
-#copy the mongo directory to a new location
+echo 'copy the mongo directory to a new location'
 mv src dst
 
-#update the default path in mongo config
+echo 'update the default path in mongo config'
 sudo sed -i -e 's|dbpath=.*$|dbpath='$2'/data|' /etc/mongod.conf
 sudo sed -i -e 's|logpath=.*$|logpath='$2'/log/mongod.log|' /etc/mongod.conf
 
-#restart the mongo service
+echo 'restart the mongo service'
 sudo service mongod start
+
+echo 'restart the web server'
+/home/pollution/airquality/grunt forever:server:start
+
+echo 'migration complete'
