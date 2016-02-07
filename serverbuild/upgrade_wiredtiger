@@ -1,0 +1,79 @@
+#!/bin/bash
+
+if [[ $# -ne 1 ]] ; then
+    echo 'Usage: upgrade_wiredtiger dbpath'
+    echo 'This will destroy the current database and edit the default mongod service.'
+    echo 'Only use on initial server configuration'
+    exit 0
+fi
+
+if [[ ! -d ${1}/data || ! -d ${1}/log ]] ; then
+  echo 'expected '$1'/data and '$1'/log to exist and be directories'
+  exit 0
+fi
+
+if grep -q "dbpath=$1/data" /etc/mongod.conf
+then
+    echo 'dpbath is current default mongod service, proceeding'
+else
+    echo 'dpbath is not current default mongod service, exiting'
+    exit 0
+fi
+
+grunt --gruntfile /home/pollution/airquality/Gruntfile.js forever:server:stop
+
+sudo service mongod stop
+
+sudo rm -rf $1/log
+sudo rm -rf $1/data
+
+mkdir $1/log
+mkdir $1/data
+
+sudo chown mongodb:nogroup $1/data
+sudo chown mongodb:nogroup $1/log
+
+if ! grep -q "storageEngine=wiredTiger" /etc/mongod.conf
+then
+    #edit default mongodb configuration
+    echo 'storageEngine=wiredTiger' | sudo tee -a /etc/mongod.conf
+fi
+
+echo 'starting mongod'
+sudo service mongod start
+
+echo 'now use grunt to confirm installation and set up mean-dev database in mongo'
+echo '/home/pollution/airquality/grunt forever:server:start'
+
+grunt --gruntfile /home/pollution/airquality/Gruntfile.js forever:server:start
+
+echo 'sleep 10 seconds to allow server boot'
+sleep 10
+
+echo 'call wget to download latest file data from the airnow ftp'
+wget -O /dev/null http://localhost:3000/filesync
+echo 'sleep 20 seconds to allow ftp file syncronization'
+sleep 10
+echo '10 seconds to go'
+sleep 10
+
+
+echo 'then call wget to initialize database collections'
+wget -O /dev/null http://localhost:3000/reload
+echo 'sleep 20 seconds to allow initial mongodo collection creation'
+sleep 10
+echo '10 seconds to go'
+sleep 10
+
+
+echo 'now using the following command to setup the database indexes'
+echo 'mongo localhost:27017/mean-dev < /home/pollution/airquality/serverbuild/mongo_setup.js'
+mongo localhost:27017/mean-dev < /home/pollution/airquality/serverbuild/mongo_setup.js
+
+echo 'Server is running as daemon using forever. Try tailing the log file with :'
+echo 'tail -f logs/log.log'
+
+echo 'Mongo setup complete'
+
+
+

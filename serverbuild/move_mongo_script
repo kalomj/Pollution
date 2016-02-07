@@ -7,7 +7,7 @@ if [[ $# -ne 2 ]] ; then
 fi
 
 echo 'stop the web server'
-/home/pollution/airquality/grunt forever:server:stop
+grunt --gruntfile /home/pollution/airquality/Gruntfile.js forever:server:stop
 
 echo 'stop the mongo service'
 sudo service mongod stop
@@ -23,6 +23,6 @@ echo 'restart the mongo service'
 sudo service mongod start
 
 echo 'restart the web server'
-/home/pollution/airquality/grunt forever:server:start
+grunt --gruntfile /home/pollution/airquality/Gruntfile.js forever:server:start
 
 echo 'migration complete'
