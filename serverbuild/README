@@ -1,3 +1,6 @@
+**************************************************
+Initial Server Config
+**************************************************
 copy install_script to a fresh Ubuntu installation and run it to set up the environment
 
 to setup lftp to download from teh airnow api, run the following (where username and password correspond to an Airnow API account)
@@ -8,6 +11,13 @@ mongo_setup_script device_name       (where device name is like sdb)
 
 to disable transparent huge pages for mongodb performance, run
 dthp_script
+
+upgrade to the wired tiger mongo storage engine
+upgrade_wiredtiger /home/pollution/mongo
+**************************************************
+/Initial Server Config
+**************************************************
+
 
 to migrate the mongo database to a new volume, first mount the volume to a new directory. the following script will shut down the webserver,
 shut down the mongo database service, move the database files, restart the mongo server, then restart the web server
