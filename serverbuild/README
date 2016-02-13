@@ -1,19 +1,24 @@
 **************************************************
 Initial Server Config
 **************************************************
-copy install_script to a fresh Ubuntu installation and run it to set up the environment
+#copy install_script to a fresh Ubuntu installation and run it to set up the environment
+wget https://raw.githubusercontent.com/kalomj/Pollution/master/serverbuild/install_script
+chmod 755 install_script
+./install_script "First Last" "email@site.com"
 
-to setup lftp to download from teh airnow api, run the following (where username and password correspond to an Airnow API account)
-airnow_setup username password
+cd /home/pollution/airqulity/serverbuild
 
-to setup mongodb on a new disk,  run:
-mongo_setup_script device_name       (where device name is like sdb)
+#to setup lftp to download from teh airnow api, run the following (where username and password correspond to an Airnow API account)
+./airnow_setup username password
 
-to disable transparent huge pages for mongodb performance, run
-dthp_script
+#to setup mongodb on a new disk,  run:
+./mongo_setup_script device_name       (where device name is like sdb)
 
-upgrade to the wired tiger mongo storage engine
-upgrade_wiredtiger /home/pollution/mongo
+#to disable transparent huge pages for mongodb performance, run
+./dthp_script
+
+#upgrade to the wired tiger mongo storage engine
+./upgrade_wiredtiger /home/pollution/mongo
 **************************************************
 /Initial Server Config
 **************************************************
@@ -34,9 +39,9 @@ tail -f /logs/log.log
 
 
 you will need to to set execute permissions
-chmod 755 airnow_setup
-chmod 755 install_scripts
-chmod 755 mongo_setup_script
-chmod 755 dthp_script
-chmod 755 move_mongo_script
+chmod 755 /home/pollution/airquality/serverbuild/airnow_setup
+chmod 755 /home/pollution/airquality/serverbuild/install_scripts
+chmod 755 /home/pollution/airquality/serverbuild/mongo_setup_script
+chmod 755 /home/pollution/airquality/serverbuild/dthp_script
+chmod 755 /home/pollution/airquality/serverbuild/move_mongo_script
 
