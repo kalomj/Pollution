@@ -8,6 +8,12 @@ chmod 755 install_script
 
 cd /home/pollution/airqulity/serverbuild
 
+#you will need to to set execute permissions
+chmod 755 /home/pollution/airquality/serverbuild/airnow_setup
+chmod 755 /home/pollution/airquality/serverbuild/mongo_setup_script
+chmod 755 /home/pollution/airquality/serverbuild/dthp_script
+chmod 755 /home/pollution/airquality/serverbuild/move_mongo_script
+
 #to setup lftp to download from teh airnow api, run the following (where username and password correspond to an Airnow API account)
 ./airnow_setup username password
 
@@ -38,10 +44,5 @@ use the following to tail the log file when running as a daemon
 tail -f /logs/log.log
 
 
-you will need to to set execute permissions
-chmod 755 /home/pollution/airquality/serverbuild/airnow_setup
-chmod 755 /home/pollution/airquality/serverbuild/install_scripts
-chmod 755 /home/pollution/airquality/serverbuild/mongo_setup_script
-chmod 755 /home/pollution/airquality/serverbuild/dthp_script
-chmod 755 /home/pollution/airquality/serverbuild/move_mongo_script
+
 
