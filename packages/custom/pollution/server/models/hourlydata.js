@@ -49,7 +49,17 @@ var HourlyDataSchema = new Schema({
   data_source: {
     type: String
   },
+  //an integer that is monotonically increasing to absolutely identify the hour the measurement was taken
   hour_code: {
+    type: Number
+  },
+  //used as a flag to indicate if the value was read as a measurement or interpolated. 0 if not interpolated, 1 if interpolated
+  interpolated: {
+    type: Number
+  },
+  //used if a measurement needs to considered for reduction method interpolation. if a measurement (real or interpolated)
+  // exists at hour_code+1 and hour_code-1, it becomes bounded and no longer needs to be considered in future reduction passes. 0 if not bounded, 1 if bounded
+  bounded: {
     type: Number
   }
 });

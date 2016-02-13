@@ -48,7 +48,10 @@ exports.delaunay_cron = function(year,month,day,hour,parameter_name,cb) {
 
         var hourlydata = hourlydatas[i];
 
+        //save additional flags to the loaded hourlydata
         hourlydata.hour_code = hour_code;
+        hourlydata.interpolated = 0;
+        hourlydata.bounded = 0;
         hourlydata.save();
 
         //exclude where latitude and longitude values are invalid
