@@ -22,6 +22,14 @@ var LoadedFileSchema = new Schema({
   loaded : {
     type: Date,
     default: Date.now
+  },
+  processed:{
+    type:Number,
+    default: 0
+  },
+  hour_code:{
+    type:Number,
+    default:0
   }
 });
 

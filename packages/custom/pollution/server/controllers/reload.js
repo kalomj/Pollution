@@ -67,6 +67,7 @@ exports.reload = function(req, res) {
 
     var cronArray;
 
+      //this runs once per file, so it's a good place to manage the Loaded Files collection
     var execcb = function (filename, callback) {
       return function (error, stdout, stderr) {
         console.log(error);
@@ -78,13 +79,21 @@ exports.reload = function(req, res) {
         var month = filename.substring(4, 6);
         var hour = filename.substring(8, 10);
 
+        //calculate monotonically increasing integer per hour since Midnight, January 1st, 2000
+        var now = Date.UTC(year,month-1,day,hour);
+        var epoch = Date.UTC(2000,0,1,0);
+
+        var hour_code = Math.abs((now.valueOf() - epoch.valueOf())/(60*60*1000));
+
         var newLoadedFile = new LoadedFile({
           filename: filename,
           valid_date: month + '/' + day + '/' + year ,
-          valid_time: hour + ':00'
+          valid_time: hour + ':00',
+          hour_code: hour_code,
+          processed: 1
         });
 
-        newLoadedFile.save(savecb(filename));
+
 
         console.log(year + ' ' + month + ' ' + day + ' ' + hour);
 
@@ -97,7 +106,19 @@ exports.reload = function(req, res) {
         }
 
         //do all cron's in series then call the global callback
-        async.series(cronArray,function(err) { callback(); });
+        async.series(cronArray,function(err) {
+          newLoadedFile.save(savecb(filename));
+
+          /*LoadedFile.findOne({
+            filename: filename,
+            valid_date: month + '/' + day + '/' + year ,
+            valid_time: hour + ':00'
+          }, function(err,record) {
+            record.processed = 1;
+            record.save();
+          });*/
+          callback();
+        });
 
       };
     };
@@ -118,11 +139,13 @@ exports.reload = function(req, res) {
             'sed -i \'s/[|]PM2.5[|]/|PM25|/g\' ' + joinedpath + '/' + filename + '\n' +
               //using awk to replace pipes with commas and reorder/concatenate columns
             'awk \'BEGIN { FS="|";OFS=","} {print $3$6,$1,$2,"id" $3,$4,$5,$6,$7,$8,$9}\' ' + joinedpath + '/' + filename + ' | sort -t , -k1,1 > ' + joinedpath + '/temp_' + filename + ' && mv ' + joinedpath + '/temp_' + filename + ' ' + joinedpath + '/' + filename + '\n' +
-            'awk \'BEGIN { FS="|";OFS=","} {print $1$2,$9,$10,$13}\' ' + joinedpath + '/msl_' + filename + ' | sort  -t , -k1,1 > ' + joinedpath + '/temp_' + filename + ' && mv ' + joinedpath + '/temp_' + filename + ' ' + joinedpath + '/msl_' + filename + '\n' +
+            'awk \'BEGIN { FS="|";OFS=","} {print $1$2,$9,$10,$13,$2}\' ' + joinedpath + '/msl_' + filename + ' | sort  -t , -k1,1 > ' + joinedpath + '/temp_' + filename + ' && mv ' + joinedpath + '/temp_' + filename + ' ' + joinedpath + '/msl_' + filename + '\n' +
               //sort and join the hourly data and the monitoring site files
             'join -t, -1 1 -2 1 -o 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.2 2.3 2.4 1.10 ' + joinedpath + '/' + filename + ' ' + joinedpath + '/msl_' + filename + ' > ' + joinedpath + '/joined_' + filename + '\n' +
               //use mongoimport to pull into the hourlydata collection
             'mongoimport --db mean-dev --collection hourlydata --type csv --file ' + joinedpath + '/joined_' + filename + ' --fields measurement_key,valid_date,valid_time,aqsid,sitename,gmt_offset,parameter_name,reporting_units,value,latitude,longitude,country_code,data_source --upsert --upsertFields measurement_key,valid_date,valid_time' + '\n' +
+              //use mongoimport to pull into the locations collection
+            'mongoimport --db mean-dev --collection locations --type csv --file ' + joinedpath + '/msl_' + filename + ' --fields measurement_key,latitude,longitude,country_code,parameter_name --upsert --upsertFields measurement_key' + '\n' +
               //remove all temporary files to save space
             'rm ' + joinedpath + '/' + filename + '\n' +
             'rm ' + joinedpath + '/msl_' + filename + '\n' +
@@ -149,7 +172,11 @@ exports.reload = function(req, res) {
 
 
     console.log(funcArray.length);
-    async.series(funcArray, function(err) { console.log('finished reload job'); });
+
+    async.series(funcArray, function(err) {
+
+        console.log('finished reload job');
+    });
   });
 
   res.json('Data load requested');

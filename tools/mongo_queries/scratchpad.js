@@ -15,7 +15,7 @@ db.hourlydata.update(
     }
 );
 
-
+//query to add bounded field to parameters that currently have an hour_code but not a bounded flag
 
 
 
