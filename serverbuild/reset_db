@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [[ $# -ne 1 ]] ; then
-    echo 'Usage: upgrade_wiredtiger dbpath'
-    echo 'This will destroy the current database and edit the default mongod service.'
-    echo 'Only use on initial server configuration'
+    echo 'Usage: reset_db dbpath'
+    echo 'This will destroy the current database and reinitialize it.'
+    echo 'For testing purposes only.'
     exit 0
 fi
 
@@ -32,12 +32,6 @@ mkdir $1/data
 
 sudo chown mongodb:nogroup $1/data
 sudo chown mongodb:nogroup $1/log
-
-if ! grep -q "storageEngine=wiredTiger" /etc/mongod.conf
-then
-    #edit default mongodb configuration
-    echo 'storageEngine=wiredTiger' | sudo tee -a /etc/mongod.conf
-fi
 
 echo 'starting mongod'
 sudo service mongod start
@@ -74,6 +68,3 @@ echo 'Server is running as daemon using forever. Try tailing the log file with :
 echo 'tail -f logs/log.log'
 
 echo 'Mongo setup complete'
-
-
-

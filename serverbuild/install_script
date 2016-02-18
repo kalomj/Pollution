@@ -4,13 +4,25 @@
 
 #Certain commands require sudo so this cannot be automated (must type password when prompted
 
-#This should be run in an empty directory which will contain the project source code after the script completes
+if [[ $# -ne 1 ]] ; then
+    echo 'Usage: install_script "First Last" "email@address.com"'
+    echo 'input strings will be used to setup git'
+    exit 0
+fi
 
+if [[ -d "/home/pollution/airquality" ]] ; then
+  echo "/home/pollution/airquality already exists"
+  exit 0
+fi
+
+
+mkdir /home/pollution/airquality
+cd  /home/pollution/airquality
 
 sudo apt-get update
 sudo apt-get -y install git
-git config --global user.name "Marc Kalo"
-git config --global user.email "marc.kalo@gmail.com"
+git config --global user.name "$1"
+git config --global user.email "$2"
 git init
 
 git remote add origin https://github.com/kalomj/Pollution

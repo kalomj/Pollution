@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#this script mounts a newly provisioned disk to a predefined location /home/pollution/mongo
+# it then configures mongo startup scrpits to treat this location as the default location for the mongod service
+#it then does an initial startup using grunt to populate collections necessary for the project
+#it also runs some optimizations recommended when using mongo in an AWS EC2 instance
+
 if [[ $# -ne 1 ]] ; then
     echo 'Usage: mongo_setup_script device_name'
     echo 'Use device_name=sdb, not device_name=/dev/sdb'
