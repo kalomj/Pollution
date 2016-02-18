@@ -25,49 +25,8 @@ exports.reduction = function(cb) {
     //an array of javascript objects to hold the data
     var keyarray = [];
 
-    //function generator for finding max bounded hour code associated with a key
-   /*
-   var max_fun = function(i) {
-        return function(cb) {
-            HourlyData.find({ measurement_key:keyarray[i].key, bounded:1}).sort({hour_code:-1}).limit(1).exec(function (err, record) {
-                if (!record.length) {
-                    keyarray[i].max_hour_code = -1;
-                    keyarray[i].max_hour_value = -1;
-                }
-                else {
-                    keyarray[i].max_hour_code = record[0].hour_code;
-                    keyarray[i].max_hour_value = record[0].value;
-                }
-
-                //async callback
-                cb();
-            });
-        };
-
-    };
-    */
-
-    //function generator for finding min bounded hour code associated with a key
-    /*
-    var min_fun = function(i) {
-        return function(cb) {
-            HourlyData.find({ measurement_key:keyarray[i].key, bounded:1}).sort({hour_code:1}).limit(1).exec(function (err, record) {
-                if (!record.length) {
-                    keyarray[i].min_hour_code = -1;
-                    keyarray[i].min_hour_value = -1;
-                }
-                else {
-                    keyarray[i].min_hour_code = record[0].hour_code;
-                    keyarray[i].min_hour_value = record[0].value;
-                }
-
-                //async callback
-                cb();
-            });
-        };
-
-    };
-    */
+    //arrays to store mongodb insert and update jobs
+    var db_jobs = [];
 
     //function generator for finding unbounded hours based on a key
     var unbounded_fun = function(i) {
@@ -83,13 +42,11 @@ exports.reduction = function(cb) {
                     keyarray[i].unbounded = [];
                     keyarray[i].unbounded_values = [];
 
-
                     for(var j = 0; j < records.length; j+=1) {
 
                         keyarray[i].unbounded[j] = records[j].hour_code;
                         keyarray[i].unbounded_values[j] = records[j].value;
                     }
-
                 }
                 if(i%400===0){
                     var pct = i/4000 * 100;
@@ -106,7 +63,7 @@ exports.reduction = function(cb) {
     //function generator for finding any bounded hour based on a key
     var bounded_fun = function(i) {
         return function(cb) {
-            HourlyData.find({ measurement_key:keyarray[i].key, bounded:1}).findOne(function (err, record) {
+            HourlyData.findOne({ measurement_key:keyarray[i].key, bounded:1}, function (err, record) {
 
                 if (record) {
                     keyarray[i].bounded_hour = record.hour_code;
@@ -121,7 +78,34 @@ exports.reduction = function(cb) {
                 cb();
             });
         };
+    };
 
+    //function generator for finding common fields to be associated with each measurement key
+    var common_fun = function(i) {
+        return function(cb) {
+            HourlyData.findOne({ measurement_key:keyarray[i].key}, function (err, record) {
+                if(record) {
+                    keyarray[i].aqsid = record.aqsid;
+                    keyarray[i].sitename = record.sitename;
+                    keyarray[i].gmt_offset = record.gmt_offset;
+                    keyarray[i].parameter_name = record.parameter_name;
+                    keyarray[i].reporting_units = record.reporting_units;
+                    keyarray[i].latitude = record.latitude;
+                    keyarray[i].longitude = record.longitude;
+                    keyarray[i].country_code = record.country_code;
+                    keyarray[i].data_source = record.data_source;
+                    //async callback
+                    cb();
+                }
+            });
+        };
+    };
+
+    //function generator for printing status message after each batch of database jobs
+    var db_status_fun = function(key, i) {
+        return function() {
+            console.log('finished database jobs for measurement key ' + key + ' # ' + i);
+        };
     };
 
     //use async library to enforce serial execution of database calls
@@ -143,7 +127,6 @@ exports.reduction = function(cb) {
                 console.log('retrieved distinct measurement keys');
                 callback(null,'retrieved distinct measurement keys');
             });
-
         },
         // for each measurement key, get the maximum hour_code of a bounded record, minimum hour_code of a bounded record, and complete list of unbounded hour_codes
         function(callback) {
@@ -151,17 +134,15 @@ exports.reduction = function(cb) {
             var tasks = [];
 
             for (var i = 0; i < keyarray.length; i +=1 ) {
-                //tasks.push(max_fun(i));
                 tasks.push(bounded_fun(i));
                 tasks.push(unbounded_fun(i));
+                tasks.push(common_fun(i));
             }
 
             async.parallelLimit(tasks,100, function(err,results) {
                 console.log('retrieved all key data');
                 callback(null,'retrieved all key data');
             });
-
-
         },
         // keyarray is populated with all necessary data. find gaps and interpolate new values for insert. set bounded flags as appropriate with update
         function(callback) {
@@ -181,11 +162,22 @@ exports.reduction = function(cb) {
                     else {
                         //get the central index (if length is the minimum of 3, the formula below will return 1 as expected
                         bottom_half_ix = Math.floor(keyarray[i].unbounded.length / 2);
-                        //insert interpolated values between if necessary
-                        //interpolate(keyarray[i],bottom_half_ix-1);
-                        //interpolate(keyarray[i],bottom_half_ix);
+
                         //set central index to bounded
-                        //set_bounded(keyarray[i],bottom_half_ix);
+                        //bounded_update(keyarray[i],bottom_half_ix);
+
+                        /*If the server were to die right here, we could potentially flag an hour as bounded when it isn't
+                        * This will not affect the algorithms ability to recover when the server restarts. However,
+                        * There could be a permanent gap of data hours that does not have reduction method interpolation
+                        * applied (this only happens in this error case), and is expected to happen extremely rarely
+                        * an enhancement would be to schedule a job to scan the entire DB for gaps and repair them
+                        * perhaps as part of a maintenance or downtime routine */
+
+                        //insert interpolated values between if necessary
+                        //interpolated_insert(db_jobs,keyarray[i],bottom_half_ix,-1);
+                        //interpolated_insert(db_jobs,keyarray[i],bottom_half_ix,1);
+
+
                     }
                 }
                 else {
@@ -199,7 +191,6 @@ exports.reduction = function(cb) {
 
                 var top_half_ix = bottom_half_ix + 1;
                 var next = -1;
-
 
                 //only perform interpolation if there is data gap
                 if(bottom_half_ix > 0) {
@@ -237,8 +228,18 @@ exports.reduction = function(cb) {
                     }
                 }
 
+                //send database jobs using async series. As long as these jobs run in series, we can guarantee
+                //that the reduction algorithm will pick up where it left off by expanding on the "core" of bounded
+                //hours within each measurement key
+                //we can run a separate "series" job for each measurement key since measurement keys are processed
+                //independently
+                //I can't think of a good reason to wait for the entire "series" job to complete before going to the next
+                //measurement key. they can run in parallel. this will allow "series" jobs started early in the loop to
+                //complete and fall out of active memory before we experience paging or thrashing
+                async.series(db_jobs,db_status_fun(keyarray[i].key,i));
 
-
+                //set db_jobs to a new, empty array for the next pass through the loop
+                db_jobs = [];
             }
 
             console.log('gap total ' + gap_total + ' update total ' + update_total);

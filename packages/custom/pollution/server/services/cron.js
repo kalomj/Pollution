@@ -19,10 +19,10 @@ exports.delaunay_cron = function(year,month,day,hour,parameter_name,cb) {
   var valid_time = hour + ':00';
 
   //calculate monotonically increasing integer per hour since Midnight, January 1st, 2000
-  var now = Date.UTC(year,month-1,day,hour);
+  var now = Date.UTC(2000+ year,month-1,day,hour);
   var epoch = Date.UTC(2000,0,1,0);
 
-  var hour_code = Math.abs((now.valueOf() - epoch.valueOf())/(60*60*1000));
+  var hour_code = Math.abs((now - epoch)/(60*60*1000));
 
   var query = { valid_date: valid_date,
     valid_time: valid_time,
