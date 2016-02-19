@@ -70,3 +70,8 @@ test/coverage/
 # vim Files
 # --------------------
 *.swp
+
+#----------
+# Log Files
+#----------
+logs/
