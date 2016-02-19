@@ -7345,3 +7345,1464 @@ Mean app started on port 3000 (development) cluster.worker.id: 1
 [0mGET /pollution/assets/img/gsu_background.jpg [36m304 [0m1.041 ms - -[0m
 [0mGET /admin/menu/main [36m304 [0m1.367 ms - -[0m
 [0mGET /admin/menu/account [36m304 [0m0.829 ms - -[0m
+for real!
+forking  0
+forking  1
+forking  2
+forking  3
+Mean app started on port 3000 (development) cluster.worker.id: 1
+Mean app started on port 3000 (development) cluster.worker.id: 2
+Mean app started on port 3000 (development) cluster.worker.id: 3
+Mean app started on port 3000 (development) cluster.worker.id: 4
+[0mGET /filesync [32m200 [0m25.939 ms - 19[0m
+[0mGET /reload [32m200 [0m40.857 ms - 21[0m
+5
+processing /home/pollution/airnow/script_2016021814.dat
+null
+
+2016-02-18T14:59:17.295-0500	connected to: localhost
+2016-02-18T14:59:20.293-0500	[########################] mean-dev.hourlydata	635.3 KB/635.3 KB (100.0%)
+2016-02-18T14:59:22.371-0500	imported 4835 documents
+2016-02-18T14:59:22.377-0500	connected to: localhost
+2016-02-18T14:59:25.377-0500	[########################] mean-dev.locations	334.1 KB/334.1 KB (100.0%)
+2016-02-18T14:59:28.376-0500	[########################] mean-dev.locations	334.1 KB/334.1 KB (100.0%)
+2016-02-18T14:59:31.377-0500	[########################] mean-dev.locations	334.1 KB/334.1 KB (100.0%)
+2016-02-18T14:59:32.257-0500	imported 7990 documents
+
+16 02 18 14
+cron job requested for 02/18/16 14:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 14:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 14:00 PM25 29 remaining
+cron job requested for 02/18/16 14:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 14:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 14:00 PM10 28 remaining
+cron job requested for 02/18/16 14:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 14:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 14:00 OZONE 27 remaining
+cron job requested for 02/18/16 14:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 14:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 14:00 NO2 26 remaining
+cron job requested for 02/18/16 14:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 14:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 14:00 SO2 25 remaining
+cron job requested for 02/18/16 14:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 14:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 14:00 CO 24 remaining
+processing /home/pollution/airnow/script_2016021813.dat
+2016021814.dat saved to database
+null
+
+2016-02-18T14:59:33.657-0500	connected to: localhost
+2016-02-18T14:59:36.657-0500	[########################] mean-dev.hourlydata	636.8 KB/636.8 KB (100.0%)
+2016-02-18T14:59:39.656-0500	[########################] mean-dev.hourlydata	636.8 KB/636.8 KB (100.0%)
+2016-02-18T14:59:42.656-0500	[########################] mean-dev.hourlydata	636.8 KB/636.8 KB (100.0%)
+2016-02-18T14:59:44.454-0500	imported 4848 documents
+2016-02-18T14:59:44.458-0500	connected to: localhost
+2016-02-18T14:59:45.406-0500	imported 7990 documents
+
+16 02 18 13
+cron job requested for 02/18/16 13:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 13:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 13:00 PM25 23 remaining
+cron job requested for 02/18/16 13:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 13:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 13:00 PM10 22 remaining
+cron job requested for 02/18/16 13:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 13:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 13:00 OZONE 21 remaining
+cron job requested for 02/18/16 13:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 13:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 13:00 NO2 20 remaining
+cron job requested for 02/18/16 13:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 13:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 13:00 SO2 19 remaining
+cron job requested for 02/18/16 13:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 13:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 13:00 CO 18 remaining
+processing /home/pollution/airnow/script_2016021812.dat
+2016021813.dat saved to database
+null
+
+2016-02-18T14:59:53.062-0500	connected to: localhost
+2016-02-18T14:59:54.074-0500	imported 4750 documents
+2016-02-18T14:59:54.078-0500	connected to: localhost
+2016-02-18T14:59:55.060-0500	imported 7990 documents
+
+16 02 18 12
+cron job requested for 02/18/16 12:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 12:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 12:00 PM25 17 remaining
+cron job requested for 02/18/16 12:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 12:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 12:00 PM10 16 remaining
+cron job requested for 02/18/16 12:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 12:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 12:00 OZONE 15 remaining
+cron job requested for 02/18/16 12:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 12:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 12:00 NO2 14 remaining
+cron job requested for 02/18/16 12:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 12:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 12:00 SO2 13 remaining
+cron job requested for 02/18/16 12:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 12:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 12:00 CO 12 remaining
+processing /home/pollution/airnow/script_2016021811.dat
+2016021812.dat saved to database
+null
+
+2016-02-18T15:00:02.431-0500	connected to: localhost
+2016-02-18T15:00:03.485-0500	imported 4808 documents
+2016-02-18T15:00:03.490-0500	connected to: localhost
+2016-02-18T15:00:04.435-0500	imported 7990 documents
+
+16 02 18 11
+cron job requested for 02/18/16 11:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 11:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 11:00 PM25 11 remaining
+cron job requested for 02/18/16 11:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 11:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 11:00 PM10 10 remaining
+cron job requested for 02/18/16 11:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 11:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 11:00 OZONE 9 remaining
+cron job requested for 02/18/16 11:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 11:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 11:00 NO2 8 remaining
+cron job requested for 02/18/16 11:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 11:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 11:00 SO2 7 remaining
+cron job requested for 02/18/16 11:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 11:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 11:00 CO 6 remaining
+processing /home/pollution/airnow/script_2016021810.dat
+2016021811.dat saved to database
+null
+
+2016-02-18T15:00:12.020-0500	connected to: localhost
+2016-02-18T15:00:13.060-0500	imported 4925 documents
+2016-02-18T15:00:13.064-0500	connected to: localhost
+2016-02-18T15:00:14.007-0500	imported 7990 documents
+
+16 02 18 10
+cron job requested for 02/18/16 10:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 10:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 10:00 PM25 5 remaining
+cron job requested for 02/18/16 10:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 10:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 10:00 PM10 4 remaining
+cron job requested for 02/18/16 10:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 10:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 10:00 OZONE 3 remaining
+cron job requested for 02/18/16 10:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 10:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 10:00 NO2 2 remaining
+cron job requested for 02/18/16 10:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 10:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 10:00 SO2 1 remaining
+cron job requested for 02/18/16 10:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 10:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 10:00 CO 0 remaining
+finished reload job
+2016021810.dat saved to database
+null
+
+
+finished ftp mirror
+[0mGET /filesync [32m200 [0m11.182 ms - 19[0m
+null
+
+
+finished ftp mirror
+error: Forever detected script was killed by signal: SIGKILL
+for real!
+forking  0
+forking  1
+forking  2
+forking  3
+Mean app started on port 3000 (development) cluster.worker.id: 1
+Mean app started on port 3000 (development) cluster.worker.id: 3
+Mean app started on port 3000 (development) cluster.worker.id: 2
+Mean app started on port 3000 (development) cluster.worker.id: 4
+[0mGET /filesync [32m200 [0m23.819 ms - 19[0m
+5
+processing /home/pollution/airnow/script_2016021816.dat
+[0mGET /reload [32m200 [0m24.299 ms - 21[0m
+null
+
+
+finished ftp mirror
+null
+
+2016-02-18T15:10:23.612-0500	connected to: localhost
+2016-02-18T15:10:26.611-0500	[########################] mean-dev.hourlydata	642.7 KB/642.7 KB (100.0%)
+2016-02-18T15:10:28.778-0500	imported 4899 documents
+2016-02-18T15:10:28.782-0500	connected to: localhost
+2016-02-18T15:10:31.783-0500	[########################] mean-dev.locations	334.1 KB/334.1 KB (100.0%)
+2016-02-18T15:10:34.783-0500	[########################] mean-dev.locations	334.1 KB/334.1 KB (100.0%)
+2016-02-18T15:10:37.782-0500	[########################] mean-dev.locations	334.1 KB/334.1 KB (100.0%)
+2016-02-18T15:10:38.645-0500	imported 7990 documents
+
+16 02 18 16
+cron job requested for 02/18/16 16:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 16:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 16:00 PM25 29 remaining
+cron job requested for 02/18/16 16:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 16:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 16:00 PM10 28 remaining
+cron job requested for 02/18/16 16:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 16:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 16:00 OZONE 27 remaining
+cron job requested for 02/18/16 16:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 16:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 16:00 NO2 26 remaining
+cron job requested for 02/18/16 16:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 16:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 16:00 SO2 25 remaining
+cron job requested for 02/18/16 16:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 16:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 16:00 CO 24 remaining
+processing /home/pollution/airnow/script_2016021815.dat
+2016021816.dat saved to database
+null
+
+2016-02-18T15:10:39.994-0500	connected to: localhost
+2016-02-18T15:10:42.994-0500	[########################] mean-dev.hourlydata	639.0 KB/639.0 KB (100.0%)
+2016-02-18T15:10:45.994-0500	[########################] mean-dev.hourlydata	639.0 KB/639.0 KB (100.0%)
+2016-02-18T15:10:48.994-0500	[########################] mean-dev.hourlydata	639.0 KB/639.0 KB (100.0%)
+2016-02-18T15:10:50.793-0500	imported 4872 documents
+2016-02-18T15:10:50.797-0500	connected to: localhost
+2016-02-18T15:10:51.727-0500	imported 7990 documents
+
+16 02 18 15
+cron job requested for 02/18/16 15:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 15:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 15:00 PM25 23 remaining
+cron job requested for 02/18/16 15:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 15:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 15:00 PM10 22 remaining
+cron job requested for 02/18/16 15:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 15:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 15:00 OZONE 21 remaining
+cron job requested for 02/18/16 15:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 15:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 15:00 NO2 20 remaining
+cron job requested for 02/18/16 15:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 15:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 15:00 SO2 19 remaining
+cron job requested for 02/18/16 15:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 15:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 15:00 CO 18 remaining
+processing /home/pollution/airnow/script_2016021814.dat
+2016021815.dat saved to database
+null
+
+2016-02-18T15:10:58.886-0500	connected to: localhost
+2016-02-18T15:10:59.918-0500	imported 4947 documents
+2016-02-18T15:10:59.923-0500	connected to: localhost
+2016-02-18T15:11:00.864-0500	imported 7990 documents
+
+16 02 18 14
+cron job requested for 02/18/16 14:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 14:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 14:00 PM25 17 remaining
+cron job requested for 02/18/16 14:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 14:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 14:00 PM10 16 remaining
+cron job requested for 02/18/16 14:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 14:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 14:00 OZONE 15 remaining
+cron job requested for 02/18/16 14:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 14:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 14:00 NO2 14 remaining
+cron job requested for 02/18/16 14:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 14:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 14:00 SO2 13 remaining
+cron job requested for 02/18/16 14:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 14:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 14:00 CO 12 remaining
+processing /home/pollution/airnow/script_2016021813.dat
+2016021814.dat saved to database
+null
+
+2016-02-18T15:11:08.514-0500	connected to: localhost
+2016-02-18T15:11:09.567-0500	imported 4953 documents
+2016-02-18T15:11:09.572-0500	connected to: localhost
+2016-02-18T15:11:10.516-0500	imported 7990 documents
+
+16 02 18 13
+cron job requested for 02/18/16 13:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 13:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 13:00 PM25 11 remaining
+cron job requested for 02/18/16 13:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 13:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 13:00 PM10 10 remaining
+cron job requested for 02/18/16 13:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 13:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 13:00 OZONE 9 remaining
+cron job requested for 02/18/16 13:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 13:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 13:00 NO2 8 remaining
+cron job requested for 02/18/16 13:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 13:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 13:00 SO2 7 remaining
+cron job requested for 02/18/16 13:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 13:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 13:00 CO 6 remaining
+processing /home/pollution/airnow/script_2016021812.dat
+2016021813.dat saved to database
+null
+
+2016-02-18T15:11:19.776-0500	connected to: localhost
+2016-02-18T15:11:21.724-0500	imported 4855 documents
+2016-02-18T15:11:21.728-0500	connected to: localhost
+2016-02-18T15:11:23.339-0500	imported 7990 documents
+
+16 02 18 12
+cron job requested for 02/18/16 12:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 12:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 12:00 PM25 5 remaining
+cron job requested for 02/18/16 12:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 12:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 12:00 PM10 4 remaining
+cron job requested for 02/18/16 12:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 12:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 12:00 OZONE 3 remaining
+cron job requested for 02/18/16 12:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 12:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 12:00 NO2 2 remaining
+cron job requested for 02/18/16 12:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 12:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 12:00 SO2 1 remaining
+cron job requested for 02/18/16 12:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 12:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 12:00 CO 0 remaining
+finished reload job
+2016021812.dat saved to database
+[0mGET /reload [32m200 [0m8.065 ms - 21[0m
+5
+processing /home/pollution/airnow/script_2016021817.dat
+null
+
+2016-02-18T15:30:01.649-0500	connected to: localhost
+2016-02-18T15:30:03.104-0500	imported 4853 documents
+2016-02-18T15:30:03.109-0500	connected to: localhost
+2016-02-18T15:30:04.216-0500	imported 7990 documents
+
+16 02 18 17
+cron job requested for 02/18/16 17:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 17:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 17:00 PM25 29 remaining
+cron job requested for 02/18/16 17:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 17:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 17:00 PM10 28 remaining
+cron job requested for 02/18/16 17:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 17:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 17:00 OZONE 27 remaining
+cron job requested for 02/18/16 17:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 17:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 17:00 NO2 26 remaining
+cron job requested for 02/18/16 17:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 17:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 17:00 SO2 25 remaining
+cron job requested for 02/18/16 17:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 17:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 17:00 CO 24 remaining
+processing /home/pollution/airnow/script_2016021811.dat
+2016021817.dat saved to database
+null
+
+2016-02-18T15:30:14.345-0500	connected to: localhost
+2016-02-18T15:30:15.659-0500	imported 4887 documents
+2016-02-18T15:30:15.663-0500	connected to: localhost
+2016-02-18T15:30:16.728-0500	imported 7990 documents
+
+16 02 18 11
+cron job requested for 02/18/16 11:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 11:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 11:00 PM25 23 remaining
+cron job requested for 02/18/16 11:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 11:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 11:00 PM10 22 remaining
+cron job requested for 02/18/16 11:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 11:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 11:00 OZONE 21 remaining
+cron job requested for 02/18/16 11:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 11:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 11:00 NO2 20 remaining
+cron job requested for 02/18/16 11:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 11:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 11:00 SO2 19 remaining
+cron job requested for 02/18/16 11:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 11:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 11:00 CO 18 remaining
+processing /home/pollution/airnow/script_2016021810.dat
+2016021811.dat saved to database
+null
+
+2016-02-18T15:30:25.709-0500	connected to: localhost
+2016-02-18T15:30:27.243-0500	imported 4930 documents
+2016-02-18T15:30:27.247-0500	connected to: localhost
+2016-02-18T15:30:28.550-0500	imported 7990 documents
+
+16 02 18 10
+cron job requested for 02/18/16 10:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 10:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 10:00 PM25 17 remaining
+cron job requested for 02/18/16 10:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 10:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 10:00 PM10 16 remaining
+cron job requested for 02/18/16 10:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 10:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 10:00 OZONE 15 remaining
+cron job requested for 02/18/16 10:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 10:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 10:00 NO2 14 remaining
+cron job requested for 02/18/16 10:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 10:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 10:00 SO2 13 remaining
+cron job requested for 02/18/16 10:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 10:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 10:00 CO 12 remaining
+processing /home/pollution/airnow/script_2016021809.dat
+2016021810.dat saved to database
+null
+
+2016-02-18T15:30:37.097-0500	connected to: localhost
+2016-02-18T15:30:38.695-0500	imported 4919 documents
+2016-02-18T15:30:38.700-0500	connected to: localhost
+2016-02-18T15:30:40.507-0500	imported 7990 documents
+
+16 02 18 09
+cron job requested for 02/18/16 09:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 09:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 09:00 PM25 11 remaining
+cron job requested for 02/18/16 09:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 09:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 09:00 PM10 10 remaining
+cron job requested for 02/18/16 09:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 09:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 09:00 OZONE 9 remaining
+cron job requested for 02/18/16 09:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 09:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 09:00 NO2 8 remaining
+cron job requested for 02/18/16 09:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 09:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 09:00 SO2 7 remaining
+cron job requested for 02/18/16 09:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 09:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 09:00 CO 6 remaining
+processing /home/pollution/airnow/script_2016021808.dat
+2016021809.dat saved to database
+null
+
+2016-02-18T15:30:50.262-0500	connected to: localhost
+2016-02-18T15:30:51.883-0500	imported 4925 documents
+2016-02-18T15:30:51.887-0500	connected to: localhost
+2016-02-18T15:30:53.621-0500	imported 7990 documents
+
+16 02 18 08
+cron job requested for 02/18/16 08:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 08:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 08:00 PM25 5 remaining
+cron job requested for 02/18/16 08:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 08:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 08:00 PM10 4 remaining
+cron job requested for 02/18/16 08:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 08:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 08:00 OZONE 3 remaining
+cron job requested for 02/18/16 08:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 08:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 08:00 NO2 2 remaining
+cron job requested for 02/18/16 08:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 08:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 08:00 SO2 1 remaining
+cron job requested for 02/18/16 08:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 08:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 08:00 CO 0 remaining
+finished reload job
+2016021808.dat saved to database
+[0mGET /filesync [32m200 [0m24.890 ms - 19[0m
+null
+
+
+finished ftp mirror
+[0mGET /reload [32m200 [0m27.263 ms - 21[0m
+5
+processing /home/pollution/airnow/script_2016021807.dat
+null
+
+2016-02-18T16:30:01.665-0500	connected to: localhost
+2016-02-18T16:30:02.902-0500	imported 4830 documents
+2016-02-18T16:30:02.908-0500	connected to: localhost
+2016-02-18T16:30:04.264-0500	imported 7990 documents
+
+16 02 18 07
+cron job requested for 02/18/16 07:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 07:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 07:00 PM25 29 remaining
+cron job requested for 02/18/16 07:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 07:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 07:00 PM10 28 remaining
+cron job requested for 02/18/16 07:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 07:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 07:00 OZONE 27 remaining
+cron job requested for 02/18/16 07:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 07:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 07:00 NO2 26 remaining
+cron job requested for 02/18/16 07:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 07:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 07:00 SO2 25 remaining
+cron job requested for 02/18/16 07:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 07:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 07:00 CO 24 remaining
+processing /home/pollution/airnow/script_2016021806.dat
+2016021807.dat saved to database
+null
+
+2016-02-18T16:30:11.472-0500	connected to: localhost
+2016-02-18T16:30:12.545-0500	imported 4907 documents
+2016-02-18T16:30:12.549-0500	connected to: localhost
+2016-02-18T16:30:13.602-0500	imported 7990 documents
+
+16 02 18 06
+cron job requested for 02/18/16 06:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 06:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 06:00 PM25 23 remaining
+cron job requested for 02/18/16 06:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 06:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 06:00 PM10 22 remaining
+cron job requested for 02/18/16 06:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 06:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 06:00 OZONE 21 remaining
+cron job requested for 02/18/16 06:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 06:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 06:00 NO2 20 remaining
+cron job requested for 02/18/16 06:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 06:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 06:00 SO2 19 remaining
+cron job requested for 02/18/16 06:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 06:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 06:00 CO 18 remaining
+processing /home/pollution/airnow/script_2016021805.dat
+2016021806.dat saved to database
+null
+
+2016-02-18T16:30:21.030-0500	connected to: localhost
+2016-02-18T16:30:22.073-0500	imported 4926 documents
+2016-02-18T16:30:22.077-0500	connected to: localhost
+2016-02-18T16:30:23.009-0500	imported 7990 documents
+
+16 02 18 05
+cron job requested for 02/18/16 05:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 05:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 05:00 PM25 17 remaining
+cron job requested for 02/18/16 05:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 05:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 05:00 PM10 16 remaining
+cron job requested for 02/18/16 05:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 05:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 05:00 OZONE 15 remaining
+cron job requested for 02/18/16 05:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 05:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 05:00 NO2 14 remaining
+cron job requested for 02/18/16 05:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 05:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 05:00 SO2 13 remaining
+cron job requested for 02/18/16 05:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 05:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 05:00 CO 12 remaining
+processing /home/pollution/airnow/script_2016021804.dat
+2016021805.dat saved to database
+null
+
+2016-02-18T16:30:30.508-0500	connected to: localhost
+2016-02-18T16:30:31.576-0500	imported 4908 documents
+2016-02-18T16:30:31.580-0500	connected to: localhost
+2016-02-18T16:30:32.533-0500	imported 7990 documents
+
+16 02 18 04
+cron job requested for 02/18/16 04:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 04:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 04:00 PM25 11 remaining
+cron job requested for 02/18/16 04:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 04:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 04:00 PM10 10 remaining
+cron job requested for 02/18/16 04:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 04:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 04:00 OZONE 9 remaining
+cron job requested for 02/18/16 04:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 04:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 04:00 NO2 8 remaining
+cron job requested for 02/18/16 04:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 04:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 04:00 SO2 7 remaining
+cron job requested for 02/18/16 04:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 04:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 04:00 CO 6 remaining
+processing /home/pollution/airnow/script_2016021803.dat
+2016021804.dat saved to database
+null
+
+2016-02-18T16:30:39.882-0500	connected to: localhost
+2016-02-18T16:30:40.930-0500	imported 4929 documents
+2016-02-18T16:30:40.934-0500	connected to: localhost
+2016-02-18T16:30:41.876-0500	imported 7990 documents
+
+16 02 18 03
+cron job requested for 02/18/16 03:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 03:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 03:00 PM25 5 remaining
+cron job requested for 02/18/16 03:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 03:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 03:00 PM10 4 remaining
+cron job requested for 02/18/16 03:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 03:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 03:00 OZONE 3 remaining
+cron job requested for 02/18/16 03:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 03:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 03:00 NO2 2 remaining
+cron job requested for 02/18/16 03:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 03:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 03:00 SO2 1 remaining
+cron job requested for 02/18/16 03:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 03:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 03:00 CO 0 remaining
+finished reload job
+2016021803.dat saved to database
+[0mGET /filesync [32m200 [0m18.691 ms - 19[0m
+null
+
+
+finished ftp mirror
+[0mGET /reload [32m200 [0m2.856 ms - 21[0m
+5
+processing /home/pollution/airnow/script_2016021818.dat
+null
+
+2016-02-18T17:30:01.723-0500	connected to: localhost
+2016-02-18T17:30:02.938-0500	imported 4875 documents
+2016-02-18T17:30:02.947-0500	connected to: localhost
+2016-02-18T17:30:04.004-0500	imported 7990 documents
+
+16 02 18 18
+cron job requested for 02/18/16 18:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 18:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 18:00 PM25 29 remaining
+cron job requested for 02/18/16 18:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 18:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 18:00 PM10 28 remaining
+cron job requested for 02/18/16 18:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 18:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 18:00 OZONE 27 remaining
+cron job requested for 02/18/16 18:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 18:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 18:00 NO2 26 remaining
+cron job requested for 02/18/16 18:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 18:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 18:00 SO2 25 remaining
+cron job requested for 02/18/16 18:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 18:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 18:00 CO 24 remaining
+processing /home/pollution/airnow/script_2016021802.dat
+2016021818.dat saved to database
+null
+
+2016-02-18T17:30:15.344-0500	connected to: localhost
+2016-02-18T17:30:17.782-0500	imported 4996 documents
+2016-02-18T17:30:17.788-0500	connected to: localhost
+2016-02-18T17:30:19.640-0500	imported 7990 documents
+
+16 02 18 02
+cron job requested for 02/18/16 02:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 02:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 02:00 PM25 23 remaining
+cron job requested for 02/18/16 02:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 02:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 02:00 PM10 22 remaining
+cron job requested for 02/18/16 02:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 02:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 02:00 OZONE 21 remaining
+cron job requested for 02/18/16 02:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 02:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 02:00 NO2 20 remaining
+cron job requested for 02/18/16 02:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 02:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 02:00 SO2 19 remaining
+cron job requested for 02/18/16 02:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 02:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 02:00 CO 18 remaining
+processing /home/pollution/airnow/script_2016021801.dat
+2016021802.dat saved to database
+null
+
+2016-02-18T17:30:29.953-0500	connected to: localhost
+2016-02-18T17:30:31.772-0500	imported 4988 documents
+2016-02-18T17:30:31.780-0500	connected to: localhost
+2016-02-18T17:30:33.579-0500	imported 7990 documents
+
+16 02 18 01
+cron job requested for 02/18/16 01:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 01:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 01:00 PM25 17 remaining
+cron job requested for 02/18/16 01:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 01:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 01:00 PM10 16 remaining
+cron job requested for 02/18/16 01:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 01:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 01:00 OZONE 15 remaining
+cron job requested for 02/18/16 01:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 01:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 01:00 NO2 14 remaining
+cron job requested for 02/18/16 01:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 01:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 01:00 SO2 13 remaining
+cron job requested for 02/18/16 01:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 01:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 01:00 CO 12 remaining
+processing /home/pollution/airnow/script_2016021800.dat
+2016021801.dat saved to database
+null
+
+2016-02-18T17:30:42.287-0500	connected to: localhost
+2016-02-18T17:30:43.504-0500	imported 4990 documents
+2016-02-18T17:30:43.509-0500	connected to: localhost
+2016-02-18T17:30:44.691-0500	imported 7990 documents
+
+16 02 18 00
+cron job requested for 02/18/16 00:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 00:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 00:00 PM25 11 remaining
+cron job requested for 02/18/16 00:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 00:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 00:00 PM10 10 remaining
+cron job requested for 02/18/16 00:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 00:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 00:00 OZONE 9 remaining
+cron job requested for 02/18/16 00:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 00:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 00:00 NO2 8 remaining
+cron job requested for 02/18/16 00:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 00:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 00:00 SO2 7 remaining
+cron job requested for 02/18/16 00:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 00:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 00:00 CO 6 remaining
+processing /home/pollution/airnow/script_2016021723.dat
+2016021800.dat saved to database
+null
+
+2016-02-18T17:30:52.958-0500	connected to: localhost
+2016-02-18T17:30:54.796-0500	imported 4929 documents
+2016-02-18T17:30:54.800-0500	connected to: localhost
+2016-02-18T17:30:55.803-0500	imported 7990 documents
+
+16 02 17 23
+cron job requested for 02/17/16 23:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 23:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 23:00 PM25 5 remaining
+cron job requested for 02/17/16 23:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 23:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 23:00 PM10 4 remaining
+cron job requested for 02/17/16 23:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 23:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 23:00 OZONE 3 remaining
+cron job requested for 02/17/16 23:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 23:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 23:00 NO2 2 remaining
+cron job requested for 02/17/16 23:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 23:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 23:00 SO2 1 remaining
+cron job requested for 02/17/16 23:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 23:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 23:00 CO 0 remaining
+finished reload job
+2016021723.dat saved to database
+[0mGET /filesync [32m200 [0m16.756 ms - 19[0m
+null
+
+
+finished ftp mirror
+[0mGET /reload [32m200 [0m3.668 ms - 21[0m
+5
+processing /home/pollution/airnow/script_2016021819.dat
+null
+
+2016-02-18T18:30:01.802-0500	connected to: localhost
+2016-02-18T18:30:02.859-0500	imported 4903 documents
+2016-02-18T18:30:02.863-0500	connected to: localhost
+2016-02-18T18:30:04.224-0500	imported 7990 documents
+
+16 02 18 19
+cron job requested for 02/18/16 19:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 19:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 19:00 PM25 29 remaining
+cron job requested for 02/18/16 19:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 19:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 19:00 PM10 28 remaining
+cron job requested for 02/18/16 19:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 19:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 19:00 OZONE 27 remaining
+cron job requested for 02/18/16 19:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 19:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 19:00 NO2 26 remaining
+cron job requested for 02/18/16 19:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 19:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 19:00 SO2 25 remaining
+cron job requested for 02/18/16 19:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/18/16 19:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/18/16 19:00 CO 24 remaining
+processing /home/pollution/airnow/script_2016021722.dat
+2016021819.dat saved to database
+null
+
+2016-02-18T18:30:12.595-0500	connected to: localhost
+2016-02-18T18:30:13.983-0500	imported 4950 documents
+2016-02-18T18:30:13.987-0500	connected to: localhost
+2016-02-18T18:30:15.012-0500	imported 7990 documents
+
+16 02 17 22
+cron job requested for 02/17/16 22:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 22:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 22:00 PM25 23 remaining
+cron job requested for 02/17/16 22:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 22:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 22:00 PM10 22 remaining
+cron job requested for 02/17/16 22:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 22:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 22:00 OZONE 21 remaining
+cron job requested for 02/17/16 22:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 22:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 22:00 NO2 20 remaining
+cron job requested for 02/17/16 22:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 22:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 22:00 SO2 19 remaining
+cron job requested for 02/17/16 22:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 22:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 22:00 CO 18 remaining
+processing /home/pollution/airnow/script_2016021721.dat
+2016021722.dat saved to database
+null
+
+2016-02-18T18:30:24.994-0500	connected to: localhost
+2016-02-18T18:30:26.467-0500	imported 4947 documents
+2016-02-18T18:30:26.471-0500	connected to: localhost
+2016-02-18T18:30:27.743-0500	imported 7990 documents
+
+16 02 17 21
+cron job requested for 02/17/16 21:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 21:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 21:00 PM25 17 remaining
+cron job requested for 02/17/16 21:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 21:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 21:00 PM10 16 remaining
+cron job requested for 02/17/16 21:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 21:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 21:00 OZONE 15 remaining
+cron job requested for 02/17/16 21:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 21:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 21:00 NO2 14 remaining
+cron job requested for 02/17/16 21:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 21:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 21:00 SO2 13 remaining
+cron job requested for 02/17/16 21:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 21:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 21:00 CO 12 remaining
+processing /home/pollution/airnow/script_2016021720.dat
+2016021721.dat saved to database
+null
+
+2016-02-18T18:30:36.886-0500	connected to: localhost
+2016-02-18T18:30:38.544-0500	imported 4915 documents
+2016-02-18T18:30:38.549-0500	connected to: localhost
+2016-02-18T18:30:39.571-0500	imported 7990 documents
+
+16 02 17 20
+cron job requested for 02/17/16 20:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 20:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 20:00 PM25 11 remaining
+cron job requested for 02/17/16 20:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 20:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 20:00 PM10 10 remaining
+cron job requested for 02/17/16 20:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 20:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 20:00 OZONE 9 remaining
+cron job requested for 02/17/16 20:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 20:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 20:00 NO2 8 remaining
+cron job requested for 02/17/16 20:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 20:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 20:00 SO2 7 remaining
+cron job requested for 02/17/16 20:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 20:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 20:00 CO 6 remaining
+processing /home/pollution/airnow/script_2016021719.dat
+2016021720.dat saved to database
+null
+
+2016-02-18T18:30:49.813-0500	connected to: localhost
+2016-02-18T18:30:51.520-0500	imported 4905 documents
+2016-02-18T18:30:51.524-0500	connected to: localhost
+2016-02-18T18:30:52.861-0500	imported 7990 documents
+
+16 02 17 19
+cron job requested for 02/17/16 19:00 PM25
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 19:00 PM25
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 19:00 PM25 5 remaining
+cron job requested for 02/17/16 19:00 PM10
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 19:00 PM10
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 19:00 PM10 4 remaining
+cron job requested for 02/17/16 19:00 OZONE
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 19:00 OZONE
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 19:00 OZONE 3 remaining
+cron job requested for 02/17/16 19:00 NO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 19:00 NO2
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 19:00 NO2 2 remaining
+cron job requested for 02/17/16 19:00 SO2
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 19:00 SO2
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 19:00 SO2 1 remaining
+cron job requested for 02/17/16 19:00 CO
+Calculating triangulation
+Finished calculating triangulation
+triangle removed at 02/17/16 19:00 CO
+finished bulk triangle insert
+cron job successfully completed for 02/17/16 19:00 CO 0 remaining
+finished reload job
+2016021719.dat saved to database

@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c07db2d7-c1ee-4297-aa63-b09b9fda6e5d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/log.log" afterPath="$PROJECT_DIR$/logs/log.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/out.log" afterPath="$PROJECT_DIR$/logs/out.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/server/controllers/reload.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/server/controllers/reload.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/server/services/cron.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/server/services/cron.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/server/services/interpolated_insert.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/server/services/interpolated_insert.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/custom/pollution/server/services/reduction.js" afterPath="$PROJECT_DIR$/packages/custom/pollution/server/services/reduction.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serverbuild/reset_db" afterPath="$PROJECT_DIR$/serverbuild/reset_db" />
     </list>
     <ignored path="Pollution.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,51 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="reduction.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/reduction.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reduction.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="reduction.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/services/reduction.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="96" column="36" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hourlydata.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/models/hourlydata.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cron.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/services/cron.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reload.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/reload.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6407563">
-              <caret line="79" column="45" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
+            <state vertical-scroll-proportion="-1.4579831">
+              <caret line="209" column="53" selection-start-line="209" selection-start-column="53" selection-end-line="209" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -80,7 +43,57 @@
         <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/services/interpolated_insert.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="82" column="61" selection-start-line="82" selection-start-column="61" selection-end-line="82" selection-end-column="61" />
+              <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="delaunayjobs.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/models/delaunayjobs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loadedfiles.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/models/loadedfiles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reduction.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/reduction.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reload.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/reload.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cron.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/services/cron.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -89,8 +102,8 @@
       <file leaf-file-name="pollution.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.0">
-              <caret line="94" column="27" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
+            <state vertical-scroll-proportion="-16.258064">
+              <caret line="91" column="27" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -101,16 +114,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-8.666667">
               <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myroutes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/controllers/myroutes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -141,7 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/packages/custom/pollution/public/services/myroutes.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/assets/data/myroute.json" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/public/controllers/login.js" />
         <option value="$PROJECT_DIR$/config/assets.json" />
@@ -188,10 +190,11 @@
         <option value="$PROJECT_DIR$/tools/mongo_queries/scratchpad.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/models/locations.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/models/loadedfiles.js" />
-        <option value="$PROJECT_DIR$/packages/custom/pollution/server/services/reduction.js" />
-        <option value="$PROJECT_DIR$/packages/custom/pollution/server/services/interpolated_insert.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/controllers/reload.js" />
         <option value="$PROJECT_DIR$/packages/custom/pollution/server/services/cron.js" />
+        <option value="$PROJECT_DIR$/packages/custom/pollution/server/models/delaunayjobs.js" />
+        <option value="$PROJECT_DIR$/packages/custom/pollution/server/services/interpolated_insert.js" />
+        <option value="$PROJECT_DIR$/packages/custom/pollution/server/services/reduction.js" />
       </list>
     </option>
   </component>
@@ -950,18 +953,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/views/includes/foot.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.058315333">
@@ -1141,6 +1137,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1180,13 +1177,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="15" selection-end-column="2" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/models/loadedfiles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.758621">
-          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1272,26 +1262,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/services/cron.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/models/hourlydata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.65966386">
           <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/services/reduction.js">
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="96" column="36" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
+        <state vertical-scroll-proportion="-16.258064">
+          <caret line="91" column="27" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1299,7 +1281,39 @@
     <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/reduction.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/models/loadedfiles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/services/cron.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/reload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/models/delaunayjobs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1307,23 +1321,15 @@
     <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/services/interpolated_insert.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="61" selection-start-line="82" selection-start-column="61" selection-end-line="82" selection-end-column="61" />
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/public/controllers/pollution.js">
+    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/services/reduction.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.0">
-          <caret line="94" column="27" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/custom/pollution/server/controllers/reload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6407563">
-          <caret line="79" column="45" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
+        <state vertical-scroll-proportion="-1.4579831">
+          <caret line="209" column="53" selection-start-line="209" selection-start-column="53" selection-end-line="209" selection-end-column="53" />
           <folding />
         </state>
       </provider>

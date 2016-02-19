@@ -1,7 +1,8 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-    HourlyData = mongoose.model('HourlyData');
+    HourlyData = mongoose.model('HourlyData'),
+    DelaunayJobs = mongoose.model('DelaunayJobs');
 
 
 /**
@@ -14,7 +15,7 @@ var mongoose = require('mongoose'),
  * pass in the direction  to insert interpolated values from the core
  * (insert jobs should be added to the db_jobs_array growing out from the core, either up or down)
  */
-exports.interpolated_insert = function(db_jobs_array,key_obj,start_ix,direction) {
+module.exports = function(db_jobs_array,key_obj,start_ix,direction) {
 
     var end_ix = start_ix + direction,
         start_hour = key_obj.unbounded[start_ix],
@@ -34,33 +35,6 @@ exports.interpolated_insert = function(db_jobs_array,key_obj,start_ix,direction)
             });
         };
     };
-
-    /*
-    key_obj.aqsid
-    key_obj.sitename
-    key_obj.gmt_offset
-    key_obj.parameter_name
-    key_obj.reporting_units
-    key_obj.latitude
-    key_obj.longitude
-    key_obj.country_code
-    key_obj.data_source
-    */
-
-    /*
-
-    Need function to reverse this calculation - convert an hour code back to a valid_date and valid_time string
-
-     var valid_date = month + '/' + day + '/' + year;
-     var valid_time = hour + ':00';
-
-     //calculate monotonically increasing integer per hour since Midnight, January 1st, 2000
-     var now = Date.UTC(year,month-1,day,hour);
-
-
-     var hour_code = Math.abs((now.valueOf() - epoch.valueOf())/(60*60*1000));
-
-     */
 
     var epoch = Date.UTC(2000,0,1,0);
 
@@ -106,17 +80,70 @@ exports.interpolated_insert = function(db_jobs_array,key_obj,start_ix,direction)
         };
     };
 
+    //generator function to set a given hour/parameter to dirty state (indicating triangulation needs to be recalculated)
+    var dirty_fun = function(hour_code) {
+        return function(cb) {
+            DelaunayJobs.update(
+                {
+                    hour_code : hour_code,
+                    parameter_name : key_obj.parameter_name
+                },
+                {
+                    hour_code : hour_code,
+                    parameter_name : key_obj.parameter_name,
+                    valid_date : hc_to_valid_date(hour_code),
+                    valid_time : hc_to_valid_time(hour_code),
+                    dirty : 1
+                },
+                {
+                    upsert:true
+                },
+                function(err,result) {
+                    //async callback
+                    cb();
+                }
+            );
+        };
+    };
+
     //add the update job first, otherwise a failure after this point could lead to a gap in the bounded core
     db_jobs_array.push(bounded_fun(start_ix));
+
+    /*If the server were to die right after running to this part of the db_jobs_array
+     * we could potentially flag an hour as bounded when it isn't
+     * This will not affect the algorithms ability to recover when the server restarts. However,
+     * There could be a permanent gap of data hours that does not have reduction method interpolation
+     * applied (this only happens in this error case), and is expected to happen extremely rarely
+     * The algorithms would still perform in this case with slight accuracy reductions.
+     * an enhancement would be to schedule a job to scan the entire DB for gaps and repair them
+     * perhaps as part of a maintenance or downtime routine
+     * */
 
     //then iterate through hours and push job to do time interpolation inserts
     var gap_size = Math.abs(end_hour - start_hour)-1;
 
+    //no inserts required, return early
+    if(gap_size===0) {
+        return;
+    }
+
+    //at least 1 insert required
     for(var i = 1; i <= gap_size; i += 1) {
 
         var current_hour = start_hour + i * direction;
         var interpolated_value = 0;
 
+        var start_value = key_obj.unbounded_values[start_ix];
+        var end_value = key_obj.unbounded_values[end_ix];
+
+        var diff = end_value - start_value;
+        var value_step = direction * diff / (end_hour-start_hour);
+        interpolated_value = start_value + value_step * i;
+
+        //db job to ensure triangulation is run later for this hour/parameter
+        db_jobs_array.push(dirty_fun(current_hour));
+
+        //db job to insert the interpolated value
         db_jobs_array.push(insert_fun(current_hour,interpolated_value));
     }
 };
