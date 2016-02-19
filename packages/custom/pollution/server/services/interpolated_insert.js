@@ -29,9 +29,20 @@ module.exports = function(db_jobs_array,key_obj,start_ix,direction) {
     //generator function to create bounded update jobs (updates bounded field to 1 for the given hour code)
     var bounded_fun = function(hour_code) {
         return function(cb){
-            HourlyData.update({ measurement_key : key_obj.key, hour_code: hour_code },{ bounded : 1},{},function(err) {
-                //async callback
-                cb();
+            HourlyData.update(
+                {
+                    measurement_key : key_obj.key,
+                    hour_code: hour_code
+                },
+                {
+                    bounded:1
+                },
+                {
+
+                },
+                function(err) {
+                    //async callback
+                    cb();
             });
         };
     };
@@ -50,7 +61,7 @@ module.exports = function(db_jobs_array,key_obj,start_ix,direction) {
         //var now =  new Date(hour_code*(60*60*1000) + epoch.valueOf());
         //return '00:' + String('00' + now.getUTCHours()).slice(-2);
 
-        return '00:' + String('00' + (hour_code % 24)).slice(-2);
+        return String('00' + (hour_code % 24)).slice(-2) + ':00';
     };
 
     //generator function to create interpolated insert jobs
@@ -74,6 +85,9 @@ module.exports = function(db_jobs_array,key_obj,start_ix,direction) {
                 interpolated: 1,
                 bounded: 1
             },function(err,result) {
+                if(err) {
+                    console.log(err);
+                }
                 //async callback
                 cb();
             });
@@ -99,6 +113,9 @@ module.exports = function(db_jobs_array,key_obj,start_ix,direction) {
                     upsert:true
                 },
                 function(err,result) {
+                    if(err) {
+                        console.log(err);
+                    }
                     //async callback
                     cb();
                 }
@@ -107,7 +124,7 @@ module.exports = function(db_jobs_array,key_obj,start_ix,direction) {
     };
 
     //add the update job first, otherwise a failure after this point could lead to a gap in the bounded core
-    db_jobs_array.push(bounded_fun(start_ix));
+    db_jobs_array.push(bounded_fun(start_hour));
 
     /*If the server were to die right after running to this part of the db_jobs_array
      * we could potentially flag an hour as bounded when it isn't

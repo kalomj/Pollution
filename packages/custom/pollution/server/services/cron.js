@@ -57,8 +57,15 @@ exports.delaunay_cron = function(year,month,day,hour,parameter_name,cb) {
 
         //save additional flags to the loaded hourlydata
         hourlydata.hour_code = hour_code;
-        hourlydata.interpolated = 0;
-        hourlydata.bounded = 0;
+
+        if(hourlydata.interpolated !== 1 ) {
+          hourlydata.interpolated = 0;
+        }
+
+        if(hourlydata.bounded !== 1) {
+          hourlydata.bounded = 0;
+        }
+
         save_array.push(save_fun(hourlydata));
 
         //exclude where latitude and longitude values are invalid

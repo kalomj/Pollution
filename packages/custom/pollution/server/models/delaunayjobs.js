@@ -16,7 +16,7 @@ var DelaunayJobsSchema = new Schema({
     valid_time: {
         type: String
     },
-    parameter : {
+    parameter_name: {
         type: String
     },
     dirty:{

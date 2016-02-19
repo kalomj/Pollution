@@ -37,6 +37,10 @@ exports.reduction = function(cb) {
         return function(cb) {
             HourlyData.find({ measurement_key:keyarray[i].key, bounded:0}).sort({hour_code:1}).select('hour_code value').exec(function (err, records) {
 
+                if (err) {
+                    console.log(err);
+                }
+
                 if (!records.length) {
                     keyarray[i].unbounded_values = [];
                     keyarray[i].unbounded = [];
@@ -52,6 +56,7 @@ exports.reduction = function(cb) {
                         keyarray[i].unbounded_values[j] = records[j].value;
                     }
                 }
+                //console.log('unbounded call ' + i + ' finished, unbounded length : ' + keyarray[i].unbounded.length);
                 if(i%400===0){
                     var pct = i/4000 * 100;
                     console.log( pct + '% complete with reduction function data collecting');
@@ -68,6 +73,10 @@ exports.reduction = function(cb) {
     var bounded_fun = function(i) {
         return function(cb) {
             HourlyData.findOne({ measurement_key:keyarray[i].key, bounded:1}, function (err, record) {
+
+                if (err) {
+                    console.log(err);
+                }
 
                 if (record) {
                     keyarray[i].bounded_hour = record.hour_code;
@@ -88,6 +97,11 @@ exports.reduction = function(cb) {
     var common_fun = function(i) {
         return function(cb) {
             HourlyData.findOne({ measurement_key:keyarray[i].key}, function (err, record) {
+
+                if (err) {
+                    console.log(err);
+                }
+
                 if(record) {
                     keyarray[i].aqsid = record.aqsid;
                     keyarray[i].sitename = record.sitename;
@@ -98,9 +112,10 @@ exports.reduction = function(cb) {
                     keyarray[i].longitude = record.longitude;
                     keyarray[i].country_code = record.country_code;
                     keyarray[i].data_source = record.data_source;
-                    //async callback
-                    cb();
                 }
+
+                //async callback
+                cb();
             });
         };
     };
@@ -108,8 +123,10 @@ exports.reduction = function(cb) {
     //function generator for printing status message after each batch of database jobs
     var db_status_fun = function(key, i) {
         return function(cb) {
-            console.log('finished database jobs for measurement key ' + key + ' # ' + i);
-            cb();
+            //console.log('finished database jobs for measurement key ' + key + ' # ' + i);
+            async.setImmediate(function () {
+                cb();
+            });
         };
     };
 
@@ -118,7 +135,7 @@ exports.reduction = function(cb) {
     var async_series_fun = function(fun_array,my_cb) {
         return function(cb) {
             async.series(fun_array,my_cb(cb));
-        }
+        };
     };
 
     //function generator to run delaunay cron jobs
@@ -149,6 +166,9 @@ exports.reduction = function(cb) {
                     },
                     function(err, result) {
                         console.log(message);
+                        if(err) {
+                            console.log(err);
+                        }
                         //async callback
                         cb();
                     }
@@ -172,8 +192,8 @@ exports.reduction = function(cb) {
                         keyarray.push({key:keys[i].measurement_key});
                         //initialize
                 }
-                console.log('retrieved distinct measurement keys');
-                callback(null,'retrieved distinct measurement keys');
+                console.log('retrieved ' + keyarray.length + ' distinct measurement keys');
+                callback(null,'retrieved ' + keyarray.length + ' distinct measurement keys');
             });
         },
         // for each measurement key, get the maximum hour_code of a bounded record, minimum hour_code of a bounded record, and complete list of unbounded hour_codes
@@ -187,7 +207,7 @@ exports.reduction = function(cb) {
                 tasks.push(common_fun(i));
             }
 
-            async.parallelLimit(tasks,100, function(err,results) {
+            async.series(tasks, function() {
                 console.log('retrieved all key data');
                 callback(null,'retrieved all key data');
             });
@@ -306,7 +326,7 @@ exports.reduction = function(cb) {
 
             DelaunayJobs.find({dirty:1}).exec(function(err,results) {
                 // add delaunanyjobs to job array
-                for(var i = 0; i < results.length; i++) {
+                for(var i = 0; i < results.length; i += 1) {
                     d_jobs.push(delaunay_fun(results[i].hour_code,results[i].valid_date,results[i].valid_time,results[i].parameter_name));
                 }
 
