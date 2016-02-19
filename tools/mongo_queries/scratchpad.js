@@ -30,3 +30,9 @@ db.hourlydata.find({
 
 
 
+db.hourlydata.find({bounded:0},{ measurement_key : 1, hour_code : 1, bounded : 1, interpolated : 1, value : 1}).sort({ measurement_key: 1, hour_code : 1 }).pretty()
+
+db.hourlydata.find({
+    measurement_key : '000102001OZONE'},{ measurement_key : 1, hour_code : 1, bounded : 1, interpolated : 1, value : 1}).sort({ measurement_key: 1, hour_code : 1 }).pretty()
+
+

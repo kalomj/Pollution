@@ -35,7 +35,6 @@ exports.delaunay_cron = function(year,month,day,hour,parameter_name,cb) {
   };
 
   HourlyData.find(query)
-    .select('latitude longitude value')
     .exec(function (err,hourlydatas) {
 
       var points = [];

@@ -21,11 +21,6 @@ module.exports = function(db_jobs_array,key_obj,start_ix,direction) {
         start_hour = key_obj.unbounded[start_ix],
         end_hour = key_obj.unbounded[end_ix];
 
-    //return early if there are no gaps to interpolate (hours are consecutive integers)
-    if(Math.abs(end_hour - start_hour)===1) {
-        return;
-    }
-
     //generator function to create bounded update jobs (updates bounded field to 1 for the given hour code)
     var bounded_fun = function(hour_code) {
         return function(cb){
@@ -123,7 +118,7 @@ module.exports = function(db_jobs_array,key_obj,start_ix,direction) {
         };
     };
 
-    //add the update job first, otherwise a failure after this point could lead to a gap in the bounded core
+    //add the update job before inserts, otherwise a failure after this point could lead to a gap in the bounded core
     db_jobs_array.push(bounded_fun(start_hour));
 
     /*If the server were to die right after running to this part of the db_jobs_array

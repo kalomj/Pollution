@@ -58,3 +58,78 @@ Error: Cannot find module '/home/marc/meanapps/Pollution/index.js'
     at Function.Module.runMain (module.js:497:10)
     at startup (node.js:119:16)
     at node.js:902:3
+
+/home/pollution/airquality/packages/custom/pollution/server/services/interpolate.js:31
+      if (triangle[0]) {
+                  ^
+TypeError: Cannot read property '0' of undefined
+    at Promise.<anonymous> (/home/pollution/airquality/packages/custom/pollution/server/services/interpolate.js:31:19)
+    at Promise.<anonymous> (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:172:8)
+    at Promise.EventEmitter.emit (events.js:95:17)
+    at Promise.emit (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:84:38)
+    at Promise.reject (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:111:15)
+    at Promise.error (/home/pollution/airquality/node_modules/mongoose/lib/promise.js:95:15)
+    at Promise.resolve (/home/pollution/airquality/node_modules/mongoose/lib/promise.js:113:24)
+    at Promise.<anonymous> (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:172:8)
+    at Promise.EventEmitter.emit (events.js:95:17)
+    at Promise.emit (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:84:38)
+
+/home/pollution/airquality/packages/custom/pollution/server/services/interpolate.js:31
+      if (triangle[0]) {
+                  ^
+TypeError: Cannot read property '0' of undefined
+    at Promise.<anonymous> (/home/pollution/airquality/packages/custom/pollution/server/services/interpolate.js:31:19)
+    at Promise.<anonymous> (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:172:8)
+    at Promise.EventEmitter.emit (events.js:95:17)
+    at Promise.emit (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:84:38)
+    at Promise.reject (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:111:15)
+    at Promise.error (/home/pollution/airquality/node_modules/mongoose/lib/promise.js:95:15)
+    at Promise.resolve (/home/pollution/airquality/node_modules/mongoose/lib/promise.js:113:24)
+    at Promise.<anonymous> (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:172:8)
+    at Promise.EventEmitter.emit (events.js:95:17)
+    at Promise.emit (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:84:38)
+
+/home/pollution/airquality/packages/custom/pollution/server/services/interpolate.js:31
+      if (triangle[0]) {
+                  ^
+TypeError: Cannot read property '0' of undefined
+    at Promise.<anonymous> (/home/pollution/airquality/packages/custom/pollution/server/services/interpolate.js:31:19)
+    at Promise.<anonymous> (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:172:8)
+    at Promise.EventEmitter.emit (events.js:95:17)
+    at Promise.emit (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:84:38)
+    at Promise.reject (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:111:15)
+    at Promise.error (/home/pollution/airquality/node_modules/mongoose/lib/promise.js:95:15)
+    at Promise.resolve (/home/pollution/airquality/node_modules/mongoose/lib/promise.js:113:24)
+    at Promise.<anonymous> (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:172:8)
+    at Promise.EventEmitter.emit (events.js:95:17)
+    at Promise.emit (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:84:38)
+
+/home/pollution/airquality/packages/custom/pollution/server/services/interpolate.js:31
+      if (triangle[0]) {
+                  ^
+TypeError: Cannot read property '0' of undefined
+    at Promise.<anonymous> (/home/pollution/airquality/packages/custom/pollution/server/services/interpolate.js:31:19)
+    at Promise.<anonymous> (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:172:8)
+    at Promise.EventEmitter.emit (events.js:95:17)
+    at Promise.emit (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:84:38)
+    at Promise.reject (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:111:15)
+    at Promise.error (/home/pollution/airquality/node_modules/mongoose/lib/promise.js:95:15)
+    at Promise.resolve (/home/pollution/airquality/node_modules/mongoose/lib/promise.js:113:24)
+    at Promise.<anonymous> (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:172:8)
+    at Promise.EventEmitter.emit (events.js:95:17)
+    at Promise.emit (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:84:38)
+
+/home/pollution/airquality/packages/custom/pollution/server/services/interpolate.js:31
+      if (triangle[0]) {
+                  ^
+TypeError: Cannot read property '0' of undefined
+    at Promise.<anonymous> (/home/pollution/airquality/packages/custom/pollution/server/services/interpolate.js:31:19)
+    at Promise.<anonymous> (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:172:8)
+    at Promise.EventEmitter.emit (events.js:95:17)
+    at Promise.emit (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:84:38)
+    at Promise.reject (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:111:15)
+    at Promise.error (/home/pollution/airquality/node_modules/mongoose/lib/promise.js:95:15)
+    at Promise.resolve (/home/pollution/airquality/node_modules/mongoose/lib/promise.js:113:24)
+    at Promise.<anonymous> (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:172:8)
+    at Promise.EventEmitter.emit (events.js:95:17)
+    at Promise.emit (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:84:38)

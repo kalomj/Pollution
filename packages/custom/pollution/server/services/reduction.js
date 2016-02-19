@@ -139,7 +139,7 @@ exports.reduction = function(cb) {
     };
 
     //function generator to run delaunay cron jobs
-    var delaunay_fun = function(hour_code,valid_date,valid_time,parameter_name) {
+    var delaunay_fun = function(hour_code,valid_date,valid_time,parameter_name,job_no,total_jobs) {
 
         var month = valid_date.substr(0,2);
         var day = valid_date.substr(3,2);
@@ -169,6 +169,7 @@ exports.reduction = function(cb) {
                         if(err) {
                             console.log(err);
                         }
+                        console.log('Job ' + job_no + ' / ' + total_jobs + ' Complete.');
                         //async callback
                         cb();
                     }
@@ -242,7 +243,7 @@ exports.reduction = function(cb) {
                     }
                 }
                 else {
-                    for(var j = keyarray[i].unbounded.length-1; j <= 0; j-=1) {
+                    for(var j = keyarray[i].unbounded.length-1; j >= 0; j-=1) {
                         if(keyarray[i].unbounded[j] < keyarray[i].bounded_hour || j===0) {
                             bottom_half_ix = j;
                             break;
@@ -316,6 +317,7 @@ exports.reduction = function(cb) {
 
             //call all of the database jobs
             async.parallelLimit(all_db_jobs,100,function() {
+                console.log('all database jobs complete');
                 callback(null,'values interpolated');
             });
 
@@ -327,7 +329,7 @@ exports.reduction = function(cb) {
             DelaunayJobs.find({dirty:1}).exec(function(err,results) {
                 // add delaunanyjobs to job array
                 for(var i = 0; i < results.length; i += 1) {
-                    d_jobs.push(delaunay_fun(results[i].hour_code,results[i].valid_date,results[i].valid_time,results[i].parameter_name));
+                    d_jobs.push(delaunay_fun(results[i].hour_code,results[i].valid_date,results[i].valid_time,results[i].parameter_name,i+1,results.length));
                 }
 
                 // run delaunayjobs in series

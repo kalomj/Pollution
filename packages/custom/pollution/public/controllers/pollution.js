@@ -211,13 +211,22 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
       scale = scale > 75 ? 75 : scale;
       scale = scale < 7 ? 7 : scale;
 
+      //select color
+      var markercolor = 'blue';
+      var fillOpacity = .2;
+      if(info.interpolated ===1) {
+        markercolor = 'red';
+        fillOpacity = .4;
+      }
+
+
       //build marker
       var marker = new google.maps.Marker({
         position: pos,
         icon: {
           path: google.maps.SymbolPath.CIRCLE,
-          fillColor: 'blue',
-          fillOpacity: .2,
+          fillColor: markercolor,
+          fillOpacity: fillOpacity,
           scale: scale,
           strokeColor: 'white',
           strokeWeight: .5
