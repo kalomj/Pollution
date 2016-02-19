@@ -327,9 +327,31 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
       //build grid of points to overlay on map
       var viewportQuery = { points: { coordinates: []}};
+
       for(var i = 0; i < latArray.length; i+=1){
         for(var j = 0; j < lngArray.length; j+=1) {
-          viewportQuery.points.coordinates.push([latArray[i],lngArray[j]]);
+
+          //calculate offset for longitude of every other row by half the grid spacing
+          //and alternate positive and negative offset value. This is used to create a hexagonal cicle packing
+          //which is more efficient and provides more coverage than the grid packing used in earlier versions
+          var offset = 0;
+          var lng_value = lngArray[j];
+          if(i%2===0) {
+            //even rows
+            offset = lngstep/2;
+            if(i%4===0) {
+              //every other even row
+              offset *= -1;
+            }
+          }
+          else {
+            //odd rows
+            offset = 0;
+          }
+
+          lng_value = lngArray[j] + offset;
+
+          viewportQuery.points.coordinates.push([latArray[i],lng_value]);
         }
       }
 
