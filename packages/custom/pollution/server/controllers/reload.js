@@ -10,7 +10,7 @@ var mongoose = require('mongoose'),
   exec = require('child_process').exec,
   cron = require('../services/cron'),
   async = require('async'),
-    reduction = require('../services/cron');
+    reduction = require('../services/reduction');
 
 
 /**
