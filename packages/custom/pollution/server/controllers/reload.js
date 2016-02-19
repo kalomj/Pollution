@@ -9,7 +9,8 @@ var mongoose = require('mongoose'),
   _ = require('lodash'),
   exec = require('child_process').exec,
   cron = require('../services/cron'),
-  async = require('async');
+  async = require('async'),
+    reduction = require('../services/cron');
 
 
 /**
@@ -176,6 +177,10 @@ exports.reload = function(req, res) {
     async.series(funcArray, function(err) {
 
         console.log('finished reload job');
+
+        reduction.reduction(function(msg) {
+          console.log(msg);
+        });
     });
   });
 
