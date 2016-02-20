@@ -133,3 +133,1026 @@ TypeError: Cannot read property '0' of undefined
     at Promise.<anonymous> (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:172:8)
     at Promise.EventEmitter.emit (events.js:95:17)
     at Promise.emit (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:84:38)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.3:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.1:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.2:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.4:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.5:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.7:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.8:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.6:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.9:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.10:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.11:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.12:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.14:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.13:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.15:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.16:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.17:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.18:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.19:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.20:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.21:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.22:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.23:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.24:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.25:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.26:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.27:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.28:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.29:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.30:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.31:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.32:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.33:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.34:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.35:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.36:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.39:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.4:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.2:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.3:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.1:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.6:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.5:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+
+events.js:72
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.8:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.7:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.10:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.9:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+             
+ ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.11:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.12:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.14:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.16:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.13:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.15:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.17:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.18:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.19:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.20:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.21:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.22:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.23:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.24:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.25:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.26:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.27:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.28:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+
+events.js:72
+events.js:72
+        throw er; // Unhandled 'error' event
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.29:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.31:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.30:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.32:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.34:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+
+events.js:72
+        throw er; // Unhandled 'error' event
+events.js:72
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.33:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.35:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EADDRINUSE
+    at errnoException (net.js:901:11)
+    at net.js:1069:30
+    at Object.36:2 (cluster.js:592:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.EventEmitter.emit (events.js:117:20)
+    at handleMessage (child_process.js:318:10)
+    at Pipe.channel.onread (child_process.js:345:11)

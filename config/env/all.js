@@ -9,7 +9,7 @@ module.exports = {
     port: process.env.PORT || 3000
   },
   https: {
-    port: process.env.HTTPS || false,
+    port: 3001 || process.env.HTTPS || false,
 
     // Paths to key and cert as string
     ssl: {
