@@ -13,6 +13,7 @@ chmod 755 /home/pollution/airquality/serverbuild/airnow_setup
 chmod 755 /home/pollution/airquality/serverbuild/mongo_setup_script
 chmod 755 /home/pollution/airquality/serverbuild/dthp_script
 chmod 755 /home/pollution/airquality/serverbuild/move_mongo_script
+chmod 755 /home/pollution/airquality/serverbuild/enable_https
 
 #to setup lftp to download from teh airnow api, run the following (where username and password correspond to an Airnow API account)
 ./airnow_setup username password
@@ -25,24 +26,29 @@ chmod 755 /home/pollution/airquality/serverbuild/move_mongo_script
 
 #upgrade to the wired tiger mongo storage engine
 ./upgrade_wiredtiger /home/pollution/mongo
+
+#to enable https on port 3001, run this script to generate a key/cert and set environment variables
+#you may need to stop the http server and log out/log in after running this script
+./enable_https
 **************************************************
 /Initial Server Config
 **************************************************
 
 
-to migrate the mongo database to a new volume, first mount the volume to a new directory. the following script will shut down the webserver,
-shut down the mongo database service, move the database files, restart the mongo server, then restart the web server
+#to migrate the mongo database to a new volume, first mount the volume to a new directory. the following script will shut down the webserver,
+#shut down the mongo database service, move the database files, restart the mongo server, then restart the web server
 move_mongo_script src dst
 
-use the following to stop the server daemon
+#use the following to stop the server daemon
 grunt forever:server:stop
 
-use the following to start the server daemon
+#use the following to start the server daemon
 grunt forever:server:start
 
-use the following to tail the log file when running as a daemon
+#use the following to tail the log file when running as a daemon
 tail -f /logs/log.log
 
-
-
+#delete all data in the mongodb and reset with default collections
+chmod 755 /home/pollution/airquality/serverbuild/reset_db
+./reset_db
 

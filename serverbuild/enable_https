@@ -5,6 +5,8 @@ mkdir /home/pollution/ssl
 
 openssl req  -nodes -new -x509  -keyout /home/pollution/ssl/server.key -out /home/pollution/ssl/server.cert
 
-echo "HTTPS=true" | sudo tee -a /etc/environment
+echo "HTTPS=3001" | sudo tee -a /etc/environment
 echo "HTTPS_KEY=/home/pollution/ssl/server.key" | sudo tee -a /etc/environment
 echo "HTTPS_CERT=/home/pollution/ssl/server.cert" | sudo tee -a /etc/environment
+
+echo 'You must log out and log back so the environment variables are recognized by grunt forever server daemon'
