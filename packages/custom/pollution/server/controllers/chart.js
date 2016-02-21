@@ -14,7 +14,7 @@ var mongoose = require('mongoose'),
 exports.chart = function(req, res, next, measurement_key) {
     HourlyData.find({
         measurement_key: measurement_key
-    }).sort({hour_code : 1}).limit(24).exec(function(err, locations) {
+    }).sort({hour_code : -1}).limit(24).exec(function(err, locations) {
 
         if (err) return next(err);
         if (!locations) return next(new Error('Failed to load location ' + measurement_key));
