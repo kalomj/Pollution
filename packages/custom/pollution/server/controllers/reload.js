@@ -22,9 +22,13 @@ exports.reload = function(req, res) {
   //first, query the JobControl collection to see if a job is currently running from another server
   //The findAndModify function available on MongoDB collection can find a job that is not running and set it to running
   //in one atomic operation
-  JobControl.findOneAndUpdate({ job_name : 'reload', running : 0 }, { $set : { running : 1 } }).exec().then(function(result) {
-    if(result) {
-      res.json('Data load started');
+  JobControl.findOneAndUpdate({ job_name : 'reload', running : 0 }, { $set : { running : 1 } },function(err,result) {
+    if(err) {
+      console.log(err);
+      res.json('Data load denied : ' + err);
+    }
+    else if(result) {
+      res.json('Data load started ');
 
       LoadedFile.find().exec(function (err, loadedfile) {
 
@@ -188,6 +192,17 @@ exports.reload = function(req, res) {
 
           reduction.reduction(function(msg) {
             console.log(msg);
+            JobControl.findOneAndUpdate({ job_name : 'reload', running : 1 }, { $set : { running : 0 } },function(err,result) {
+              if(err) {
+                console.log(err);
+              }
+              if(result) {
+                console.log('Reload Job Set to Not Running');
+              }
+              else {
+                console.log('JobControl Update Failed, check collection manually');
+              }
+            });
           });
         });
       });
@@ -196,12 +211,5 @@ exports.reload = function(req, res) {
     else {
       res.json('Data load denied - job already running');
     }
-  },
-  //the jobcontrol promise was rejected
-  function(err)
-  {
-    console.log(err);
-    res.json('Data load denied : ' + err);
   });
-
 };

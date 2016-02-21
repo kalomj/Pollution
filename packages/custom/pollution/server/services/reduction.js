@@ -23,9 +23,6 @@ var mongoose = require('mongoose'),
  */
 exports.reduction = function(cb) {
 
-    //don't wait in calling controller, return immediately
-    cb('reduction job requested');
-
     //an array of javascript objects to hold the data
     var keyarray = [];
 
@@ -343,6 +340,10 @@ exports.reduction = function(cb) {
     //cleanup
     function(err, results) {
         console.log('reduction job complete');
+
+        //don't wait in calling controller, return immediately
+        cb('reduction job complete');
+
 
         if (err) {
             console.log(err);

@@ -19,4 +19,4 @@ var JobControlSchema = new Schema({
 });
 
 
-mongoose.model('JobControl', JobControlSchema);
+mongoose.model('JobControl', JobControlSchema, 'jobcontrol');
