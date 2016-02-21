@@ -10,3 +10,4 @@ db.loadedfiles.createIndex( { hour_code : 1 } );
 db.delaunayjobs.createIndex( { hour_code : 1, parameter_name : 1 } );
 db.delaunayjobs.createIndex( { dirty : 1 } );
 db.jobcontrol.insert({ job_name: "reload", running : 0});
+db.jobcontrol.createIndex( { job_name: 1 }, { unique: true } );
