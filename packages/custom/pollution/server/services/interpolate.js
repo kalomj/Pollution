@@ -28,7 +28,7 @@ exports.interpolate = function(myroute,year,month,day,hour,parameter_name,cb) {
         console.log(err);
       }
 
-      if (triangle[0]) {
+      if (triangle && triangle.length >=1 ) {
         var triangleArray = triangle[0].triangle.coordinates[0].slice(0, 3);
         var triangleValues = triangle[0].values;
         //pull in barcentric library here - calculate coordinates then interpolate
