@@ -8,8 +8,8 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
       name: 'pollution'
     };
   }
-]).controller('GMapCtrl', ['$scope', '$timeout', 'Global', 'Pollution', '$log', '$http',
-  function($scope, $timeout, Global, Pollution, $log, $http) {
+]).controller('GMapCtrl', ['$scope', '$timeout', 'Global', 'Pollution', '$log', '$http','$stateParams','$state',
+  function($scope, $timeout, Global, Pollution, $log, $http, $stateParams, $state) {
 
     $scope.routeViewLoad = function() {
       $scope.routeView = true;
@@ -20,9 +20,9 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     };
 
     //default center on the united states
-    $scope.centerlat = 39.8282;
-    $scope.centerlon = -98.5795;
-    $scope.zoom = 5;
+    $scope.centerlat = $stateParams.centerlat || 39.8282;
+    $scope.centerlon = $stateParams.centerlon || -98.5795;
+    $scope.zoom = $stateParams.zoom || 5;
 
     $scope.viewportData = [];
     $scope.slider = {};
@@ -53,7 +53,7 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
     //end datepicker functions
 
-    $scope.parameter_name = 'CO';
+    $scope.parameter_name = $stateParams.parameter_name || 'CO';
     $scope.parameterMultiplier = {};
     $scope.parameterMultiplier.CO = 100;
     $scope.parameterMultiplier.PM25 = 1;
@@ -114,17 +114,24 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     $scope.getDataStats = function () {
       $http.get('/loadedfiles').success(function (response) {
         $scope.datastats = response;
-        $scope.dt = $scope.maxdate = new Date(response.max_valid_date);
-        $scope.mindate = response.min_valid_date;
 
-        $scope.time = $scope.datastats.max_valid_time.slice(0,2);
+        if($stateParams.year) {
+          $scope.dt = new Date($stateParams.month + '/' + $stateParams.day + '/' + $stateParams.year);
+          $scope.time = $stateParams.hour;
+        }
+        else {
+          $scope.dt = new Date(response.max_valid_date);
+          $scope.time = $scope.datastats.max_valid_time.slice(0,2);
+        }
+        $scope.maxdate = new Date(response.max_valid_date);
+        $scope.mindate = response.min_valid_date;
 
         //only set if not in route view
         if(!$scope.inRouteView) {
-          $scope.year = String($scope.dt.getYear()).slice(-2);
-          $scope.month = String('00' + ($scope.dt.getMonth() + 1)).slice(-2);
-          $scope.day = String('00' + ($scope.dt.getDate())).slice(-2);
-          $scope.hour = $scope.time;//String('00' + $scope.time.getHours()).slice(-2);
+          $scope.year = $stateParams.year || String($scope.dt.getYear()).slice(-2);
+          $scope.month = $stateParams.month || String('00' + ($scope.dt.getMonth() + 1)).slice(-2);
+          $scope.day = $stateParams.day || String('00' + ($scope.dt.getDate())).slice(-2);
+          $scope.hour = $stateParams.hour || $scope.time;//String('00' + $scope.time.getHours()).slice(-2);
         }
 
         $scope.renderedTimeString = $scope.month + '/' + $scope.day + '/' + $scope.year + ' ' + $scope.hour + ':00';
@@ -288,6 +295,29 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
     };
 
     $scope.renderHeatmap = function(cb) {
+
+      //set restful URL state without reloading page (makes for smoother back button experience
+      $state.go('mapIndex2',
+          {
+            centerlat : $scope.map.getCenter().lat(),
+            centerlon : $scope.map.getCenter().lng(),
+            zoom : $scope.map.getZoom(),
+            year : $scope.year,
+            month : $scope.month,
+            day : $scope.day,
+            hour : $scope.hour,
+            parameter_name : $scope.parameter_name
+          },
+          {
+            // prevent the events onStart and onSuccess from firing
+            notify:false,
+            // prevent reload of the current state
+            reload:false,
+            // replace the last record when changing the params so you don't hit the back button and get old params
+            location:'replace',
+            // inherit the current params on the url
+            inherit:true
+          });
 
       if(!$scope.userHeatmap) {
         $scope.heatmapStatus = 'Not Displayed';
@@ -483,6 +513,8 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
       ($scope.map, 'idle', function() {
         //post each time there is a map idle event to interpolate the gridded points
         $scope.renderHeatmap();
+
+
 
       });
     });
