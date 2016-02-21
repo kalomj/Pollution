@@ -26,11 +26,8 @@ var LocationsSchema = new Schema({
     parameter_name: {
         type: String
     },
-    max_bounded_hour: {
-        type: Number
-    },
-    min_bounded_hour: {
-        type: Number
+    aqsid: {
+        type: String
     }
 });
 

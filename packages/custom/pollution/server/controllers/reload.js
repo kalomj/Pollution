@@ -140,13 +140,13 @@ exports.reload = function(req, res) {
             'sed -i \'s/[|]PM2.5[|]/|PM25|/g\' ' + joinedpath + '/' + filename + '\n' +
               //using awk to replace pipes with commas and reorder/concatenate columns
             'awk \'BEGIN { FS="|";OFS=","} {print $3$6,$1,$2,"id" $3,$4,$5,$6,$7,$8,$9}\' ' + joinedpath + '/' + filename + ' | sort -t , -k1,1 > ' + joinedpath + '/temp_' + filename + ' && mv ' + joinedpath + '/temp_' + filename + ' ' + joinedpath + '/' + filename + '\n' +
-            'awk \'BEGIN { FS="|";OFS=","} {print $1$2,$9,$10,$13,$2}\' ' + joinedpath + '/msl_' + filename + ' | sort  -t , -k1,1 > ' + joinedpath + '/temp_' + filename + ' && mv ' + joinedpath + '/temp_' + filename + ' ' + joinedpath + '/msl_' + filename + '\n' +
+            'awk \'BEGIN { FS="|";OFS=","} {print $1$2,$9,$10,$13,$2,"id" $1}\' ' + joinedpath + '/msl_' + filename + ' | sort  -t , -k1,1 > ' + joinedpath + '/temp_' + filename + ' && mv ' + joinedpath + '/temp_' + filename + ' ' + joinedpath + '/msl_' + filename + '\n' +
               //sort and join the hourly data and the monitoring site files
             'join -t, -1 1 -2 1 -o 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.2 2.3 2.4 1.10 ' + joinedpath + '/' + filename + ' ' + joinedpath + '/msl_' + filename + ' > ' + joinedpath + '/joined_' + filename + '\n' +
               //use mongoimport to pull into the hourlydata collection
             'mongoimport --db mean-dev --collection hourlydata --type csv --file ' + joinedpath + '/joined_' + filename + ' --fields measurement_key,valid_date,valid_time,aqsid,sitename,gmt_offset,parameter_name,reporting_units,value,latitude,longitude,country_code,data_source --upsert --upsertFields measurement_key,valid_date,valid_time' + '\n' +
               //use mongoimport to pull into the locations collection
-            'mongoimport --db mean-dev --collection locations --type csv --file ' + joinedpath + '/msl_' + filename + ' --fields measurement_key,latitude,longitude,country_code,parameter_name --upsert --upsertFields measurement_key' + '\n' +
+            'mongoimport --db mean-dev --collection locations --type csv --file ' + joinedpath + '/msl_' + filename + ' --fields measurement_key,latitude,longitude,country_code,parameter_name,aqsid --upsert --upsertFields measurement_key' + '\n' +
               //remove all temporary files to save space
             'rm ' + joinedpath + '/' + filename + '\n' +
             'rm ' + joinedpath + '/msl_' + filename + '\n' +
