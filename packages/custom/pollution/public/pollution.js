@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mean.pollution',['mean.system', 'ngMap','ui.slider'])
+angular.module('mean.pollution',['mean.system', 'ngMap','ui.slider','chart.js'])
     .config(['$viewPathProvider', function($viewPathProvider) {
         $viewPathProvider.override('system/views/index.html', 'pollution/views/index.html');
         $viewPathProvider.override('users/views/index.html', 'pollution/views/login/index.html');

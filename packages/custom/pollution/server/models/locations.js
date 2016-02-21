@@ -6,6 +6,7 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
+
 /**
  * Locations Schema
  */
@@ -46,14 +47,4 @@ var LocationsSchema = new Schema({
  }, 'Content cannot be blank');
  */
 
-/**
- * Statics
- */
-/*
- MyRouteSchema.statics.load = function(id, cb) {
- this.findOne({
- _id: id
- }).populate('user', 'name username').exec(cb);
- };
- */
 mongoose.model('Locations', LocationsSchema);

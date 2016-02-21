@@ -246,3 +246,11 @@ section.ng-scope{
 .routetable tr:nth-child(even) {
   background-color: #ffffff;
 }
+
+.chart {
+    height: 500px;
+    width: 768px;
+    margin-left:-384px;
+    left: 50%;
+    position: relative;
+}

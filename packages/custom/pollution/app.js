@@ -26,12 +26,24 @@ Pollution.register(function(app, auth, system, database) {
     roles: ['authenticated'],
     menu: 'main'
   });
-  
+
+  //a link to browse charts on the main menu for all authenticated users
+  Pollution.menus.add({
+    title: 'Charts',
+    link: 'List Chart',
+    roles: ['authenticated'],
+    menu: 'main'
+  });
+
   Pollution.aggregateAsset('css', 'pollution.css',{
       weight: 2,
       group: 'header'});
 
   Pollution.aggregateAsset('css', 'jquery-ui.css',{
+    weight: 1,
+    group: 'header'});
+
+  Pollution.aggregateAsset('css', 'angular-chart.css',{
     weight: 1,
     group: 'header'});
 
@@ -52,7 +64,7 @@ Pollution.register(function(app, auth, system, database) {
     group: 'footer'});
 
 
-  Pollution.angularDependencies(['ngMap', 'xml', 'angular-charts']);
+  Pollution.angularDependencies(['ngMap', 'xml']);
   /**
     //Uncomment to use. Requires meanio@0.3.7 or above
     // Save settings with callback
