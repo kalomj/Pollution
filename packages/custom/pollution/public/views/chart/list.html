@@ -1,0 +1,16 @@
+<div style="top:60px;position:relative" data-ng-controller="ChartCtrl" data-ng-init="find()">
+    <table class="charttable">
+        <tr>
+            <td>Link</td>
+            <td>Latitude</td>
+            <td>Longitude</td>
+            <td>Parameter Name</td>
+        </tr>
+        <tr data-ng-repeat="chart in charts">
+            <td><a data-ng-href="#!/chart/{{chart.measurement_key}}">{{chart.measurement_key}}</a></td>
+            <td>{{chart.latitude}}</td>
+            <td>{{chart.longitude}}</td>
+            <td>{{chart.parameter_name}}</td>
+        </tr>
+    </table>
+</div>

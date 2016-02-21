@@ -52,7 +52,7 @@ Pollution.register(function(app, auth, system, database) {
     group: 'footer'});
 
 
-  Pollution.angularDependencies(['ngMap', 'xml']);
+  Pollution.angularDependencies(['ngMap', 'xml', 'angular-charts']);
   /**
     //Uncomment to use. Requires meanio@0.3.7 or above
     // Save settings with callback

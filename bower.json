@@ -14,7 +14,8 @@
     "ngmap": "1.6.0",
     "angular-xml": "~2.1.0",
     "angular-file-upload": "~1.1.5",
-    "angular-ui-slider": "~0.1.1"
+    "angular-ui-slider": "~0.1.1",
+    "angular-charts": "0.2.7"
   },
   "resolutions": {
     "ngmap": "1.6.0",
