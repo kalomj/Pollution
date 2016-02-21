@@ -1,0 +1,7 @@
+#!/bin/sh
+
+grunt forever:server:stop
+
+grunt forever:server:start
+
+tail -f logs/log.log
