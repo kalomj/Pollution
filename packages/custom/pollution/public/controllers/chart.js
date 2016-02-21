@@ -57,7 +57,7 @@ angular.module('mean.pollution').controller('ChartCtrl', ['$scope', '$stateParam
                 $scope.data_source = chart[0].data_source;
                 $scope.series.push(chart[0].parameter_name + ' ' + chart[0].reporting_units);
 
-                for(var i = 0; i < chart.length; i += 1) {
+                for(var i = chart.length-1; i >= 0; i -= 1) {
                     $scope.labels.push(chart[i].valid_date + ' ' + chart[i].valid_time);
                     $scope.data[0].push(chart[i].value);
                 }
