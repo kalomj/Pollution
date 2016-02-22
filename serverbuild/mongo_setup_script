@@ -10,6 +10,7 @@ if [[ $# -ne 1 ]] ; then
     echo 'Use device_name=sdb, not device_name=/dev/sdb'
     echo 'to find volume name:'
     echo 'lsblk'
+    echo 'use NONE as device name to skip disk mounting'
     echo '(lsblk will list volume name like /dev/sd*)'
     echo 'see script comments for details on checking filesytem'
     exit 0
@@ -25,16 +26,20 @@ fi
 #check for file system on the volume. If filesystem is ‘data’ the no file system exists on the disk
 #sudo file -s /dev/sd*
 
-#create file system on the volume
-sudo mkfs.ext4 -F /dev/$1
-
-
 #create directory for mount point
 mkdir /home/pollution/mongo
-#mount disk to mount point
-echo "/dev/$1 /home/pollution/mongo ext4 defaults,auto,noatime,noexec 0 0" | sudo tee -a /etc/fstab
 
-sudo mount /home/pollution/mongo
+if [[ "$1" != "NONE" ]]
+
+    #create file system on the volume
+    sudo mkfs.ext4 -F /dev/$1
+    
+    #mount disk to mount point
+    echo "/dev/$1 /home/pollution/mongo ext4 defaults,auto,noatime,noexec 0 0" | sudo tee -a /etc/fstab
+    
+    sudo mount /home/pollution/mongo
+
+fi
 
 mkdir /home/pollution/mongo/log
 mkdir /home/pollution/mongo/data
