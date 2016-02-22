@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #This script builds the initial environment to host the pollution tracking web app
 
