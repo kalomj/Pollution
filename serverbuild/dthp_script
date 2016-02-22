@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo cp /home/pollution/airquality/serverbuild/disable-transparent-hugepages /etc/init.d/disable-transparent-hugepages
+sudo cp /home/$(whoami)/airquality/serverbuild/disable-transparent-hugepages /etc/init.d/disable-transparent-hugepages
 
 sudo chmod 755 /etc/init.d/disable-transparent-hugepages
 
