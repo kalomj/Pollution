@@ -15,9 +15,6 @@ if [[ -d "/home/$(whoami)/airquality" ]] ; then
   exit 0
 fi
 
-#to fix AWS error with sudo "unable to resolve host"
-echo "127.0.0.1 $(hostname)" >> /etc/hosts
-
 mkdir /home/$(whoami)/airquality
 cd  /home/$(whoami)/airquality
 
