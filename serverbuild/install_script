@@ -10,14 +10,14 @@ if [[ $# -ne 1 ]] ; then
     exit 0
 fi
 
-if [[ -d "/home/pollution/airquality" ]] ; then
-  echo "/home/pollution/airquality already exists"
+if [[ -d "/home/$(whoami)/airquality" ]] ; then
+  echo "/home/$(whoami)/airquality already exists"
   exit 0
 fi
 
 
-mkdir /home/pollution/airquality
-cd  /home/pollution/airquality
+mkdir /home/$(whoami)/airquality
+cd  /home/$(whoami)/airquality
 
 sudo apt-get update
 sudo apt-get -y install git
