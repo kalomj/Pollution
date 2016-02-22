@@ -10,8 +10,8 @@ ls
 #if you get an error with sudo about hostnames, login to AWS, go to the VPC console, select the VPC of your server, select actions, select edit dns hostames, select yes
 #change permissions
 chmod 755 install_script
-#run
-./install_script "First Last" "email@site.com"
+#run and save output to log file
+./install_script "First Last" "email@site.com" | tee out.log
 
 #restart your login window now to make sure necessary scripts are sourced.
 
