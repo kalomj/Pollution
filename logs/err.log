@@ -1216,3 +1216,18 @@ TypeError: Cannot read property '0' of undefined
     at Promise.<anonymous> (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:172:8)
     at Promise.EventEmitter.emit (events.js:95:17)
     at Promise.emit (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:84:38)
+
+/home/pollution/airquality/node_modules/async/lib/async.js:571
+                        var args = Array.prototype.slice.call(arguments, 1);
+                                                         ^
+RangeError: Maximum call stack size exceeded
+
+/home/pollution/airquality/node_modules/async/lib/async.js:571
+                        var args = Array.prototype.slice.call(arguments, 1);
+                                                         ^
+RangeError: Maximum call stack size exceeded
+
+/home/pollution/airquality/node_modules/async/lib/async.js:571
+                        var args = Array.prototype.slice.call(arguments, 1);
+                                                         ^
+RangeError: Maximum call stack size exceeded

@@ -217,9 +217,9 @@ exports.reduction = function(cb) {
                 //if bounded_hour is -1, then arbitrarily split the array in half and process outwards
                 var bottom_half_ix = -1;
 
-                if(keyarray[i].bounded_hour === -1) {
+                if (keyarray[i].bounded_hour === -1) {
                     //no bounded core was found, so create one if there are at least three entries
-                    if(keyarray[i].unbounded.length < 3) {
+                    if (keyarray[i].unbounded.length < 3) {
                         //no way to create a bounded entry, so continue to next measurement key
                         continue;
                     }
@@ -228,13 +228,13 @@ exports.reduction = function(cb) {
                         bottom_half_ix = Math.floor(keyarray[i].unbounded.length / 2);
 
                         //create database jobs to set up bounded core
-                        interpolated_insert(db_jobs,keyarray[i],bottom_half_ix,-1);
-                        interpolated_insert(db_jobs,keyarray[i],bottom_half_ix,1);
+                        interpolated_insert(db_jobs, keyarray[i], bottom_half_ix, -1);
+                        interpolated_insert(db_jobs, keyarray[i], bottom_half_ix, 1);
                     }
                 }
                 else {
-                    for(var j = keyarray[i].unbounded.length-1; j >= 0; j-=1) {
-                        if(keyarray[i].unbounded[j] < keyarray[i].bounded_hour || j===0) {
+                    for (var j = keyarray[i].unbounded.length - 1; j >= 0; j -= 1) {
+                        if (keyarray[i].unbounded[j] < keyarray[i].bounded_hour || j === 0) {
                             bottom_half_ix = j;
                             break;
                         }
@@ -245,20 +245,20 @@ exports.reduction = function(cb) {
                 var next = -1;
 
                 //only perform interpolation if there is data gap
-                if(bottom_half_ix > 0) {
+                if (bottom_half_ix > 0) {
                     next = bottom_half_ix - 1;
-                    while(next >= 0) {
+                    while (next >= 0) {
                         /*
-                        console.log('bottom down hourend :'+keyarray[i].unbounded[bottom_half_ix]+' value:'+keyarray[i].unbounded_values[bottom_half_ix]);
-                        console.log('bottom down hourstart :'+keyarray[i].unbounded[next]+' value:'+keyarray[i].unbounded_values[next]);
-                        if(keyarray[i].unbounded[bottom_half_ix]===keyarray[i].unbounded[next]+1) {
-                            update_total += 1;
-                        }
-                        else {
-                            update_total += 1;
-                            gap_total += keyarray[i].unbounded[bottom_half_ix] - (keyarray[i].unbounded[next]+1);
-                        }*/
-                        interpolated_insert(db_jobs,keyarray[i],bottom_half_ix,-1);
+                         console.log('bottom down hourend :'+keyarray[i].unbounded[bottom_half_ix]+' value:'+keyarray[i].unbounded_values[bottom_half_ix]);
+                         console.log('bottom down hourstart :'+keyarray[i].unbounded[next]+' value:'+keyarray[i].unbounded_values[next]);
+                         if(keyarray[i].unbounded[bottom_half_ix]===keyarray[i].unbounded[next]+1) {
+                         update_total += 1;
+                         }
+                         else {
+                         update_total += 1;
+                         gap_total += keyarray[i].unbounded[bottom_half_ix] - (keyarray[i].unbounded[next]+1);
+                         }*/
+                        interpolated_insert(db_jobs, keyarray[i], bottom_half_ix, -1);
 
                         bottom_half_ix -= 1;
                         next = bottom_half_ix - 1;
@@ -266,20 +266,20 @@ exports.reduction = function(cb) {
                 }
 
                 //only perform interpolation if there is data gap
-                if(top_half_ix < keyarray[i].unbounded.length-1) {
+                if (top_half_ix < keyarray[i].unbounded.length - 1) {
                     next = top_half_ix + 1;
-                    while(next < keyarray[i].unbounded.length) {
+                    while (next < keyarray[i].unbounded.length) {
                         /*console.log('top up hourstart :'+keyarray[i].unbounded[top_half_ix]+' value:'+keyarray[i].unbounded_values[top_half_ix]);
-                        console.log('top up hourend :'+keyarray[i].unbounded[next]+' value:'+keyarray[i].unbounded_values[next]);
-                        if(keyarray[i].unbounded[top_half_ix]+1===keyarray[i].unbounded[next]) {
-                            update_total += 1;
-                        }
-                        else {
-                            update_total += 1;
-                            gap_total += keyarray[i].unbounded[next] - (keyarray[i].unbounded[top_half_ix]+1);
-                        }*/
+                         console.log('top up hourend :'+keyarray[i].unbounded[next]+' value:'+keyarray[i].unbounded_values[next]);
+                         if(keyarray[i].unbounded[top_half_ix]+1===keyarray[i].unbounded[next]) {
+                         update_total += 1;
+                         }
+                         else {
+                         update_total += 1;
+                         gap_total += keyarray[i].unbounded[next] - (keyarray[i].unbounded[top_half_ix]+1);
+                         }*/
 
-                        interpolated_insert(db_jobs,keyarray[i],top_half_ix,1);
+                        interpolated_insert(db_jobs, keyarray[i], top_half_ix, 1);
 
                         top_half_ix += 1;
                         next = top_half_ix + 1;
@@ -295,8 +295,12 @@ exports.reduction = function(cb) {
                 //measurement key. they can run in parallel.
                 //async.series(db_jobs,db_status_fun(keyarray[i].key,i));
 
-                all_db_jobs.push(async_series_fun(db_jobs));
-                total_jobs += db_jobs.length;
+                if (db_jobs.length > 0) {
+
+                    all_db_jobs.push(async_series_fun(db_jobs));
+                    total_jobs += db_jobs.length;
+
+                }
 
                 //set db_jobs to a new, empty array for the next pass through the loop
                 db_jobs = [];
