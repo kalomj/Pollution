@@ -20,6 +20,7 @@ cd  /home/$(whoami)/airquality
 
 sudo apt-get update
 sudo apt-get -y install libkrb5-dev
+sudo apt-get -y install build-essential
 sudo apt-get -y install git
 git config --global user.name "$1"
 git config --global user.email "$2"
