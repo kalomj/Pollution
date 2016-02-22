@@ -5,6 +5,9 @@ Initial Server Config
 wget https://raw.githubusercontent.com/kalomj/Pollution/master/serverbuild/install_script
 #convert line endings
 sed -i 's/\r//' install_script
+#test sudo
+ls
+#if you get an error with sudo about hostnames, login to AWS, go to the VPC console, select the VPC of your server, select actions, select edit dns hostames, select yes
 #change permissions
 chmod 755 install_script
 #run
