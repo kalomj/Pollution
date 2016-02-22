@@ -4,7 +4,7 @@
 
 #Certain commands require sudo so this cannot be automated (must type password when prompted
 
-if [[ $# -ne 1 ]] ; then
+if [[ $# -ne 2 ]] ; then
     echo 'Usage: install_script "First Last" "email@address.com"'
     echo 'input strings will be used to setup git'
     exit 0
