@@ -40,7 +40,7 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | b
 . ~/.nvm/nvm.sh 
 . ~/.profile 
 . ~/.bashrc
-
+source ~/.profile
 
 nvm install v0.10.25
 nvm alias default 0.10.25
