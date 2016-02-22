@@ -11,7 +11,7 @@ ls
 #change permissions
 chmod 755 install_script
 #run and save output to log file
-./install_script "First Last" "email@site.com" | tee out.log
+./install_script "First Last" "email@site.com" > out.log 2>&1
 
 #restart your login window now to make sure necessary scripts are sourced.
 
