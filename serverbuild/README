@@ -3,7 +3,11 @@ Initial Server Config
 **************************************************
 #copy install_script to a fresh Ubuntu installation and run it to set up the environment
 wget https://raw.githubusercontent.com/kalomj/Pollution/master/serverbuild/install_script
+#convert line endings
+sed -i 's/\r//' install_script
+#change permissions
 chmod 755 install_script
+#run
 ./install_script "First Last" "email@site.com"
 
 cd /home/$(whoami)/airqulity/serverbuild
