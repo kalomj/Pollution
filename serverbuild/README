@@ -23,6 +23,7 @@ chmod 755 /home/$(whoami)/airquality/serverbuild/mongo_setup_script
 chmod 755 /home/$(whoami)/airquality/serverbuild/dthp_script
 chmod 755 /home/$(whoami)/airquality/serverbuild/move_mongo_script
 chmod 755 /home/$(whoami)/airquality/serverbuild/enable_https
+chmod 755 /home/$(whoami)/airquality/serverbuild/upgrade_wiredtiger
 
 #to setup lftp to download from teh airnow api, run the following (where username and password correspond to an Airnow API account)
 ./airnow_setup username password
