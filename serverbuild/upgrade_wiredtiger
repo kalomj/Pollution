@@ -20,7 +20,7 @@ else
     exit 0
 fi
 
-grunt --gruntfile /home/pollution/airquality/Gruntfile.js forever:server:stop
+grunt --gruntfile /home/$(whoami)/airquality/Gruntfile.js forever:server:stop
 
 sudo service mongod stop
 
@@ -43,9 +43,9 @@ echo 'starting mongod'
 sudo service mongod start
 
 echo 'now use grunt to confirm installation and set up mean-dev database in mongo'
-echo '/home/pollution/airquality/grunt forever:server:start'
+echo "/home/$(whoami)/airquality/grunt forever:server:start"
 
-grunt --gruntfile /home/pollution/airquality/Gruntfile.js forever:server:start
+grunt --gruntfile /home/$(whoami)/airquality/Gruntfile.js forever:server:start
 
 echo 'sleep 10 seconds to allow server boot'
 sleep 10
@@ -67,8 +67,8 @@ sleep 10
 
 
 echo 'now using the following command to setup the database indexes'
-echo 'mongo localhost:27017/mean-dev < /home/pollution/airquality/serverbuild/mongo_setup.js'
-mongo localhost:27017/mean-dev < /home/pollution/airquality/serverbuild/mongo_setup.js
+echo "mongo localhost:27017/mean-dev < /home/$(whoami)/airquality/serverbuild/mongo_setup.js"
+mongo localhost:27017/mean-dev < /home/$(whoami)/airquality/serverbuild/mongo_setup.js
 
 echo 'Server is running as daemon using forever. Try tailing the log file with :'
 echo 'tail -f logs/log.log'

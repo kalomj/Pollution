@@ -3,17 +3,26 @@ Initial Server Config
 **************************************************
 #copy install_script to a fresh Ubuntu installation and run it to set up the environment
 wget https://raw.githubusercontent.com/kalomj/Pollution/master/serverbuild/install_script
+#convert line endings
+sed -i 's/\r//' install_script
+#test sudo
+ls
+#if you get an error with sudo about hostnames, login to AWS, go to the VPC console, select the VPC of your server, select actions, select edit dns hostames, select yes
+#change permissions
 chmod 755 install_script
-./install_script "First Last" "email@site.com"
+#run and save output to log file
+./install_script "First Last" "email@site.com" > out.log 2>&1
 
-cd /home/pollution/airqulity/serverbuild
+#restart your login window now to make sure necessary scripts are sourced.
+
+cd /home/$(whoami)/airqulity/serverbuild
 
 #you will need to to set execute permissions
-chmod 755 /home/pollution/airquality/serverbuild/airnow_setup
-chmod 755 /home/pollution/airquality/serverbuild/mongo_setup_script
-chmod 755 /home/pollution/airquality/serverbuild/dthp_script
-chmod 755 /home/pollution/airquality/serverbuild/move_mongo_script
-chmod 755 /home/pollution/airquality/serverbuild/enable_https
+chmod 755 /home/$(whoami)/airquality/serverbuild/airnow_setup
+chmod 755 /home/$(whoami)/airquality/serverbuild/mongo_setup_script
+chmod 755 /home/$(whoami)/airquality/serverbuild/dthp_script
+chmod 755 /home/$(whoami)/airquality/serverbuild/move_mongo_script
+chmod 755 /home/$(whoami)/airquality/serverbuild/enable_https
 
 #to setup lftp to download from teh airnow api, run the following (where username and password correspond to an Airnow API account)
 ./airnow_setup username password
@@ -25,7 +34,7 @@ chmod 755 /home/pollution/airquality/serverbuild/enable_https
 ./dthp_script
 
 #upgrade to the wired tiger mongo storage engine
-./upgrade_wiredtiger /home/pollution/mongo
+./upgrade_wiredtiger /home/$(whoami)/mongo
 
 #to enable https on port 3001, run this script to generate a key/cert and set environment variables
 #you may need to stop the http server and log out/log in after running this script
@@ -49,6 +58,6 @@ grunt forever:server:start
 tail -f /logs/log.log
 
 #delete all data in the mongodb and reset with default collections
-chmod 755 /home/pollution/airquality/serverbuild/reset_db
+chmod 755 /home/$(whoami)/airquality/serverbuild/reset_db
 ./reset_db
 

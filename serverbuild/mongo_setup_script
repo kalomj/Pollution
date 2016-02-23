@@ -5,18 +5,21 @@
 #it then does an initial startup using grunt to populate collections necessary for the project
 #it also runs some optimizations recommended when using mongo in an AWS EC2 instance
 
-if [[ $# -ne 1 ]] ; then
+if [[ $# -lt 1 ]] ; then
     echo 'Usage: mongo_setup_script device_name'
     echo 'Use device_name=sdb, not device_name=/dev/sdb'
     echo 'to find volume name:'
     echo 'lsblk'
+    echo 'use NONE as device name to skip disk mounting'
+    echo 'use second input argument as main disk in this case eg:'
+    echo 'mongo_setup_script NONE sda1'
     echo '(lsblk will list volume name like /dev/sd*)'
     echo 'see script comments for details on checking filesytem'
     exit 0
 fi
 
-if [[ -d "/home/pollution/mongo" ]] ; then
-  echo "/home/pollution/mongo already exists"
+if [[ -d "/home/$(whoami)/mongo" ]] ; then
+  echo "/home/$(whoami)/mongo already exists"
   exit 0
 fi
 
@@ -25,28 +28,32 @@ fi
 #check for file system on the volume. If filesystem is ‘data’ the no file system exists on the disk
 #sudo file -s /dev/sd*
 
-#create file system on the volume
-sudo mkfs.ext4 -F /dev/$1
-
-
 #create directory for mount point
-mkdir /home/pollution/mongo
-#mount disk to mount point
-echo "/dev/$1 /home/pollution/mongo ext4 defaults,auto,noatime,noexec 0 0" | sudo tee -a /etc/fstab
+mkdir /home/$(whoami)/mongo
 
-sudo mount /home/pollution/mongo
+if [[ "$1" != "NONE" ]]
 
-mkdir /home/pollution/mongo/log
-mkdir /home/pollution/mongo/data
+    #create file system on the volume
+    sudo mkfs.ext4 -F /dev/$1
+    
+    #mount disk to mount point
+    echo "/dev/$1 /home/$(whoami)/mongo ext4 defaults,auto,noatime,noexec 0 0" | sudo tee -a /etc/fstab
+    
+    sudo mount /home/$(whoami)/mongo
 
-sudo chown mongodb:nogroup /home/pollution/mongo/data
-sudo chown mongodb:nogroup /home/pollution/mongo/log
+fi
+
+mkdir /home/$(whoami)/mongo/log
+mkdir /home/$(whoami)/mongo/data
+
+sudo chown mongodb:nogroup /home/$(whoami)/mongo/data
+sudo chown mongodb:nogroup /home/$(whoami)/mongo/log
 
 #edit default mongodb configuration
 #edit mongod.conf
 
-sudo sed -i -e 's/\/var\/log\/mongodb/\/home\/pollution\/mongo\/log/' /etc/mongod.conf
-sudo sed -i -e 's/\/var\/lib\/mongodb/\/home\/pollution\/mongo\/data/' /etc/mongod.conf
+sudo sed -i -e 's/\/var\/log\/mongodb/\/home\/'$(whoami)'\/mongo\/log/' /etc/mongod.conf
+sudo sed -i -e 's/\/var\/lib\/mongodb/\/home\/'$(whoami)'\/mongo\/data/' /etc/mongod.conf
 
 #By default Amazon Linux uses ulimit settings that are not appropriate for MongoDB. To setup ulimit to match the documented ulimit settings use the following steps:
 
@@ -66,19 +73,33 @@ echo  '# End of file' | sudo tee -a /etc/security/limits.conf
 #echo '* hard nproc 32000' | sudo tee -a /etc/security/limits.d/90-nproc.conf
 #echo  '# End of file' | sudo tee -a /etc/security/limits.d/90-nproc.conf
 
-#set EC2 optimized block read settings for EC2
-sudo blockdev --setra 32 /dev/sdb
+if [[ "$1" != "NONE" ]]
 
-#makes block read settings persistent across reboots
-echo "ACTION==\"add\", KERNEL==\"$1\", ATTR{bdi/read_ahead_kb}=\"16\"" | sudo tee -a /etc/udev/rules.d/85-ebs.rules
+    #set EC2 optimized block read settings for EC2
+    sudo blockdev --setra 32 /dev/$1
+    
+    #makes block read settings persistent across reboots
+    echo "ACTION==\"add\", KERNEL==\"$1\", ATTR{bdi/read_ahead_kb}=\"16\"" | sudo tee -a /etc/udev/rules.d/85-ebs.rules
+
+fi
+
+if [[ "$1" == "NONE" ]]
+
+    #set EC2 optimized block read settings for EC2
+    sudo blockdev --setra 32 /dev/$2
+    
+    #makes block read settings persistent across reboots
+    echo "ACTION==\"add\", KERNEL==\"$2\", ATTR{bdi/read_ahead_kb}=\"16\"" | sudo tee -a /etc/udev/rules.d/85-ebs.rules
+
+fi
 
 #restart mongodb
 sudo service mongod restart
 
 echo 'now use grunt to confirm installation and set up mean-dev database in mongo'
-echo '/home/pollution/airquality/grunt'
+echo "/home/$(whoami)/airquality/grunt"
 
-grunt --gruntfile /home/pollution/airquality/Gruntfile.js forever:server:start
+grunt --gruntfile /home/$(whoami)/airquality/Gruntfile.js forever:server:start
 
 echo 'call wget to download latest file data from the airnow ftp'
 wget -O /dev/null http://localhost:3000/filesync
@@ -101,8 +122,8 @@ sleep 10
 
 
 echo 'now using the following command to setup the database indexes'
-echo 'mongo localhost:27017/mean-dev < /home/pollution/airquality/serverbuild/mongo_setup.js'
-mongo localhost:27017/mean-dev < /home/pollution/airquality/serverbuild/mongo_setup.js
+echo "mongo localhost:27017/mean-dev < /home/$(whoami)/airquality/serverbuild/mongo_setup.js"
+mongo localhost:27017/mean-dev < /home/$(whoami)/airquality/serverbuild/mongo_setup.js
 
 echo 'Server is running as daemon using forever. Try tailing the log file with :'
 echo 'tail -f logs/log.log'

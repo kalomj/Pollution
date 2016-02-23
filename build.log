@@ -1,0 +1,2046 @@
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty InRelease
+Get:1 http://us-east-1.ec2.archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com trusty-backports InRelease [65.9 kB]
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty Release.gpg
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty Release
+Get:3 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/main Sources [260 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/restricted Sources [5,352 B]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/universe Sources [150 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/multiverse Sources [5,547 B]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/main amd64 Packages [706 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/restricted amd64 Packages [15.9 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/universe amd64 Packages [338 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/multiverse amd64 Packages [13.2 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/main Translation-en [356 kB]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/multiverse Translation-en [6,947 B]
+Get:14 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/restricted Translation-en [3,699 B]
+Get:15 http://security.ubuntu.com trusty-security/main Sources [105 kB]
+Get:16 http://us-east-1.ec2.archive.ubuntu.com trusty-updates/universe Translation-en [180 kB]
+Get:17 http://us-east-1.ec2.archive.ubuntu.com trusty-backports/main Sources [8,672 B]
+Get:18 http://us-east-1.ec2.archive.ubuntu.com trusty-backports/restricted Sources [28 B]
+Get:19 http://us-east-1.ec2.archive.ubuntu.com trusty-backports/universe Sources [33.2 kB]
+Get:20 http://us-east-1.ec2.archive.ubuntu.com trusty-backports/multiverse Sources [1,898 B]
+Get:21 http://us-east-1.ec2.archive.ubuntu.com trusty-backports/main amd64 Packages [9,787 B]
+Get:22 http://us-east-1.ec2.archive.ubuntu.com trusty-backports/restricted amd64 Packages [28 B]
+Get:23 http://us-east-1.ec2.archive.ubuntu.com trusty-backports/universe amd64 Packages [39.8 kB]
+Get:24 http://us-east-1.ec2.archive.ubuntu.com trusty-backports/multiverse amd64 Packages [1,571 B]
+Get:25 http://us-east-1.ec2.archive.ubuntu.com trusty-backports/main Translation-en [5,843 B]
+Get:26 http://security.ubuntu.com trusty-security/universe Sources [33.0 kB]
+Get:27 http://us-east-1.ec2.archive.ubuntu.com trusty-backports/multiverse Translation-en [1,215 B]
+Get:28 http://us-east-1.ec2.archive.ubuntu.com trusty-backports/restricted Translation-en [28 B]
+Get:29 http://us-east-1.ec2.archive.ubuntu.com trusty-backports/universe Translation-en [34.6 kB]
+Get:30 http://us-east-1.ec2.archive.ubuntu.com trusty/main Sources [1,064 kB]
+Get:31 http://security.ubuntu.com trusty-security/main amd64 Packages [421 kB]
+Get:32 http://us-east-1.ec2.archive.ubuntu.com trusty/restricted Sources [5,433 B]
+Get:33 http://us-east-1.ec2.archive.ubuntu.com trusty/universe Sources [6,399 kB]
+Get:34 http://security.ubuntu.com trusty-security/universe amd64 Packages [124 kB]
+Get:35 http://us-east-1.ec2.archive.ubuntu.com trusty/multiverse Sources [174 kB]
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/main Translation-en
+Get:36 http://security.ubuntu.com trusty-security/main Translation-en [231 kB]
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/universe Translation-en
+Get:37 http://security.ubuntu.com trusty-security/universe Translation-en [72.5 kB]
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty/main Translation-en_US
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty/universe Translation-en_US
+Fetched 11.0 MB in 2s (4,016 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  binutils comerr-dev cpp cpp-4.8 gcc gcc-4.8 gcc-4.8-base krb5-multidev
+  libasan0 libatomic1 libc-dev-bin libc6 libc6-dev libcloog-isl4
+  libgcc-4.8-dev libgmp10 libgomp1 libgssrpc4 libisl10 libitm1
+  libkadm5clnt-mit9 libkadm5srv-mit9 libkdb5-7 libmpc3 libmpfr4 libquadmath0
+  libstdc++6 libtsan0 linux-libc-dev manpages-dev
+Suggested packages:
+  binutils-doc doc-base cpp-doc gcc-4.8-locales gcc-multilib make autoconf
+  automake1.9 libtool flex bison gdb gcc-doc gcc-4.8-multilib gcc-4.8-doc
+  libgcc1-dbg libgomp1-dbg libitm1-dbg libatomic1-dbg libasan0-dbg
+  libtsan0-dbg libquadmath0-dbg krb5-doc glibc-doc krb5-user
+The following NEW packages will be installed:
+  binutils comerr-dev cpp cpp-4.8 gcc gcc-4.8 krb5-multidev libasan0
+  libatomic1 libc-dev-bin libc6-dev libcloog-isl4 libgcc-4.8-dev libgmp10
+  libgomp1 libgssrpc4 libisl10 libitm1 libkadm5clnt-mit9 libkadm5srv-mit9
+  libkdb5-7 libkrb5-dev libmpc3 libmpfr4 libquadmath0 libtsan0 linux-libc-dev
+  manpages-dev
+The following packages will be upgraded:
+  gcc-4.8-base libc6 libstdc++6
+3 upgraded, 28 newly installed, 0 to remove and 46 not upgraded.
+Need to get 24.6 MB of archives.
+After this operation, 72.6 MB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main gcc-4.8-base amd64 4.8.4-2ubuntu1~14.04.1 [16.0 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libstdc++6 amd64 4.8.4-2ubuntu1~14.04.1 [259 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libc6 amd64 2.19-0ubuntu6.7 [4,719 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libasan0 amd64 4.8.4-2ubuntu1~14.04.1 [63.1 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libatomic1 amd64 4.8.4-2ubuntu1~14.04.1 [8,640 B]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libgmp10 amd64 2:5.1.3+dfsg-1ubuntu1 [218 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libisl10 amd64 0.12.2-1 [419 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libcloog-isl4 amd64 0.18.2-1 [57.5 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libgomp1 amd64 4.8.4-2ubuntu1~14.04.1 [23.1 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libgssrpc4 amd64 1.12+dfsg-2ubuntu5.2 [53.1 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libitm1 amd64 4.8.4-2ubuntu1~14.04.1 [28.5 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libkadm5clnt-mit9 amd64 1.12+dfsg-2ubuntu5.2 [36.2 kB]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libkdb5-7 amd64 1.12+dfsg-2ubuntu5.2 [36.2 kB]
+Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libkadm5srv-mit9 amd64 1.12+dfsg-2ubuntu5.2 [50.4 kB]
+Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libmpfr4 amd64 3.1.2-1 [203 kB]
+Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libquadmath0 amd64 4.8.4-2ubuntu1~14.04.1 [126 kB]
+Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libtsan0 amd64 4.8.4-2ubuntu1~14.04.1 [94.9 kB]
+Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libmpc3 amd64 1.0.1-1ubuntu1 [38.4 kB]
+Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main binutils amd64 2.24-5ubuntu14 [2,076 kB]
+Get:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main cpp-4.8 amd64 4.8.4-2ubuntu1~14.04.1 [4,595 kB]
+Get:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main cpp amd64 4:4.8.2-1ubuntu6 [27.5 kB]
+Get:22 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libgcc-4.8-dev amd64 4.8.4-2ubuntu1~14.04.1 [1,688 kB]
+Get:23 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main gcc-4.8 amd64 4.8.4-2ubuntu1~14.04.1 [5,056 kB]
+Get:24 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main gcc amd64 4:4.8.2-1ubuntu6 [5,098 B]
+Get:25 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libc-dev-bin amd64 2.19-0ubuntu6.7 [69.0 kB]
+Get:26 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main linux-libc-dev amd64 3.13.0-77.121 [776 kB]
+Get:27 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libc6-dev amd64 2.19-0ubuntu6.7 [1,910 kB]
+Get:28 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main comerr-dev amd64 2.1-1.42.9-3ubuntu1.3 [38.3 kB]
+Get:29 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main krb5-multidev amd64 1.12+dfsg-2ubuntu5.2 [111 kB]
+Get:30 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main manpages-dev all 3.54-1ubuntu1 [1,820 kB]
+Get:31 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libkrb5-dev amd64 1.12+dfsg-2ubuntu5.2 [14.4 kB]
+Extracting templates from packages: 96%Extracting templates from packages: 100%
+Preconfiguring packages ...
+Fetched 24.6 MB in 0s (38.7 MB/s)
+(Reading database ... 51150 files and directories currently installed.)
+Preparing to unpack .../gcc-4.8-base_4.8.4-2ubuntu1~14.04.1_amd64.deb ...
+Unpacking gcc-4.8-base:amd64 (4.8.4-2ubuntu1~14.04.1) over (4.8.4-2ubuntu1~14.04) ...
+Setting up gcc-4.8-base:amd64 (4.8.4-2ubuntu1~14.04.1) ...
+(Reading database ... 51150 files and directories currently installed.)
+Preparing to unpack .../libstdc++6_4.8.4-2ubuntu1~14.04.1_amd64.deb ...
+Unpacking libstdc++6:amd64 (4.8.4-2ubuntu1~14.04.1) over (4.8.4-2ubuntu1~14.04) ...
+Preparing to unpack .../libc6_2.19-0ubuntu6.7_amd64.deb ...
+Unpacking libc6:amd64 (2.19-0ubuntu6.7) over (2.19-0ubuntu6.6) ...
+Setting up libc6:amd64 (2.19-0ubuntu6.7) ...
+Setting up libstdc++6:amd64 (4.8.4-2ubuntu1~14.04.1) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.6) ...
+Selecting previously unselected package libasan0:amd64.
+(Reading database ... 51150 files and directories currently installed.)
+Preparing to unpack .../libasan0_4.8.4-2ubuntu1~14.04.1_amd64.deb ...
+Unpacking libasan0:amd64 (4.8.4-2ubuntu1~14.04.1) ...
+Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../libatomic1_4.8.4-2ubuntu1~14.04.1_amd64.deb ...
+Unpacking libatomic1:amd64 (4.8.4-2ubuntu1~14.04.1) ...
+Selecting previously unselected package libgmp10:amd64.
+Preparing to unpack .../libgmp10_2%3a5.1.3+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libgmp10:amd64 (2:5.1.3+dfsg-1ubuntu1) ...
+Selecting previously unselected package libisl10:amd64.
+Preparing to unpack .../libisl10_0.12.2-1_amd64.deb ...
+Unpacking libisl10:amd64 (0.12.2-1) ...
+Selecting previously unselected package libcloog-isl4:amd64.
+Preparing to unpack .../libcloog-isl4_0.18.2-1_amd64.deb ...
+Unpacking libcloog-isl4:amd64 (0.18.2-1) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../libgomp1_4.8.4-2ubuntu1~14.04.1_amd64.deb ...
+Unpacking libgomp1:amd64 (4.8.4-2ubuntu1~14.04.1) ...
+Selecting previously unselected package libgssrpc4:amd64.
+Preparing to unpack .../libgssrpc4_1.12+dfsg-2ubuntu5.2_amd64.deb ...
+Unpacking libgssrpc4:amd64 (1.12+dfsg-2ubuntu5.2) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../libitm1_4.8.4-2ubuntu1~14.04.1_amd64.deb ...
+Unpacking libitm1:amd64 (4.8.4-2ubuntu1~14.04.1) ...
+Selecting previously unselected package libkadm5clnt-mit9:amd64.
+Preparing to unpack .../libkadm5clnt-mit9_1.12+dfsg-2ubuntu5.2_amd64.deb ...
+Unpacking libkadm5clnt-mit9:amd64 (1.12+dfsg-2ubuntu5.2) ...
+Selecting previously unselected package libkdb5-7:amd64.
+Preparing to unpack .../libkdb5-7_1.12+dfsg-2ubuntu5.2_amd64.deb ...
+Unpacking libkdb5-7:amd64 (1.12+dfsg-2ubuntu5.2) ...
+Selecting previously unselected package libkadm5srv-mit9:amd64.
+Preparing to unpack .../libkadm5srv-mit9_1.12+dfsg-2ubuntu5.2_amd64.deb ...
+Unpacking libkadm5srv-mit9:amd64 (1.12+dfsg-2ubuntu5.2) ...
+Selecting previously unselected package libmpfr4:amd64.
+Preparing to unpack .../libmpfr4_3.1.2-1_amd64.deb ...
+Unpacking libmpfr4:amd64 (3.1.2-1) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../libquadmath0_4.8.4-2ubuntu1~14.04.1_amd64.deb ...
+Unpacking libquadmath0:amd64 (4.8.4-2ubuntu1~14.04.1) ...
+Selecting previously unselected package libtsan0:amd64.
+Preparing to unpack .../libtsan0_4.8.4-2ubuntu1~14.04.1_amd64.deb ...
+Unpacking libtsan0:amd64 (4.8.4-2ubuntu1~14.04.1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../libmpc3_1.0.1-1ubuntu1_amd64.deb ...
+Unpacking libmpc3:amd64 (1.0.1-1ubuntu1) ...
+Selecting previously unselected package binutils.
+Preparing to unpack .../binutils_2.24-5ubuntu14_amd64.deb ...
+Unpacking binutils (2.24-5ubuntu14) ...
+Selecting previously unselected package cpp-4.8.
+Preparing to unpack .../cpp-4.8_4.8.4-2ubuntu1~14.04.1_amd64.deb ...
+Unpacking cpp-4.8 (4.8.4-2ubuntu1~14.04.1) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../cpp_4%3a4.8.2-1ubuntu6_amd64.deb ...
+Unpacking cpp (4:4.8.2-1ubuntu6) ...
+Selecting previously unselected package libgcc-4.8-dev:amd64.
+Preparing to unpack .../libgcc-4.8-dev_4.8.4-2ubuntu1~14.04.1_amd64.deb ...
+Unpacking libgcc-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.1) ...
+Selecting previously unselected package gcc-4.8.
+Preparing to unpack .../gcc-4.8_4.8.4-2ubuntu1~14.04.1_amd64.deb ...
+Unpacking gcc-4.8 (4.8.4-2ubuntu1~14.04.1) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../gcc_4%3a4.8.2-1ubuntu6_amd64.deb ...
+Unpacking gcc (4:4.8.2-1ubuntu6) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../libc-dev-bin_2.19-0ubuntu6.7_amd64.deb ...
+Unpacking libc-dev-bin (2.19-0ubuntu6.7) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../linux-libc-dev_3.13.0-77.121_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (3.13.0-77.121) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../libc6-dev_2.19-0ubuntu6.7_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.19-0ubuntu6.7) ...
+Selecting previously unselected package comerr-dev.
+Preparing to unpack .../comerr-dev_2.1-1.42.9-3ubuntu1.3_amd64.deb ...
+Unpacking comerr-dev (2.1-1.42.9-3ubuntu1.3) ...
+Selecting previously unselected package krb5-multidev.
+Preparing to unpack .../krb5-multidev_1.12+dfsg-2ubuntu5.2_amd64.deb ...
+Unpacking krb5-multidev (1.12+dfsg-2ubuntu5.2) ...
+Selecting previously unselected package manpages-dev.
+Preparing to unpack .../manpages-dev_3.54-1ubuntu1_all.deb ...
+Unpacking manpages-dev (3.54-1ubuntu1) ...
+Selecting previously unselected package libkrb5-dev.
+Preparing to unpack .../libkrb5-dev_1.12+dfsg-2ubuntu5.2_amd64.deb ...
+Unpacking libkrb5-dev (1.12+dfsg-2ubuntu5.2) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for install-info (5.2.0.dfsg.1-2) ...
+Setting up libasan0:amd64 (4.8.4-2ubuntu1~14.04.1) ...
+Setting up libatomic1:amd64 (4.8.4-2ubuntu1~14.04.1) ...
+Setting up libgmp10:amd64 (2:5.1.3+dfsg-1ubuntu1) ...
+Setting up libisl10:amd64 (0.12.2-1) ...
+Setting up libcloog-isl4:amd64 (0.18.2-1) ...
+Setting up libgomp1:amd64 (4.8.4-2ubuntu1~14.04.1) ...
+Setting up libgssrpc4:amd64 (1.12+dfsg-2ubuntu5.2) ...
+Setting up libitm1:amd64 (4.8.4-2ubuntu1~14.04.1) ...
+Setting up libkadm5clnt-mit9:amd64 (1.12+dfsg-2ubuntu5.2) ...
+Setting up libkdb5-7:amd64 (1.12+dfsg-2ubuntu5.2) ...
+Setting up libkadm5srv-mit9:amd64 (1.12+dfsg-2ubuntu5.2) ...
+Setting up libmpfr4:amd64 (3.1.2-1) ...
+Setting up libquadmath0:amd64 (4.8.4-2ubuntu1~14.04.1) ...
+Setting up libtsan0:amd64 (4.8.4-2ubuntu1~14.04.1) ...
+Setting up libmpc3:amd64 (1.0.1-1ubuntu1) ...
+Setting up binutils (2.24-5ubuntu14) ...
+Setting up cpp-4.8 (4.8.4-2ubuntu1~14.04.1) ...
+Setting up cpp (4:4.8.2-1ubuntu6) ...
+Setting up libgcc-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.1) ...
+Setting up gcc-4.8 (4.8.4-2ubuntu1~14.04.1) ...
+Setting up gcc (4:4.8.2-1ubuntu6) ...
+Setting up libc-dev-bin (2.19-0ubuntu6.7) ...
+Setting up linux-libc-dev:amd64 (3.13.0-77.121) ...
+Setting up libc6-dev:amd64 (2.19-0ubuntu6.7) ...
+Setting up comerr-dev (2.1-1.42.9-3ubuntu1.3) ...
+Setting up krb5-multidev (1.12+dfsg-2ubuntu5.2) ...
+Setting up manpages-dev (3.54-1ubuntu1) ...
+Setting up libkrb5-dev (1.12+dfsg-2ubuntu5.2) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.6) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  dpkg-dev fakeroot g++ g++-4.8 libalgorithm-diff-perl
+  libalgorithm-diff-xs-perl libalgorithm-merge-perl libdpkg-perl libfakeroot
+  libfile-fcntllock-perl libstdc++-4.8-dev make
+Suggested packages:
+  debian-keyring g++-multilib g++-4.8-multilib gcc-4.8-doc libstdc++6-4.8-dbg
+  libstdc++-4.8-doc make-doc
+The following NEW packages will be installed:
+  build-essential dpkg-dev fakeroot g++ g++-4.8 libalgorithm-diff-perl
+  libalgorithm-diff-xs-perl libalgorithm-merge-perl libdpkg-perl libfakeroot
+  libfile-fcntllock-perl libstdc++-4.8-dev make
+0 upgraded, 13 newly installed, 0 to remove and 46 not upgraded.
+Need to get 20.4 MB of archives.
+After this operation, 44.4 MB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libstdc++-4.8-dev amd64 4.8.4-2ubuntu1~14.04.1 [1,051 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main g++-4.8 amd64 4.8.4-2ubuntu1~14.04.1 [18.1 MB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main g++ amd64 4:4.8.2-1ubuntu6 [1,490 B]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main make amd64 3.81-8.2ubuntu3 [119 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libdpkg-perl all 1.17.5ubuntu5.5 [179 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main dpkg-dev all 1.17.5ubuntu5.5 [726 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main build-essential amd64 11.6ubuntu6 [4,838 B]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libfakeroot amd64 1.20-3ubuntu2 [25.4 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main fakeroot amd64 1.20-3ubuntu2 [55.0 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libalgorithm-diff-perl all 1.19.02-3 [50.0 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libalgorithm-diff-xs-perl amd64 0.04-2build4 [12.6 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libalgorithm-merge-perl all 0.08-2 [12.7 kB]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libfile-fcntllock-perl amd64 0.14-2build1 [15.9 kB]
+Fetched 20.4 MB in 0s (38.7 MB/s)
+Selecting previously unselected package libstdc++-4.8-dev:amd64.
+(Reading database ... 54944 files and directories currently installed.)
+Preparing to unpack .../libstdc++-4.8-dev_4.8.4-2ubuntu1~14.04.1_amd64.deb ...
+Unpacking libstdc++-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.1) ...
+Selecting previously unselected package g++-4.8.
+Preparing to unpack .../g++-4.8_4.8.4-2ubuntu1~14.04.1_amd64.deb ...
+Unpacking g++-4.8 (4.8.4-2ubuntu1~14.04.1) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../g++_4%3a4.8.2-1ubuntu6_amd64.deb ...
+Unpacking g++ (4:4.8.2-1ubuntu6) ...
+Selecting previously unselected package make.
+Preparing to unpack .../make_3.81-8.2ubuntu3_amd64.deb ...
+Unpacking make (3.81-8.2ubuntu3) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../libdpkg-perl_1.17.5ubuntu5.5_all.deb ...
+Unpacking libdpkg-perl (1.17.5ubuntu5.5) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../dpkg-dev_1.17.5ubuntu5.5_all.deb ...
+Unpacking dpkg-dev (1.17.5ubuntu5.5) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../build-essential_11.6ubuntu6_amd64.deb ...
+Unpacking build-essential (11.6ubuntu6) ...
+Selecting previously unselected package libfakeroot:amd64.
+Preparing to unpack .../libfakeroot_1.20-3ubuntu2_amd64.deb ...
+Unpacking libfakeroot:amd64 (1.20-3ubuntu2) ...
+Selecting previously unselected package fakeroot.
+Preparing to unpack .../fakeroot_1.20-3ubuntu2_amd64.deb ...
+Unpacking fakeroot (1.20-3ubuntu2) ...
+Selecting previously unselected package libalgorithm-diff-perl.
+Preparing to unpack .../libalgorithm-diff-perl_1.19.02-3_all.deb ...
+Unpacking libalgorithm-diff-perl (1.19.02-3) ...
+Selecting previously unselected package libalgorithm-diff-xs-perl.
+Preparing to unpack .../libalgorithm-diff-xs-perl_0.04-2build4_amd64.deb ...
+Unpacking libalgorithm-diff-xs-perl (0.04-2build4) ...
+Selecting previously unselected package libalgorithm-merge-perl.
+Preparing to unpack .../libalgorithm-merge-perl_0.08-2_all.deb ...
+Unpacking libalgorithm-merge-perl (0.08-2) ...
+Selecting previously unselected package libfile-fcntllock-perl.
+Preparing to unpack .../libfile-fcntllock-perl_0.14-2build1_amd64.deb ...
+Unpacking libfile-fcntllock-perl (0.14-2build1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up libstdc++-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.1) ...
+Setting up g++-4.8 (4.8.4-2ubuntu1~14.04.1) ...
+Setting up g++ (4:4.8.2-1ubuntu6) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Setting up make (3.81-8.2ubuntu3) ...
+Setting up libdpkg-perl (1.17.5ubuntu5.5) ...
+Setting up dpkg-dev (1.17.5ubuntu5.5) ...
+Setting up build-essential (11.6ubuntu6) ...
+Setting up libfakeroot:amd64 (1.20-3ubuntu2) ...
+Setting up fakeroot (1.20-3ubuntu2) ...
+update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode
+Setting up libalgorithm-diff-perl (1.19.02-3) ...
+Setting up libalgorithm-diff-xs-perl (0.04-2build4) ...
+Setting up libalgorithm-merge-perl (0.08-2) ...
+Setting up libfile-fcntllock-perl (0.14-2build1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  git-man liberror-perl
+Suggested packages:
+  git-daemon-run git-daemon-sysvinit git-doc git-el git-email git-gui gitk
+  gitweb git-arch git-bzr git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  git git-man liberror-perl
+0 upgraded, 3 newly installed, 0 to remove and 46 not upgraded.
+Need to get 3,421 kB of archives.
+After this operation, 21.9 MB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main liberror-perl all 0.17-1.1 [21.1 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main git-man all 1:1.9.1-1ubuntu0.2 [699 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main git amd64 1:1.9.1-1ubuntu0.2 [2,701 kB]
+Fetched 3,421 kB in 0s (40.4 MB/s)
+Selecting previously unselected package liberror-perl.
+(Reading database ... 56182 files and directories currently installed.)
+Preparing to unpack .../liberror-perl_0.17-1.1_all.deb ...
+Unpacking liberror-perl (0.17-1.1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a1.9.1-1ubuntu0.2_all.deb ...
+Unpacking git-man (1:1.9.1-1ubuntu0.2) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a1.9.1-1ubuntu0.2_amd64.deb ...
+Unpacking git (1:1.9.1-1ubuntu0.2) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up liberror-perl (0.17-1.1) ...
+Setting up git-man (1:1.9.1-1ubuntu0.2) ...
+Setting up git (1:1.9.1-1ubuntu0.2) ...
+Initialized empty Git repository in /home/ubuntu/airquality/.git/
+From https://github.com/kalomj/Pollution
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --homedir /tmp/tmp.Q0Cgw6bSOT --no-auto-check-trustdb --trust-model always --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+gpg: requesting key 7F0CEB10 from hkp server keyserver.ubuntu.com
+gpg: key 7F0CEB10: public key "Richard Kreuter <richard@10gen.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty InRelease
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates InRelease
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports InRelease
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty Release.gpg
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty Release
+Ign http://repo.mongodb.org trusty/mongodb-org/3.0 InRelease
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/main Sources
+Get:1 http://repo.mongodb.org trusty/mongodb-org/3.0 Release.gpg [455 B]
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/restricted Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/universe Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/multiverse Sources
+Get:2 http://repo.mongodb.org trusty/mongodb-org/3.0 Release [3,090 B]
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/main amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/restricted amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/universe amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://security.ubuntu.com trusty-security InRelease
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-updates/universe Translation-en
+Get:3 http://repo.mongodb.org trusty/mongodb-org/3.0/multiverse amd64 Packages [7,852 B]
+Hit http://security.ubuntu.com trusty-security/main Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/main Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/universe Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://security.ubuntu.com trusty-security/universe Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Ign http://repo.mongodb.org trusty/mongodb-org/3.0/multiverse Translation-en_US
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/main Sources
+Ign http://repo.mongodb.org trusty/mongodb-org/3.0/multiverse Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/restricted Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/universe Sources
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/multiverse Sources
+Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/main Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://us-east-1.ec2.archive.ubuntu.com trusty/universe Translation-en
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty/main Translation-en_US
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://us-east-1.ec2.archive.ubuntu.com trusty/universe Translation-en_US
+Fetched 11.4 kB in 2s (5,604 B/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  mongodb-org mongodb-org-mongos mongodb-org-server mongodb-org-shell
+  mongodb-org-tools
+0 upgraded, 5 newly installed, 0 to remove and 46 not upgraded.
+Need to get 49.5 MB of archives.
+After this operation, 154 MB of additional disk space will be used.
+Get:1 http://repo.mongodb.org/apt/ubuntu/ trusty/mongodb-org/3.0/multiverse mongodb-org-shell amd64 3.0.0 [4,233 kB]
+Get:2 http://repo.mongodb.org/apt/ubuntu/ trusty/mongodb-org/3.0/multiverse mongodb-org-server amd64 3.0.0 [8,539 kB]
+Get:3 http://repo.mongodb.org/apt/ubuntu/ trusty/mongodb-org/3.0/multiverse mongodb-org-mongos amd64 3.0.0 [4,013 kB]
+Get:4 http://repo.mongodb.org/apt/ubuntu/ trusty/mongodb-org/3.0/multiverse mongodb-org-tools amd64 3.0.0 [32.8 MB]
+Get:5 http://repo.mongodb.org/apt/ubuntu/ trusty/mongodb-org/3.0/multiverse mongodb-org amd64 3.0.0 [3,618 B]
+Fetched 49.5 MB in 2s (20.1 MB/s)
+Selecting previously unselected package mongodb-org-shell.
+(Reading database ... 56930 files and directories currently installed.)
+Preparing to unpack .../mongodb-org-shell_3.0.0_amd64.deb ...
+Unpacking mongodb-org-shell (3.0.0) ...
+Selecting previously unselected package mongodb-org-server.
+Preparing to unpack .../mongodb-org-server_3.0.0_amd64.deb ...
+Unpacking mongodb-org-server (3.0.0) ...
+Selecting previously unselected package mongodb-org-mongos.
+Preparing to unpack .../mongodb-org-mongos_3.0.0_amd64.deb ...
+Unpacking mongodb-org-mongos (3.0.0) ...
+Selecting previously unselected package mongodb-org-tools.
+Preparing to unpack .../mongodb-org-tools_3.0.0_amd64.deb ...
+Unpacking mongodb-org-tools (3.0.0) ...
+Selecting previously unselected package mongodb-org.
+Preparing to unpack .../mongodb-org_3.0.0_amd64.deb ...
+Unpacking mongodb-org (3.0.0) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up mongodb-org-shell (3.0.0) ...
+Setting up mongodb-org-server (3.0.0) ...
+Adding system user `mongodb' (UID 106) ...
+Adding new user `mongodb' (UID 106) with group `nogroup' ...
+Not creating home directory `/home/mongodb'.
+Adding group `mongodb' (GID 111) ...
+Done.
+Adding user `mongodb' to group `mongodb' ...
+Adding user mongodb to group mongodb
+Done.
+mongod start/running, process 10984
+Setting up mongodb-org-mongos (3.0.0) ...
+Setting up mongodb-org-tools (3.0.0) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up mongodb-org (3.0.0) ...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  7750  100  7750    0     0   192k      0 --:--:-- --:--:-- --:--:--  194k
+=> Downloading nvm from git to '/home/ubuntu/.nvm'
+=> Cloning into '/home/ubuntu/.nvm'...
+* (detached from v0.30.2)
+  master
+
+=> Appending source string to /home/ubuntu/.bashrc
+=> Close and reopen your terminal to start using nvm
+#####                                                                      7.0%##############################################################            87.1%######################################################################## 100.0%
+Now using node v0.10.25 (npm v1.3.24)
+default -> 0.10.25 (-> v0.10.25)
+npm http GET https://registry.npmjs.org/request
+npm http 200 https://registry.npmjs.org/request
+npm http GET https://registry.npmjs.org/request/-/request-2.69.0.tgz
+npm http 200 https://registry.npmjs.org/request/-/request-2.69.0.tgz
+npm http GET https://registry.npmjs.org/bl
+npm http GET https://registry.npmjs.org/aws-sign2
+npm http GET https://registry.npmjs.org/aws4
+npm http GET https://registry.npmjs.org/caseless
+npm http GET https://registry.npmjs.org/combined-stream
+npm http GET https://registry.npmjs.org/extend
+npm http GET https://registry.npmjs.org/form-data
+npm http GET https://registry.npmjs.org/forever-agent
+npm http GET https://registry.npmjs.org/har-validator
+npm http GET https://registry.npmjs.org/hawk
+npm http GET https://registry.npmjs.org/http-signature
+npm http GET https://registry.npmjs.org/is-typedarray
+npm http GET https://registry.npmjs.org/isstream
+npm http GET https://registry.npmjs.org/json-stringify-safe
+npm http GET https://registry.npmjs.org/mime-types
+npm http GET https://registry.npmjs.org/node-uuid
+npm http GET https://registry.npmjs.org/oauth-sign
+npm http GET https://registry.npmjs.org/qs
+npm http GET https://registry.npmjs.org/stringstream
+npm http GET https://registry.npmjs.org/tough-cookie
+npm http GET https://registry.npmjs.org/tunnel-agent
+npm http 200 https://registry.npmjs.org/aws-sign2
+npm http GET https://registry.npmjs.org/aws-sign2/-/aws-sign2-0.6.0.tgz
+npm http 200 https://registry.npmjs.org/caseless
+npm http GET https://registry.npmjs.org/caseless/-/caseless-0.11.0.tgz
+npm http 200 https://registry.npmjs.org/aws4
+npm http 200 https://registry.npmjs.org/extend
+npm http 200 https://registry.npmjs.org/bl
+npm http 200 https://registry.npmjs.org/forever-agent
+npm http 200 https://registry.npmjs.org/form-data
+npm http 200 https://registry.npmjs.org/combined-stream
+npm http 200 https://registry.npmjs.org/is-typedarray
+npm http 200 https://registry.npmjs.org/http-signature
+npm http GET https://registry.npmjs.org/aws4/-/aws4-1.2.1.tgz
+npm http 200 https://registry.npmjs.org/har-validator
+npm http GET https://registry.npmjs.org/extend/-/extend-3.0.0.tgz
+npm http 200 https://registry.npmjs.org/aws-sign2/-/aws-sign2-0.6.0.tgz
+npm http 200 https://registry.npmjs.org/isstream
+npm http 200 https://registry.npmjs.org/caseless/-/caseless-0.11.0.tgz
+npm http 200 https://registry.npmjs.org/json-stringify-safe
+npm http GET https://registry.npmjs.org/bl/-/bl-1.0.3.tgz
+npm http 200 https://registry.npmjs.org/oauth-sign
+npm http GET https://registry.npmjs.org/forever-agent/-/forever-agent-0.6.1.tgz
+npm http GET https://registry.npmjs.org/form-data/-/form-data-1.0.0-rc3.tgz
+npm http GET https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.5.tgz
+npm http 200 https://registry.npmjs.org/node-uuid
+npm http 200 https://registry.npmjs.org/stringstream
+npm http GET https://registry.npmjs.org/http-signature/-/http-signature-1.1.1.tgz
+npm http GET https://registry.npmjs.org/is-typedarray/-/is-typedarray-1.0.0.tgz
+npm http GET https://registry.npmjs.org/har-validator/-/har-validator-2.0.6.tgz
+npm http 200 https://registry.npmjs.org/aws4/-/aws4-1.2.1.tgz
+npm http GET https://registry.npmjs.org/isstream/-/isstream-0.1.2.tgz
+npm http 200 https://registry.npmjs.org/tunnel-agent
+npm http GET https://registry.npmjs.org/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz
+npm http 200 https://registry.npmjs.org/extend/-/extend-3.0.0.tgz
+npm http 200 https://registry.npmjs.org/mime-types
+npm http 200 https://registry.npmjs.org/bl/-/bl-1.0.3.tgz
+npm http 200 https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.5.tgz
+npm http 200 https://registry.npmjs.org/forever-agent/-/forever-agent-0.6.1.tgz
+npm http GET https://registry.npmjs.org/oauth-sign/-/oauth-sign-0.8.1.tgz
+npm http 200 https://registry.npmjs.org/hawk
+npm http 200 https://registry.npmjs.org/http-signature/-/http-signature-1.1.1.tgz
+npm http 200 https://registry.npmjs.org/form-data/-/form-data-1.0.0-rc3.tgz
+npm http GET https://registry.npmjs.org/node-uuid/-/node-uuid-1.4.7.tgz
+npm http GET https://registry.npmjs.org/stringstream/-/stringstream-0.0.5.tgz
+npm http 200 https://registry.npmjs.org/is-typedarray/-/is-typedarray-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/har-validator/-/har-validator-2.0.6.tgz
+npm http 200 https://registry.npmjs.org/isstream/-/isstream-0.1.2.tgz
+npm http GET https://registry.npmjs.org/tunnel-agent/-/tunnel-agent-0.4.2.tgz
+npm http 200 https://registry.npmjs.org/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz
+npm http 200 https://registry.npmjs.org/oauth-sign/-/oauth-sign-0.8.1.tgz
+npm http 200 https://registry.npmjs.org/qs
+npm http GET https://registry.npmjs.org/mime-types/-/mime-types-2.1.10.tgz
+npm http 200 https://registry.npmjs.org/node-uuid/-/node-uuid-1.4.7.tgz
+npm http 200 https://registry.npmjs.org/stringstream/-/stringstream-0.0.5.tgz
+npm http 200 https://registry.npmjs.org/tough-cookie
+npm http GET https://registry.npmjs.org/hawk/-/hawk-3.1.3.tgz
+npm http 200 https://registry.npmjs.org/tunnel-agent/-/tunnel-agent-0.4.2.tgz
+npm http GET https://registry.npmjs.org/qs/-/qs-6.0.2.tgz
+npm http GET https://registry.npmjs.org/tough-cookie/-/tough-cookie-2.2.1.tgz
+npm http 200 https://registry.npmjs.org/mime-types/-/mime-types-2.1.10.tgz
+npm http 200 https://registry.npmjs.org/hawk/-/hawk-3.1.3.tgz
+npm http 200 https://registry.npmjs.org/qs/-/qs-6.0.2.tgz
+npm http 200 https://registry.npmjs.org/tough-cookie/-/tough-cookie-2.2.1.tgz
+npm WARN engine hawk@3.1.3: wanted: {"node":">=0.10.32"} (current: {"node":"v0.10.25","npm":"1.3.24"})
+npm http GET https://registry.npmjs.org/delayed-stream
+npm http GET https://registry.npmjs.org/mime-db
+npm http GET https://registry.npmjs.org/async
+npm http 200 https://registry.npmjs.org/delayed-stream
+npm http GET https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/mime-db
+npm http GET https://registry.npmjs.org/readable-stream
+npm http GET https://registry.npmjs.org/mime-db/-/mime-db-1.22.0.tgz
+npm http GET https://registry.npmjs.org/lru-cache
+npm http 200 https://registry.npmjs.org/async
+npm http 200 https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz
+npm http GET https://registry.npmjs.org/async/-/async-1.5.2.tgz
+npm http GET https://registry.npmjs.org/assert-plus
+npm http GET https://registry.npmjs.org/jsprim
+npm http 200 https://registry.npmjs.org/mime-db/-/mime-db-1.22.0.tgz
+npm http 200 https://registry.npmjs.org/readable-stream
+npm http GET https://registry.npmjs.org/sshpk
+npm http 200 https://registry.npmjs.org/lru-cache
+npm http 200 https://registry.npmjs.org/async/-/async-1.5.2.tgz
+npm http GET https://registry.npmjs.org/readable-stream/-/readable-stream-2.0.5.tgz
+npm http 200 https://registry.npmjs.org/assert-plus
+npm http 200 https://registry.npmjs.org/jsprim
+npm http GET https://registry.npmjs.org/lru-cache/-/lru-cache-2.7.3.tgz
+npm http GET https://registry.npmjs.org/pinkie-promise
+npm http GET https://registry.npmjs.org/is-my-json-valid
+npm http GET https://registry.npmjs.org/commander
+npm http GET https://registry.npmjs.org/chalk
+npm http GET https://registry.npmjs.org/assert-plus/-/assert-plus-0.2.0.tgz
+npm http GET https://registry.npmjs.org/jsprim/-/jsprim-1.2.2.tgz
+npm http 200 https://registry.npmjs.org/sshpk
+npm http 200 https://registry.npmjs.org/readable-stream/-/readable-stream-2.0.5.tgz
+npm http 200 https://registry.npmjs.org/lru-cache/-/lru-cache-2.7.3.tgz
+npm http GET https://registry.npmjs.org/sshpk/-/sshpk-1.7.4.tgz
+npm http 200 https://registry.npmjs.org/jsprim/-/jsprim-1.2.2.tgz
+npm http 200 https://registry.npmjs.org/assert-plus/-/assert-plus-0.2.0.tgz
+npm http 200 https://registry.npmjs.org/pinkie-promise
+npm http 200 https://registry.npmjs.org/chalk
+npm http 200 https://registry.npmjs.org/commander
+npm http 200 https://registry.npmjs.org/is-my-json-valid
+npm http GET https://registry.npmjs.org/pinkie-promise/-/pinkie-promise-2.0.0.tgz
+npm http GET https://registry.npmjs.org/chalk/-/chalk-1.1.1.tgz
+npm http GET https://registry.npmjs.org/commander/-/commander-2.9.0.tgz
+npm http GET https://registry.npmjs.org/is-my-json-valid/-/is-my-json-valid-2.13.0.tgz
+npm http 200 https://registry.npmjs.org/sshpk/-/sshpk-1.7.4.tgz
+npm http 200 https://registry.npmjs.org/pinkie-promise/-/pinkie-promise-2.0.0.tgz
+npm http 200 https://registry.npmjs.org/chalk/-/chalk-1.1.1.tgz
+npm http 200 https://registry.npmjs.org/commander/-/commander-2.9.0.tgz
+npm http 200 https://registry.npmjs.org/is-my-json-valid/-/is-my-json-valid-2.13.0.tgz
+npm http GET https://registry.npmjs.org/hoek
+npm http GET https://registry.npmjs.org/boom
+npm http GET https://registry.npmjs.org/cryptiles
+npm http GET https://registry.npmjs.org/sntp
+npm http 200 https://registry.npmjs.org/cryptiles
+npm http 200 https://registry.npmjs.org/boom
+npm http 200 https://registry.npmjs.org/hoek
+npm http 200 https://registry.npmjs.org/sntp
+npm http GET https://registry.npmjs.org/cryptiles/-/cryptiles-2.0.5.tgz
+npm http GET https://registry.npmjs.org/boom/-/boom-2.10.1.tgz
+npm http GET https://registry.npmjs.org/hoek/-/hoek-2.16.3.tgz
+npm http GET https://registry.npmjs.org/sntp/-/sntp-1.0.9.tgz
+npm http 200 https://registry.npmjs.org/cryptiles/-/cryptiles-2.0.5.tgz
+npm http 200 https://registry.npmjs.org/boom/-/boom-2.10.1.tgz
+npm http 200 https://registry.npmjs.org/sntp/-/sntp-1.0.9.tgz
+npm http 200 https://registry.npmjs.org/hoek/-/hoek-2.16.3.tgz
+npm http GET https://registry.npmjs.org/extsprintf/1.0.2
+npm http GET https://registry.npmjs.org/json-schema/0.2.2
+npm http GET https://registry.npmjs.org/verror/1.3.6
+npm http GET https://registry.npmjs.org/core-util-is
+npm http GET https://registry.npmjs.org/inherits
+npm http GET https://registry.npmjs.org/process-nextick-args
+npm http GET https://registry.npmjs.org/isarray/0.0.1
+npm http GET https://registry.npmjs.org/string_decoder
+npm http GET https://registry.npmjs.org/util-deprecate
+npm http 200 https://registry.npmjs.org/extsprintf/1.0.2
+npm http 200 https://registry.npmjs.org/json-schema/0.2.2
+npm http GET https://registry.npmjs.org/extsprintf/-/extsprintf-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/verror/1.3.6
+npm http 200 https://registry.npmjs.org/process-nextick-args
+npm http GET https://registry.npmjs.org/json-schema/-/json-schema-0.2.2.tgz
+npm http 200 https://registry.npmjs.org/isarray/0.0.1
+npm http 200 https://registry.npmjs.org/inherits
+npm http GET https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-1.0.6.tgz
+npm http GET https://registry.npmjs.org/verror/-/verror-1.3.6.tgz
+npm http 200 https://registry.npmjs.org/util-deprecate
+npm http 200 https://registry.npmjs.org/string_decoder
+npm http GET https://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz
+npm http 200 https://registry.npmjs.org/core-util-is
+npm http GET https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz
+npm http GET https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz
+npm http GET https://registry.npmjs.org/string_decoder/-/string_decoder-0.10.31.tgz
+npm http GET https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/extsprintf/-/extsprintf-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-1.0.6.tgz
+npm http 200 https://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz
+npm http 200 https://registry.npmjs.org/json-schema/-/json-schema-0.2.2.tgz
+npm http 200 https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz
+npm http 200 https://registry.npmjs.org/verror/-/verror-1.3.6.tgz
+npm http 200 https://registry.npmjs.org/string_decoder/-/string_decoder-0.10.31.tgz
+npm http 200 https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz
+npm http GET https://registry.npmjs.org/pinkie
+npm http GET https://registry.npmjs.org/has-ansi
+npm http GET https://registry.npmjs.org/strip-ansi
+npm http GET https://registry.npmjs.org/supports-color
+npm http GET https://registry.npmjs.org/ansi-styles
+npm http GET https://registry.npmjs.org/escape-string-regexp
+npm http 200 https://registry.npmjs.org/pinkie
+npm http 200 https://registry.npmjs.org/has-ansi
+npm http 200 https://registry.npmjs.org/escape-string-regexp
+npm http 200 https://registry.npmjs.org/supports-color
+npm http 200 https://registry.npmjs.org/strip-ansi
+npm http 200 https://registry.npmjs.org/ansi-styles
+npm http GET https://registry.npmjs.org/pinkie/-/pinkie-2.0.4.tgz
+npm http GET https://registry.npmjs.org/graceful-readlink
+npm http GET https://registry.npmjs.org/has-ansi/-/has-ansi-2.0.0.tgz
+npm http GET https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz
+npm http GET https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz
+npm http GET https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz
+npm http GET https://registry.npmjs.org/ansi-styles/-/ansi-styles-2.2.0.tgz
+npm http 200 https://registry.npmjs.org/graceful-readlink
+npm http 200 https://registry.npmjs.org/has-ansi/-/has-ansi-2.0.0.tgz
+npm http 200 https://registry.npmjs.org/pinkie/-/pinkie-2.0.4.tgz
+npm http 200 https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz
+npm http 200 https://registry.npmjs.org/ansi-styles/-/ansi-styles-2.2.0.tgz
+npm http GET https://registry.npmjs.org/graceful-readlink/-/graceful-readlink-1.0.1.tgz
+npm http 200 https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz
+npm http 200 https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz
+npm http 200 https://registry.npmjs.org/graceful-readlink/-/graceful-readlink-1.0.1.tgz
+npm http GET https://registry.npmjs.org/tweetnacl
+npm http GET https://registry.npmjs.org/jsbn
+npm http GET https://registry.npmjs.org/jodid25519
+npm http GET https://registry.npmjs.org/ecc-jsbn
+npm http GET https://registry.npmjs.org/asn1
+npm http GET https://registry.npmjs.org/dashdash
+npm http 200 https://registry.npmjs.org/jsbn
+npm http 200 https://registry.npmjs.org/jodid25519
+npm http 200 https://registry.npmjs.org/ecc-jsbn
+npm http 200 https://registry.npmjs.org/tweetnacl
+npm http 200 https://registry.npmjs.org/asn1
+npm http 200 https://registry.npmjs.org/dashdash
+npm http GET https://registry.npmjs.org/jsbn/-/jsbn-0.1.0.tgz
+npm http GET https://registry.npmjs.org/jodid25519/-/jodid25519-1.0.2.tgz
+npm http GET https://registry.npmjs.org/ecc-jsbn/-/ecc-jsbn-0.1.1.tgz
+npm http GET https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.14.0.tgz
+npm http GET https://registry.npmjs.org/asn1/-/asn1-0.2.3.tgz
+npm http GET https://registry.npmjs.org/dashdash/-/dashdash-1.13.0.tgz
+npm http 200 https://registry.npmjs.org/jsbn/-/jsbn-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/ecc-jsbn/-/ecc-jsbn-0.1.1.tgz
+npm http 200 https://registry.npmjs.org/dashdash/-/dashdash-1.13.0.tgz
+npm http 200 https://registry.npmjs.org/jodid25519/-/jodid25519-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/asn1/-/asn1-0.2.3.tgz
+npm http 200 https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.14.0.tgz
+npm http GET https://registry.npmjs.org/ansi-regex
+npm http GET https://registry.npmjs.org/color-convert
+npm http 200 https://registry.npmjs.org/ansi-regex
+npm http 200 https://registry.npmjs.org/color-convert
+npm http GET https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.0.0.tgz
+npm http GET https://registry.npmjs.org/color-convert/-/color-convert-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.0.0.tgz
+npm http 200 https://registry.npmjs.org/color-convert/-/color-convert-1.0.0.tgz
+npm WARN engine cryptiles@2.0.5: wanted: {"node":">=0.10.40"} (current: {"node":"v0.10.25","npm":"1.3.24"})
+npm WARN engine boom@2.10.1: wanted: {"node":">=0.10.40"} (current: {"node":"v0.10.25","npm":"1.3.24"})
+npm WARN engine hoek@2.16.3: wanted: {"node":">=0.10.40"} (current: {"node":"v0.10.25","npm":"1.3.24"})
+npm http GET https://registry.npmjs.org/generate-function
+npm http GET https://registry.npmjs.org/generate-object-property
+npm http GET https://registry.npmjs.org/xtend
+npm http GET https://registry.npmjs.org/jsonpointer/2.0.0
+npm http 200 https://registry.npmjs.org/generate-function
+npm http 200 https://registry.npmjs.org/jsonpointer/2.0.0
+npm http 200 https://registry.npmjs.org/generate-object-property
+npm http 200 https://registry.npmjs.org/xtend
+npm http GET https://registry.npmjs.org/generate-function/-/generate-function-2.0.0.tgz
+npm http GET https://registry.npmjs.org/generate-object-property/-/generate-object-property-1.2.0.tgz
+npm http GET https://registry.npmjs.org/xtend/-/xtend-4.0.1.tgz
+npm http GET https://registry.npmjs.org/jsonpointer/-/jsonpointer-2.0.0.tgz
+npm http 200 https://registry.npmjs.org/jsonpointer/-/jsonpointer-2.0.0.tgz
+npm http 200 https://registry.npmjs.org/generate-function/-/generate-function-2.0.0.tgz
+npm http 200 https://registry.npmjs.org/xtend/-/xtend-4.0.1.tgz
+npm http 200 https://registry.npmjs.org/generate-object-property/-/generate-object-property-1.2.0.tgz
+npm http GET https://registry.npmjs.org/is-property
+npm http 200 https://registry.npmjs.org/is-property
+npm http GET https://registry.npmjs.org/is-property/-/is-property-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/is-property/-/is-property-1.0.2.tgz
+npm http GET https://registry.npmjs.org/assert-plus/-/assert-plus-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/assert-plus/-/assert-plus-1.0.0.tgz
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/dependable-list requires complex-list@'latest' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/complex-list,
+npm WARN unmet dependency which is version 0.1.4
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/lazy-dependable requires dependable-list@'latest' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/dependable-list,
+npm WARN unmet dependency which is version 0.1.1
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli requires lodash@'^2.4.1' but will load
+npm WARN unmet dependency undefined,
+npm WARN unmet dependency which is version undefined
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli requires request@'latest' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/request,
+npm WARN unmet dependency which is version 2.69.0
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/inquirer requires chalk@'^1.0.0' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/chalk,
+npm WARN unmet dependency which is version 0.5.1
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/inquirer requires lodash@'^3.3.1' but will load
+npm WARN unmet dependency undefined,
+npm WARN unmet dependency which is version undefined
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/cmd-shim requires graceful-fs@'>3.0.1 <4.0.0-0' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/graceful-fs,
+npm WARN unmet dependency which is version 4.1.2
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/init-package-json requires validate-npm-package-license@'^3.0.1' but will load
+npm WARN unmet dependency undefined,
+npm WARN unmet dependency which is version undefined
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/init-package-json requires validate-npm-package-name@'^2.0.1' but will load
+npm WARN unmet dependency undefined,
+npm WARN unmet dependency which is version undefined
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/node-gyp requires glob@'3 || 4' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/glob,
+npm WARN unmet dependency which is version 5.0.15
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/node-gyp requires npmlog@'0 || 1' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/npmlog,
+npm WARN unmet dependency which is version 2.0.0
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/normalize-package-data requires hosted-git-info@'^2.1.4' but will load
+npm WARN unmet dependency undefined,
+npm WARN unmet dependency which is version undefined
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/normalize-package-data requires validate-npm-package-license@'^3.0.1' but will load
+npm WARN unmet dependency undefined,
+npm WARN unmet dependency which is version undefined
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/npm-install-checks requires npmlog@'0.1 || 1' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/npmlog,
+npm WARN unmet dependency which is version 2.0.0
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/npm-package-arg requires hosted-git-info@'^2.1.4' but will load
+npm WARN unmet dependency undefined,
+npm WARN unmet dependency which is version undefined
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/node-gyp/node_modules/minimatch requires lru-cache@'2' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/lru-cache,
+npm WARN unmet dependency which is version 3.2.0
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/request/node_modules/bl requires readable-stream@'~2.0.0' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/readable-stream,
+npm WARN unmet dependency which is version 1.1.13
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/prompt/node_modules/utile/node_modules/rimraf requires glob@'^6.0.1' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/glob,
+npm WARN unmet dependency which is version 4.5.3
+request@2.69.0 node_modules/request
+├── is-typedarray@1.0.0
+├── aws-sign2@0.6.0
+├── forever-agent@0.6.1
+├── caseless@0.11.0
+├── stringstream@0.0.5
+├── tunnel-agent@0.4.2
+├── oauth-sign@0.8.1
+├── isstream@0.1.2
+├── json-stringify-safe@5.0.1
+├── extend@3.0.0
+├── node-uuid@1.4.7
+├── qs@6.0.2
+├── combined-stream@1.0.5 (delayed-stream@1.0.0)
+├── tough-cookie@2.2.1
+├── aws4@1.2.1 (lru-cache@2.7.3)
+├── form-data@1.0.0-rc3 (async@1.5.2)
+├── mime-types@2.1.10 (mime-db@1.22.0)
+├── bl@1.0.3 (readable-stream@2.0.5)
+├── hawk@3.1.3 (cryptiles@2.0.5, sntp@1.0.9, boom@2.10.1, hoek@2.16.3)
+├── har-validator@2.0.6 (pinkie-promise@2.0.0, commander@2.9.0, chalk@1.1.1, is-my-json-valid@2.13.0)
+└── http-signature@1.1.1 (assert-plus@0.2.0, jsprim@1.2.2, sshpk@1.7.4)
+npm http GET https://registry.npmjs.org/uglify-js
+npm http 200 https://registry.npmjs.org/uglify-js
+npm http GET https://registry.npmjs.org/uglify-js/-/uglify-js-2.6.1.tgz
+npm http 200 https://registry.npmjs.org/uglify-js/-/uglify-js-2.6.1.tgz
+npm http GET https://registry.npmjs.org/source-map
+npm http GET https://registry.npmjs.org/uglify-to-browserify
+npm http GET https://registry.npmjs.org/yargs
+npm http GET https://registry.npmjs.org/async/-/async-0.2.10.tgz
+npm http 200 https://registry.npmjs.org/uglify-to-browserify
+npm http GET https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/async/-/async-0.2.10.tgz
+npm http 200 https://registry.npmjs.org/source-map
+npm http 200 https://registry.npmjs.org/yargs
+npm http 200 https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz
+npm http GET https://registry.npmjs.org/source-map/-/source-map-0.5.3.tgz
+npm http GET https://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz
+npm http 200 https://registry.npmjs.org/source-map/-/source-map-0.5.3.tgz
+npm http 200 https://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz
+npm http GET https://registry.npmjs.org/camelcase
+npm http GET https://registry.npmjs.org/cliui
+npm http GET https://registry.npmjs.org/decamelize
+npm http GET https://registry.npmjs.org/window-size/0.1.0
+npm http 200 https://registry.npmjs.org/camelcase
+npm http 200 https://registry.npmjs.org/window-size/0.1.0
+npm http 200 https://registry.npmjs.org/decamelize
+npm http GET https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz
+npm http GET https://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz
+npm http GET https://registry.npmjs.org/decamelize/-/decamelize-1.1.2.tgz
+npm http 200 https://registry.npmjs.org/cliui
+npm http GET https://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz
+npm http 200 https://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz
+npm http 200 https://registry.npmjs.org/decamelize/-/decamelize-1.1.2.tgz
+npm http 200 https://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz
+npm http GET https://registry.npmjs.org/center-align
+npm http GET https://registry.npmjs.org/right-align
+npm http GET https://registry.npmjs.org/wordwrap/0.0.2
+npm http 200 https://registry.npmjs.org/right-align
+npm http GET https://registry.npmjs.org/right-align/-/right-align-0.1.3.tgz
+npm http 200 https://registry.npmjs.org/center-align
+npm http 200 https://registry.npmjs.org/wordwrap/0.0.2
+npm http GET https://registry.npmjs.org/center-align/-/center-align-0.1.3.tgz
+npm http GET https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz
+npm http 200 https://registry.npmjs.org/right-align/-/right-align-0.1.3.tgz
+npm http 200 https://registry.npmjs.org/center-align/-/center-align-0.1.3.tgz
+npm http 200 https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz
+npm http GET https://registry.npmjs.org/align-text
+npm http GET https://registry.npmjs.org/align-text
+npm http GET https://registry.npmjs.org/lazy-cache
+npm http 200 https://registry.npmjs.org/align-text
+npm http GET https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz
+npm http 200 https://registry.npmjs.org/align-text
+npm http 200 https://registry.npmjs.org/lazy-cache
+npm http GET https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.3.tgz
+npm http 200 https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz
+npm http 200 https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.3.tgz
+npm http GET https://registry.npmjs.org/repeat-string
+npm http GET https://registry.npmjs.org/kind-of
+npm http GET https://registry.npmjs.org/longest
+npm http 200 https://registry.npmjs.org/repeat-string
+npm http 200 https://registry.npmjs.org/longest
+npm http 200 https://registry.npmjs.org/kind-of
+npm http GET https://registry.npmjs.org/longest/-/longest-1.0.1.tgz
+npm http GET https://registry.npmjs.org/repeat-string/-/repeat-string-1.5.2.tgz
+npm http GET https://registry.npmjs.org/kind-of/-/kind-of-3.0.2.tgz
+npm http 200 https://registry.npmjs.org/repeat-string/-/repeat-string-1.5.2.tgz
+npm http 200 https://registry.npmjs.org/kind-of/-/kind-of-3.0.2.tgz
+npm http 200 https://registry.npmjs.org/longest/-/longest-1.0.1.tgz
+npm http GET https://registry.npmjs.org/is-buffer
+npm http 200 https://registry.npmjs.org/is-buffer
+npm http GET https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.2.tgz
+npm http 200 https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.2.tgz
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/dependable-list requires complex-list@'latest' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/complex-list,
+npm WARN unmet dependency which is version 0.1.4
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/lazy-dependable requires dependable-list@'latest' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/dependable-list,
+npm WARN unmet dependency which is version 0.1.1
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli requires lodash@'^2.4.1' but will load
+npm WARN unmet dependency undefined,
+npm WARN unmet dependency which is version undefined
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli requires request@'latest' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/request,
+npm WARN unmet dependency which is version 2.69.0
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/inquirer requires chalk@'^1.0.0' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/chalk,
+npm WARN unmet dependency which is version 0.5.1
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/inquirer requires lodash@'^3.3.1' but will load
+npm WARN unmet dependency undefined,
+npm WARN unmet dependency which is version undefined
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/cmd-shim requires graceful-fs@'>3.0.1 <4.0.0-0' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/graceful-fs,
+npm WARN unmet dependency which is version 4.1.2
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/init-package-json requires validate-npm-package-license@'^3.0.1' but will load
+npm WARN unmet dependency undefined,
+npm WARN unmet dependency which is version undefined
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/init-package-json requires validate-npm-package-name@'^2.0.1' but will load
+npm WARN unmet dependency undefined,
+npm WARN unmet dependency which is version undefined
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/node-gyp requires glob@'3 || 4' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/glob,
+npm WARN unmet dependency which is version 5.0.15
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/node-gyp requires npmlog@'0 || 1' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/npmlog,
+npm WARN unmet dependency which is version 2.0.0
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/normalize-package-data requires hosted-git-info@'^2.1.4' but will load
+npm WARN unmet dependency undefined,
+npm WARN unmet dependency which is version undefined
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/normalize-package-data requires validate-npm-package-license@'^3.0.1' but will load
+npm WARN unmet dependency undefined,
+npm WARN unmet dependency which is version undefined
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/npm-install-checks requires npmlog@'0.1 || 1' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/npmlog,
+npm WARN unmet dependency which is version 2.0.0
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/npm-package-arg requires hosted-git-info@'^2.1.4' but will load
+npm WARN unmet dependency undefined,
+npm WARN unmet dependency which is version undefined
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/node-gyp/node_modules/minimatch requires lru-cache@'2' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/lru-cache,
+npm WARN unmet dependency which is version 3.2.0
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/request/node_modules/bl requires readable-stream@'~2.0.0' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/npm/node_modules/readable-stream,
+npm WARN unmet dependency which is version 1.1.13
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/prompt/node_modules/utile/node_modules/rimraf requires glob@'^6.0.1' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/glob,
+npm WARN unmet dependency which is version 4.5.3
+uglify-js@2.6.1 node_modules/uglify-js
+├── uglify-to-browserify@1.0.2
+├── async@0.2.10
+├── source-map@0.5.3
+└── yargs@3.10.0 (camelcase@1.2.1, window-size@0.1.0, decamelize@1.1.2, cliui@2.1.0)
+
+> meanio@0.7.4 preinstall /home/ubuntu/airquality/node_modules/meanio
+> node ./scripts/preinstall
+
+npm http GET https://registry.npmjs.org/lodash
+npm http GET https://registry.npmjs.org/mean-cli
+npm http GET https://registry.npmjs.org/mocha
+npm http GET https://registry.npmjs.org/swig
+npm http GET https://registry.npmjs.org/should
+npm http GET https://registry.npmjs.org/complex-list
+npm http GET https://registry.npmjs.org/dependable-list
+npm http GET https://registry.npmjs.org/lazy-dependable
+npm http 200 https://registry.npmjs.org/swig
+npm http 200 https://registry.npmjs.org/should
+npm http 200 https://registry.npmjs.org/lodash
+npm http 200 https://registry.npmjs.org/complex-list
+npm http GET https://registry.npmjs.org/swig/-/swig-1.4.2.tgz
+npm http GET https://registry.npmjs.org/should/-/should-3.3.2.tgz
+npm http GET https://registry.npmjs.org/lodash/-/lodash-2.4.2.tgz
+npm http 200 https://registry.npmjs.org/mean-cli
+npm http GET https://registry.npmjs.org/complex-list/-/complex-list-0.1.4.tgz
+npm http 200 https://registry.npmjs.org/mocha
+npm http 200 https://registry.npmjs.org/swig/-/swig-1.4.2.tgz
+npm http 200 https://registry.npmjs.org/should/-/should-3.3.2.tgz
+npm http 200 https://registry.npmjs.org/dependable-list
+npm http 200 https://registry.npmjs.org/lodash/-/lodash-2.4.2.tgz
+npm http 200 https://registry.npmjs.org/complex-list/-/complex-list-0.1.4.tgz
+npm http GET https://registry.npmjs.org/mean-cli/-/mean-cli-0.11.1.tgz
+npm http GET https://registry.npmjs.org/mocha/-/mocha-1.21.5.tgz
+npm http GET https://registry.npmjs.org/dependable-list/-/dependable-list-0.1.1.tgz
+npm http 200 https://registry.npmjs.org/mean-cli/-/mean-cli-0.11.1.tgz
+npm http 200 https://registry.npmjs.org/mocha/-/mocha-1.21.5.tgz
+npm http 200 https://registry.npmjs.org/dependable-list/-/dependable-list-0.1.1.tgz
+npm http 200 https://registry.npmjs.org/lazy-dependable
+npm http GET https://registry.npmjs.org/lazy-dependable/-/lazy-dependable-0.2.0.tgz
+npm http 200 https://registry.npmjs.org/lazy-dependable/-/lazy-dependable-0.2.0.tgz
+
+> mean-cli@0.11.1 preinstall /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli
+> node ./scripts/preinstall
+
+npm http GET https://registry.npmjs.org/commander/2.3.0
+npm http GET https://registry.npmjs.org/debug/2.0.0
+npm http GET https://registry.npmjs.org/diff/1.0.8
+npm http GET https://registry.npmjs.org/glob/3.2.3
+npm http GET https://registry.npmjs.org/escape-string-regexp/1.0.2
+npm http GET https://registry.npmjs.org/growl/1.8.1
+npm http GET https://registry.npmjs.org/jade/0.26.3
+npm http GET https://registry.npmjs.org/mkdirp/0.5.0
+npm http 200 https://registry.npmjs.org/debug/2.0.0
+npm http 200 https://registry.npmjs.org/commander/2.3.0
+npm http GET https://registry.npmjs.org/mongoose
+npm http GET https://registry.npmjs.org/json-file-plus
+npm http 200 https://registry.npmjs.org/growl/1.8.1
+npm http 200 https://registry.npmjs.org/glob/3.2.3
+npm http 200 https://registry.npmjs.org/jade/0.26.3
+npm http GET https://registry.npmjs.org/npm
+npm http GET https://registry.npmjs.org/opener
+npm http GET https://registry.npmjs.org/progress
+npm http GET https://registry.npmjs.org/prompt
+npm http GET https://registry.npmjs.org/shelljs
+npm http GET https://registry.npmjs.org/async-series
+npm http GET https://registry.npmjs.org/crypto
+npm http GET https://registry.npmjs.org/bower
+npm http GET https://registry.npmjs.org/inquirer
+npm http 200 https://registry.npmjs.org/diff/1.0.8
+npm http 200 https://registry.npmjs.org/escape-string-regexp/1.0.2
+npm http 200 https://registry.npmjs.org/mkdirp/0.5.0
+npm http 200 https://registry.npmjs.org/opener
+npm http GET https://registry.npmjs.org/commander/-/commander-2.3.0.tgz
+npm http 200 https://registry.npmjs.org/progress
+npm http GET https://registry.npmjs.org/chalk/-/chalk-0.5.1.tgz
+npm http GET https://registry.npmjs.org/debug/-/debug-2.0.0.tgz
+npm http GET https://registry.npmjs.org/growl/-/growl-1.8.1.tgz
+npm http GET https://registry.npmjs.org/glob/-/glob-3.2.3.tgz
+npm http GET https://registry.npmjs.org/jade/-/jade-0.26.3.tgz
+npm http GET https://registry.npmjs.org/diff/-/diff-1.0.8.tgz
+npm http GET https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/commander/-/commander-2.3.0.tgz
+npm http 200 https://registry.npmjs.org/chalk/-/chalk-0.5.1.tgz
+npm http GET https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.0.tgz
+npm http 200 https://registry.npmjs.org/glob/-/glob-3.2.3.tgz
+npm http 200 https://registry.npmjs.org/debug/-/debug-2.0.0.tgz
+npm http 200 https://registry.npmjs.org/prompt
+npm http GET https://registry.npmjs.org/opener/-/opener-1.4.1.tgz
+npm http GET https://registry.npmjs.org/optimist
+npm http 200 https://registry.npmjs.org/growl/-/growl-1.8.1.tgz
+npm http 200 https://registry.npmjs.org/jade/-/jade-0.26.3.tgz
+npm http 200 https://registry.npmjs.org/diff/-/diff-1.0.8.tgz
+npm http GET https://registry.npmjs.org/progress/-/progress-1.1.8.tgz
+npm http 200 https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.0.tgz
+npm http 200 https://registry.npmjs.org/opener/-/opener-1.4.1.tgz
+npm http 200 https://registry.npmjs.org/shelljs
+npm http GET https://registry.npmjs.org/uglify-js/-/uglify-js-2.4.24.tgz
+npm http 200 https://registry.npmjs.org/progress/-/progress-1.1.8.tgz
+npm http GET https://registry.npmjs.org/prompt/-/prompt-0.2.14.tgz
+npm http 200 https://registry.npmjs.org/crypto
+npm http 200 https://registry.npmjs.org/uglify-js/-/uglify-js-2.4.24.tgz
+npm http 200 https://registry.npmjs.org/prompt/-/prompt-0.2.14.tgz
+npm http GET https://registry.npmjs.org/shelljs/-/shelljs-0.3.0.tgz
+npm http GET https://registry.npmjs.org/crypto/-/crypto-0.0.3.tgz
+npm http 200 https://registry.npmjs.org/shelljs/-/shelljs-0.3.0.tgz
+npm http 200 https://registry.npmjs.org/crypto/-/crypto-0.0.3.tgz
+npm http 200 https://registry.npmjs.org/bower
+npm http 200 https://registry.npmjs.org/inquirer
+npm http GET https://registry.npmjs.org/bower/-/bower-1.7.7.tgz
+npm http 200 https://registry.npmjs.org/mongoose
+npm http 200 https://registry.npmjs.org/optimist
+npm http 200 https://registry.npmjs.org/bower/-/bower-1.7.7.tgz
+npm http GET https://registry.npmjs.org/inquirer/-/inquirer-0.8.5.tgz
+npm http GET https://registry.npmjs.org/mongoose/-/mongoose-4.0.8.tgz
+npm http GET https://registry.npmjs.org/optimist/-/optimist-0.6.1.tgz
+npm http 200 https://registry.npmjs.org/inquirer/-/inquirer-0.8.5.tgz
+npm http 200 https://registry.npmjs.org/mongoose/-/mongoose-4.0.8.tgz
+npm http 200 https://registry.npmjs.org/optimist/-/optimist-0.6.1.tgz
+npm http 200 https://registry.npmjs.org/json-file-plus
+npm WARN deprecated json-file-plus@2.0.0: Before v3.0.0, errors in fs.writeFile would not be propagated
+npm http GET https://registry.npmjs.org/json-file-plus/-/json-file-plus-2.0.0.tgz
+npm http 200 https://registry.npmjs.org/json-file-plus/-/json-file-plus-2.0.0.tgz
+npm http 200 https://registry.npmjs.org/async-series
+npm http GET https://registry.npmjs.org/async-series/-/async-series-0.0.1.tgz
+npm http 200 https://registry.npmjs.org/async-series/-/async-series-0.0.1.tgz
+npm http 200 https://registry.npmjs.org/npm
+npm http GET https://registry.npmjs.org/npm/-/npm-2.14.20.tgz
+npm http 200 https://registry.npmjs.org/npm/-/npm-2.14.20.tgz
+npm http GET https://registry.npmjs.org/ms/0.6.2
+npm http GET https://registry.npmjs.org/minimist/0.0.8
+npm http 200 https://registry.npmjs.org/minimist/0.0.8
+npm http GET https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz
+npm http GET https://registry.npmjs.org/minimatch
+npm http GET https://registry.npmjs.org/graceful-fs
+npm http 200 https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz
+npm http 200 https://registry.npmjs.org/ms/0.6.2
+npm http GET https://registry.npmjs.org/ms/-/ms-0.6.2.tgz
+npm http 200 https://registry.npmjs.org/graceful-fs
+npm http 200 https://registry.npmjs.org/ms/-/ms-0.6.2.tgz
+npm WARN deprecated graceful-fs@2.0.3: graceful-fs version 3 and before will fail on newer node releases. Please update to graceful-fs@^4.0.0 as soon as possible.
+npm http 200 https://registry.npmjs.org/minimatch
+npm http GET https://registry.npmjs.org/graceful-fs/-/graceful-fs-2.0.3.tgz
+npm http GET https://registry.npmjs.org/minimatch/-/minimatch-0.2.14.tgz
+npm http 200 https://registry.npmjs.org/graceful-fs/-/graceful-fs-2.0.3.tgz
+npm http 200 https://registry.npmjs.org/minimatch/-/minimatch-0.2.14.tgz
+npm http GET https://registry.npmjs.org/commander/0.6.1
+npm http GET https://registry.npmjs.org/mkdirp/0.3.0
+npm http 200 https://registry.npmjs.org/mkdirp/0.3.0
+npm http 200 https://registry.npmjs.org/commander/0.6.1
+npm http GET https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz
+npm http GET https://registry.npmjs.org/commander/-/commander-0.6.1.tgz
+npm http 200 https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz
+npm http 200 https://registry.npmjs.org/commander/-/commander-0.6.1.tgz
+npm http GET https://registry.npmjs.org/sigmund
+npm http GET https://registry.npmjs.org/lru-cache
+npm http 200 https://registry.npmjs.org/sigmund
+npm http 304 https://registry.npmjs.org/lru-cache
+npm http GET https://registry.npmjs.org/sigmund/-/sigmund-1.0.1.tgz
+npm http 200 https://registry.npmjs.org/sigmund/-/sigmund-1.0.1.tgz
+npm http GET https://registry.npmjs.org/minimist
+npm http GET https://registry.npmjs.org/wordwrap
+npm http 200 https://registry.npmjs.org/wordwrap
+npm http 200 https://registry.npmjs.org/minimist
+npm http GET https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.3.tgz
+npm http GET https://registry.npmjs.org/minimist/-/minimist-0.0.10.tgz
+npm http 200 https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.3.tgz
+npm http 200 https://registry.npmjs.org/minimist/-/minimist-0.0.10.tgz
+npm http GET https://registry.npmjs.org/source-map/0.1.34
+npm http GET https://registry.npmjs.org/async
+npm http GET https://registry.npmjs.org/yargs/-/yargs-3.5.4.tgz
+npm http 304 https://registry.npmjs.org/async
+npm http 200 https://registry.npmjs.org/yargs/-/yargs-3.5.4.tgz
+npm http 200 https://registry.npmjs.org/source-map/0.1.34
+npm http GET https://registry.npmjs.org/source-map/-/source-map-0.1.34.tgz
+npm http 200 https://registry.npmjs.org/source-map/-/source-map-0.1.34.tgz
+npm http GET https://registry.npmjs.org/escape-string-regexp
+npm http 304 https://registry.npmjs.org/escape-string-regexp
+npm http GET https://registry.npmjs.org/amdefine
+npm http 200 https://registry.npmjs.org/amdefine
+npm http GET https://registry.npmjs.org/amdefine/-/amdefine-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/amdefine/-/amdefine-1.0.0.tgz
+npm http GET https://registry.npmjs.org/ansi-styles
+npm http GET https://registry.npmjs.org/escape-string-regexp
+npm http GET https://registry.npmjs.org/has-ansi
+npm http GET https://registry.npmjs.org/strip-ansi
+npm http GET https://registry.npmjs.org/supports-color
+npm http 304 https://registry.npmjs.org/escape-string-regexp
+npm http 304 https://registry.npmjs.org/ansi-styles
+npm http 304 https://registry.npmjs.org/supports-color
+npm http 304 https://registry.npmjs.org/has-ansi
+npm http 304 https://registry.npmjs.org/strip-ansi
+npm http GET https://registry.npmjs.org/graceful-readlink
+npm http GET https://registry.npmjs.org/ansi-styles/-/ansi-styles-1.1.0.tgz
+npm http GET https://registry.npmjs.org/supports-color/-/supports-color-0.2.0.tgz
+npm http GET https://registry.npmjs.org/has-ansi/-/has-ansi-0.1.0.tgz
+npm http GET https://registry.npmjs.org/strip-ansi/-/strip-ansi-0.3.0.tgz
+npm http GET https://registry.npmjs.org/is
+npm http GET https://registry.npmjs.org/node.extend
+npm http GET https://registry.npmjs.org/promiseback
+npm http 304 https://registry.npmjs.org/graceful-readlink
+npm http 200 https://registry.npmjs.org/supports-color/-/supports-color-0.2.0.tgz
+npm http 200 https://registry.npmjs.org/has-ansi/-/has-ansi-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/ansi-styles/-/ansi-styles-1.1.0.tgz
+npm http 200 https://registry.npmjs.org/strip-ansi/-/strip-ansi-0.3.0.tgz
+npm http 200 https://registry.npmjs.org/node.extend
+npm http GET https://registry.npmjs.org/node.extend/-/node.extend-1.1.5.tgz
+npm http 200 https://registry.npmjs.org/is
+npm http 200 https://registry.npmjs.org/promiseback
+npm http 200 https://registry.npmjs.org/node.extend/-/node.extend-1.1.5.tgz
+npm http GET https://registry.npmjs.org/is/-/is-2.0.2.tgz
+npm http GET https://registry.npmjs.org/promiseback/-/promiseback-2.0.2.tgz
+npm http 200 https://registry.npmjs.org/is/-/is-2.0.2.tgz
+npm http GET https://registry.npmjs.org/cli-width
+npm http GET https://registry.npmjs.org/figures
+npm http GET https://registry.npmjs.org/readline2
+npm http GET https://registry.npmjs.org/rx
+npm http GET https://registry.npmjs.org/through
+npm http GET https://registry.npmjs.org/ansi-regex
+npm http GET https://registry.npmjs.org/chalk
+npm http GET https://registry.npmjs.org/lodash
+npm http 200 https://registry.npmjs.org/cli-width
+npm http 200 https://registry.npmjs.org/promiseback/-/promiseback-2.0.2.tgz
+npm http 304 https://registry.npmjs.org/ansi-regex
+npm http 200 https://registry.npmjs.org/figures
+npm http 200 https://registry.npmjs.org/through
+npm http 200 https://registry.npmjs.org/readline2
+npm http GET https://registry.npmjs.org/cli-width/-/cli-width-1.1.1.tgz
+npm http 304 https://registry.npmjs.org/chalk
+npm http 304 https://registry.npmjs.org/lodash
+npm http GET https://registry.npmjs.org/ansi-regex/-/ansi-regex-1.1.1.tgz
+npm http GET https://registry.npmjs.org/figures/-/figures-1.4.0.tgz
+npm http GET https://registry.npmjs.org/through/-/through-2.3.8.tgz
+npm http 200 https://registry.npmjs.org/rx
+npm http GET https://registry.npmjs.org/readline2/-/readline2-0.1.1.tgz
+npm http GET https://registry.npmjs.org/lodash/-/lodash-3.10.1.tgz
+npm http GET https://registry.npmjs.org/rx/-/rx-2.5.3.tgz
+npm http 200 https://registry.npmjs.org/cli-width/-/cli-width-1.1.1.tgz
+npm http 200 https://registry.npmjs.org/lodash/-/lodash-3.10.1.tgz
+npm http 200 https://registry.npmjs.org/ansi-regex/-/ansi-regex-1.1.1.tgz
+npm http 200 https://registry.npmjs.org/figures/-/figures-1.4.0.tgz
+npm http 200 https://registry.npmjs.org/readline2/-/readline2-0.1.1.tgz
+npm http 200 https://registry.npmjs.org/through/-/through-2.3.8.tgz
+npm http 200 https://registry.npmjs.org/rx/-/rx-2.5.3.tgz
+npm http GET https://registry.npmjs.org/ansi-regex/-/ansi-regex-0.2.1.tgz
+npm http GET https://registry.npmjs.org/revalidator
+npm http GET https://registry.npmjs.org/pkginfo
+npm http GET https://registry.npmjs.org/read
+npm http GET https://registry.npmjs.org/utile
+npm http GET https://registry.npmjs.org/winston
+npm http 200 https://registry.npmjs.org/ansi-regex/-/ansi-regex-0.2.1.tgz
+npm http 200 https://registry.npmjs.org/pkginfo
+npm http 200 https://registry.npmjs.org/read
+npm http 200 https://registry.npmjs.org/revalidator
+npm http 200 https://registry.npmjs.org/utile
+npm http 200 https://registry.npmjs.org/winston
+npm http GET https://registry.npmjs.org/pkginfo/-/pkginfo-0.3.1.tgz
+npm http GET https://registry.npmjs.org/read/-/read-1.0.7.tgz
+npm http GET https://registry.npmjs.org/revalidator/-/revalidator-0.1.8.tgz
+npm http GET https://registry.npmjs.org/utile/-/utile-0.2.1.tgz
+npm http GET https://registry.npmjs.org/winston/-/winston-0.8.3.tgz
+npm http 200 https://registry.npmjs.org/pkginfo/-/pkginfo-0.3.1.tgz
+npm http 200 https://registry.npmjs.org/read/-/read-1.0.7.tgz
+npm http 200 https://registry.npmjs.org/utile/-/utile-0.2.1.tgz
+npm http 200 https://registry.npmjs.org/revalidator/-/revalidator-0.1.8.tgz
+npm http 200 https://registry.npmjs.org/winston/-/winston-0.8.3.tgz
+npm http GET https://registry.npmjs.org/is/-/is-3.1.0.tgz
+npm http GET https://registry.npmjs.org/promise-deferred
+npm http GET https://registry.npmjs.org/is-callable
+npm http 200 https://registry.npmjs.org/is/-/is-3.1.0.tgz
+npm http 200 https://registry.npmjs.org/is-callable
+npm http GET https://registry.npmjs.org/is-callable/-/is-callable-1.1.2.tgz
+npm http 200 https://registry.npmjs.org/is-callable/-/is-callable-1.1.2.tgz
+npm http 200 https://registry.npmjs.org/promise-deferred
+npm http GET https://registry.npmjs.org/promise-deferred/-/promise-deferred-2.0.1.tgz
+npm http 200 https://registry.npmjs.org/promise-deferred/-/promise-deferred-2.0.1.tgz
+npm http GET https://registry.npmjs.org/promise
+npm http 200 https://registry.npmjs.org/promise
+npm http GET https://registry.npmjs.org/promise/-/promise-6.1.0.tgz
+npm http 200 https://registry.npmjs.org/promise/-/promise-6.1.0.tgz
+npm http GET https://registry.npmjs.org/async/0.9.0
+npm http GET https://registry.npmjs.org/bson
+npm http GET https://registry.npmjs.org/hooks-fixed/1.0.2
+npm http GET https://registry.npmjs.org/kareem/1.0.1
+npm http GET https://registry.npmjs.org/mpath/0.1.1
+npm http GET https://registry.npmjs.org/mongodb/2.0.34
+npm http GET https://registry.npmjs.org/mpromise/0.5.4
+npm http GET https://registry.npmjs.org/mquery/1.6.1
+npm http GET https://registry.npmjs.org/ms/0.1.0
+npm http GET https://registry.npmjs.org/muri/1.0.0
+npm http GET https://registry.npmjs.org/regexp-clone/0.0.1
+npm http GET https://registry.npmjs.org/sliced/0.0.5
+npm http 200 https://registry.npmjs.org/mpath/0.1.1
+npm http GET https://registry.npmjs.org/mpath/-/mpath-0.1.1.tgz
+npm http 200 https://registry.npmjs.org/bson
+npm http GET https://registry.npmjs.org/bson/-/bson-0.3.2.tgz
+npm http 200 https://registry.npmjs.org/mpath/-/mpath-0.1.1.tgz
+npm http 200 https://registry.npmjs.org/async/0.9.0
+npm http GET https://registry.npmjs.org/async/-/async-0.9.0.tgz
+npm http 200 https://registry.npmjs.org/hooks-fixed/1.0.2
+npm http 200 https://registry.npmjs.org/bson/-/bson-0.3.2.tgz
+npm http GET https://registry.npmjs.org/hooks-fixed/-/hooks-fixed-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/ms/0.1.0
+npm http 200 https://registry.npmjs.org/mquery/1.6.1
+npm http GET https://registry.npmjs.org/ms/-/ms-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/regexp-clone/0.0.1
+npm http 200 https://registry.npmjs.org/mongodb/2.0.34
+npm http 200 https://registry.npmjs.org/sliced/0.0.5
+npm http GET https://registry.npmjs.org/mquery/-/mquery-1.6.1.tgz
+npm http 200 https://registry.npmjs.org/mpromise/0.5.4
+npm http GET https://registry.npmjs.org/regexp-clone/-/regexp-clone-0.0.1.tgz
+npm http GET https://registry.npmjs.org/mongodb/-/mongodb-2.0.34.tgz
+npm http 200 https://registry.npmjs.org/async/-/async-0.9.0.tgz
+npm http 200 https://registry.npmjs.org/hooks-fixed/-/hooks-fixed-1.0.2.tgz
+npm http GET https://registry.npmjs.org/sliced/-/sliced-0.0.5.tgz
+npm http 200 https://registry.npmjs.org/mongodb/-/mongodb-2.0.34.tgz
+npm http 200 https://registry.npmjs.org/ms/-/ms-0.1.0.tgz
+npm http GET https://registry.npmjs.org/mpromise/-/mpromise-0.5.4.tgz
+npm http 200 https://registry.npmjs.org/mquery/-/mquery-1.6.1.tgz
+npm http 200 https://registry.npmjs.org/mpromise/-/mpromise-0.5.4.tgz
+npm http 200 https://registry.npmjs.org/regexp-clone/-/regexp-clone-0.0.1.tgz
+npm http 200 https://registry.npmjs.org/sliced/-/sliced-0.0.5.tgz
+npm http GET https://registry.npmjs.org/asap
+npm http 200 https://registry.npmjs.org/asap
+npm http 200 https://registry.npmjs.org/kareem/1.0.1
+npm http GET https://registry.npmjs.org/asap/-/asap-1.0.0.tgz
+npm http GET https://registry.npmjs.org/kareem/-/kareem-1.0.1.tgz
+npm http 200 https://registry.npmjs.org/asap/-/asap-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/kareem/-/kareem-1.0.1.tgz
+npm http 200 https://registry.npmjs.org/muri/1.0.0
+npm http GET https://registry.npmjs.org/muri/-/muri-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/muri/-/muri-1.0.0.tgz
+npm http GET https://registry.npmjs.org/mute-stream
+npm http 200 https://registry.npmjs.org/mute-stream
+npm http GET https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.6.tgz
+npm http 200 https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.6.tgz
+npm http GET https://registry.npmjs.org/i
+npm http GET https://registry.npmjs.org/ncp
+npm http GET https://registry.npmjs.org/mkdirp
+npm http GET https://registry.npmjs.org/rimraf
+npm http GET https://registry.npmjs.org/deep-equal
+npm http GET https://registry.npmjs.org/async
+npm http 200 https://registry.npmjs.org/i
+npm http 304 https://registry.npmjs.org/async
+npm http 200 https://registry.npmjs.org/mkdirp
+npm http 200 https://registry.npmjs.org/deep-equal
+npm http GET https://registry.npmjs.org/i/-/i-0.3.4.tgz
+npm http 200 https://registry.npmjs.org/rimraf
+npm http 200 https://registry.npmjs.org/ncp
+npm http GET https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz
+npm http GET https://registry.npmjs.org/deep-equal/-/deep-equal-1.0.1.tgz
+npm http GET https://registry.npmjs.org/rimraf/-/rimraf-2.5.2.tgz
+npm http GET https://registry.npmjs.org/ncp/-/ncp-0.4.2.tgz
+npm http 200 https://registry.npmjs.org/i/-/i-0.3.4.tgz
+npm http 200 https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz
+npm http 200 https://registry.npmjs.org/deep-equal/-/deep-equal-1.0.1.tgz
+npm http 200 https://registry.npmjs.org/ncp/-/ncp-0.4.2.tgz
+npm http 200 https://registry.npmjs.org/rimraf/-/rimraf-2.5.2.tgz
+npm http GET https://registry.npmjs.org/colors
+npm http GET https://registry.npmjs.org/eyes
+npm http GET https://registry.npmjs.org/cycle
+npm http GET https://registry.npmjs.org/stack-trace
+npm http GET https://registry.npmjs.org/isstream
+npm http 200 https://registry.npmjs.org/colors
+npm http 200 https://registry.npmjs.org/eyes
+npm http 200 https://registry.npmjs.org/stack-trace
+npm http 200 https://registry.npmjs.org/cycle
+npm http 304 https://registry.npmjs.org/isstream
+npm http GET https://registry.npmjs.org/colors/-/colors-0.6.2.tgz
+npm http GET https://registry.npmjs.org/eyes/-/eyes-0.1.8.tgz
+npm http GET https://registry.npmjs.org/stack-trace/-/stack-trace-0.0.9.tgz
+npm http GET https://registry.npmjs.org/cycle/-/cycle-1.0.3.tgz
+npm http 200 https://registry.npmjs.org/colors/-/colors-0.6.2.tgz
+npm http 200 https://registry.npmjs.org/stack-trace/-/stack-trace-0.0.9.tgz
+npm http 200 https://registry.npmjs.org/eyes/-/eyes-0.1.8.tgz
+npm http 200 https://registry.npmjs.org/cycle/-/cycle-1.0.3.tgz
+npm http GET https://registry.npmjs.org/glob
+npm http 200 https://registry.npmjs.org/glob
+npm http GET https://registry.npmjs.org/glob/-/glob-7.0.0.tgz
+npm http GET https://registry.npmjs.org/minimist/0.0.8
+npm http 200 https://registry.npmjs.org/glob/-/glob-7.0.0.tgz
+npm http 304 https://registry.npmjs.org/minimist/0.0.8
+npm http GET https://registry.npmjs.org/inflight
+npm http GET https://registry.npmjs.org/once
+npm http GET https://registry.npmjs.org/path-is-absolute
+npm http GET https://registry.npmjs.org/inherits
+npm http GET https://registry.npmjs.org/minimatch
+npm http 200 https://registry.npmjs.org/inflight
+npm http GET https://registry.npmjs.org/inflight/-/inflight-1.0.4.tgz
+npm http 304 https://registry.npmjs.org/inherits
+npm http 200 https://registry.npmjs.org/once
+npm http 304 https://registry.npmjs.org/minimatch
+npm http 200 https://registry.npmjs.org/path-is-absolute
+npm http GET https://registry.npmjs.org/minimatch/-/minimatch-3.0.0.tgz
+npm http GET https://registry.npmjs.org/once/-/once-1.3.3.tgz
+npm http GET https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/inflight/-/inflight-1.0.4.tgz
+npm http 200 https://registry.npmjs.org/minimatch/-/minimatch-3.0.0.tgz
+npm http 200 https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/once/-/once-1.3.3.tgz
+npm http GET https://registry.npmjs.org/wrappy
+npm http GET https://registry.npmjs.org/brace-expansion
+npm http 200 https://registry.npmjs.org/wrappy
+npm http GET https://registry.npmjs.org/wrappy/-/wrappy-1.0.1.tgz
+npm http 200 https://registry.npmjs.org/brace-expansion
+npm http GET https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.3.tgz
+npm http 200 https://registry.npmjs.org/wrappy/-/wrappy-1.0.1.tgz
+npm http 200 https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.3.tgz
+npm http GET https://registry.npmjs.org/balanced-match
+npm http GET https://registry.npmjs.org/concat-map/0.0.1
+npm http 200 https://registry.npmjs.org/balanced-match
+npm http 200 https://registry.npmjs.org/concat-map/0.0.1
+npm http GET https://registry.npmjs.org/balanced-match/-/balanced-match-0.3.0.tgz
+npm http GET https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+npm http 200 https://registry.npmjs.org/balanced-match/-/balanced-match-0.3.0.tgz
+npm http 200 https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+npm http GET https://registry.npmjs.org/bluebird/2.9.26
+npm http GET https://registry.npmjs.org/debug/2.2.0
+npm http 200 https://registry.npmjs.org/debug/2.2.0
+npm http GET https://registry.npmjs.org/debug/-/debug-2.2.0.tgz
+npm http 200 https://registry.npmjs.org/debug/-/debug-2.2.0.tgz
+npm http 200 https://registry.npmjs.org/bluebird/2.9.26
+npm http GET https://registry.npmjs.org/bluebird/-/bluebird-2.9.26.tgz
+npm http GET https://registry.npmjs.org/bson-ext
+npm http 200 https://registry.npmjs.org/bluebird/-/bluebird-2.9.26.tgz
+npm http GET https://registry.npmjs.org/mongodb-core/1.2.0
+npm http GET https://registry.npmjs.org/readable-stream/1.0.31
+npm http 200 https://registry.npmjs.org/readable-stream/1.0.31
+npm http GET https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.31.tgz
+npm http 200 https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.31.tgz
+npm http 200 https://registry.npmjs.org/bson-ext
+npm http GET https://registry.npmjs.org/bson-ext/-/bson-ext-0.1.13.tgz
+npm http 200 https://registry.npmjs.org/bson-ext/-/bson-ext-0.1.13.tgz
+npm http 200 https://registry.npmjs.org/mongodb-core/1.2.0
+npm http GET https://registry.npmjs.org/mongodb-core/-/mongodb-core-1.2.0.tgz
+npm http 200 https://registry.npmjs.org/mongodb-core/-/mongodb-core-1.2.0.tgz
+npm http GET https://registry.npmjs.org/bindings
+npm http GET https://registry.npmjs.org/nan
+npm http 200 https://registry.npmjs.org/bindings
+npm http GET https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz
+npm http 200 https://registry.npmjs.org/nan
+npm http GET https://registry.npmjs.org/nan/-/nan-2.0.9.tgz
+npm http 200 https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz
+npm http 200 https://registry.npmjs.org/nan/-/nan-2.0.9.tgz
+npm http GET https://registry.npmjs.org/ms/0.7.1
+npm http 200 https://registry.npmjs.org/ms/0.7.1
+npm http GET https://registry.npmjs.org/ms/-/ms-0.7.1.tgz
+npm http 200 https://registry.npmjs.org/ms/-/ms-0.7.1.tgz
+npm http GET https://registry.npmjs.org/core-util-is
+npm http GET https://registry.npmjs.org/isarray/0.0.1
+npm http GET https://registry.npmjs.org/string_decoder
+npm http 304 https://registry.npmjs.org/core-util-is
+npm http 304 https://registry.npmjs.org/isarray/0.0.1
+npm http 304 https://registry.npmjs.org/string_decoder
+npm http GET https://registry.npmjs.org/kerberos
+npm http GET https://registry.npmjs.org/bson/-/bson-0.4.21.tgz
+npm http 200 https://registry.npmjs.org/kerberos
+npm http GET https://registry.npmjs.org/kerberos/-/kerberos-0.0.18.tgz
+npm http 200 https://registry.npmjs.org/bson/-/bson-0.4.21.tgz
+npm http 200 https://registry.npmjs.org/kerberos/-/kerberos-0.0.18.tgz
+
+> bson-ext@0.1.13 install /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/mongoose/node_modules/bson/node_modules/bson-ext
+> (node-gyp rebuild 2> builderror.log) || (exit 0)
+
+make: Entering directory `/home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/mongoose/node_modules/bson/node_modules/bson-ext/build'
+  CXX(target) Release/obj.target/bson/ext/bson.o
+  SOLINK_MODULE(target) Release/obj.target/bson.node
+  SOLINK_MODULE(target) Release/obj.target/bson.node: Finished
+  COPY Release/bson.node
+make: Leaving directory `/home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/mongoose/node_modules/bson/node_modules/bson-ext/build'
+npm http GET https://registry.npmjs.org/mute-stream/0.0.4
+npm http GET https://registry.npmjs.org/strip-ansi
+npm http GET https://registry.npmjs.org/ansi-styles
+npm http GET https://registry.npmjs.org/escape-string-regexp
+npm http GET https://registry.npmjs.org/has-ansi
+npm http GET https://registry.npmjs.org/strip-ansi
+npm http GET https://registry.npmjs.org/supports-color
+npm http 304 https://registry.npmjs.org/strip-ansi
+npm http 304 https://registry.npmjs.org/ansi-styles
+npm http 304 https://registry.npmjs.org/escape-string-regexp
+npm http GET https://registry.npmjs.org/strip-ansi/-/strip-ansi-2.0.1.tgz
+npm http 304 https://registry.npmjs.org/has-ansi
+npm http 304 https://registry.npmjs.org/strip-ansi
+npm http 304 https://registry.npmjs.org/supports-color
+npm http 200 https://registry.npmjs.org/strip-ansi/-/strip-ansi-2.0.1.tgz
+npm http GET https://registry.npmjs.org/ansi-regex
+npm http GET https://registry.npmjs.org/color-convert
+npm http 304 https://registry.npmjs.org/ansi-regex
+npm http 304 https://registry.npmjs.org/color-convert
+npm http 200 https://registry.npmjs.org/mute-stream/0.0.4
+npm http GET https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.4.tgz
+npm http 200 https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.4.tgz
+
+> kerberos@0.0.18 install /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/node_modules/kerberos
+> (node-gyp rebuild) || (exit 0)
+
+make: Entering directory `/home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/node_modules/kerberos/build'
+  CXX(target) Release/obj.target/kerberos/lib/kerberos.o
+  CXX(target) Release/obj.target/kerberos/lib/worker.o
+  CC(target) Release/obj.target/kerberos/lib/kerberosgss.o
+../lib/kerberosgss.c:36:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic push
+ ^
+../lib/kerberosgss.c:37:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+ ^
+../lib/kerberosgss.c: In function ‘authenticate_gss_client_wrap’:
+../lib/kerberosgss.c:362:19: warning: variable ‘server_conf_flags’ set but not used [-Wunused-but-set-variable]
+   char buf[4096], server_conf_flags;
+                   ^
+../lib/kerberosgss.c: At top level:
+../lib/kerberosgss.c:930:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic pop
+ ^
+  CC(target) Release/obj.target/kerberos/lib/base64.o
+  CXX(target) Release/obj.target/kerberos/lib/kerberos_context.o
+  SOLINK_MODULE(target) Release/obj.target/kerberos.node
+  SOLINK_MODULE(target) Release/obj.target/kerberos.node: Finished
+  COPY Release/kerberos.node
+make: Leaving directory `/home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/node_modules/kerberos/build'
+
+> meanio@0.7.4 postinstall /home/ubuntu/airquality/node_modules/meanio
+> cd ./lib/core_modules/server && npm install && cd ../../..
+
+npm WARN package.json server@ No description
+npm WARN package.json server@ No repository field.
+npm WARN package.json server@ No README data
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/dependable-list requires complex-list@'latest' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/complex-list,
+npm WARN unmet dependency which is version 0.1.4
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/lazy-dependable requires dependable-list@'latest' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/dependable-list,
+npm WARN unmet dependency which is version 0.1.1
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli requires request@'latest' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/request,
+npm WARN unmet dependency which is version 2.69.0
+should@3.3.2 node_modules/should
+
+lodash@2.4.2 node_modules/lodash
+
+mocha@1.21.5 node_modules/mocha
+├── escape-string-regexp@1.0.2
+├── diff@1.0.8
+├── growl@1.8.1
+├── commander@2.3.0
+├── debug@2.0.0 (ms@0.6.2)
+├── mkdirp@0.5.0 (minimist@0.0.8)
+├── jade@0.26.3 (commander@0.6.1, mkdirp@0.3.0)
+└── glob@3.2.3 (inherits@2.0.1, graceful-fs@2.0.3, minimatch@0.2.14)
+
+swig@1.4.2 node_modules/swig
+├── optimist@0.6.1 (wordwrap@0.0.3, minimist@0.0.10)
+└── uglify-js@2.4.24 (uglify-to-browserify@1.0.2, async@0.2.10, yargs@3.5.4, source-map@0.1.34)
+
+mean-cli@0.11.1 node_modules/mean-cli
+├── opener@1.4.1
+├── async-series@0.0.1
+├── progress@1.1.8
+├── crypto@0.0.3
+├── commander@2.9.0 (graceful-readlink@1.0.1)
+├── shelljs@0.3.0
+├── chalk@0.5.1 (escape-string-regexp@1.0.5, ansi-styles@1.1.0, supports-color@0.2.0, has-ansi@0.1.0, strip-ansi@0.3.0)
+├── json-file-plus@2.0.0 (is@2.0.2, node.extend@1.1.5, promiseback@2.0.2)
+├── prompt@0.2.14 (revalidator@0.1.8, pkginfo@0.3.1, read@1.0.7, winston@0.8.3, utile@0.2.1)
+├── inquirer@0.8.5 (ansi-regex@1.1.1, figures@1.4.0, through@2.3.8, cli-width@1.1.1, chalk@1.1.1, readline2@0.1.1, lodash@3.10.1, rx@2.5.3)
+├── npm@2.14.20
+├── bower@1.7.7
+└── mongoose@4.0.8 (regexp-clone@0.0.1, sliced@0.0.5, muri@1.0.0, hooks-fixed@1.0.2, mpromise@0.5.4, kareem@1.0.1, mpath@0.1.1, async@0.9.0, ms@0.1.0, mquery@1.6.1, bson@0.3.2, mongodb@2.0.34)
+npm http GET https://registry.npmjs.org/bower
+npm http 304 https://registry.npmjs.org/bower
+/home/ubuntu/.nvm/v0.10.25/bin/bower -> /home/ubuntu/.nvm/v0.10.25/lib/node_modules/bower/bin/bower
+bower@1.7.7 /home/ubuntu/.nvm/v0.10.25/lib/node_modules/bower
+bower angular-xml#~2.1.0    not-cached git://github.com/johngeorgewright/angular-xml.git#~2.1.0
+bower angular-xml#~2.1.0       resolve git://github.com/johngeorgewright/angular-xml.git#~2.1.0
+bower angular-chart.js#0.8.8       not-cached git://github.com/jtblin/angular-chart.js.git#0.8.8
+bower angular-chart.js#0.8.8          resolve git://github.com/jtblin/angular-chart.js.git#0.8.8
+bower angular-file-upload#~1.1.5   not-cached git://github.com/nervgh/angular-file-upload.git#~1.1.5
+bower angular-file-upload#~1.1.5      resolve git://github.com/nervgh/angular-file-upload.git#~1.1.5
+bower ngmap#1.6.0                  not-cached git://github.com/allenhwkim/angularjs-google-maps.git#1.6.0
+bower ngmap#1.6.0                     resolve git://github.com/allenhwkim/angularjs-google-maps.git#1.6.0
+bower angular-ui-slider#~0.1.1     not-cached git://github.com/angular-ui/ui-slider.git#~0.1.1
+bower angular-ui-slider#~0.1.1        resolve git://github.com/angular-ui/ui-slider.git#~0.1.1
+bower angular-chart.js#0.8.8         download https://github.com/jtblin/angular-chart.js/archive/0.8.8.tar.gz
+bower angular-file-upload#~1.1.5     download https://github.com/nervgh/angular-file-upload/archive/v1.1.6.tar.gz
+bower angular-xml#~2.1.0             download https://github.com/johngeorgewright/angular-xml/archive/v2.1.1.tar.gz
+bower ngmap#1.6.0                    download https://github.com/allenhwkim/angularjs-google-maps/archive/v1.6.0.tar.gz
+bower angular-ui-slider#~0.1.1       download https://github.com/angular-ui/ui-slider/archive/0.1.6.tar.gz
+bower angular-file-upload#~1.1.5      extract archive.tar.gz
+bower angular-xml#~2.1.0              extract archive.tar.gz
+bower angular-ui-slider#~0.1.1        extract archive.tar.gz
+bower angular-chart.js#0.8.8          extract archive.tar.gz
+bower angular-ui-slider#~0.1.1       resolved git://github.com/angular-ui/ui-slider.git#0.1.6
+bower angular-xml#~2.1.0             resolved git://github.com/johngeorgewright/angular-xml.git#2.1.1
+bower jquery-ui#~1.10.x            not-cached git://github.com/components/jqueryui.git#~1.10.x
+bower jquery-ui#~1.10.x               resolve git://github.com/components/jqueryui.git#~1.10.x
+bower x2js#~1.1.7                  not-cached git://github.com/abdmob/x2js.git#~1.1.7
+bower x2js#~1.1.7                     resolve git://github.com/abdmob/x2js.git#~1.1.7
+bower jquery-ui#~1.10.x              download https://github.com/components/jqueryui/archive/1.10.4.tar.gz
+bower x2js#~1.1.7                    download https://github.com/abdmob/x2js/archive/v1.1.7.tar.gz
+bower angular-file-upload#~1.1.5     resolved git://github.com/nervgh/angular-file-upload.git#1.1.6
+bower angular#~1.2.11              not-cached git://github.com/angular/bower-angular.git#~1.2.11
+bower angular#~1.2.11                 resolve git://github.com/angular/bower-angular.git#~1.2.11
+bower x2js#~1.1.7                     extract archive.tar.gz
+bower angular#~1.2.11                download https://github.com/angular/bower-angular/archive/v1.2.29.tar.gz
+bower angular-chart.js#0.8.8         resolved git://github.com/jtblin/angular-chart.js.git#0.8.8
+bower x2js#~1.1.7                    resolved git://github.com/abdmob/x2js.git#1.1.7
+bower jquery-ui#~1.10.x               extract archive.tar.gz
+bower Chart.js#~1.0.1              not-cached git://github.com/nnnick/Chart.js.git#~1.0.1
+bower Chart.js#~1.0.1                 resolve git://github.com/nnnick/Chart.js.git#~1.0.1
+bower angular#~1.2.11                 extract archive.tar.gz
+bower ngmap#1.6.0                     extract archive.tar.gz
+bower Chart.js#~1.0.1                download https://github.com/nnnick/Chart.js/archive/v1.0.2.tar.gz
+bower angular#~1.2.11                resolved git://github.com/angular/bower-angular.git#1.2.29
+bower angular#>=1                      cached git://github.com/angular/bower-angular.git#1.3.2
+bower angular#>=1                    validate 1.3.2 against git://github.com/angular/bower-angular.git#>=1
+bower angular#>=1                         new version for git://github.com/angular/bower-angular.git#>=1
+bower angular#>=1                     resolve git://github.com/angular/bower-angular.git#>=1
+bower angular#>= 1.0.8                 cached git://github.com/angular/bower-angular.git#1.3.2
+bower angular#>= 1.0.8               validate 1.3.2 against git://github.com/angular/bower-angular.git#>= 1.0.8
+bower angular#>= 1.0.8                    new version for git://github.com/angular/bower-angular.git#>= 1.0.8
+bower angular#>= 1.0.8                resolve git://github.com/angular/bower-angular.git#>= 1.0.8
+bower angular#>=1                    download https://github.com/angular/bower-angular/archive/v1.5.0.tar.gz
+bower angular#>= 1.0.8               download https://github.com/angular/bower-angular/archive/v1.5.0.tar.gz
+bower Chart.js#~1.0.1                 extract archive.tar.gz
+bower angular#>=1                     extract archive.tar.gz
+bower Chart.js#~1.0.1            invalid-meta Chart.js is missing "ignore" entry in bower.json
+bower Chart.js#~1.0.1                resolved git://github.com/nnnick/Chart.js.git#1.0.2
+bower angular#>= 1.0.8                extract archive.tar.gz
+bower angular#>=1                    resolved git://github.com/angular/bower-angular.git#1.5.0
+bower angular#>= 1.0.8               resolved git://github.com/angular/bower-angular.git#1.5.0
+bower ngmap#1.6.0                invalid-meta ngmap is missing "ignore" entry in bower.json
+bower ngmap#1.6.0                    resolved git://github.com/allenhwkim/angularjs-google-maps.git#1.6.0
+bower jquery-ui#~1.10.x          invalid-meta jquery-ui is missing "ignore" entry in bower.json
+bower jquery-ui#~1.10.x              resolved git://github.com/components/jqueryui.git#1.10.4
+
+Please note that,
+    angular-file-upload#1.1.6 depends on angular#~1.2.11 which resolved to angular#1.2.29
+    angular-cookies#1.3.2, angular-mocks#1.3.2, angular-resource#1.3.2, angular-route#1.3.2, mean depends on angular#1.3.2 which resolved to angular#1.3.2
+    angular-ui-slider#0.1.6 depends on angular#>=1.0.0 <1.5.0 which resolved to angular#1.3.2
+    angular-chart.js#0.8.8 depends on angular#1.x which resolved to angular#1.3.2
+    angular-bootstrap#0.11.0 depends on angular#>=1 which resolved to angular#1.5.0
+    angular-ui-router#87f10dfc9c depends on angular#>= 1.0.8 which resolved to angular#1.5.0
+Resort to using angular#1.3.2 which resolved to angular#1.3.2
+Code incompatibilities may occur.
+
+bower ngmap                  extra-resolution Unnecessary resolution: ngmap#1.6.0
+bower angular-ui-slider#~0.1.1        install angular-ui-slider#0.1.6
+bower angular-xml#~2.1.0              install angular-xml#2.1.1
+bower angular-file-upload#~1.1.5      install angular-file-upload#1.1.6
+bower angular-chart.js#0.8.8          install angular-chart.js#0.8.8
+bower x2js#~1.1.7                     install x2js#1.1.7
+bower Chart.js#~1.0.1                 install Chart.js#1.0.2
+bower ngmap#1.6.0                     install ngmap#1.6.0
+bower jquery-ui#~1.10.x               install jquery-ui#1.10.4
+
+angular-ui-slider#0.1.6 bower_components/angular-ui-slider
+├── angular#1.3.2
+├── jquery#1.12.0
+└── jquery-ui#1.10.4
+
+angular-xml#2.1.1 bower_components/angular-xml
+└── x2js#1.1.7
+
+angular-file-upload#1.1.6 bower_components/angular-file-upload
+└── angular#1.3.2
+
+angular-chart.js#0.8.8 bower_components/angular-chart.js
+├── Chart.js#1.0.2
+└── angular#1.3.2
+
+x2js#1.1.7 bower_components/x2js
+
+Chart.js#1.0.2 bower_components/Chart.js
+
+ngmap#1.6.0 bower_components/ngmap
+
+jquery-ui#1.10.4 bower_components/jquery-ui
+└── jquery#1.12.0
+npm http GET https://registry.npmjs.org/grunt-cli
+npm http 200 https://registry.npmjs.org/grunt-cli
+npm http GET https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz
+npm http 200 https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz
+npm http GET https://registry.npmjs.org/nopt
+npm http GET https://registry.npmjs.org/findup-sync
+npm http GET https://registry.npmjs.org/resolve
+npm http 200 https://registry.npmjs.org/findup-sync
+npm http GET https://registry.npmjs.org/findup-sync/-/findup-sync-0.1.3.tgz
+npm http 200 https://registry.npmjs.org/nopt
+npm http 200 https://registry.npmjs.org/resolve
+npm http GET https://registry.npmjs.org/nopt/-/nopt-1.0.10.tgz
+npm http GET https://registry.npmjs.org/resolve/-/resolve-0.3.1.tgz
+npm http 200 https://registry.npmjs.org/findup-sync/-/findup-sync-0.1.3.tgz
+npm http 200 https://registry.npmjs.org/nopt/-/nopt-1.0.10.tgz
+npm http 200 https://registry.npmjs.org/resolve/-/resolve-0.3.1.tgz
+npm http GET https://registry.npmjs.org/abbrev
+npm http GET https://registry.npmjs.org/glob
+npm http GET https://registry.npmjs.org/lodash
+npm http 200 https://registry.npmjs.org/abbrev
+npm http GET https://registry.npmjs.org/abbrev/-/abbrev-1.0.7.tgz
+npm http 304 https://registry.npmjs.org/glob
+npm http 304 https://registry.npmjs.org/lodash
+npm http GET https://registry.npmjs.org/glob/-/glob-3.2.11.tgz
+npm http 200 https://registry.npmjs.org/abbrev/-/abbrev-1.0.7.tgz
+npm http 200 https://registry.npmjs.org/glob/-/glob-3.2.11.tgz
+npm http GET https://registry.npmjs.org/inherits
+npm http GET https://registry.npmjs.org/minimatch
+npm http 304 https://registry.npmjs.org/inherits
+npm http 304 https://registry.npmjs.org/minimatch
+npm http GET https://registry.npmjs.org/minimatch/-/minimatch-0.3.0.tgz
+npm http 200 https://registry.npmjs.org/minimatch/-/minimatch-0.3.0.tgz
+npm http GET https://registry.npmjs.org/lru-cache
+npm http GET https://registry.npmjs.org/sigmund
+npm http 304 https://registry.npmjs.org/lru-cache
+npm http 304 https://registry.npmjs.org/sigmund
+/home/ubuntu/.nvm/v0.10.25/bin/grunt -> /home/ubuntu/.nvm/v0.10.25/lib/node_modules/grunt-cli/bin/grunt
+grunt-cli@0.1.13 /home/ubuntu/.nvm/v0.10.25/lib/node_modules/grunt-cli
+├── resolve@0.3.1
+├── nopt@1.0.10 (abbrev@1.0.7)
+└── findup-sync@0.1.3 (lodash@2.4.2, glob@3.2.11)
+npm http GET https://registry.npmjs.org/grunt
+npm http 200 https://registry.npmjs.org/grunt
+npm http GET https://registry.npmjs.org/grunt/-/grunt-0.4.5.tgz
+npm http 200 https://registry.npmjs.org/grunt/-/grunt-0.4.5.tgz
+npm http GET https://registry.npmjs.org/coffee-script
+npm http GET https://registry.npmjs.org/dateformat/1.0.2-1.2.3
+npm http GET https://registry.npmjs.org/async
+npm http GET https://registry.npmjs.org/eventemitter2
+npm http GET https://registry.npmjs.org/hooker
+npm http GET https://registry.npmjs.org/iconv-lite
+npm http GET https://registry.npmjs.org/colors
+npm http GET https://registry.npmjs.org/underscore.string
+npm http GET https://registry.npmjs.org/which
+npm http GET https://registry.npmjs.org/js-yaml
+npm http GET https://registry.npmjs.org/exit
+npm http GET https://registry.npmjs.org/getobject
+npm http GET https://registry.npmjs.org/grunt-legacy-util
+npm http GET https://registry.npmjs.org/grunt-legacy-log
+npm http GET https://registry.npmjs.org/rimraf
+npm WARN deprecated lodash@0.9.2: Grunt needs your help! See https://github.com/gruntjs/grunt/issues/1403.
+npm http GET https://registry.npmjs.org/glob/-/glob-3.1.21.tgz
+npm http GET https://registry.npmjs.org/lodash/-/lodash-0.9.2.tgz
+npm http 200 https://registry.npmjs.org/hooker
+npm http GET https://registry.npmjs.org/hooker/-/hooker-0.2.3.tgz
+npm http 304 https://registry.npmjs.org/async
+npm http 200 https://registry.npmjs.org/coffee-script
+npm http 200 https://registry.npmjs.org/eventemitter2
+npm http 304 https://registry.npmjs.org/colors
+npm http GET https://registry.npmjs.org/async/-/async-0.1.22.tgz
+npm http GET https://registry.npmjs.org/coffee-script/-/coffee-script-1.3.3.tgz
+npm http GET https://registry.npmjs.org/eventemitter2/-/eventemitter2-0.4.14.tgz
+npm http 200 https://registry.npmjs.org/which
+npm http 200 https://registry.npmjs.org/underscore.string
+npm http 200 https://registry.npmjs.org/iconv-lite
+npm http GET https://registry.npmjs.org/which/-/which-1.0.9.tgz
+npm http 200 https://registry.npmjs.org/exit
+npm http 200 https://registry.npmjs.org/getobject
+npm http GET https://registry.npmjs.org/underscore.string/-/underscore.string-2.2.1.tgz
+npm http 200 https://registry.npmjs.org/glob/-/glob-3.1.21.tgz
+npm http GET https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.2.11.tgz
+npm http 200 https://registry.npmjs.org/grunt-legacy-util
+npm http 200 https://registry.npmjs.org/lodash/-/lodash-0.9.2.tgz
+npm http GET https://registry.npmjs.org/exit/-/exit-0.1.2.tgz
+npm http 200 https://registry.npmjs.org/grunt-legacy-log
+npm http 304 https://registry.npmjs.org/rimraf
+npm http GET https://registry.npmjs.org/getobject/-/getobject-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/hooker/-/hooker-0.2.3.tgz
+npm http 200 https://registry.npmjs.org/js-yaml
+npm http 200 https://registry.npmjs.org/eventemitter2/-/eventemitter2-0.4.14.tgz
+npm http GET https://registry.npmjs.org/grunt-legacy-util/-/grunt-legacy-util-0.2.0.tgz
+npm http 200 https://registry.npmjs.org/which/-/which-1.0.9.tgz
+npm http 200 https://registry.npmjs.org/underscore.string/-/underscore.string-2.2.1.tgz
+npm http 200 https://registry.npmjs.org/dateformat/1.0.2-1.2.3
+npm http GET https://registry.npmjs.org/grunt-legacy-log/-/grunt-legacy-log-0.1.3.tgz
+npm http 200 https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.2.11.tgz
+npm http GET https://registry.npmjs.org/rimraf/-/rimraf-2.2.8.tgz
+npm http 200 https://registry.npmjs.org/async/-/async-0.1.22.tgz
+npm http GET https://registry.npmjs.org/js-yaml/-/js-yaml-2.0.5.tgz
+npm http 200 https://registry.npmjs.org/exit/-/exit-0.1.2.tgz
+npm http GET https://registry.npmjs.org/dateformat/-/dateformat-1.0.2-1.2.3.tgz
+npm http 200 https://registry.npmjs.org/coffee-script/-/coffee-script-1.3.3.tgz
+npm http 200 https://registry.npmjs.org/grunt-legacy-util/-/grunt-legacy-util-0.2.0.tgz
+npm http 200 https://registry.npmjs.org/getobject/-/getobject-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/grunt-legacy-log/-/grunt-legacy-log-0.1.3.tgz
+npm http 200 https://registry.npmjs.org/js-yaml/-/js-yaml-2.0.5.tgz
+npm http 200 https://registry.npmjs.org/rimraf/-/rimraf-2.2.8.tgz
+npm http 200 https://registry.npmjs.org/dateformat/-/dateformat-1.0.2-1.2.3.tgz
+npm http GET https://registry.npmjs.org/grunt-legacy-log-utils
+npm http GET https://registry.npmjs.org/underscore.string/-/underscore.string-2.3.3.tgz
+npm http 200 https://registry.npmjs.org/grunt-legacy-log-utils
+npm http GET https://registry.npmjs.org/grunt-legacy-log-utils/-/grunt-legacy-log-utils-0.1.1.tgz
+npm http 200 https://registry.npmjs.org/underscore.string/-/underscore.string-2.3.3.tgz
+npm http GET https://registry.npmjs.org/graceful-fs
+npm http GET https://registry.npmjs.org/inherits/-/inherits-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/grunt-legacy-log-utils/-/grunt-legacy-log-utils-0.1.1.tgz
+npm http 304 https://registry.npmjs.org/graceful-fs
+npm http 200 https://registry.npmjs.org/inherits/-/inherits-1.0.2.tgz
+npm WARN deprecated graceful-fs@1.2.3: graceful-fs version 3 and before will fail on newer node releases. Please update to graceful-fs@^4.0.0 as soon as possible.
+npm http GET https://registry.npmjs.org/graceful-fs/-/graceful-fs-1.2.3.tgz
+npm http GET https://registry.npmjs.org/argparse
+npm http GET https://registry.npmjs.org/esprima
+npm http 200 https://registry.npmjs.org/graceful-fs/-/graceful-fs-1.2.3.tgz
+npm http 200 https://registry.npmjs.org/argparse
+npm http 200 https://registry.npmjs.org/esprima
+npm http GET https://registry.npmjs.org/argparse/-/argparse-0.1.16.tgz
+npm http GET https://registry.npmjs.org/esprima/-/esprima-1.0.4.tgz
+npm http 200 https://registry.npmjs.org/argparse/-/argparse-0.1.16.tgz
+npm http 200 https://registry.npmjs.org/esprima/-/esprima-1.0.4.tgz
+npm http GET https://registry.npmjs.org/underscore
+npm http GET https://registry.npmjs.org/underscore.string/-/underscore.string-2.4.0.tgz
+npm http 200 https://registry.npmjs.org/underscore.string/-/underscore.string-2.4.0.tgz
+npm http 200 https://registry.npmjs.org/underscore
+npm http GET https://registry.npmjs.org/underscore/-/underscore-1.7.0.tgz
+npm http 200 https://registry.npmjs.org/underscore/-/underscore-1.7.0.tgz
+grunt@0.4.5 /home/ubuntu/.nvm/v0.10.25/lib/node_modules/grunt
+├── which@1.0.9
+├── dateformat@1.0.2-1.2.3
+├── eventemitter2@0.4.14
+├── getobject@0.1.0
+├── rimraf@2.2.8
+├── colors@0.6.2
+├── hooker@0.2.3
+├── async@0.1.22
+├── grunt-legacy-util@0.2.0
+├── nopt@1.0.10 (abbrev@1.0.7)
+├── exit@0.1.2
+├── minimatch@0.2.14 (sigmund@1.0.1, lru-cache@2.7.3)
+├── lodash@0.9.2
+├── coffee-script@1.3.3
+├── underscore.string@2.2.1
+├── glob@3.1.21 (inherits@1.0.2, graceful-fs@1.2.3)
+├── iconv-lite@0.2.11
+├── findup-sync@0.1.3 (glob@3.2.11, lodash@2.4.2)
+├── grunt-legacy-log@0.1.3 (grunt-legacy-log-utils@0.1.1, underscore.string@2.3.3, lodash@2.4.2)
+└── js-yaml@2.0.5 (esprima@1.0.4, argparse@0.1.16)
+npm http GET https://registry.npmjs.org/grunt-forever
+npm http GET https://registry.npmjs.org/barycentric
+npm http GET https://registry.npmjs.org/delaunay-triangulate
+npm http 200 https://registry.npmjs.org/delaunay-triangulate
+npm http GET https://registry.npmjs.org/delaunay-triangulate/-/delaunay-triangulate-1.1.6.tgz
+npm http 200 https://registry.npmjs.org/grunt-forever
+npm http GET https://registry.npmjs.org/grunt-forever/-/grunt-forever-0.4.7.tgz
+npm http 200 https://registry.npmjs.org/delaunay-triangulate/-/delaunay-triangulate-1.1.6.tgz
+npm http 200 https://registry.npmjs.org/grunt-forever/-/grunt-forever-0.4.7.tgz
+npm http 200 https://registry.npmjs.org/barycentric
+npm http GET https://registry.npmjs.org/barycentric/-/barycentric-1.0.1.tgz
+npm http 200 https://registry.npmjs.org/barycentric/-/barycentric-1.0.1.tgz
+npm http GET https://registry.npmjs.org/robust-linear-solve
+npm http GET https://registry.npmjs.org/forever
+npm http GET https://registry.npmjs.org/uniq
+npm http GET https://registry.npmjs.org/incremental-convex-hull
+npm http 200 https://registry.npmjs.org/robust-linear-solve
+npm http GET https://registry.npmjs.org/robust-linear-solve/-/robust-linear-solve-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/forever
+npm http GET https://registry.npmjs.org/forever/-/forever-0.14.2.tgz
+npm http 200 https://registry.npmjs.org/robust-linear-solve/-/robust-linear-solve-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/forever/-/forever-0.14.2.tgz
+npm http GET https://registry.npmjs.org/robust-determinant
+npm http 200 https://registry.npmjs.org/incremental-convex-hull
+npm http GET https://registry.npmjs.org/incremental-convex-hull/-/incremental-convex-hull-1.0.1.tgz
+npm http 200 https://registry.npmjs.org/incremental-convex-hull/-/incremental-convex-hull-1.0.1.tgz
+npm http 200 https://registry.npmjs.org/robust-determinant
+npm http GET https://registry.npmjs.org/robust-determinant/-/robust-determinant-1.1.0.tgz
+npm http GET https://registry.npmjs.org/cliff
+npm http GET https://registry.npmjs.org/flatiron
+npm http GET https://registry.npmjs.org/forever-monitor
+npm http GET https://registry.npmjs.org/nssocket
+npm http GET https://registry.npmjs.org/nconf
+npm http GET https://registry.npmjs.org/timespan
+npm http GET https://registry.npmjs.org/optimist
+npm http GET https://registry.npmjs.org/utile
+npm http GET https://registry.npmjs.org/winston
+npm http 200 https://registry.npmjs.org/robust-determinant/-/robust-determinant-1.1.0.tgz
+npm http GET https://registry.npmjs.org/robust-sum
+npm http GET https://registry.npmjs.org/two-product
+npm http 200 https://registry.npmjs.org/cliff
+npm http GET https://registry.npmjs.org/robust-compress
+npm http GET https://registry.npmjs.org/robust-scale
+npm http 200 https://registry.npmjs.org/nssocket
+npm http 200 https://registry.npmjs.org/flatiron
+npm http 200 https://registry.npmjs.org/timespan
+npm http GET https://registry.npmjs.org/cliff/-/cliff-0.1.10.tgz
+npm http 200 https://registry.npmjs.org/forever-monitor
+npm http GET https://registry.npmjs.org/nssocket/-/nssocket-0.5.3.tgz
+npm http GET https://registry.npmjs.org/flatiron/-/flatiron-0.4.3.tgz
+npm http 304 https://registry.npmjs.org/optimist
+npm http GET https://registry.npmjs.org/timespan/-/timespan-2.3.0.tgz
+npm http 200 https://registry.npmjs.org/nconf
+npm http GET https://registry.npmjs.org/forever-monitor/-/forever-monitor-1.5.2.tgz
+npm http 304 https://registry.npmjs.org/utile
+npm http 304 https://registry.npmjs.org/winston
+npm http 200 https://registry.npmjs.org/uniq
+npm http GET https://registry.npmjs.org/nconf/-/nconf-0.6.9.tgz
+npm http GET https://registry.npmjs.org/uniq/-/uniq-1.0.1.tgz
+npm http 200 https://registry.npmjs.org/nssocket/-/nssocket-0.5.3.tgz
+npm http 200 https://registry.npmjs.org/robust-scale
+npm http GET https://registry.npmjs.org/robust-scale/-/robust-scale-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/cliff/-/cliff-0.1.10.tgz
+npm http 200 https://registry.npmjs.org/nconf/-/nconf-0.6.9.tgz
+npm http 200 https://registry.npmjs.org/flatiron/-/flatiron-0.4.3.tgz
+npm http 200 https://registry.npmjs.org/timespan/-/timespan-2.3.0.tgz
+npm http 200 https://registry.npmjs.org/forever-monitor/-/forever-monitor-1.5.2.tgz
+npm http 200 https://registry.npmjs.org/uniq/-/uniq-1.0.1.tgz
+npm http 200 https://registry.npmjs.org/robust-scale/-/robust-scale-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/robust-sum
+npm http GET https://registry.npmjs.org/robust-sum/-/robust-sum-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/robust-sum/-/robust-sum-1.0.0.tgz
+npm http GET https://registry.npmjs.org/simplicial-complex
+npm http GET https://registry.npmjs.org/robust-orientation
+npm http 200 https://registry.npmjs.org/two-product
+npm http GET https://registry.npmjs.org/two-product/-/two-product-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/robust-compress
+npm http GET https://registry.npmjs.org/robust-compress/-/robust-compress-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/two-product/-/two-product-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/robust-orientation
+npm http 200 https://registry.npmjs.org/simplicial-complex
+npm http GET https://registry.npmjs.org/robust-orientation/-/robust-orientation-1.1.3.tgz
+npm http 200 https://registry.npmjs.org/robust-compress/-/robust-compress-1.0.0.tgz
+npm http GET https://registry.npmjs.org/simplicial-complex/-/simplicial-complex-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/simplicial-complex/-/simplicial-complex-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/robust-orientation/-/robust-orientation-1.1.3.tgz
+npm http GET https://registry.npmjs.org/two-sum
+npm http GET https://registry.npmjs.org/robust-subtract
+npm http 200 https://registry.npmjs.org/two-sum
+npm http GET https://registry.npmjs.org/two-sum/-/two-sum-1.0.0.tgz
+npm http GET https://registry.npmjs.org/bit-twiddle
+npm http GET https://registry.npmjs.org/union-find
+npm http 200 https://registry.npmjs.org/two-sum/-/two-sum-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/bit-twiddle
+npm http GET https://registry.npmjs.org/bit-twiddle/-/bit-twiddle-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/bit-twiddle/-/bit-twiddle-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/robust-subtract
+npm http GET https://registry.npmjs.org/robust-subtract/-/robust-subtract-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/robust-subtract/-/robust-subtract-1.0.0.tgz
+npm http GET https://registry.npmjs.org/i
+npm http GET https://registry.npmjs.org/deep-equal
+npm http GET https://registry.npmjs.org/mkdirp
+npm http GET https://registry.npmjs.org/ncp
+npm http GET https://registry.npmjs.org/lazy
+npm http 200 https://registry.npmjs.org/union-find
+npm http 200 https://registry.npmjs.org/lazy
+npm http GET https://registry.npmjs.org/union-find/-/union-find-1.0.2.tgz
+npm http GET https://registry.npmjs.org/lazy/-/lazy-1.0.11.tgz
+npm http 304 https://registry.npmjs.org/ncp
+npm http 304 https://registry.npmjs.org/i
+npm http 304 https://registry.npmjs.org/deep-equal
+npm http 304 https://registry.npmjs.org/mkdirp
+npm http 200 https://registry.npmjs.org/union-find/-/union-find-1.0.2.tgz
+npm http GET https://registry.npmjs.org/wordwrap
+npm http GET https://registry.npmjs.org/minimist
+npm http 200 https://registry.npmjs.org/lazy/-/lazy-1.0.11.tgz
+npm http 304 https://registry.npmjs.org/minimist
+npm http 304 https://registry.npmjs.org/wordwrap
+npm http GET https://registry.npmjs.org/prompt/0.2.14
+npm http GET https://registry.npmjs.org/broadway
+npm http GET https://registry.npmjs.org/optimist/0.6.0
+npm http GET https://registry.npmjs.org/director/1.2.7
+npm http GET https://registry.npmjs.org/broadway
+npm http GET https://registry.npmjs.org/ps-tree
+npm http GET https://registry.npmjs.org/watch
+npm http GET https://registry.npmjs.org/minimatch/-/minimatch-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/prompt/0.2.14
+npm http GET https://registry.npmjs.org/prompt/-/prompt-0.2.14.tgz
+npm http 200 https://registry.npmjs.org/director/1.2.7
+npm http 200 https://registry.npmjs.org/optimist/0.6.0
+npm http 200 https://registry.npmjs.org/ps-tree
+npm http GET https://registry.npmjs.org/director/-/director-1.2.7.tgz
+npm http GET https://registry.npmjs.org/optimist/-/optimist-0.6.0.tgz
+npm http 200 https://registry.npmjs.org/broadway
+npm http GET https://registry.npmjs.org/ps-tree/-/ps-tree-0.0.3.tgz
+npm http 200 https://registry.npmjs.org/watch
+npm http GET https://registry.npmjs.org/minimist/0.0.8
+npm http 200 https://registry.npmjs.org/broadway
+npm http 200 https://registry.npmjs.org/minimatch/-/minimatch-1.0.0.tgz
+npm http GET https://registry.npmjs.org/broadway/-/broadway-0.3.6.tgz
+npm http GET https://registry.npmjs.org/watch/-/watch-0.13.0.tgz
+npm http 200 https://registry.npmjs.org/optimist/-/optimist-0.6.0.tgz
+npm http 200 https://registry.npmjs.org/prompt/-/prompt-0.2.14.tgz
+npm http 200 https://registry.npmjs.org/director/-/director-1.2.7.tgz
+npm http 200 https://registry.npmjs.org/watch/-/watch-0.13.0.tgz
+npm http 200 https://registry.npmjs.org/ps-tree/-/ps-tree-0.0.3.tgz
+npm http GET https://registry.npmjs.org/once
+npm http 304 https://registry.npmjs.org/minimist/0.0.8
+npm http GET https://registry.npmjs.org/path-is-absolute
+npm http GET https://registry.npmjs.org/inflight
+npm http 200 https://registry.npmjs.org/broadway/-/broadway-0.3.6.tgz
+npm http GET https://registry.npmjs.org/eyes
+npm http GET https://registry.npmjs.org/colors/-/colors-1.0.3.tgz
+npm http 304 https://registry.npmjs.org/path-is-absolute
+npm http 304 https://registry.npmjs.org/inflight
+npm http 304 https://registry.npmjs.org/once
+npm http 304 https://registry.npmjs.org/eyes
+npm http 200 https://registry.npmjs.org/colors/-/colors-1.0.3.tgz
+npm http GET https://registry.npmjs.org/wrappy
+npm http GET https://registry.npmjs.org/brace-expansion
+npm http 304 https://registry.npmjs.org/wrappy
+npm http GET https://registry.npmjs.org/cycle
+npm http 304 https://registry.npmjs.org/brace-expansion
+npm http GET https://registry.npmjs.org/isstream
+npm http GET https://registry.npmjs.org/stack-trace
+npm http GET https://registry.npmjs.org/pkginfo
+npm http 304 https://registry.npmjs.org/cycle
+npm http 304 https://registry.npmjs.org/isstream
+npm http GET https://registry.npmjs.org/async/0.2.9
+npm http GET https://registry.npmjs.org/ini
+npm http 304 https://registry.npmjs.org/pkginfo
+npm http 304 https://registry.npmjs.org/stack-trace
+npm http 200 https://registry.npmjs.org/async/0.2.9
+npm http GET https://registry.npmjs.org/balanced-match
+npm http GET https://registry.npmjs.org/concat-map/0.0.1
+npm http GET https://registry.npmjs.org/async/-/async-0.2.9.tgz
+npm http 200 https://registry.npmjs.org/ini
+npm http GET https://registry.npmjs.org/ini/-/ini-1.3.4.tgz
+npm http 304 https://registry.npmjs.org/balanced-match
+npm http 304 https://registry.npmjs.org/concat-map/0.0.1
+npm http 200 https://registry.npmjs.org/async/-/async-0.2.9.tgz
+npm http 200 https://registry.npmjs.org/ini/-/ini-1.3.4.tgz
+npm http GET https://registry.npmjs.org/event-stream
+npm http GET https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz
+npm http 200 https://registry.npmjs.org/event-stream
+npm http GET https://registry.npmjs.org/event-stream/-/event-stream-0.5.3.tgz
+npm http 200 https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz
+npm http GET https://registry.npmjs.org/cliff/0.1.9
+npm http GET https://registry.npmjs.org/eventemitter2/0.4.14
+npm http GET https://registry.npmjs.org/winston/0.8.0
+npm http 200 https://registry.npmjs.org/event-stream/-/event-stream-0.5.3.tgz
+npm http 200 https://registry.npmjs.org/cliff/0.1.9
+npm http 200 https://registry.npmjs.org/eventemitter2/0.4.14
+npm http GET https://registry.npmjs.org/cliff/-/cliff-0.1.9.tgz
+npm http 200 https://registry.npmjs.org/winston/0.8.0
+npm http GET https://registry.npmjs.org/eventemitter2/-/eventemitter2-0.4.14.tgz
+npm http GET https://registry.npmjs.org/winston/-/winston-0.8.0.tgz
+npm http 200 https://registry.npmjs.org/eventemitter2/-/eventemitter2-0.4.14.tgz
+npm http 200 https://registry.npmjs.org/cliff/-/cliff-0.1.9.tgz
+npm http 200 https://registry.npmjs.org/winston/-/winston-0.8.0.tgz
+npm http GET https://registry.npmjs.org/optimist/-/optimist-0.2.8.tgz
+npm http GET https://registry.npmjs.org/read
+npm http GET https://registry.npmjs.org/revalidator
+npm http 200 https://registry.npmjs.org/optimist/-/optimist-0.2.8.tgz
+npm http 304 https://registry.npmjs.org/revalidator
+npm http 304 https://registry.npmjs.org/read
+npm http GET https://registry.npmjs.org/mute-stream
+npm http 304 https://registry.npmjs.org/mute-stream
+
+> Pollution@0.4.3 postinstall /home/ubuntu/airquality
+> node node_modules/meanio/node_modules/mean-cli/bin/mean-postinstall
+
+Installing Bower dependencies
+Auto installing package dependencies
+Auto installing package dependencies
+TAG:master
+TAG:master
+TAG:master
+Package not found.
+Package not found.
+Package not found.
+    Dependencies installed for package pollution
+    Dependencies installed for package system
+    Dependencies installed for package articles
+    Dependencies installed for package theme
+    Dependencies installed for package users
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/dependable-list requires complex-list@'latest' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/complex-list,
+npm WARN unmet dependency which is version 0.1.4
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/lazy-dependable requires dependable-list@'latest' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/dependable-list,
+npm WARN unmet dependency which is version 0.1.1
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/mean-cli requires request@'latest' but will load
+npm WARN unmet dependency /home/ubuntu/airquality/node_modules/meanio/node_modules/request,
+npm WARN unmet dependency which is version 2.69.0
+barycentric@1.0.1 node_modules/barycentric
+└── robust-linear-solve@1.0.0 (robust-determinant@1.1.0)
+
+delaunay-triangulate@1.1.6 node_modules/delaunay-triangulate
+├── uniq@1.0.1
+└── incremental-convex-hull@1.0.1 (robust-orientation@1.1.3, simplicial-complex@1.0.0)
+
+grunt-forever@0.4.7 node_modules/grunt-forever
+└── forever@0.14.2 (colors@0.6.2, timespan@2.3.0, optimist@0.6.1, winston@0.8.3, utile@0.2.1, nssocket@0.5.3, nconf@0.6.9, cliff@0.1.10, forever-monitor@1.5.2, flatiron@0.4.3)
+Install Complete.
