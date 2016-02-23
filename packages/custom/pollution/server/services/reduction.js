@@ -136,7 +136,7 @@ exports.reduction = function(cb) {
         return function(cb) {
             cron.delaunay_cron(year,month,day,hour,parameter_name,function(message) {
                 //update delaunayjobs collection after the job is complete
-                DelaunayJobs.update(
+                DelaunayJobs.findOneAndUpdate(
                     {
                         hour_code : hour_code,
                         parameter_name : parameter_name

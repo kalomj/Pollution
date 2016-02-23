@@ -92,7 +92,7 @@ module.exports = function(db_jobs_array,key_obj,start_ix,direction) {
     //generator function to set a given hour/parameter to dirty state (indicating triangulation needs to be recalculated)
     var dirty_fun = function(hour_code) {
         return function(cb) {
-            DelaunayJobs.update(
+            DelaunayJobs.findOneAndUpdate(
                 {
                     hour_code : hour_code,
                     parameter_name : key_obj.parameter_name
