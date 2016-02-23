@@ -31,7 +31,7 @@ fi
 #create directory for mount point
 mkdir /home/$(whoami)/mongo
 
-if [[ "$1" != "NONE" ]]
+if [[ "$1" != "NONE" ]] ; then
 
     #create file system on the volume
     sudo mkfs.ext4 -F /dev/$1
@@ -73,7 +73,7 @@ echo  '# End of file' | sudo tee -a /etc/security/limits.conf
 #echo '* hard nproc 32000' | sudo tee -a /etc/security/limits.d/90-nproc.conf
 #echo  '# End of file' | sudo tee -a /etc/security/limits.d/90-nproc.conf
 
-if [[ "$1" != "NONE" ]]
+if [[ "$1" != "NONE" ]] ; then
 
     #set EC2 optimized block read settings for EC2
     sudo blockdev --setra 32 /dev/$1
@@ -83,7 +83,7 @@ if [[ "$1" != "NONE" ]]
 
 fi
 
-if [[ "$1" == "NONE" ]]
+if [[ "$1" == "NONE" ]] ; then
 
     #set EC2 optimized block read settings for EC2
     sudo blockdev --setra 32 /dev/$2
