@@ -1,0 +1,3 @@
+#!/bin/bash
+
+mongo localhost:27017/mean-dev < /home/$(whoami)/airquality/serverbuild/clean_dups.js
