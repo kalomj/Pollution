@@ -36,3 +36,93 @@ db.hourlydata.find({
     measurement_key : '000102001OZONE'},{ measurement_key : 1, hour_code : 1, bounded : 1, interpolated : 1, value : 1}).sort({ measurement_key: 1, hour_code : 1 }).pretty()
 
 
+
+//count duplicates
+db.hourlydata.aggregate([
+    { $group: {
+        _id: { firstField: "$measurement_key", secondField: "$hour_code" },
+        uniqueIds: { $addToSet: "$_id" },
+        count: { $sum: 1 }
+    }},
+    { $match: {
+        count: { $gt: 1 }
+    }}
+])
+
+//count duplicates, don't collect
+db.hourlydata.aggregate([
+    {
+        $match: { measurement_key : "340171002CO", hour_code : 141551  }
+    },
+    { $group: {
+        _id: { measurement_key: "$measurement_key", hour_code: "$hour_code" },
+        count: { $sum: 1 }
+    }},
+    { $match: {
+        count: { $gt: 1 }
+    }}
+])
+
+db.hourlydata.aggregate([
+    {
+        $match: { measurement_key : "340171002CO"  }
+    },
+    { $group: {
+        _id: { measurement_key: "$measurement_key", hour_code: "$hour_code" },
+        count: { $sum: 1 }
+    }},
+    { $match: {
+        count: { $gt: 1 }
+    }}
+])
+
+db.hourlydata.aggregate([
+    {
+        $match: { valid_date : "02/23/16"  }
+    },
+    { $group: {
+        _id: { measurement_key: "$measurement_key", hour_code: "$hour_code" },
+        count: { $sum: 1 }
+    }},
+    { $match: {
+        count: { $gt: 1 }
+    }},
+    { $group: {
+        _id: null,
+        count: { $sum : "$count"}
+    }}
+])
+
+db.hourlydata.aggregate([
+    {
+        $match: { valid_date : "02/23/16"  }
+    },
+    { $group: {
+        _id: { measurement_key: "$measurement_key", hour_code: "$hour_code" },
+        count: { $sum: 1 }
+    }},
+    { $match: {
+        count: { $gt: 1 }
+    }},
+    { $group: {
+        _id: null,
+        count: { $sum : "$count"}
+    }}
+])
+
+db.hourlydata.aggregate([
+    {
+        $match: { hour_code : 141551  }
+    },
+    { $group: {
+        _id: { measurement_key: "$measurement_key", hour_code: "$hour_code" },
+        count: { $sum: 1 }
+    }},
+    { $match: {
+        count: { $gt: 1 }
+    }},
+    { $group: {
+        _id: null,
+        count: { $sum : "$count"}
+    }}
+])
