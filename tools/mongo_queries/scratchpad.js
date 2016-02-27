@@ -123,6 +123,77 @@ db.hourlydata.aggregate([
     }},
     { $group: {
         _id: null,
-        count: { $sum : "$count"}
+        count: { $sum : "$count"},
+        unique: {$sum : 1}
     }}
 ])
+
+db.hourlydata.aggregate([
+    {
+        $match: { hour_code : hour_code  }
+    },
+    { $group: {
+        _id: { measurement_key: "$measurement_key", hour_code: "$hour_code" },
+        count: { $sum: 1 }
+    }},
+    { $match: {
+        count: { $gt: 1 }
+    }},
+    { $group: {
+        _id: null,
+        count: { $sum : "$count"},
+        unique: {$sum : 1}
+    }}
+])
+
+var duplicates = [];
+db.hourlydata.aggregate([
+    {
+        $match: { valid_date : "02/23/16"  }
+    },
+    { $group: {
+        _id: { measurement_key: "$measurement_key", hour_code: "$hour_code" },
+        dups: { "$addToSet": "$_id" },
+        count: { $sum: 1 }
+    }},
+    { $match: {
+        count: { $gt: 1 }
+    }}
+]).forEach(function(doc) {
+        doc.dups.shift();      // First element skipped for deleting
+        doc.dups.forEach( function(dupId){
+                duplicates.push(dupId);   // Getting all duplicate ids
+            }
+        )
+    });
+
+printjson(duplicates);
+
+141528
+141551
+
+var duplicates = [];
+
+db.hourlydata.aggregate([
+    { $group: {
+        _id: { measurement_key: "$measurement_key", hour_code: "$hour_code" },
+        dups: { "$addToSet": "$_id" },
+        count: { $sum: 1 }
+    }},
+    { $match: {
+        count: { $gt: 1 }
+    }}
+],{allowDiskUse:true}).forEach(function(doc) {
+    doc.dups.shift();      // First element skipped for deleting
+    doc.dups.forEach( function(dupId){
+            duplicates.push(dupId);   // Getting all duplicate ids
+        }
+    )
+});
+
+// Remove all duplicates in one go
+while(duplicates.length > 0) {
+    var slice = duplicates.slice(0,500000);
+    db.hourlydata.remove({_id: {$in: slice}});
+    duplicates = duplicates.slice(500000);
+}

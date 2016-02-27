@@ -33,8 +33,17 @@ exports.reload = function(req, res) {
       LoadedFile.find().exec(function (err, loadedfile) {
 
         var loadedfiles = [];
-        for (var i = 0; i < loadedfile.length; i += 1) {
-          loadedfiles.push(loadedfile[i].filename);
+
+        var existing = '9999999999.dat';
+
+        if(loadedfile) {
+          for (var i = 0; i < loadedfile.length; i += 1) {
+            loadedfiles.push(loadedfile[i].filename);
+          }
+
+          var mid = Math.floor(loadedfile.length / 2);
+
+          existing = loadedfile[mid].filename;
         }
 
         var whoami = process.env.USER;
@@ -48,8 +57,14 @@ exports.reload = function(req, res) {
 
         var filestoload = _.difference(availablefiles, loadedfiles);
 
-        //sort descending to get the most recent first
-        filestoload.sort().reverse();
+        //sort so that files are processed from the boundaries of the core of loaded data outward
+        var a = { before : [], after  : [], known : existing };  // data structure for the array split
+        filestoload.forEach(function(elem,ix,array) { if (elem > this.known) {this.before.push(elem)} else {this.after.push(elem)} },a); // split array in half based on whether value is larger or smaller than existing data
+        a.before.sort().reverse(); // sort data before existing data in descending order - process from known data into the past
+        a.after.sort(); // sort data after existing data in ascending order - process from known data into the future
+
+       filestoload = a.after.concat(a.before); // concatenate pre and post arrays. process as far as possible into the future first, then into the past
+
 
         var max_files = 5;
         var totaljobs = filestoload.length > max_files ? max_files * 6 : filestoload.length * 6;
