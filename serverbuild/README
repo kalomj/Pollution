@@ -15,7 +15,7 @@ chmod 755 install_script
 
 #restart your login window now to make sure necessary scripts are sourced.
 
-cd /home/$(whoami)/airqulity/serverbuild
+cd /home/$(whoami)/airquality/serverbuild
 
 #you will need to to set execute permissions
 chmod 755 /home/$(whoami)/airquality/serverbuild/airnow_setup
@@ -23,12 +23,15 @@ chmod 755 /home/$(whoami)/airquality/serverbuild/mongo_setup_script
 chmod 755 /home/$(whoami)/airquality/serverbuild/dthp_script
 chmod 755 /home/$(whoami)/airquality/serverbuild/move_mongo_script
 chmod 755 /home/$(whoami)/airquality/serverbuild/enable_https
+chmod 755 /home/$(whoami)/airquality/serverbuild/upgrade_wiredtiger
 
 #to setup lftp to download from teh airnow api, run the following (where username and password correspond to an Airnow API account)
 ./airnow_setup username password
 
 #to setup mongodb on a new disk,  run:
-./mongo_setup_script device_name       (where device name is like sdb)
+#./mongo_setup_script device_name       (where device name is like sdb)
+#or on an existing disk
+./mongo_setup_script NONE device_name (where device name is like sda1)
 
 #to disable transparent huge pages for mongodb performance, run
 ./dthp_script
