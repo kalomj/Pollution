@@ -47,6 +47,10 @@ echo "/home/$(whoami)/airquality/grunt forever:server:start"
 
 grunt --gruntfile /home/$(whoami)/airquality/Gruntfile.js forever:server:start
 
+echo 'now using the following command to setup the database indexes'
+echo "mongo localhost:27017/mean-dev < /home/$(whoami)/airquality/serverbuild/mongo_setup.js"
+mongo localhost:27017/mean-dev < /home/$(whoami)/airquality/serverbuild/mongo_setup.js
+
 echo 'sleep 10 seconds to allow server boot'
 sleep 10
 
@@ -65,10 +69,6 @@ sleep 10
 echo '10 seconds to go'
 sleep 10
 
-
-echo 'now using the following command to setup the database indexes'
-echo "mongo localhost:27017/mean-dev < /home/$(whoami)/airquality/serverbuild/mongo_setup.js"
-mongo localhost:27017/mean-dev < /home/$(whoami)/airquality/serverbuild/mongo_setup.js
 
 echo 'Server is running as daemon using forever. Try tailing the log file with :'
 echo 'tail -f logs/log.log'

@@ -101,6 +101,10 @@ echo "/home/$(whoami)/airquality/grunt"
 
 grunt --gruntfile /home/$(whoami)/airquality/Gruntfile.js forever:server:start
 
+echo 'now using the following command to setup the database indexes'
+echo "mongo localhost:27017/mean-dev < /home/$(whoami)/airquality/serverbuild/mongo_setup.js"
+mongo localhost:27017/mean-dev < /home/$(whoami)/airquality/serverbuild/mongo_setup.js
+
 echo 'call wget to download latest file data from the airnow ftp'
 wget -O /dev/null http://localhost:3000/filesync
 echo 'sleep 30 seconds to allow ftp file syncronization'
@@ -121,9 +125,7 @@ echo '10 seconds to go'
 sleep 10
 
 
-echo 'now using the following command to setup the database indexes'
-echo "mongo localhost:27017/mean-dev < /home/$(whoami)/airquality/serverbuild/mongo_setup.js"
-mongo localhost:27017/mean-dev < /home/$(whoami)/airquality/serverbuild/mongo_setup.js
+
 
 echo 'Server is running as daemon using forever. Try tailing the log file with :'
 echo 'tail -f logs/log.log'
