@@ -36,7 +36,7 @@ exports.reload = function(req, res) {
 
         var existing = '9999999999.dat';
 
-        if(loadedfile) {
+        if(loadedfile.length > 0) {
           for (var i = 0; i < loadedfile.length; i += 1) {
             loadedfiles.push(loadedfile[i].filename);
           }
@@ -59,18 +59,25 @@ exports.reload = function(req, res) {
 
         //sort so that files are processed from the boundaries of the core of loaded data outward
         var a = { before : [], after  : [], known : existing };  // data structure for the array split
-        filestoload.forEach(function(elem,ix,array) { if (elem > this.known) {this.before.push(elem)} else {this.after.push(elem)} },a); // split array in half based on whether value is larger or smaller than existing data
+        filestoload.forEach(function(elem,ix,array) { if (elem > this.known) {this.after.push(elem)} else {this.before.push(elem)} },a); // split array in half based on whether value is larger or smaller than existing data
         a.before.sort().reverse(); // sort data before existing data in descending order - process from known data into the past
         a.after.sort(); // sort data after existing data in ascending order - process from known data into the future
 
        filestoload = a.after.concat(a.before); // concatenate pre and post arrays. process as far as possible into the future first, then into the past
 
 
+
+
         var max_files = 5;
         var totaljobs = filestoload.length > max_files ? max_files * 6 : filestoload.length * 6;
 
+        console.log("processing files split on " + existing);
+        //console.log(a);
+        console.log(filestoload.slice(0,max_files));
 
-        var savecb = function (filename) {
+
+
+          var savecb = function (filename) {
           return function (err) {
             if (err) {
               console.log(err);

@@ -1735,3 +1735,18 @@ Error: bind EADDRINUSE
     at process.EventEmitter.emit (events.js:117:20)
     at handleMessage (child_process.js:318:10)
     at Pipe.channel.onread (child_process.js:345:11)
+
+/home/pollution/airquality/packages/custom/pollution/server/controllers/reload.js:46
+          existing = loadedfile[mid].filename;
+                                    ^
+TypeError: Cannot read property 'filename' of undefined
+    at Promise.<anonymous> (/home/pollution/airquality/packages/custom/pollution/server/controllers/reload.js:46:37)
+    at Promise.<anonymous> (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:177:8)
+    at Promise.EventEmitter.emit (events.js:95:17)
+    at Promise.emit (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:84:38)
+    at Promise.fulfill (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:97:20)
+    at Promise.resolve (/home/pollution/airquality/node_modules/mongoose/lib/promise.js:114:23)
+    at Promise.<anonymous> (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:177:8)
+    at Promise.EventEmitter.emit (events.js:95:17)
+    at Promise.emit (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:84:38)
+    at Promise.fulfill (/home/pollution/airquality/node_modules/mongoose/node_modules/mpromise/lib/promise.js:97:20)
