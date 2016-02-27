@@ -343,17 +343,18 @@ exports.reduction = function(cb) {
     function(err, results) {
         console.log('reduction job complete');
 
-        //don't wait in calling controller, return immediately
-        cb('reduction job complete');
+        //since the job completed successfully, there should be no delaunayjobs that are dirty
+        DelaunayJobs.remove({dirty:1},function() {
+            cb('reduction job complete + dirty jobs removed');
 
+            if (err) {
+                console.log(err);
 
-        if (err) {
-            console.log(err);
+                if (cb) {
+                    cb(err);
+                }
 
-            if (cb) {
-                cb(err);
             }
-
-        }
+        });
     });
 };
