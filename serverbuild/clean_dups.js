@@ -17,12 +17,12 @@ db.hourlydata.aggregate([
 ],{allowDiskUse:true} // this option allows disk use in case there are a huge number of duplicates that can't fit in memory at one time
  ).forEach(function(doc) {
     var noreal = 1;
-    for(var i = 0; i < docs.length; i++) {
+    for(var i = 0; i < doc.length; i++) {
         //if a real measurement is found, move it out of the array so it won't be deleted
-        if(docs.interpolated===0) {
+        if(doc.interpolated===0) {
             noreal = 0;
-            docs[i] = docs[docs.length-1];
-            docs.pop();
+            doc[i] = doc[doc.length-1];
+            doc.pop();
             break;
         }
     }
