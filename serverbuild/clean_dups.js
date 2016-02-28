@@ -1,6 +1,9 @@
 var duplicates = [];
 
 
+//delete all nonessential data
+db.hourlydata.remove({parameter_name : { $nin: ['PM25', 'PM10', 'OZONE', 'NO2', 'SO2', 'CO'] }})
+
 //use aggregation framework to group on the natural key of the hourlydata collection
 db.hourlydata.aggregate([
     { $group: {
