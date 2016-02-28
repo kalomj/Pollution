@@ -62,7 +62,10 @@ module.exports = function(db_jobs_array,key_obj,start_ix,direction) {
     //generator function to create interpolated insert jobs
     var insert_fun = function(hour_code,interpolated_value) {
         return function(cb) {
-            HourlyData.create({
+            HourlyData.findOneAndUpdate({
+                measurement_key: key_obj.key,
+                hour_code: hour_code
+            },{
                 measurement_key: key_obj.key,
                 valid_date: hc_to_valid_date(hour_code),
                 valid_time: hc_to_valid_time(hour_code),
@@ -79,6 +82,8 @@ module.exports = function(db_jobs_array,key_obj,start_ix,direction) {
                 hour_code: hour_code,
                 interpolated: 1,
                 bounded: 1
+            }, {
+                upsert:true
             },function(err,result) {
                 if(err) {
                     console.log(err);

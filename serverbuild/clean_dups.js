@@ -13,7 +13,22 @@ db.hourlydata.aggregate([
     }}
 ],{allowDiskUse:true} // this option allows disk use in case there are a huge number of duplicates that can't fit in memory at one time
  ).forEach(function(doc) {
-    doc.dups.shift();      // First element skipped for deleting - we want to keep one of them, arbitrarily chosen
+    var noreal = 1;
+    for(var i = 0; i < docs.length; i++) {
+        //if a real measurement is found, move it out of the array so it won't be deleted
+        if(docs.interpolated===0) {
+            noreal = 0;
+            docs[i] = docs[docs.length-1];
+            docs.pop();
+            break;
+        }
+    }
+
+    //if no real measurements are found, arbitrarily delete an element
+    if(noreal) {
+        doc.dups.shift();
+    }
+
     doc.dups.forEach( function(dupId){
             duplicates.push(dupId);   // Getting all duplicate ids
         }

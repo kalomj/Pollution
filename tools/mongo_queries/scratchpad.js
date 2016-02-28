@@ -184,7 +184,21 @@ db.hourlydata.aggregate([
         count: { $gt: 1 }
     }}
 ],{allowDiskUse:true}).forEach(function(doc) {
-    doc.dups.shift();      // First element skipped for deleting
+    var noreal = 1;
+    for(var i = 0; i < docs.length; i++) {
+        //if a real measurement is found, move it out of the array so it won't be deleted
+        if(docs.interpolated===0) {
+            noreal = 0;
+            docs[i] = docs[docs.length-1];
+            docs.pop();
+            break;
+        }
+    }
+
+    //if no real measurements are found, arbitrarily delete an element
+    if(noreal) {
+        doc.dups.shift();
+    }
     doc.dups.forEach( function(dupId){
             duplicates.push(dupId);   // Getting all duplicate ids
         }

@@ -11,7 +11,8 @@ var mongoose = require('mongoose'),
   cron = require('../services/cron'),
   async = require('async'),
   reduction = require('../services/reduction'),
-  JobControl = mongoose.model('JobControl');
+  JobControl = mongoose.model('JobControl'),
+    HourlyData = mongoose.model('HourlyData');
 
 
 /**
@@ -109,52 +110,54 @@ exports.reload = function(req, res) {
             console.log(stdout);
             console.log(stderr);
 
-            var year = filename.substring(2, 4);
-            var day = filename.substring(6, 8);
-            var month = filename.substring(4, 6);
-            var hour = filename.substring(8, 10);
+              var year = filename.substring(2, 4);
+              var day = filename.substring(6, 8);
+              var month = filename.substring(4, 6);
+              var hour = filename.substring(8, 10);
 
-            //calculate monotonically increasing integer per hour since Midnight, January 1st, 2000
-            var now = Date.UTC(2000+Number(year),month-1,day,hour);
-            var epoch = Date.UTC(2000,0,1,0);
+              //calculate monotonically increasing integer per hour since Midnight, January 1st, 2000
+              var now = Date.UTC(2000+Number(year),month-1,day,hour);
+              var epoch = Date.UTC(2000,0,1,0);
 
-            var hour_code = Math.abs((now - epoch)/(60*60*1000));
+              var hour_code = Math.abs((now - epoch)/(60*60*1000));
 
-            var newLoadedFile = new LoadedFile({
-              filename: filename,
-              valid_date: month + '/' + day + '/' + year ,
-              valid_time: hour + ':00',
-              hour_code: hour_code,
-              processed: 1
-            });
+              var newLoadedFile = new LoadedFile({
+                  filename: filename,
+                  valid_date: month + '/' + day + '/' + year,
+                  valid_time: hour + ':00',
+                  hour_code: hour_code,
+                  processed: 1
+              });
+
+              console.log(year + ' ' + month + ' ' + day + ' ' + hour);
 
 
+              //delete all data that isn't our six parameters
+              HourlyData.remove({ valid_date: month + '/' + day + '/' + year, valid_time: hour + ':00', parameter_name : { $nin: ['PM25', 'PM10', 'OZONE', 'NO2', 'SO2', 'CO'] }},function() {
 
-            console.log(year + ' ' + month + ' ' + day + ' ' + hour);
+                  cronArray = [];
 
-            cronArray = [];
+                  //attempt to create triangulations for each parameter
+                  var parameter_names = ['PM25', 'PM10', 'OZONE', 'NO2', 'SO2', 'CO'];
+                  for(var j = 0; j < parameter_names.length; j+=1) {
+                      cronArray.push(cronSeries(year, month, day, hour, parameter_names[j]));
+                  }
 
-            //attempt to create triangulations for each parameter
-            var parameter_names = ['PM25', 'PM10', 'OZONE', 'NO2', 'SO2', 'CO'];
-            for(var j = 0; j < parameter_names.length; j+=1) {
-              cronArray.push(cronSeries(year, month, day, hour, parameter_names[j]));
-            }
+                  //do all cron's in series then call the global callback
+                  async.series(cronArray,function(err) {
+                      newLoadedFile.save(savecb(filename));
 
-            //do all cron's in series then call the global callback
-            async.series(cronArray,function(err) {
-              newLoadedFile.save(savecb(filename));
-
-              /*LoadedFile.findOne({
-               filename: filename,
-               valid_date: month + '/' + day + '/' + year ,
-               valid_time: hour + ':00'
-               }, function(err,record) {
-               record.processed = 1;
-               record.save();
-               });*/
-              callback();
-            });
-
+                      /*LoadedFile.findOne({
+                       filename: filename,
+                       valid_date: month + '/' + day + '/' + year ,
+                       valid_time: hour + ':00'
+                       }, function(err,record) {
+                       record.processed = 1;
+                       record.save();
+                       });*/
+                      callback();
+                  });
+              });
           };
         };
 
