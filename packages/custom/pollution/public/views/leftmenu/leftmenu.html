@@ -1,77 +1,147 @@
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
 <div class="leftmenu">
-
-  <br/>
   <br/>
 
-  <h4>Pollution Parameter Type</h4>
-  <form class="paramForm" name="myForm">
-    <label>
-      <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="OZONE">
-      <b>O<sub>3</sub> (ppb)</b>
-    </label><br/>
-    <label>
-      <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="PM25">
-      <b>PM<sub>2.5</sub> (µg/m<sup>3</sup>)</b>
-    </label><br/>
-    <label>
-      <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="PM10">
-      <b>PM<sub>10</sub> (µg/m<sup>3</sup>)</b>
-    </label><br/>
-    <label>
-      <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="CO">
-      <b>CO (ppm)</b>
-    </label><br/>
-    <label>
-      <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="SO2">
-      <b>SO<sub>2</sub> (ppb)</b>
-    </label><br/>
-    <label>
-      <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="NO2">
-      <b>NO<sub>2</sub> (ppb)</b>
-    </label><br/>
-  </form>
+  <div class="time_display" ng-model="renderedTimeString">{{renderedTimeString}} GMT</div>
 
-  <br/>
-  <br/>
-
-  <div ng-hide="routeView">
-    <h4>Date Picker</h4>
-    <p class="input-group">
-      <datepicker show-weeks="false" ng-model="dt" ng-change="updateDateTime(dt,time)" min-date="mindate" max-date="maxdate"  class="well well-sm"></datepicker>
-    </p>
-
-    <h4>Time Slider</h4>
-    <div ui-slider min="0" max="23" ng-model="time" ng-change="updateDateTime(dt,time)" ><input type="text" ng-model="time" ng-change="updateDateTime(dt,time)"/></div>
-
-
-    <p><div class="alert alert-danger animated fadeIn" ng-show="dtalert" >{{dtalert}}</div></p>
+  <div ng-click="param_open = !param_open" class="collapsable_menu" ng-class="{ showMe: param_open }">
+    <div>
+      <div style="display:inline">Pollution Parameter</div><span class="arrow">{{(param_open && '&#9660;') || '&#9650;'}}</span>
+    </div>
   </div>
 
-  <p ng-model="renderedTimeString">Displayed: {{renderedTimeString}}</p>
+  <div  ng-class="{ showMe: param_open }" class="collapsable">
 
-  <br/>
-  <br/>
+    <form class="paramForm" name="myForm">
+      <label>
+      <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="OZONE">
+       O<sub>3</sub> (ppb)
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="PM25">
+        PM<sub>2.5</sub> (µg/m<sup>3</sup>)
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="PM10">
+        PM<sub>10</sub> (µg/m<sup>3</sup>)
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="CO">
+        CO (ppm)
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="SO2">
+        SO<sub>2</sub> (ppb)
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="parameter_name" ng-change="changeParameter(parameter_name)" value="NO2">
+        NO<sub>2</sub> (ppb)
+      </label><br/>
+    </form>
 
-  <p><button class="toggleButton" ng-disabled="infoMarkerStatus !== 'Not Displayed' && infoMarkerStatus !== 'Rendered'" ng-click="toggleMarkers()">Toggle Info Markers</button><span ng-model="infoMarkerStatus">{{infoMarkerStatus}}</span></p>
-  <p><button class="toggleButton" ng-disabled="triangleStatus !== 'Not Displayed' && triangleStatus !== 'Rendered'" ng-click="toggleTriangles()">Toggle Triangulation</button><span ng-model="triangleStatus">{{triangleStatus}}</span></p>
-  <p><button class="toggleButton" ng-disabled="heatmapStatus !== 'Not Displayed' && heatmapStatus !== 'Rendered'" ng-click="toggleHeatmap()">Toggle Heatmap</button><span ng-model="heatmapStatus">{{heatmapStatus}}</span></p>
+  </div>
 
-  <br/>
-  <br/>
+  <div ng-hide="routeView">
 
-  <h4>Max Intensity Slider</h4>
-  <div ui-slider min="1" max="500" ng-model="slider.maxIntensity" ng-change="changeMaxValue()" ><input type="text" ng-model="slider.maxIntensity" ng-change="changeMaxValue()" /></div>
 
-  <h4>Radius of Influence Slider</h4>
-  <div ui-slider min="0" max="100" ng-model="slider.radius" ng-change="changeRadius()" ><input type="text" ng-model="slider.radius" ng-change="changeRadius()" /></div>
-
-  <h4>Calculated Max Intensity<br />in Parameter Units</h4>
-  <input type="text" readonly  ng-model="slider.calculated"  />
+    <div ng-click="date_open = !date_open" class="collapsable_menu" ng-class="{ showMe: date_open }" >
+      <div>
+        <div style="display:inline">Date and Time</div><span class="arrow">{{(date_open && '&#9660;') || '&#9650;'}}</span>
+      </div>
+    </div>
 
 
 
-  <br/>
-  <br/>
+    <div  ng-class="{ showMe: date_open }" class="collapsable">
 
-  <p>Latest: {{datastats.max_valid_date}} {{datastats.max_valid_time}}</p>
+      <div class="input-group">
+        <datepicker show-weeks="false" ng-model="dt" ng-change="updateDateTime(dt,time)" min-date="mindate" max-date="maxdate"  class="well well-sm"></datepicker>
+      </div>
+
+
+
+
+      <div class="leftui_label">Select Time (GMT)</div>
+
+
+
+      <div ui-slider min="0" max="23" ng-model="time" ng-change="updateDateTime(dt,time)" ><input type="text" ng-model="time" ng-change="updateDateTime(dt,time)"/></div>
+
+      <div class="alert alert-danger animated fadeIn" ng-show="dtalert" >{{dtalert}}</div>
+    </div>
+
+
+
+
+
+  </div>
+
+  <div ng-click="visuals_open = !visuals_open" ng-class="{ showMe: visuals_open }" class="collapsable_menu">
+    <div>
+      <div style="display:inline">Visualizations</div><span class="arrow">{{(visuals_open && '&#9660;') || '&#9650;'}}</span>
+    </div>
+  </div>
+
+  <div  ng-class="{ showMe: visuals_open }" class="collapsable">
+    <div class="visuals" ng-class="{ rendered: heatmapStatus == 'Rendered', toggle: heatmapStatus == 'Requesting'}" ng-click="(heatmapStatus !== 'Not Displayed' && heatmapStatus !== 'Rendered') || toggleHeatmap()">
+      <div>
+        <div style="display:inline-block;width:180px" >
+          Heatmap
+        </div>
+        <span class="glyph">{{(heatmapStatus == 'Rendered' && '&#x2713;') || (heatmapStatus == 'Not Displayed' && '+') || 'x'}}</span>
+      </div>
+
+
+    </div>
+
+    <div class="visuals" ng-class="{ rendered: infoMarkerStatus == 'Rendered', toggle: infoMarkerStatus == 'Requesting...' }" ng-click="(infoMarkerStatus !== 'Not Displayed' && infoMarkerStatus !== 'Rendered') || toggleMarkers()">
+      <div>
+        <div style="display:inline-block;width:180px" >
+          Map Markers
+        </div>
+        <span class="glyph">{{(infoMarkerStatus == 'Rendered' && '&#x2713;') || (infoMarkerStatus == 'Not Displayed' && '+') || 'x'}}</span>
+      </div>
+    </div>
+
+    <div class="visuals" ng-class="{ rendered: triangleStatus == 'Rendered', toggle: triangleStatus == 'Requesting...' }" ng-click="(triangleStatus !== 'Not Displayed' && triangleStatus !== 'Rendered') || toggleTriangles()">
+      <div>
+        <div style="display:inline-block;width:180px" >
+          Triangulation
+        </div>
+        <span class="glyph">{{(triangleStatus == 'Rendered' && '&#x2713;') || (triangleStatus == 'Not Displayed' && '+') || 'x'}}</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div ng-click="toolbox_open = !toolbox_open" ng-class="{ showMe: toolbox_open }" class="collapsable_menu">
+    <div>
+      <div style="display:inline">Toolbox</div><span class="arrow">{{(toolbox_open && '&#9660;') || '&#9650;'}}</span>
+    </div>
+  </div>
+
+  <div  ng-class="{ showMe: toolbox_open }" class="collapsable">
+
+    <div class="leftui_label">Rendering Status</div>
+
+    <button class="toggleButton" ng-disabled="infoMarkerStatus !== 'Not Displayed' && infoMarkerStatus !== 'Rendered'" ng-click="toggleMarkers()">Toggle Info Markers</button><span ng-model="infoMarkerStatus">{{infoMarkerStatus}}</span>
+    <button class="toggleButton" ng-disabled="triangleStatus !== 'Not Displayed' && triangleStatus !== 'Rendered'" ng-click="toggleTriangles()">Toggle Triangulation</button><span ng-model="triangleStatus">{{triangleStatus}}</span>
+    <button class="toggleButton" ng-disabled="heatmapStatus !== 'Not Displayed' && heatmapStatus !== 'Rendered'" ng-click="toggleHeatmap()">Toggle Heatmap</button><span ng-model="heatmapStatus">{{heatmapStatus}}</span>
+
+    <div class="leftui_label">Max Intensity Slider</div>
+    <div ui-slider min="1" max="500" ng-model="slider.maxIntensity" ng-change="changeMaxValue()" ><input type="text" ng-model="slider.maxIntensity" ng-change="changeMaxValue()" /></div>
+
+
+    <div class="leftui_label">Radius of Influence Slider</div>
+    <div ui-slider min="0" max="100" ng-model="slider.radius" ng-change="changeRadius()" ><input type="text" ng-model="slider.radius" ng-change="changeRadius()" /></div>
+
+
+    <div class="leftui_label">Calculated Max Intensity<br />in Parameter Units</div>
+    <input style="margin-left:18px" type="text" readonly  ng-model="slider.calculated"  />
+
+
+    <div class="leftui_label" >Latest: {{datastats.max_valid_date}} {{datastats.max_valid_time}}</div>
+
+  </div>
+
 </div>
