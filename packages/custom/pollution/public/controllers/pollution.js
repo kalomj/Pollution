@@ -140,12 +140,72 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
     $scope.getDataStats();
 
+    $scope.drawLegend = function() {
+
+      var num_ticks = 4;
+
+      var legend = angular.element(document.getElementsByClassName('legendTicks')[0]);
+      var legendnum = angular.element(document.getElementsByClassName('legendNumbers')[0]);
+
+      legend.html('');
+      legendnum.html('');
+
+      var tick = angular.element('<div></div>');
+      tick.css({
+        'display': 'inline-block',
+        'width': '1px',
+        'height': '8px',
+        'background': 'black'
+      });
+      legend.append(tick);
+
+      var number = angular.element('<div></div>');
+      number.css({
+        'display': 'inline-block',
+        'width': '20px',
+        'margin-right': '20px',
+        'height': '8px'
+      }).html(0);
+      legendnum.append(number);
+
+      for (var i = 1; i <= num_ticks; i=i+1) {
+        var offset = 200 / num_ticks;
+        if (i === num_ticks) {
+          offset -= 1;
+        }
+
+        tick = angular.element('<div></div>');
+
+        tick.css({
+          'display': 'inline-block',
+          'margin-left': offset-1 + 'px',
+          'width': '1px',
+          'height': '8px',
+          'background': 'black'
+        });
+
+        legend.append(tick);
+
+        number = angular.element('<div></div>');
+        number.css({
+          'display': 'inline-block',
+          'margin-right': offset-20 + 'px',
+          'width': '20px',
+          'height': '8px'
+        }).html((i*($scope.slider.calculated / num_ticks)).toFixed(1));
+        legendnum.append(number);
+      }
+    };
+
+
     //Attempt to show the "true" max intensity in parameter units by considering ratio of overlap of heatmap markers
     $scope.slider.calculate = function() {
       var multiplier = $scope.gridSpacing < $scope.slider.radius ? $scope.gridSpacing / $scope.slider.radius : 1;
 
       $scope.slider.calculated = $scope.slider.maxIntensity * multiplier;
       $scope.slider.calculated = +(Math.round($scope.slider.calculated + 'e+2')  + 'e-2');
+
+      $scope.drawLegend();
     };
 
     $scope.slider.calculate();
@@ -418,6 +478,8 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
           heatmap.set('data', $scope.viewportData);
 
           $scope.heatmapStatus = 'Rendered';
+
+          $scope.drawLegend();
 
           if(cb) {
             cb();
