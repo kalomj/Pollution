@@ -8,8 +8,8 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
       name: 'pollution'
     };
   }
-]).controller('GMapCtrl', ['$scope', '$timeout', 'Global', 'Pollution', '$log', '$http','$stateParams','$state',
-  function($scope, $timeout, Global, Pollution, $log, $http, $stateParams, $state) {
+]).controller('GMapCtrl', ['$scope', '$timeout', 'Global', 'Pollution', '$log', '$http','$stateParams','$state','$sce',
+  function($scope, $timeout, Global, Pollution, $log, $http, $stateParams, $state, $sce) {
 
     $scope.routeViewLoad = function() {
       $scope.routeView = true;
@@ -78,6 +78,15 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
     $scope.slider.radius = 82;
     $scope.slider.maxIntensity = $scope.slider.parameterMaxIntensity[$scope.parameter_name];
+
+    $scope.parameterHTML = {
+      OZONE: $sce.trustAsHtml('O<sub>3</sub> (ppb)'),
+      PM25: $sce.trustAsHtml('PM<sub>2.5</sub> (µg/m<sup>3</sup>)'),
+      PM10: $sce.trustAsHtml('PM<sub>10</sub> (µg/m<sup>3</sup>)'),
+      CO: $sce.trustAsHtml('CO (ppm)'),
+      SO2: $sce.trustAsHtml('SO<sub>2</sub> (ppb)'),
+      NO2: $sce.trustAsHtml('NO<sub>2</sub> (ppb)')
+    };
 
     $scope.updateDateTime = function (dt,time) {
       $scope.dt = dt;

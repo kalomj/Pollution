@@ -4,6 +4,16 @@
 
   <div class="time_display" ng-model="renderedTimeString">{{renderedTimeString}} GMT</div>
 
+  <div class="legend_display">
+    <div style="text-align:center;padding-bottom:12px;font-size:16px" ng-bind-html="parameterHTML[parameter_name]"></div>
+    <div class="legend">
+      <div class="legendGradient"></div>
+      <div class="legendTicks"></div>
+      <div class="legendNumbers"></div>
+    </div>
+  </div>
+
+  <br/>
   <div ng-click="param_open = !param_open" class="collapsable_menu" ng-class="{ showMe: param_open }">
     <div>
       <div style="display:inline">Pollution Parameter</div><span class="arrow">{{(param_open && '&#9660;') || '&#9650;'}}</span>
@@ -142,12 +152,8 @@
 
     <div class="leftui_label" >Latest: {{datastats.max_valid_date}} {{datastats.max_valid_time}}</div>
 
-    <div class="legend">
-      <div class="legendGradient"></div>
-      <div class="legendTicks"></div>
-      <div class="legendNumbers"></div>
-    </div>
-
   </div>
+
+
 
 </div>

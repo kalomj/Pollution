@@ -331,6 +331,16 @@ section.ng-scope{
     font-size:18px;
 }
 
+.legend_display {
+    padding-top: 10px;
+    width:290px;
+    background-color:whitesmoke;
+    height:75px;
+    margin-bottom:8px;
+    margin-top:12px;
+    font-size:12px;
+}
+
 .visuals {
     background-color: darkgray;
     margin-top:12px;
@@ -398,7 +408,7 @@ label {
 
 .legendGradient {
     width : 200px;
-    height: 15px;
+    height: 12px;
     margin-left: 20px;
     background : -webkit-linear-gradient(left,
     rgba(102, 255, 0, 0),
