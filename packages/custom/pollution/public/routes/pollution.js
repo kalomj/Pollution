@@ -15,5 +15,15 @@ angular.module('mean.pollution').config(['$stateProvider',
       url: '/gmap/:centerlat/:centerlon/:zoom/:year/:month/:day/:hour/:parameter_name',
       templateUrl: 'pollution/views/gmap/index.html'
     });
+
+    $stateProvider.state('mobileMapIndex', {
+      url: '/mobile/gmap',
+      templateUrl: 'pollution/views/mobile/gmap/index.html'
+    });
+
+    $stateProvider.state('mobileMapIndex2', {
+      url: '/mobile/gmap/:centerlat/:centerlon/:zoom/:year/:month/:day/:hour/:parameter_name',
+      templateUrl: 'pollution/views/mobile/gmap/index.html'
+    });
   }
 ]);

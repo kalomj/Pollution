@@ -99,6 +99,15 @@ body.login, body.register,  body.forgot-password, body.reset-tokenId, body.first
   height: -moz-calc(100% - 50px); /* firefox */
 }
 
+.map-container-mobile {
+    position: relative;
+    height: calc(100% + 50px);
+    height: -o-calc(100% + 50px); /* opera */
+    height: -webkit-calc(100% + 50px); /* google, safari */
+    height: -moz-calc(100% + 50px); /* firefox */
+    transform:translateY(-50px)
+}
+
 .gmap {
   position: relative;
   height: 100%;
@@ -339,6 +348,33 @@ section.ng-scope{
     margin-bottom:8px;
     margin-top:12px;
     font-size:12px;
+}
+
+.time_display_mobile {
+    display:inline-block;
+    position:absolute;
+    padding-top: 10px;
+    width:290px;
+    background-color:whitesmoke;
+    height:57px;
+    margin-bottom:8px;
+    margin-top:175px;
+    text-align: center;
+    font-size:18px;
+    z-index:5;
+}
+
+.legend_display_mobile {
+    display:inline-block;
+    position:absolute;
+    padding-top: 2px;
+    width:290px;
+    background-color:whitesmoke;
+    height:75px;
+    margin-bottom:8px;
+    margin-top:100px;
+    font-size:12px;
+    z-index:5;
 }
 
 .visuals {

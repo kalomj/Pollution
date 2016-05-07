@@ -1,0 +1,17 @@
+<style>
+  .navbar {display:none; height:0px}
+</style>
+
+<div data-ng-controller="GMapCtrl" style="height:100%;width:100%;position:absolute;overflow:hidden;">
+
+  <ng-include src="'pollution/views/mobile/leftmenu/leftmenu.html'" onload="mainViewLoad()" ></ng-include>
+
+  <div class="map-container-mobile"  >
+    <div class="gmap">
+      <map zoom="{{zoom}}" center="{{centerlat}}, {{centerlon}}">
+        <heatmap-layer id="foo" data="viewportData"></heatmap-layer>
+      </map>
+    </div>
+  </div>
+
+</div>

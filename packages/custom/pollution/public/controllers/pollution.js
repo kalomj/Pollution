@@ -365,8 +365,16 @@ angular.module('mean.pollution').controller('PollutionController', ['$scope', 'G
 
     $scope.renderHeatmap = function(cb) {
 
+      var $nextstate = 'mapIndex2';
+
       //set restful URL state without reloading page (makes for smoother back button experience
-      $state.go('mapIndex2',
+      if($state.current.name.substring(0,6) === 'mobile')
+      {
+        $nextstate = 'mobileMapIndex2';
+      }
+
+
+      $state.go($nextstate,
           {
             centerlat : $scope.map.getCenter().lat(),
             centerlon : $scope.map.getCenter().lng(),
